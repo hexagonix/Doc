@@ -1,0 +1,24 @@
+Alterações realizadas no Sistema Operacional Andromeda® (distribuição)
+======================================================================
+
+Sistema Operacional Andromeda®. Copyright © 2016-2021 Felipe Miguel Nery Lunkes. Todos os direitos reservados.
+Kernel Hexagon®. Copyright © 2016-2021 Felipe Miguel Nery Lunkes. Todos os direitos reservados.
+Gerenciador de Boot Saturno®. Copyright © 2016-2021 Felipe Miguel Nery Lunkes. Todos os direitos reservados.
+Hexagon® Boot (HBoot). Copyright © 2020-2021 Felipe Miguel Nery Lunkes. Todos os direitos reservados.
+
+Sobre o Sistema Operacional Andromeda®:
+=======================================
+
+Para mais informações, consultar o arquivo "Andromeda.txt"
+
+Regras de entrada neste arquivo:
+================================
+
+Todas as novas entradas devem ser datadas e podem ou não incluir nomes de código para cada versão. Cada entrada deve começar com o caractere "+", seguido da data, entre "[]" e ":". Após, as alterações devem ser descritas da forma mais clara possível.
+
+Alterações realizadas no Sistema Operacional Andromeda®:
+========================================================
+
++ [11/01/2021]: Anterior a data de 11/01/2021, as alterações não estavam sendo documentadas desde fevereiro de 2020.
++ [11/03/2021]: O utilitário Unix ls passará a ocultar arquivos com a extensçao .MOD, de módulos do HBoot, por padrão. Esses arquivos podem ser visualizados utilizando "ls -a".
++ [12/03/2021]: Adição da fonte Glaux, derivada do projeto descontinuado GlauxOS.
