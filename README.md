@@ -1,5 +1,10 @@
 # Documentação do Hexagonix/Andromeda
 
+# Idioma/language
+
+* [Português](https://github.com/hexagonix/Doc#pegue-um-atalho)
+* [English](https://github.com/hexagonix/Doc#take-a-shortcut)
+
 A documentação está em construção. Alguns links podem estar quebrados.
 
 ## Pegue um atalho
@@ -23,3 +28,5 @@ Documentation is under construction. Some links might be broken.
 * [HBoot Documentation](https://github.com/hexagonix/Doc/tree/main/HBoot/README.en.md)
 
 Versão deste arquivo: 1.0
+
+Copyright © 2021-2022 Felipe Miguel Nery Lunkes
