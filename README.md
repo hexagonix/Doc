@@ -29,14 +29,14 @@ Documentation is under construction. Some links might be broken.
 
 # Licença do software (código-fonte)/Software license (source code)
 
+Versão em português
+
 Sistema Operacional Hexagonix
 Sistema Operacional Andromeda
 
 Copyright (C) 2015-2022 Felipe Miguel Nery Lunkes. Todos os direitos reservados.
 
 Licença de software Hexagonix versão 2.0 (2021)
-
-Versão em português
 
 Esta licença se aplica a quaisquer arquivos presentes neste repositório, 
 incluindo qualquer diretório, que componham o sistema operacional Hexagonix/Andromeda,

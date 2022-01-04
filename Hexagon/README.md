@@ -1,12 +1,5 @@
 # Kernel Hexagon
 
-## Aviso de direitos autorais
-
-* Sistema Operacional Hexagonix e Sistema Operacional Andromeda. Copyright © 2016-2022 Felipe Miguel Nery Lunkes. Todos os direitos reservados.
-* Kernel Hexagon. Copyright © 2016-2022 Felipe Miguel Nery Lunkes. Todos os direitos reservados.
-* Gerenciador de Boot Saturno. Copyright © 2016-2022 Felipe Miguel Nery Lunkes. Todos os direitos reservados.
-* Hexagon Boot (HBoot). Copyright © 2020-2022 Felipe Miguel Nery Lunkes. Todos os direitos reservados.
-
 ## O que é
 
 O Hexagon é um núcleo (kernel) monolítico executado em modo protegido 32-bit, desenvolvido tendo como alvo a arquitetura PC (x86). É um kernel escrito do zero, visando a velocidade e a compatibilidade de harware moderno mas também sendo capaz de ser executado em hardware mais antigo. No momento, garante um ambiente monoutilizador, apesar do uso de terminais virtuais, e monotarefa, apesar da capacidade de carregar, manter em memória e controlar mais de um processo, em uma pilha de execução de ordem cronológica. Futuramente o kernel poderá receber suporte a execução de múltiplos processos em multitarefa preemptiva. O Hexagon é um kernel Unix-like e compõe a base do Sistema Operacional Hexagonix/Andromeda, embora independente deste. Ele executa imagens executáveis no formato HAPP, desenvolvido para o Hexagon. Implementa uma API bastante sofisticada acessível através de uma chamada de sistema.
@@ -109,14 +102,23 @@ inicioAPP:
 
 # Licença do software (código-fonte)
 
+## Aviso de direitos autorais
+
+* Sistema Operacional Hexagonix e Sistema Operacional Andromeda. Copyright © 2016-2022 Felipe Miguel Nery Lunkes. Todos os direitos reservados.
+* Kernel Hexagon. Copyright © 2016-2022 Felipe Miguel Nery Lunkes. Todos os direitos reservados.
+* Gerenciador de Boot Saturno. Copyright © 2016-2022 Felipe Miguel Nery Lunkes. Todos os direitos reservados.
+* Hexagon Boot (HBoot). Copyright © 2020-2022 Felipe Miguel Nery Lunkes. Todos os direitos reservados.
+
+## Licença 
+
+Versão em português
+
 Sistema Operacional Hexagonix
 Sistema Operacional Andromeda
 
 Copyright (C) 2015-2022 Felipe Miguel Nery Lunkes. Todos os direitos reservados.
 
 Licença de software Hexagonix versão 2.0 (2021)
-
-Versão em português
 
 Esta licença se aplica a quaisquer arquivos presentes neste repositório, 
 incluindo qualquer diretório, que componham o sistema operacional Hexagonix/Andromeda,
@@ -134,33 +136,6 @@ ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA E NÃO VIOLAÇÃO. EM NENHUMA HIPÓTESE
 AUTORES OU TITULARES DE DIREITOS AUTORAIS SÃO RESPONSÁVEIS POR QUALQUER RECLAMAÇÃO,
 DANOS OU OUTRAS RESPONSABILIDADES, SEJA EM AÇÃO DE CONTRATO, DELITO OU DE OUTRA FORMA,
 DECORRENTE DE, FORA DE OU EM CONEXÃO COM O SOFTWARE OU O USO OU OUTRAS NEGOCIAÇÕES NO
-SOFTWARE.
-
-English version
-
-Hexagonix Operating System
-Andromeda Operating System
-
-Copyright (C) 2015-2022 Felipe Miguel Nery Lunkes. All rights reserved.
-
-Hexagonix Software License version 2.0 (2021)
-
-This license applies to any files present in this repository,
-including any directory, which make up the Hexagonix/Andromeda operating system,
-as well as its components, libraries, data files, binary images and adjacent files.
-
-Hereby, possession, publication, use, commercial or otherwise, is prohibited.
-and redistribution of any code under this license without authorization
-explicit written statement from the developer. In addition, this license expresses the
-obligatory destruction of any copies of files obtained illegally
-of this repository, at the risk of applicable legal sanctions.
-
-THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. UNDER NO EVENT
-AUTHORS OR COPYRIGHT HOLDERS ARE RESPONSIBLE FOR ANY CLAIM,
-DAMAGES OR OTHER LIABILITIES, WHETHER IN CONTRACT, TORT OR OTHERWISE,
-ARISING OUT OF, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER NEGOTIATIONS ON
 SOFTWARE.
 
 Versão deste arquivo: 1.0
