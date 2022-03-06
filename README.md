@@ -1,6 +1,7 @@
 # Idioma/language
 
 A documentação está em construção. Alguns links podem estar quebrados.
+<br>
 The documentation is under constrution. Some link may be broken.
 
 * [Português](https://github.com/hexagonix/Doc#pegue-um-atalho)
