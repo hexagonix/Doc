@@ -1,11 +1,13 @@
-# Documentação do Hexagonix/Andromeda
-
 # Idioma/language
+
+A documentação está em construção. Alguns links podem estar quebrados.
+The documentation is under constrution. Some link may be broken.
 
 * [Português](https://github.com/hexagonix/Doc#pegue-um-atalho)
 * [English](https://github.com/hexagonix/Doc#take-a-shortcut)
 
 A documentação está em construção. Alguns links podem estar quebrados.
+The documentation is under constrution. Some link may be broken.
 
 ## Pegue um atalho
 
