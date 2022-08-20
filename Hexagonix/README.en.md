@@ -274,7 +274,7 @@ Graphics mode fonts for Hexagon are developed as a bitmap in Assembly which, whe
 
 <details title="System development libraries" align='left'>
 <br>
-<summary align='left'><strong>System development libraries</strong></summary>
+<summary align='left'><strong>7️⃣ System development libraries</strong></summary>
 
 Hexagonix/Andromeda also provides functions that must be used to interact with the system environment itself. Libraries are used to access functions implemented by Hexagon or by the libraries themselves, allowing easy development of applications and utilities for both the Hexagonix and Andromeda environments. The libraries implement functions for displaying text, mathematical calculations, sending messages, opening files and devices, and much more. The core library (hexagon.s) provides functions accessible to both possible distribution environments, while other libraries may be unique to the Andromeda environment. These libraries include graphical functions to build interfaces in graphical mode (Andromeda), as well as functions to check the currently running system version (Hexagonix and Andromeda). The Hexagonix base utilities perform the Hexagon version check to see if they can be run, using the Unix utility uname or directly via a Hexagon system call.
 
@@ -290,7 +290,7 @@ To learn more and check each function available in the system development librar
 
 <details title="System requirements" align='left'>
 <br>
-<summary align='left'><strong>System requirements</strong></summary>
+<summary align='left'><strong>1️⃣ System requirements</strong></summary>
 
 Below is a list of minimum and recommended requirements for testing Hexagonix/Andromeda on a virtual machine or physical machine.
 
@@ -327,7 +327,7 @@ Below is a list of minimum and recommended requirements for testing Hexagonix/An
 
 <details title="Get the disk images with the system instalation" align='left'>
 <br>
-<summary align='left'><strong>Get the disk images with the system instalation</strong></summary>
+<summary align='left'><strong>2️⃣ Get the disk images with the system instalation</strong></summary>
 
 To test Hexagonix or Andromeda, you will need one of the disk images available, as well as the [qemu](https://www.qemu.org) tool installed on your computer, if you want to test the system in an environment virtualized. The image can also be used for writing to a physical disk on a real machine.
 
@@ -338,7 +338,7 @@ To test Andromeda, get the ['andromeda.img'](https://github.com/hexagonix/hexago
 
 <details title="For testing in virtualized environment" align='left'>
 <br>
-<summary align='left'><strong>For testing in virtualized environment</strong></summary>
+<summary align='left'><strong>3️⃣ For testing in virtualized environment</strong></summary>
 
 First, you must install the qemu tool, which will manage the virtual machine. To do so, you can install qemu using official Linux distribution repositories or by accessing [here](https://www.qemu.org) to get installation files for Windows and macOS. 
 
@@ -375,7 +375,7 @@ Remembering that you must use a version/edition of qemu that can run software wr
 
 <details title="For testing on physical machine" align='left'>
 <br>
-<summary align='left'><strong>For testing on physical machine</strong></summary>
+<summary align='left'><strong>4️⃣ For testing on physical machine</strong></summary>
 
 You must use Linux/macOS or some tool available for Windows that allows you to burn this image to disk.
 
@@ -392,7 +392,7 @@ Note that system performance may vary depending on the machine being tested. Add
 
 <details title="First use and login" align='left'>
 <br>
-<summary align='left'><strong>First use and login</strong></summary>
+<summary align='left'><strong>5️⃣ First use and login</strong></summary>
 
 When starting the system, you will be asked to enter a username and password. For the first use, use
 
@@ -407,7 +407,7 @@ You can add another user by changing the 'USUARIO.UNX' file at the root of the d
 
 <details title="Report errors" align='left'>
 <br>
-<summary align='left'><strong>Report errors</strong></summary>
+<summary align='left'><strong>6️⃣ Report errors</strong></summary>
 
 You can report bugs and help develop the system. To do this, open an error notification [here](https://github.com/hexagonix/Distro/issues), informing the error as detailed as possible (such as device brand, processor, amount of RAM, video and connected peripherals, as well as the device used to install the system, such as an internal disk drive or USB removable media). Remember to inform which application the error occurred in, if the error occurs while the system is already in operation. If the problem occurs in the boot process, please report what was displayed/observed behavior of the machine.
 
@@ -419,7 +419,7 @@ You can report bugs and help develop the system. To do this, open an error notif
 
 <details title="Hexagonix" align='left'>
 <br>
-<summary align='left'><strong>Hexagonix</strong></summary>
+<summary align='left'><strong>🌙 Hexagonix</strong></summary>
 
 <p align="center">
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix1.png" width="500" height="400">
@@ -435,7 +435,7 @@ You can see more [here](https://github.com/hexagonix/Distro/tree/main/Img).
 
 <details title="Andromeda" align='left'>
 <br>
-<summary align='left'><strong>Andromeda</strong></summary>
+<summary align='left'><strong>🌌 Andromeda</strong></summary>
 
 <p align="center">
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/Andromeda1.png" width="500" height="400">
@@ -455,7 +455,7 @@ You can see more [here](https://github.com/hexagonix/Distro/tree/main/Img).
 
 <details title="Languages" align='left'>
 <br>
-<summary align='left'><strong>Languages</strong></summary>
+<summary align='left'><strong>🎲 Languages</strong></summary>
 
 At this moment, both the system and the documentation are only available in Portuguese. Documentation in English will be available soon, and there are plans to support English as a primary language possibility in addition to Portuguese (most of the work has already been done).
 
@@ -463,7 +463,7 @@ At this moment, both the system and the documentation are only available in Port
 
 <details title="Inspiration" align='left'>
 <br>
-<summary align='left'><strong>Inspiration</strong></summary>
+<summary align='left'><strong>🖼 Inspiration</strong></summary>
 
 This project was possible and today it can see the light of day thanks to many others who have come before and contributed with design ideas and teaching how an operating system should work, even if simple. Are they:
 
@@ -484,7 +484,7 @@ In addition, other projects helped in the development of Hexagonix/Andromeda, ei
 
 <details title="Author, contributors and contact" align='left'>
 <br>
-<summary align='left'><strong>Author, contributors and contact</strong></summary>
+<summary align='left'><strong>👥️️ Author, contributors and contact</strong></summary>
 
 ## Author
 
@@ -509,7 +509,7 @@ Feel free to contact me, report bugs or be interested in participating in the pr
 
 <details title="Copyright notes" align='left'>
 <br>
-<summary align='left'><strong>Copyright notes</strong></summary>
+<summary align='left'><strong>📝 Copyright notes</strong></summary>
 
 Hexagonix/Andromeda was developed from scratch by [Felipe Lunkes](https://github.com/felipenlunkes).
 
