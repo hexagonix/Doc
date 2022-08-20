@@ -26,9 +26,9 @@ O Hexagonix H1 R1 (codenome Caladan) é o primeiro pacote de correções para a 
 
 </details>
 
-<details title="Hexagonix H1 R3 (Caladan)" align='left'>
+<details title="Hexagonix H1 R2 (Caladan)" align='left'>
 <br>
-<summary align='left'><strong>Hexagonix H1 R3 (Caladan)</strong></summary>
+<summary align='left'><strong>Hexagonix H1 R2 (Caladan)</strong></summary>
 
 Segundo pacote de atualizações para a versão H1 do Hexagonix/Andromeda, que inclui:
 
@@ -66,6 +66,8 @@ Melhorias e correção de bugs em todo o sistema.
 - Melhorias nas bibliotecas do sistema;
 - Correções de estabilidade em vários utilitários;
 - Melhorias no Configuações do Andromeda;
+
+</details>
 
 <details title="Hexagonix H1 R5 (Orion)" align='left'>
 <br>
