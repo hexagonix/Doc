@@ -570,7 +570,7 @@ To test Andromeda, get the ['andromeda.img'](andromeda.img) file from this repos
 
 First, you must install the qemu tool, which will manage the virtual machine. To do so, you can install qemu using official Linux distribution repositories or by accessing [here](https://www.qemu.org) to get installation files for Windows and macOS. 
 
-> Install on Debian, Ubuntu and Pop!_OS and derivatives
+> Install on Debian, Ubuntu, Pop!_OS and derivatives
 
 For Ubuntu, the following line will install qemu and all its dependencies (root privileges required):
 
