@@ -516,7 +516,9 @@ To learn more and check each function available in the system development librar
 
 # How to test Hexagonix or Andromeda
 
-## System requirements
+<details title="System requirements" align='left'>
+<br>
+<summary align='left'><strong>System requirements</strong></summary>
 
 Below is a list of minimum and recommended requirements for testing Hexagonix/Andromeda on a virtual machine or physical machine.
 
@@ -547,20 +549,28 @@ Below is a list of minimum and recommended requirements for testing Hexagonix/An
 
 </details>
 
-## Get the disk images with the system instalation
+</details>
+
+> Running Hexagonix
+
+<details title="Get the disk images with the system instalation" align='left'>
+<br>
+<summary align='left'><strong>Get the disk images with the system instalation</strong></summary>
 
 To test Hexagonix or Andromeda, you will need one of the disk images available in this repository, as well as the [qemu](https://www.qemu.org) tool installed on your computer, if you want to test the system in an environment virtualized. The image can also be used for writing to a physical disk on a real machine.
 
 To test Hexagonix, get the ['hexagonix.img'](hexagonix.img) file from this repository.
 To test Andromeda, get the ['andromeda.img'](andromeda.img) file from this repository.
 
-## For testing in virtualized environment
+</details>
+
+<details title="For testing in virtualized environment" align='left'>
+<br>
+<summary align='left'><strong>For testing in virtualized environment</strong></summary>
 
 First, you must install the qemu tool, which will manage the virtual machine. To do so, you can install qemu using official Linux distribution repositories or by accessing [here](https://www.qemu.org) to get installation files for Windows and macOS. 
 
-<details title="Install on Debian, Ubuntu and Pop!_OS and derivatives" align='left'>
-<br>
-<summary align='left'><strong>Install on Debian, Ubuntu and Pop!_OS and derivatives</strong></summary>
+> Install on Debian, Ubuntu and Pop!_OS and derivatives
 
 For Ubuntu, the following line will install qemu and all its dependencies (root privileges required):
 
@@ -568,7 +578,13 @@ For Ubuntu, the following line will install qemu and all its dependencies (root 
 sudo apt install qemu qemu-system-i386
 ```
 
-</details>
+> Install on Fedora, CentOS and derivatives
+
+For Fedora, the following line will install qemu and all its dependencies (root privileges required):
+
+```
+sudo dnf install qemu qemu-system-i386
+```
 
 Now that you have qemu installed on your computer, you can proceed with running the system.
 
@@ -583,7 +599,11 @@ You can omit the -serial parameter if you want. This parameter ensures that debu
 
 Remembering that you must use a version/edition of qemu that can run software written for the x86 architecture (i386 or x86_64). To download and install qemu, click [here](https://www.qemu.org/download/).
 
-## For testing on physical machine
+</details>
+
+<details title="For testing on physical machine" align='left'>
+<br>
+<summary align='left'><strong>For testing on physical machine</strong></summary>
 
 You must use Linux/macOS or some tool available for Windows that allows you to burn this image to disk.
 
@@ -596,7 +616,11 @@ where drive is the desired device (usually sdb or sdc for USB devices and hda, h
 
 Note that system performance may vary depending on the machine being tested. Added to this is the fact that the latest versions of the system have not been or are being tested directly on the physical machine, as the main operating system. If any problem occurs when running Hexagonix/Andromeda on a physical machine, please report the detailed error [here](https://github.com/hexagonix/Distro/issues), in Portuguese or English, informing data such as device, processor, amount of RAM memory, video card (if available) and peripherals connected, as well as the device used to install the system (internal disk drive or USB removable media).
 
-## First use
+</details>
+
+<details title="First use and login" align='left'>
+<br>
+<summary align='left'><strong>First use and login</strong></summary>
 
 When starting the system, you will be asked to enter a username and password. For the first use, use
 
@@ -606,6 +630,8 @@ Password: root
 ```
 
 You can add another user by changing the 'USUARIO.UNX' file at the root of the disk. Remember not to remove the root user. This can make the system permanently inoperable.
+
+</details>
 
 <details title="Report errors" align='left'>
 <br>
