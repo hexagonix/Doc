@@ -57,7 +57,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 <br>
 <summary align='left'><strong>Download and test the system right now</strong></summary>
 
-At [end of this file](https://github.com/hexagonix/hexagonix/blob/main/README.pt.md#como-testar-o-hexagonix-ou-o-andromeda) you will find a tutorial to run the Hexagonix/Andromeda on your computer, either in a virtualized or native version. Remember that it is necessary to have an x86 architecture computer or an emulator, if you are using a device of another architecture for testing.
+At [end of this file](https://github.com/hexagonix/Doc/blob/main/Hexagonix/README.en.md#how-to-test-hexagonix-or-andromeda) you will find a tutorial to run the Hexagonix/Andromeda on your computer, either in a virtualized or native version. Remember that it is necessary to have an x86 architecture computer or an emulator, if you are using a device of another architecture for testing.
 
 You can go to the [releases](https://github.com/hexagonix/hexagonix/releases) session for stable system releases. You can access the Hexagonix/Andromeda [release announcement](REL.en.md) file. Whenever possible, get the latest release and download the available .img images or the complete package in zip format. The versions available directly in this repository are always development versions (beta and release candidate), which can also be run and are minimally functional. At the end of each development cycle, the final versions will be available in the [releases](https://github.com/hexagonix/hexagonix/releases) session.
 
@@ -329,10 +329,10 @@ Below is a list of minimum and recommended requirements for testing Hexagonix/An
 <br>
 <summary align='left'><strong>Get the disk images with the system instalation</strong></summary>
 
-To test Hexagonix or Andromeda, you will need one of the disk images available in this repository, as well as the [qemu](https://www.qemu.org) tool installed on your computer, if you want to test the system in an environment virtualized. The image can also be used for writing to a physical disk on a real machine.
+To test Hexagonix or Andromeda, you will need one of the disk images available, as well as the [qemu](https://www.qemu.org) tool installed on your computer, if you want to test the system in an environment virtualized. The image can also be used for writing to a physical disk on a real machine.
 
-To test Hexagonix, get the ['hexagonix.img'](hexagonix.img) file from this repository.
-To test Andromeda, get the ['andromeda.img'](andromeda.img) file from this repository.
+To test Hexagonix, get the ['hexagonix.img'](https://github.com/hexagonix/hexagonix/blob/main/hexagonix.img).
+To test Andromeda, get the ['andromeda.img'](https://github.com/hexagonix/hexagonix/blob/main/andromeda.img).
 
 </details>
 

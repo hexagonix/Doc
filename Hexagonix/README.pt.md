@@ -58,7 +58,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 <br>
 <summary align='left'><strong>Fazer download e testar o sistema agora mesmo</strong></summary>
 
-No [final deste arquivo](https://github.com/hexagonix/hexagonix/blob/main/README.pt.md#como-testar-o-hexagonix-ou-o-andromeda) você encontra um tutorial para executar o Hexagonix/Andromeda em seu computador, tanto em uma versão virtualizada como de forma nativa. Lembre-se que é necessário possuir um computador de arquitetura x86 ou um emulador, caso esteja utilizando um dispositivo de outra arquitetura para testes.
+No [final deste arquivo](https://github.com/hexagonix/Doc/blob/main/Hexagonix/README.pt.md#como-testar-o-hexagonix-ou-o-andromeda) você encontra um tutorial para executar o Hexagonix/Andromeda em seu computador, tanto em uma versão virtualizada como de forma nativa. Lembre-se que é necessário possuir um computador de arquitetura x86 ou um emulador, caso esteja utilizando um dispositivo de outra arquitetura para testes.
 
 Você pode ir até a sessão de [lançamentos](https://github.com/hexagonix/hexagonix/releases) para obter as versões estáveis do sistema. Você pode acessar o arquivo de [anúncio de versões](REL.pt.md) do Hexagonix/Andromeda. Sempre que possível, obtenha o último lançamento e realize o download das imagens .img disponíveis ou do pacote completo em formato zip. As versões disponíveis diretamente neste repositório são sempre versões de desenvolvimento (beta e release candidate), que também podem ser executadas e estão minimamente funcionais. Ao final de cada ciclo de desenvolvimento, as versões finais estarão disponíveis na sessão [lançamentos](https://github.com/hexagonix/hexagonix/releases).
 
@@ -334,10 +334,10 @@ Abaixo, uma lista de requisitos mínimos e recomendados para testar o Hexagonix/
 <br>
 <summary align='left'><strong>Obter as imagens de disco com a instação do sistema</strong></summary>
 
-Para testar o Hexagonix ou Andromeda, você vai precisar de uma das imagens de disco disponíveis neste repositório, bem como a ferramenta [qemu](https://www.qemu.org) instalada em seu computador, caso deseje testar o sistema em ambiente virtualizado. A imagem também pode ser utilizada para a gravação em um disco físico em uma máquina real.
+Para testar o Hexagonix ou Andromeda, você vai precisar de uma das imagens de disco disponíveis, bem como a ferramenta [qemu](https://www.qemu.org) instalada em seu computador, caso deseje testar o sistema em ambiente virtualizado. A imagem também pode ser utilizada para a gravação em um disco físico em uma máquina real.
 
-Para testar o Hexagonix, obtenha o arquivo ['hexagonix.img'](hexagonix.img) neste repositório.
-Para testar o Andromeda, obtenha o arquivo ['andromeda.img'](andromeda.img) neste repositório.
+Para testar o Hexagonix, obtenha o arquivo ['hexagonix.img'](https://github.com/hexagonix/hexagonix/blob/main/hexagonix.img).
+Para testar o Andromeda, obtenha o arquivo ['andromeda.img'](https://github.com/hexagonix/hexagonix/blob/main/andromeda.img).
 
 </details>
 
