@@ -88,7 +88,7 @@ You can report system errors [here](https://github.com/hexagonix/hexagonix/blob/
 # About the system
 
 <p align="center">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix.png" width="250" height="250">
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix.png" width="200" height="200">
 </p>
 
 <details title="Development" align='left'>

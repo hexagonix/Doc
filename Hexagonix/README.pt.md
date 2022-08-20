@@ -90,7 +90,7 @@ Você pode reportar erros do sistema [aqui](https://github.com/hexagonix/hexagon
 # Sobre o sistema
 
 <p align="center">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix.png" width="250" height="250">
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix.png" width="200" height="200">
 </p>
 
 <details title="Desenvolvimento" align='left'>
