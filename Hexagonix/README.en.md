@@ -10,7 +10,7 @@ All rights reserved.
 # Hexagonix/Andromeda Operating System
 
 <p align="center">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix.png" width="200" height="200">
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix.png" width="150" height="150">
 </p>
 
 # First of all - a shortcut to get straight to the point
