@@ -573,9 +573,7 @@ Para testar o Andromeda, obtenha o arquivo ['andromeda.img'](andromeda.img) nest
 
 Primeiramente, você deve instalar a ferramenta qemu, que irá gerenciar a máquina virtual. Para isso, você pode instalar o qemu utilizando repositórios oficiais de distribuições Linux ou acessando [aqui](https://www.qemu.org) para obter os arquivos de instalação para Windows e macOS.
 
-<details title="Instalar no Debian, Ubuntu, Pop!_OS e derivados" align='left'>
-<br>
-<summary align='left'><strong>Instalar no Debian, Ubuntu, Pop_OS! e derivados</strong></summary>
+> Instalar no Debian, Ubuntu, Pop_OS! e derivados:
 
 Para o Ubuntu, a linha a seguir irá instalar o qemu e todas as suas dependências (privilégios de superusuário necessários):
 
@@ -583,7 +581,13 @@ Para o Ubuntu, a linha a seguir irá instalar o qemu e todas as suas dependênci
 sudo apt install qemu qemu-system-i386
 ```
 
-</details>
+> Instalar no Fedora, CentOS e derivados:
+
+Para o Fedora, a linha a seguir irá instalar o qemu e todas as suas dependências (privilégios de superusuário necessários):
+
+```
+sudo dnf install qemu qemu-system-i386
+```
 
 Agora que você tem o qemu instalado em seu computador, você pode prosseguir com a execução do sistema.
 
