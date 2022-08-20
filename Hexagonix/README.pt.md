@@ -73,6 +73,14 @@ Você pode ir até a sessão de [lançamentos](https://github.com/hexagonix/hexa
 
 </details>
 
+<details title="Construir o sistema" align='left'>
+<br>
+<summary align='left'><strong>Construir o sistema</strong></summary>
+
+* [Construir o sistema (Brasil)](https://github.com/hexagonix/build/blob/main/README.pt.md)
+
+</details>
+
 <details title="Ajude no desenvolvimento do Hexagonix/Andromeda" align='left'>
 <br>
 <summary align='left'><strong>Ajude no desenvolvimento do Hexagonix/Andromeda</strong></summary>

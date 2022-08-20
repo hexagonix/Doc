@@ -71,6 +71,14 @@ You can go to the [releases](https://github.com/hexagonix/hexagonix/releases) se
 
 </details>
 
+<details title="Building the system" align='left'>
+<br>
+<summary align='left'><strong>Building the system</strong></summary>
+
+* [Build the system](https://github.com/hexagonix/build/blob/main/README.en.md)
+
+</details>
+
 <details title="Help with the development of Hexagonix/Andromeda" align='left'>
 <br>
 <summary align='left'><strong>Help with the development of Hexagonix/Andromeda</strong></summary>
