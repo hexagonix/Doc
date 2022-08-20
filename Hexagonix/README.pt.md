@@ -554,6 +554,8 @@ Abaixo, uma lista de requisitos mínimos e recomendados para testar o Hexagonix/
 
 </details>
 
+> Executando o Hexagonix
+
 <details title="Obter as imagens de disco com a instação do sistema" align='left'>
 <br>
 <summary align='left'><strong>Obter as imagens de disco com a instação do sistema</strong></summary>
