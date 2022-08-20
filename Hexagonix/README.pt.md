@@ -158,86 +158,6 @@ A interação com o HBoot se dá pelo pressionamento da tecla F8 após a inicial
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/HBoot.png" width="600" height="500">
 </p>
 
-### Outras funções disponíveis (módulos HBoot e modDOS)
-
-#### Módulos HBoot
-
-O HBoot permite o carregamento de módulos no formato HBoot, que podem ser úteis, no futuro, para permitir testes de hardware, como testes de memória e disco, caso os módulos estejam disponíveis no disco. Os módulos podem ser utilizados também para estender as funções do HBoot. A especificação do formato já está disponível e um exemplo pode ser encontrado abaixo. Esses módulos podem ser utilizados para testar dispositivos específicos, obter informações do hardware ou carregar arquivos em sistemas de arquivos não suportados originalmente pelo HBoot.
-
-##### Módulos HBoot já implementados
-
-Módulos HBoot vêm sendo desenvolvidos para estender a funcionalidade do HBoot. Até o momento, estes são:
-
-* Spartan: implementação modelo de um módulo HBoot. Exibe uma mensagem na tela e solicita ao usuário o pressionamento de qualquer tecla para reiniciar o computador e iniciar o Hexagonix.
-* x86-Detect: módulo de diagnóstico e inicialização do hardware do computador. Esse módulo detecta unidades de armazenamento disponíveis, verifica requisitos mínimos do computador para a execução do Hexagon (como memória RAM e processador), detecta e inicializa portas seriais e paralelas e exibe para o usuário se o dispositivo pode ou não executar o Hexagonix. Futuramente, será utilizado para encontrar outros sistemas operacionais instalados, realizar o teste de memória RAM e de desempenho de discos e encontrar e configurar dispositivos PCI. Uma entrada de inicialização rápida ao x86-Detect pode ser adicionada de forma permanente no HBoot, para execução mais fácil e com menos passos.
-
-<p align="center">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/x86-Detect.png" width="600" height="500">
-</p>
-
-#### Carregar um sistema operacional do tipo DOS com modDOS
-
-No contexto do desenvolvimento do Hexagonix, o HBoot também pode carregar e executar o núcleo do sistema operacional de código livre FreeDOS[^2], para que ferramentas utilitárias já estabelecidas e robustas que sejam executadas em ambiente DOS possam ser executadas sobre o volume e arquivos Hexagonix/Andromeda. Essa função é realizada por um módulo HBoot (modDOS) que, até esse momento, se integra ao HBoot como uma biblioteca de módulo, já contendo toda a estrutura necessária para ser um módulo independente. Futuramente, o plano é que essa biblioteca/módulo seja removida do HBoot e mantida como um módulo separado, removendo a complexidade e o código do HBoot. Por desempenho, neste momento, o modDOS ainda é mantido na árvore de código do HBoot. O FreeDOS foi escolhido devido a diversas características interessantes que facilitam a implementação necessária no modDOS. Primeiramente, o kernel do sistema está contido em um único arquivo, geralmente "KERNEL.SYS"[^3] (embora que no contexto do modDOS, o nome de arquivo não é importante, visto que a inicialização não se dará pelo inicializador do projeto FreeDOS, que espera encontrar um arquivo com este nome), além da sua distribuição livre e gratuita. Já outros sistemas do tipo DOS, como o MS-DOS (principalmente em sua versão anterior a 7.0), podem utilizar mais de um arquivo no disco, bem como exigem que estes arquivos estejam em locais definidos e sejam contíguos no disco. Essa obrigatoriedade de localização definida não pode ser atendida aqui, visto que a instalação de uma cópia do sistema DOS ocorre já em uma partição Hexagonix. A instalação de um sistema DOS é opcional e o modDOS torna a execução deste tipo de sistema mais fácil, sendo necessária apenas a cópia do kernel, interpretador de comandos  demais utilitários desejados a uma partição do Hexagonix. Além disso, a utilização de um sistema de distribuição livre remove qualquer problema de licenciamento. A instalação de um sistema DOS juntamente ao Hexagonix/Andromeda permite que ferramentas DOS sejam utilizadas para realizar tarefas específicas deste ambiente ou adicionar funções e utilitários que ainda não estão disponíveis ou terminados para serem utilizados no Hexagonix, como um utilitário de particionamento de disco, por exemplo [^4]. Caso os componentes de sistema do FreeDOS não estejam presentes no disco (a cópia dos arquivos do FreeDOS não faz parte da imagem e instalação padrão), a inicialização em modo de compatibilidade DOS não irá ocorrer.
-
-### Exemplo de módulo HBoot
-
-Abaixo é possível encontrar um exemplo de implementação de módulo HBoot (especificação de módulo HBoot v2.0):
-
-```assembly
-;;************************************************************************************
-;;
-;;    
-;;                                Módulo do HBoot
-;;        
-;;                             Hexagon® Boot - HBoot
-;;           
-;;                 Copyright © 2020-2022 Felipe Miguel Nery Lunkes
-;;                         Todos os direitos reservados
-;;                                  
-;;************************************************************************************
-
-use16
-
-;; O módulo deve apresentar um cabeçalho especial de imagem HBoot
-;; São 6 bytes, com assinatura (número mágico) e arquitetura alvo
-
-cabecalhoHBoot:
-
-.assinatura:  db "HBOOT"       ;; Assinatura, 5 bytes
-.arquitetura: db 01h           ;; Arquitetura (i386), 1 byte
-.versaoMod:   db 01h           ;; Versão, com 1 byte
-.subverMod:   db 00h           ;; Subversão, com 1 byte
-.nomeMod:     db "NOME    "    ;; Nome do módulo, com 8 bytes
-
-;; Configurar pilha e ponteiro
-
-    cli            ;; Desativar interrupções
-    
-    mov ax, 0x2000 ;; Definir aqui os registradores de pilha
-    mov ss, ax
-    mov sp, 0
-    
-    sti            ;; Habilitar interrupções
-     
-    clc 
-
-    mov ax, 0x2000 ;; Definir aqui os registradores de segmento
-    mov ds, ax
-    mov es, ax
-    
-    sti            ;; Habilitar as interrupções
-
-;; Seu código aqui
-
-```
-
-### Sistemas de arquivos suportados
-
-* FAT16B
-* FAT12 (em desenvolvimento)
-
-Novos sistemas de arquivos serão implementados no futuro, incluindo o suporte destes por meio de módulos HBoot.
-
 ### Reportar bugs
 
 O HBoot ganhou muita complexidade desde o início de seu desenvolvimento, em 2020. Devido a esse aumento de código e a natureza de sua operação (16-bit), bugs podem ser encontrados. Os mesmos podem ser reportados no repositório ou por email, disponível no final deste arquivo.
@@ -256,110 +176,7 @@ O Hexagon é um núcleo (kernel) monolítico executado em modo protegido 32-bit,
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/LogoHexagon.png" width="250" height="250">
 </p>
 
-### História
-
-O kernel foi inicialmente desenhado e escrito visando uma estrutura e funcionamento próximos de sistemas DOS (Disk Operating System), como MS-DOS, nos ano de 2015 a 2017. Sendo assim, muitas chamadas de sistema e nomes de dispositivo seguiam uma sintaxe e nomes DOS. Com o passar do tempo, houve o interesse de aproximar o então núcleo do Andromeda, que a essa altura não possuia nome e era mantido junto ao código da distribuição, a uma estrutura e funcionamento mais próximos de sistemas do tipo Unix, como BSD ou Linux, por exemplo. Desta forma, muitas partes do kernel foram reimplementadas tendo em mente o novo objetivo. O código do núcleo foi separado do restante do Sistema e se tornou independente, em questão de desenvolvimento e também de funcionamento, além de ganhar um nome, Hexagon. Foi escrita uma camada de abstração de hardware com a inclusão de chamadas de sistema conhecidas no mundo Unix, como abrir(), fechar(), ler() e escrever()[^5]. Os dispositivos ganharam nome e as unidades de disco mudaram da nomenclatura DOS e foram para nomes de dispositivo Unix. O kernel então passa a seguir um processo de inicialização conhecido, com a execução, com PID 1, do primeiro processo do usuário, init, que então carrega o restante dos componentes. Foram então escritos utilitários Unix-like que passassem a utilizar a API Unix-like do kernel, e várias ferramentas Unix-like já foram escritas desde então (2017 em diante).
-
-### O formato executável HAPP
-
-O formato de imagem executável HAPP foi desenvolvida para o Hexagon para permitir o desenvolvimento de imagens que possam ser verificadas e validadas quanto a arquitetura e versões mínimas do kernel necessárias para a correta execução. O cabeçalho também armazena informações importantes, permitindo ao desenvolvedor adicionar diretamente um ponto de entrada, independente de onde ele esteja no interior da imagem, algo que deveria ser redirecionado anteriormente, quando a imagem executável era no formato binário puro. A imagem HAPP também permite validar se a imagem a ser carregada é realmente uma imagem executável, impedindo então que arquivos não suportados sejam executados, mesmo que não se tratem sequer de arquivos executáveis. Também permite que o sistema verifique as dependências do código, como a já citada arquitetura, bem como os números de versão do Hexagon, que devem ser iguais ou superiores ao mínimo especificado pelo cabeçalho. Todas as imagens HAPP devem apresentar este cabeçalho completo, incluindo as sessões reservadas, a fim de funcionarem corretamente em versões posteriores do Sistema. As imagens HAPP são sempre 32-bit. Para imagens 16-bit, o sistema utiliza a implementação de cabeçalho HBoot (implementação encontrada em módulos de inicialização do sistema).
-
-Em linguagem Assembly, a linguagem de desenvolvimento do sistema, o cabeçalho, em sua especificação 2.0:
-
-```assembly
-cabecalhoAPP:
-
-.assinatura:      db "HAPP" ;; Assinatura
-.arquitetura:     db 01h    ;; Arquitetura (i386 = 01h)
-.versaoMinima:    db 8      ;; Versão mínima do Hexagon
-.subversaoMinima: db 40     ;; Subversão mínima do Hexagon
-.pontoEntrada:    dd        ;; Offset do ponto de entrada (referência à função principal aqui)
-.tipoImagem:      db 01h    ;; Tipo de imagem executável (executável = 01h)
-.reservado0:      dd 0      ;; Reservado (Dword)
-.reservado1:      db 0      ;; Reservado (Byte)
-.reservado2:      db 0      ;; Reservado (Byte)
-.reservado3:      db 0      ;; Reservado (Byte)
-.reservado4:      dd 0      ;; Reservado (Dword)
-.reservado5:      dd 0      ;; Reservado (Dword)
-.reservado6:      dd 0      ;; Reservado (Dword)
-.reservado7:      db 0      ;; Reservado (Byte)
-.reservado8:      dw 0      ;; Reservado (Word)
-.reservado9:      dw 0      ;; Reservado (Word)
-.reservado10:     dw 0      ;; Reservado (Word)
-```
-
-Os aplicativos para Hexagonix/Andromeda podem ser desenvolvidos em Assembly, até o momento, utilizando o montador de sua preferência (desde que consiga gerar código x86). Bibliotecas para o desenvolvimento de aplicativos, contendo macros, funções e chamadas de sistema, podem ser encontradas [aqui (libasm)](https://github.com/hexagonix/libasm) e foram desenvolvidas para funcionar com os montadores [fasm](https://flatassembler.net/) e [nasm](https://www.nasm.us/). Ao acessar o repositório da **libasm**, você terá acesso às bibliotecas divididas de acordo com o suporte a um montador específico. O suporte a mais montadores pode ser adicionado no futuro. Uma biblioteca C (libc) também está nos planos para um futuro próximo.
-
-Abaixo, uma implementação de um pequeno aplicativo escrito como exemplo, que utiliza o cabeçalho e chamadas de sistema do Hexagon, escrito em linguagem Assembly x86 em sintaxe Intel e montada com o auxílio do flat assembler (FASM). Note que para solicitar o acesso às chamadas do Hexagon, este aplicativo deve importar o arquivo **hexagon.s** da libasm (a depender do montador escolhido. Neste caso, fasm/hexagon.s). Este aplicativo envia uma mensagem ao terminal e se encerra em seguida. Você pode obter mais informações sobre a especificação do formato HAPP na biblioteca HAPP da [libasm para fasm](https://github.com/hexagonix/libasm/blob/main/fasm/HAPP.s) ou [libasm para nasm](https://github.com/hexagonix/libasm/blob/main/nasm/HAPP.s). Abaixo, você poderá obter mais informações sobre as chamadas de sistema.
-
-```assembly
-;; Este é um template para a construção de um app de modo texto para 
-;; o Hexagonix/Andromeda!
-;;
-;; Escrito por Felipe Miguel Nery Lunkes em 04/12/2020
-;;
-;; Voce pode gerar uma imagem HAPP executável utilizando o montador
-;; FASM. Para isso, utilize a linha de comando abaixo:
-;;
-;; fasmX tapp.asm
-;;       ou
-;; fasmX tapp.asm tapp.app
-
-format binary as "app" ;; Define o formato e extensão do arquivo gerado
-
-use32
-
-;; O cabeçalho pode ser definido diretamente assim e preenchido manualmente
-;; ou através de um macro disponível na biblioteca HAPP.s, da libasm.
-;; Abaixo, a implementação manual (que deve ser desencorajada, uma vez que 
-;; alterações na API levariam a alterações manuais em todos os fontes. Isso
-;; não ocorre com a utilização da biblioteca, que, ao ser atualizada, passa
-;; a tornar compatíveis todos os fontes, automatizando o processo).
-
-cabecalhoAPP:
-
-.assinatura:      db "HAPP"    ;; Assinatura
-.arquitetura:     db 01h       ;; Arquitetura (i386 = 01h)
-.versaoMinima:    db 8         ;; Versão mínima do Hexagon
-.subversaoMinima: db 40        ;; Subversão mínima do Hexagon
-.pontoEntrada:    dd inicioAPP ;; Offset do ponto de entrada
-.tipoImagem:      db 01h       ;; Imagem executável
-.reservado0:      dd 0         ;; Reservado (Dword)
-.reservado1:      db 0         ;; Reservado (Byte)
-.reservado2:      db 0         ;; Reservado (Byte)
-.reservado3:      db 0         ;; Reservado (Byte)
-.reservado4:      dd 0         ;; Reservado (Dword)
-.reservado5:      dd 0         ;; Reservado (Dword)
-.reservado6:      dd 0         ;; Reservado (Dword)
-.reservado7:      db 0         ;; Reservado (Byte)
-.reservado8:      dw 0         ;; Reservado (Word)
-.reservado9:      dw 0         ;; Reservado (Word)
-.reservado10:     dw 0         ;; Reservado (Word)
-
-;;*************************************************************
-
-include "hexagon.s" ;; Incluir as chamadas de sistema
-
-;;*************************************************************
-
-;; Variaveis e constantes
-
-msg: db 10, 10, "Este e um template com um exemplo de aplicativo HAPP simples!", 10, 0
-
-;;*************************************************************
-
-;; Ponto de entrada
-
-inicioAPP:
-
-    mov esi, msg
-
-    imprimirString ;; Aqui temos um macro que configura e chama uma função da API
-
-    Hexagonix encerrarProcesso ;; Outro macro que solicita qual chamada realizar
-```
-
-Uma documentação mais detalhada do Hexagon está em preparação e está sendo liberada conforme pronta.
+[![Hexagon Kernel](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=Hexagon&theme=dark)](https://github.com/hexagonix/Hexagon)
 
 ### Chamadas de sistema
 
@@ -372,6 +189,8 @@ As chamadas de sistema são realizadas no estilo BSD, com o número da função 
 <summary align='left'><strong>Ambiente Hexagonix</strong></summary>
 
 O Hexagonix implementa, junto ao Hexagon, uma série de utilitários Unix-like, com funcionalidade e sintaxe de uso semelhante à sistemas UNIX e Unix-like. **Utilitários como init, login, sh, top, ps, cp, rm, cat, clear, man, dentre outros, estão inclusos na distribuição padrão do Hexagonix**. Estes utilitários compõem o pacote de utilitários base do Hexagonix. As ferramentas de inicialização de ambiente de modo usuário e login estão neste pacote, bem como vários arquivos de configuração deste ambiente. Estes utilitários não apresentam, no geral, uma interface gráfica, apenas uma interface em linha de comando (CLI). Entretanto, podem ser solicitados por aplicativos que apresentem interface gráfica. Este ambiente está disponível tanto na distribuição do [Hexagonix](hexagonix.img) quanto na distribuição [Andromeda](andromeda.img).
+
+[![Unix-Apps](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=unix-apps&theme=dark)](https://github.com/hexagonix/unix-apps)
 
 ### Alguns aplicativos e utilitários do ambiente Hexagonix
 
@@ -417,6 +236,8 @@ O Hexagonix recebeu um port do montador [Fasm](https://flatassembler.net/index.p
 
 O ambiente Andromeda é construído sobre a base sólida fornecida pelo Hexagonix, incluindo aplicativos e utilitários que não implementam a filosofia Unix ou apresentam sintaxe e forma de uso bastante diferentes do que se esperaria de um ambiente Unix. Desta forma, eles são separados como **aplicativos Andromeda**, e não fazem parte da distribuição padrão do Hexagonix. Aqui estão o aplicativo de configurações do Sistema, calculadora, gerenciador de fontes, editores de texto e a IDE desenvolvida para o Andromeda. Estes utilitários podem ou não apresentar uma interface gráfica. Juntamente a eles, compõem o ambiente Andromeda bibliotecas desenvolvidas para permitir o desenvolvimento de aplicativos, como a biblioteca **Estelar**. Esse ambiente só está disponível na distribuição [Andromeda](andromeda.img).
 
+[![Andromeda-Apps](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=andromeda-apps&theme=dark)](https://github.com/hexagonix/andromeda-apps)
+
 ### Alguns aplicativos e utilitários do ambiente Andromeda
 
 * Configurações do Sistema (Config)
@@ -443,68 +264,7 @@ A instalação padrão do Hexagonix também fornece uma série de fontes que pod
 
 As fontes de modo gráfico para Hexagon são desenvolvidas como um bitmap em Assembly que, compiladas, geram uma imagem binária da fonte com representações de cada caractere. Os códigos das fontes padrão do Hexagonix já foram liberados como código livre e estão disponíveis no [repositório de fontes do Hexagonix](https://github.com/hexagonix/Fontes). 
 
-### Como criar sua própria fonte gráfica
-
-Sinta-se a vontade para realizar o download da fonte [modelo](https://github.com/hexagonix/Fontes/blob/main/modelo.asm), que já vem estruturada mas com os caracteres em branco, e desenhar a sua própria fonte gráfica! Para isso, você precisa saber algumas informações técnicas sobre elas:
-
-* As fontes apresentam um altura de 16 e largura de 8 pixels. Essa informação é necessária para garantir que a sua fonte não apresente problemas durante o uso.
-* Você pode dividir livremente os espaços reservados para acentuação e outras características gráficas de cada caractere, como cedilha ou porções que ficam abaixo da linha de caracteres, como y, vírgula e etc.
-* As fontes são desenhadas no formato bitmap. Sendo assim, cada caractere é um mapa de pixels composto de 0s e 1s. Os 0s simbolizam áreas que não serão exibidas do caractere, enquanto os 1s representam os pixels do caractere que serão exibidos ao usuário. Você deve alterar cada matriz de caractere na fonte modelo adicionando os 1s onde deseja que os pixels sejam exibidos para formar o caractere. Abaixo, você verá um exemplo de um caractere em branco e a mesma representação deste caractere pronto para a fonte.
-
-O código abaixo mostra a representação em bitmap da cerquilha (#) na fonte [modelo](https://github.com/hexagonix/Fontes/blob/main/modelo.asm) e a implementação na fonte [hint](https://github.com/hexagonix/Fontes/blob/main/hint.asm).
-
-```assembly
-;; Representação em branco do caractere cerquilha (#), no modelo 
-
-.cerquilha: 
-
-	db 00000000b ;; Dois pixels de altura para caracteres acima da letra
-	db 00000000b
-	
-	db 00000000b
-	db 00000000b
-	db 00000000b
-	db 00000000b
-	db 00000000b
-	db 00000000b
-	db 00000000b
-	db 00000000b
-	db 00000000b
-
-	db 00000000b ;; Cinco pixels de altura para caracteres acima da letra
-	db 00000000b
-	db 00000000b
-	db 00000000b
-	db 00000000b
-
-;; Representação em branco do caractere cerquilha (#), na fonte hint 
-
-.cerquilha: 
-
-	db 00000000b
-	db 00000000b
-	
-	db 00000000b
-	db 00000000b
-	db 00100010b
-	db 00100010b
-	db 01111111b
-	db 00100010b
-	db 01111111b
-	db 00100010b
-	db 00100010b
-
-	db 00000000b
-	db 00000000b
-	db 00000000b
-	db 00000000b
-	db 00000000b
-
-```
-
-Você já deve conseguir visualizar, dentro da matriz, a cerquilha, marcada pela presença de 1s.
-
-Você pode desenvolver quantas fontes quiser e brincar com designs diferentes e inovadores, bem como estender os caracteres disponíveis (utilizando a referência ASCII).
+[![Andromeda-Apps](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=xfnt-apps&theme=dark)](https://github.com/hexagonix/xfnt)
 
 </details>
 
@@ -516,6 +276,8 @@ Você pode desenvolver quantas fontes quiser e brincar com designs diferentes e 
 O Hexagonix/Andromeda também fornece funções que devem ser utilizadas para interagir com o próprio ambiente do sistema. As bibliotecas são utilizadas para acessar funções implementadas pelo Hexagon ou pelas próprias bibliotecas, permitindo o desenvolvimento facilitado de aplicativos e utilitários tanto para o ambiente Hexagonix quanto para o Andromeda. As bibliotecas implementam funções para exibição de texto, cálculos matemáticos, envio de mensagens, abertura de arquivos e dispositivos e muito mais. A biblioteca básica (hexagon.s) fornece funções acessíveis para ambos os ambientes possíveis de distribuição, enquanto outras bibliotecas podem ser exclusivas do ambiente Andromeda. Essas bibliotecas incluem funções gráficas para montar interfaces em modo gráfico (Andromeda), bem como funções para verificar a versão do sistema atualmente em execução (Hexagonix e Andromeda). Os utilitários base Hexagonix realizam a checagem da versão do Hexagon para verificar se podem ser executados, utilizando o utilitário Unix uname ou diretamente por uma chamada de sistema do Hexagon.
 
 Para saber mais e verificar cada função disponível nas bibliotecas de desenvolvimento do sistema, veja o repositório da [libasm](https://github.com/hexagonix/libasm).
+
+[![lib](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=lib&theme=dark)](https://github.com/hexagonix/lib)
 
 </details>
 
