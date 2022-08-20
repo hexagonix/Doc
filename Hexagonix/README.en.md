@@ -17,7 +17,7 @@ All rights reserved.
 
 <details title="License" align='left'>
 <br>
-<summary align='left'><strong>License</strong></summary>
+<summary align='left'><strong>1️⃣ License</strong></summary>
 
 Hexagonix Operating System
 
@@ -55,7 +55,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 <details title="Download and test the system right now" align='left'>
 <br>
-<summary align='left'><strong>Download and test the system right now</strong></summary>
+<summary align='left'><strong>2️⃣ Download and test the system right now</strong></summary>
 
 At [end of this file](https://github.com/hexagonix/Doc/blob/main/Hexagonix/README.en.md#how-to-test-hexagonix-or-andromeda) you will find a tutorial to run the Hexagonix/Andromeda on your computer, either in a virtualized or native version. Remember that it is necessary to have an x86 architecture computer or an emulator, if you are using a device of another architecture for testing.
 
@@ -65,7 +65,7 @@ You can go to the [releases](https://github.com/hexagonix/hexagonix/releases) se
 
 <details title="System documentation" align='left'>
 <br>
-<summary align='left'><strong>System documentation</strong></summary>
+<summary align='left'><strong>3️⃣ System documentation</strong></summary>
 
 * [System Documentation (under construction)](https://github.com/hexagonix/Doc)
 
@@ -73,7 +73,7 @@ You can go to the [releases](https://github.com/hexagonix/hexagonix/releases) se
 
 <details title="Building the system" align='left'>
 <br>
-<summary align='left'><strong>Building the system</strong></summary>
+<summary align='left'><strong>4️⃣ Building the system</strong></summary>
 
 * [Build the system](https://github.com/hexagonix/build/blob/main/README.en.md)
 
@@ -81,7 +81,7 @@ You can go to the [releases](https://github.com/hexagonix/hexagonix/releases) se
 
 <details title="Help with the development of Hexagonix/Andromeda" align='left'>
 <br>
-<summary align='left'><strong>Help with the development of Hexagonix/Andromeda</strong></summary>
+<summary align='left'><strong>5️⃣ Help with the development of Hexagonix/Andromeda</strong></summary>
 
 If you have knowledge of writing x86 assembly code and would like to help develop the system, feel free to send me an email! See [here](https://github.com/hexagonix/hexagonix/blob/main/README.en.md#author--contact) how to contact me!
 
@@ -89,7 +89,7 @@ If you have knowledge of writing x86 assembly code and would like to help develo
 
 <details title="Report system errors" align='left'>
 <br>
-<summary align='left'><strong>Report system errors</strong></summary>
+<summary align='left'><strong>6️⃣ Report system errors</strong></summary>
 
 You can report system errors [here](https://github.com/hexagonix/hexagonix/blob/main/README.en.md#reportar-errors).
 
