@@ -101,7 +101,7 @@ You can report system errors [here](https://github.com/hexagonix/hexagonix/blob/
 
 <details title="Development" align='left'>
 <br>
-<summary align='left'><strong>Development</strong></summary>
+<summary align='left'><strong>1️⃣ Development</strong></summary>
 
 Hexagonix/Andromeda and all its components have been developed since 2015 and were written completely in Assembly language.
 
@@ -109,7 +109,7 @@ Hexagonix/Andromeda and all its components have been developed since 2015 and we
 
 <details title="Why two names? Hexagonix and Andromeda, what are they?" align='left'>
 <br>
-<summary align='left'><strong>Why two names? Hexagonix and Andromeda, what are they?</strong></summary>
+<summary align='left'><strong>2️⃣ Why two names? Hexagonix and Andromeda, what are they?</strong></summary>
 
 In the beginning, Andromeda was intended to be a complete operating system, composed of the kernel, libraries, graphical and text interface and utilities. Later, with the passage of time and the change in approach to the architecture and objectives of the system, the components were separated and became independent projects in terms of functioning, organization and development. As you will see below, the Andromeda core was separated from the rest of the Andromeda code tree, becoming an independent project, even given a name, Hexagon. From then on, the idea arose of making the composition of the system more flexible and allowing the development of distributions, as in GNU/Linux. In this way, distributions of Hexagon could be created, grouping the necessary components for the basic functioning (Hexagonix) and allowing the extension of the system if necessary, with new components, modules and utilities, being the userland defined in each case. With the change of architecture of the system itself, with the core approaching a Unix-like architecture, new utilities in Unix style and syntax were developed and kept separate, in another project. From the original Andromeda project we have the Andromeda-specific applications and graphics libraries. A base system was then created, which by itself can already be fully executed, and became the base of Andromeda. This base system is called Hexagonix, and it consists of the HBoot boot loader, the Hexagon kernel, the shell, Unix environment libraries (here called Hexagonix environment) and Unix utilities. This system is fully functional, but lacks graphical resources and applications developed for the Andromeda environment. In this way, Andromeda stands out for being one more layer built on top of Hexagonix, with graphics resources, a graphics library and utilities that work on top of Hexagonix and extend its function. This built environment was named the Andromeda environment. To meet different needs, the two distributions will always be kept. Both versions are functional and can be used depending on the desired end use. In summary, both Hexagonix and Andromeda are distributions of the Hexagon kernel, differing in the components included.
 
@@ -119,7 +119,7 @@ To better understand this distribution model, a suitable example would be what h
 
 <details title="What about the source code?" align='left'>
 <br>
-<summary align='left'><strong>What about the source code?</strong></summary>
+<summary align='left'><strong>3️⃣ What about the source code?</strong></summary>
 
 The project's source code has now been made publicly available. The kernel code and Unix-like utilities and Andromeda applications are available, as well as the source package that makes up HBoot. Disk images with both Hexagonix and Andromeda are now available and free to distribute. Please note the [license](LICENSE) available in this repository for more information. It is worth mentioning that the license of each code package that makes up the system (Hexagon, HBoot, Hexagonix utilities, Andromeda utilities, fonts and other components) may vary. Each package can be released with a different license type (like GPL, MIT or BSD, for example). Keep an eye on each license in the respective repositories. Components that are not available in the official repository are still closed source, governed by a proprietary Hexagonix license, which can be found [here](https://github.com/hexagonix/Doc/blob/main/LICENSES/Hexagonix ).
 
@@ -127,7 +127,7 @@ The project's source code has now been made publicly available. The kernel code 
 
 <details title="The Hexagonix/Andromeda story" align='left'>
 <br>
-<summary align='left'><strong>The Hexagonix/Andromeda story</strong></summary>
+<summary align='left'><strong>4️⃣ The Hexagonix/Andromeda story</strong></summary>
 
 Andromeda started as an implementation in a structure similar to DOS-like systems, with an interpreter with built-in commands with names, syntax and results similar to a generic DOS. The command interpreter presented file manipulation and other commands internally, as in conventional DOS systems. Disk drives were also defined as letters. Later, there was a growing interest and fascination in the functioning of Unix systems and all the code was rewritten or adapted to make the System kernel a Unix-like kernel. All System components, as in DOS, were kept in a single tree until then. With Andromeda version 1.5, codenamed "Unix-like", the kernel has been heavily modified and rewritten to fit the Unix philosophy. Changes even included the way devices were handled, writing a hardware abstraction layer managing devices as files, and adding open(), close(), write() and to read(). The Unix-based utilities were also written, removing commands from the default interpreter, which was rewritten to make way for a Unix-like shell. The internal commands were moved to the utilities, which now have a Unix-style structure and syntax. The rest of the utilities, such as mount, were written already taking advantage of the open() call, which is also used to mount volume, in addition to opening ordinary files from the volume. The open() call is also used to start other peripherals such as serial and parallel ports. The write() call also works with devices and files, as well as close(). A VFS (Virtual File System) was also introduced, which will support multiple file systems in the future and make file management transparent to the System, programmers and users. Also included are new hardware management functions and many improvements and bug fixes. The System gains new Unix utilities until the present moment. After this change in the proposal and architecture, the components were separated and allocated to specific projects. The union of these components forms the operating system. In the case of Hexagonix, we have HBoot, Hexagon, shell, Unix libraries and applications, while Andromeda extends Hexagonix, incorporating other libraries and applications that use them.
 
@@ -139,7 +139,7 @@ Andromeda started as an implementation in a structure similar to DOS-like system
 
 <details title="Saturno" align='left'>
 <br>
-<summary align='left'><strong>Saturno</strong></summary>
+<summary align='left'><strong>1️⃣ Saturno</strong></summary>
 
 The first component of Hexagonix/Andromeda is Saturno. It is responsible for taking control of the boot process performed by the BIOS/UEFI and looking in the volume for the second boot stage. For that, it implements a driver for reading a FAT16 file system. The second boot stage (see below) can implement drivers for other filesystems and is responsible for finding Hexagon, loading HBoot modules or loading a compatible DOS-like system (BETA version).
 
@@ -147,7 +147,7 @@ The first component of Hexagonix/Andromeda is Saturno. It is responsible for tak
 
 <details title="Hexagon Boot (HBoot)" align='left'>
 <br>
-<summary align='left'><strong>Hexagon Boot (HBoot)</strong></summary>
+<summary align='left'><strong>2️⃣ Hexagon Boot (HBoot)</strong></summary>
 
 Hexagon Boot (HBoot) is a component designed to allow the Hexagon kernel to boot. Until then, initialization was performed by just one stage, which defined a very basic environment, loaded Hexagon into memory and immediately executed it, providing a very limited set of parameters. This is due to the fact that the code of this stage is restricted to 512 bytes, which limits the performance of several tests and data processing. With HBoot, it was possible to expand the number of tasks performed before running Hexagon, as well as the possibility to provide more information about the device and boot environment. This is particularly important to allow the creation of a device tree that Hexagon can use to decide how to handle each identified device. HBoot is able to check which disk drives are available on the machine, emit a boot tone, obtain the amount of available RAM memory installed and allow or not to proceed with the boot process according to this information. If no user interaction is detected (within 3 seconds after HBoot is started and messages are displayed to the user), HBoot will perform additional tests to verify the device's ability to run the system and will load and run Hexagon (present in a file on the volume named **HEXAGON.SIS**). After loading, HBoot transfers control to Hexagon, which is initialized and stores the data provided by HBoot in the kernel environment.
 
@@ -169,7 +169,7 @@ HBoot has gained a lot of complexity since the beginning of its development in 2
 
 <details title="Hexagon kernel" align='left'>
 <br>
-<summary align='left'><strong>Hexagon kernel</strong></summary>
+<summary align='left'><strong>3️⃣ Hexagon kernel</strong></summary>
 
 ### Which is
 
@@ -189,7 +189,7 @@ System calls are BSD-style, with the function number present on the stack and th
 
 <details title="Hexagonix environment" align='left'>
 <br>
-<summary align='left'><strong>Hexagonix environment</strong></summary>
+<summary align='left'><strong>4️⃣ Hexagonix environment</strong></summary>
 
 Hexagonix implements, together with Hexagon, a series of Unix-like utilities, with functionality and syntax similar to UNIX and Unix-like systems. **Utilities such as init, login, sh, top, ps, cp, rm, cat, clear, man, among others, are included in the standard distribution of Hexagonix**. These utilities make up the Hexagonix base utilities package. The login and user-mode environment startup tools are in this package, as well as several configuration files for this environment. These utilities generally do not have a graphical interface, only a command-line interface (CLI). However, they can be requested by applications that have a graphical interface. This environment is available in both the [Hexagonix](hexagonix.img) distribution and the [Andromeda](andromeda.img) distribution.
 
@@ -236,7 +236,7 @@ Hexagonix received a port of the [fasm](https://flatassembler.net/index.php) ass
 
 <details title="Andromeda environment" align='left'>
 <br>
-<summary align='left'><strong>Andromeda environment</strong></summary>
+<summary align='left'><strong>5️⃣ Andromeda environment</strong></summary>
 
 The Andromeda environment is built on the solid foundation provided by Hexagonix, including applications and utilities that do not implement the Unix philosophy or have a very different syntax and usage than you would expect from a Unix environment. In this way, they are separated as **Andromeda apps**, and are not part of the standard distribution of Hexagonix. Here are the System settings app, calculator, font manager, text editors and the IDE developed for Andromeda. These utilities may or may not have a graphical interface. Together with them, the Andromeda environment comprises libraries developed to allow the development of applications, such as the **Estelar** library. This environment is only available in the [Andromeda](andromeda.img) distribution.
 
@@ -262,7 +262,7 @@ There are no third-party applications available for the Andromeda environment ye
 
 <details title="Hexagonix graphic fonts" align='left'>
 <br>
-<summary align='left'><strong>Hexagonix graphic fonts</strong></summary>
+<summary align='left'><strong>6️⃣ Hexagonix graphic fonts</strong></summary>
 
 The default installation of Hexagonix also provides a number of fonts that can be loaded by the settings application or the font utility (font manager). These files are used to change the graphical display font for Hexagonix and Andromeda.
 
