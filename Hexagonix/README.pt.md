@@ -9,6 +9,10 @@ Todos os direitos reservados.
 
 # Sistema Operacional Hexagonix/Andromeda
 
+<p align="center">
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix.png" width="200" height="200">
+</p>
+
 # Antes de mais nada - um breve atalho para ir direto ao ponto
 
 
@@ -88,10 +92,6 @@ Você pode reportar erros do sistema [aqui](https://github.com/hexagonix/hexagon
 <hr>
 
 # Sobre o sistema
-
-<p align="center">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix.png" width="200" height="200">
-</p>
 
 <details title="Desenvolvimento" align='left'>
 <br>

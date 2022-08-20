@@ -9,6 +9,10 @@ All rights reserved.
 
 # Hexagonix/Andromeda Operating System
 
+<p align="center">
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix.png" width="200" height="200">
+</p>
+
 # First of all - a shortcut to get straight to the point
 
 <details title="License" align='left'>
@@ -86,10 +90,6 @@ You can report system errors [here](https://github.com/hexagonix/hexagonix/blob/
 <hr>
 
 # About the system
-
-<p align="center">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix.png" width="200" height="200">
-</p>
 
 <details title="Development" align='left'>
 <br>
