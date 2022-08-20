@@ -519,7 +519,9 @@ Para saber mais e verificar cada função disponível nas bibliotecas de desenvo
 
 # Como testar o Hexagonix ou o Andromeda
 
-## Requisitos do sistema
+<details title="Requisitos do sistema" align='left'>
+<br>
+<summary align='left'><strong>Requisitos do sistema</strong></summary>
 
 Abaixo, uma lista de requisitos mínimos e recomendados para testar o Hexagonix/Andromeda em uma máquina virtual ou máquina física.
 
@@ -550,14 +552,22 @@ Abaixo, uma lista de requisitos mínimos e recomendados para testar o Hexagonix/
 
 </details>
 
-## Obter as imagens de disco com a instação do sistema
+</details>
+
+<details title="Obter as imagens de disco com a instação do sistema" align='left'>
+<br>
+<summary align='left'><strong>Obter as imagens de disco com a instação do sistema</strong></summary>
 
 Para testar o Hexagonix ou Andromeda, você vai precisar de uma das imagens de disco disponíveis neste repositório, bem como a ferramenta [qemu](https://www.qemu.org) instalada em seu computador, caso deseje testar o sistema em ambiente virtualizado. A imagem também pode ser utilizada para a gravação em um disco físico em uma máquina real.
 
 Para testar o Hexagonix, obtenha o arquivo ['hexagonix.img'](hexagonix.img) neste repositório.
 Para testar o Andromeda, obtenha o arquivo ['andromeda.img'](andromeda.img) neste repositório.
 
-## Para o teste em ambiente virtualizado
+</details>
+
+<details title="Testar o Hexagonix em sistema virtualizado" align='left'>
+<br>
+<summary align='left'><strong>Testar o Hexagonix em sistema virtualizado</strong></summary>
 
 Primeiramente, você deve instalar a ferramenta qemu, que irá gerenciar a máquina virtual. Para isso, você pode instalar o qemu utilizando repositórios oficiais de distribuições Linux ou acessando [aqui](https://www.qemu.org) para obter os arquivos de instalação para Windows e macOS.
 
@@ -586,7 +596,11 @@ Você pode omitir po parâmetro -serial caso queira. Esse parâmetro garante que
 
 Lembrando que você deve utilizar uma versão/edição do qemu que consiga executar software escrito para a arquitetura x86 (i386 ou x86_64). Para realizar o download e instalação do qemu, clique [aqui](https://www.qemu.org/download/).
 
-## Para teste em máquina física
+</details>
+
+<details title="Testar o Hexagonix em máquina física" align='left'>
+<br>
+<summary align='left'><strong>Testar o Hexagonix em máquina física</strong></summary>
 
 Você deve utilizar o Linux/macOS ou alguma ferramenta disponível para o Windows que te permita gravar essa imagem em disco.
 
@@ -599,7 +613,12 @@ onde unidade equivale ao dispositivo desejado (geralmente sdb ou sdc, em caso de
 
 Vale ressaltar que o desempenho do sistema pode variar de acordo com a máquina testada. Junta-se a isso o fato de que as versões mais recentes do sistema não foram ou estão sendo testadas diretamente na máquina física, como sistema operacional principal. Caso algum problema ocorra ao executar o Hexagonix/Andromeda em uma máquina física, por favor reporte o erro detalhado [aqui](https://github.com/hexagonix/Distro/issues), em português ou inglês, informando dados como marca do dispositivo, processador, quantidade de memória RAM, placa de vídeo (se disponível) e periféricos conectados, bem como o dispositivo utilizado para instalar o sistema (unidade de disco interna ou mídia removível USB).
 
-## Primeiro uso
+</details>
+
+<details title="Primeiro uso e login" align='left'>
+<br>
+<summary align='left'><strong>Primeiro uso e login</strong></summary>
+
 
 Ao iniciar o sistema, você deverá introduzir um nome de usuário e senha. Para o primeiro uso, utilize
 
@@ -609,6 +628,8 @@ Senha: root
 ```
 
 Você pode adicionar outro usuário alterando o arquivo 'USUARIO.UNX' na raiz do disco. Lembre-se de não remover o usuário raiz (root). Isso pode tornar o sistema inoperante de forma permanente.
+
+</details>
 
 <details title="Reportar erros" align='left'>
 <br>
