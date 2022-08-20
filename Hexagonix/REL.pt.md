@@ -1,10 +1,10 @@
 <!-- Vamos adicionar o logotipo do sistema -->
 
 <p align="center">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix.png" width="250" height="250">
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix.png" width="200" height="200">
 </p>
 
-# Lançamentos do Hexagonix e do Andromeda
+# Lançamentos do Hexagonix
 
 Você pode obter as versões mais recentes do Hexagonix e do Andromeda acessando a área de [lançamentos](https://github.com/hexagonix/hexagonix/releases).
 
