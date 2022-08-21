@@ -298,11 +298,17 @@ O Hexagonix recebeu um port do montador [Fasm](https://flatassembler.net/index.p
 <br>
 <summary align='left'><strong>5️⃣ Ambiente Andromeda</strong></summary>
 
+<div align="justify">
+
 O ambiente Andromeda é construído sobre a base sólida fornecida pelo Hexagonix, incluindo aplicativos e utilitários que não implementam a filosofia Unix ou apresentam sintaxe e forma de uso bastante diferentes do que se esperaria de um ambiente Unix. Desta forma, eles são separados como **aplicativos Andromeda**, e não fazem parte da distribuição padrão do Hexagonix. Aqui estão o aplicativo de configurações do Sistema, calculadora, gerenciador de fontes, editores de texto e a IDE desenvolvida para o Andromeda. Estes utilitários podem ou não apresentar uma interface gráfica. Juntamente a eles, compõem o ambiente Andromeda bibliotecas desenvolvidas para permitir o desenvolvimento de aplicativos, como a biblioteca **Estelar**. Esse ambiente só está disponível na distribuição [Andromeda](andromeda.img).
+
+</div>
 
 [![Andromeda-Apps](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=andromeda-apps&theme=dark)](https://github.com/hexagonix/andromeda-apps)
 
 ### Alguns aplicativos e utilitários do ambiente Andromeda
+
+<div align="justify">
 
 * Configurações do Sistema (Config)
 * Editor de texto Quartzo
@@ -318,17 +324,23 @@ O ambiente Andromeda é construído sobre a base sólida fornecida pelo Hexagoni
 
 Ainda não existem aplicativos de terceiros disponíveis para o ambiente Andromeda. Caso esteja interessado, você pode construir o primeiro!
 
+</div>
+
 </details>
 
 <details title="Fontes gráficas do Hexagonix" align='left'>
 <br>
 <summary align='left'><strong>6️⃣ Fontes gráficas do Hexagonix</strong></summary>
 
+<div align="justify">
+
 A instalação padrão do Hexagonix também fornece uma série de fontes que podem ser carregadas pelo aplicativo de configurações ou utilitário de fontes (gerenciador de fontes). Esses arquivos são utilizados para alterar a fonte de exibição em modo gráfico do Hexagonix e Andromeda.
 
 As fontes de modo gráfico para Hexagon são desenvolvidas como um bitmap em Assembly que, compiladas, geram uma imagem binária da fonte com representações de cada caractere. Os códigos das fontes padrão do Hexagonix já foram liberados como código livre e estão disponíveis no [repositório de fontes do Hexagonix](https://github.com/hexagonix/xfnt). 
 
-[![Andromeda-Apps](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=xfnt&theme=dark)](https://github.com/hexagonix/xfnt)
+</div>
+
+[![Andromeda-xfnt](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=xfnt&theme=dark)](https://github.com/hexagonix/xfnt)
 
 </details>
 
@@ -336,10 +348,13 @@ As fontes de modo gráfico para Hexagon são desenvolvidas como um bitmap em Ass
 <br>
 <summary align='left'><strong>7️⃣ Bibliotecas de desenvolvimento do sistema</strong></summary>
 
+<div align="justify">
 
 O Hexagonix/Andromeda também fornece funções que devem ser utilizadas para interagir com o próprio ambiente do sistema. As bibliotecas são utilizadas para acessar funções implementadas pelo Hexagon ou pelas próprias bibliotecas, permitindo o desenvolvimento facilitado de aplicativos e utilitários tanto para o ambiente Hexagonix quanto para o Andromeda. As bibliotecas implementam funções para exibição de texto, cálculos matemáticos, envio de mensagens, abertura de arquivos e dispositivos e muito mais. A biblioteca básica (hexagon.s) fornece funções acessíveis para ambos os ambientes possíveis de distribuição, enquanto outras bibliotecas podem ser exclusivas do ambiente Andromeda. Essas bibliotecas incluem funções gráficas para montar interfaces em modo gráfico (Andromeda), bem como funções para verificar a versão do sistema atualmente em execução (Hexagonix e Andromeda). Os utilitários base Hexagonix realizam a checagem da versão do Hexagon para verificar se podem ser executados, utilizando o utilitário Unix uname ou diretamente por uma chamada de sistema do Hexagon.
 
 Para saber mais e verificar cada função disponível nas bibliotecas de desenvolvimento do sistema, veja o repositório da [libasm](https://github.com/hexagonix/libasm).
+
+</div>
 
 [![lib](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=lib&theme=dark)](https://github.com/hexagonix/lib)
 
@@ -353,7 +368,11 @@ Para saber mais e verificar cada função disponível nas bibliotecas de desenvo
 <br>
 <summary align='left'><strong>1️⃣ Requisitos do sistema</strong></summary>
 
+<div align="justify">
+
 Abaixo, uma lista de requisitos mínimos e recomendados para testar o Hexagonix/Andromeda em uma máquina virtual ou máquina física.
+
+</div>
 
 <details title="Requisitos mínimos" align='left'>
 <br>
@@ -390,16 +409,22 @@ Abaixo, uma lista de requisitos mínimos e recomendados para testar o Hexagonix/
 <br>
 <summary align='left'><strong>2️⃣ Obter as imagens de disco com a instação do sistema</strong></summary>
 
+<div align="justify">
+
 Para testar o Hexagonix ou Andromeda, você vai precisar de uma das imagens de disco disponíveis, bem como a ferramenta [qemu](https://www.qemu.org) instalada em seu computador, caso deseje testar o sistema em ambiente virtualizado. A imagem também pode ser utilizada para a gravação em um disco físico em uma máquina real.
 
 Para testar o Hexagonix, obtenha o arquivo ['hexagonix.img'](https://github.com/hexagonix/hexagonix/blob/main/hexagonix.img).
 Para testar o Andromeda, obtenha o arquivo ['andromeda.img'](https://github.com/hexagonix/hexagonix/blob/main/andromeda.img).
+
+</div>
 
 </details>
 
 <details title="Testar o Hexagonix em sistema virtualizado" align='left'>
 <br>
 <summary align='left'><strong>3️⃣ Testar o Hexagonix em sistema virtualizado</strong></summary>
+
+<div align="justify">
 
 Primeiramente, você deve instalar a ferramenta qemu, que irá gerenciar a máquina virtual. Para isso, você pode instalar o qemu utilizando repositórios oficiais de distribuições Linux ou acessando [aqui](https://www.qemu.org) para obter os arquivos de instalação para Windows e macOS.
 
@@ -432,11 +457,15 @@ Você pode omitir o parâmetro -serial caso queira. Esse parâmetro garante que 
 
 Lembrando que você deve utilizar uma versão/edição do qemu que consiga executar software escrito para a arquitetura x86 (i386 ou x86_64). Para realizar o download e instalação do qemu, clique [aqui](https://www.qemu.org/download/).
 
+</div>
+
 </details>
 
 <details title="Testar o Hexagonix em máquina física" align='left'>
 <br>
 <summary align='left'><strong>4️⃣ Testar o Hexagonix em máquina física</strong></summary>
+
+<div align="justify">
 
 Você deve utilizar o Linux/macOS ou alguma ferramenta disponível para o Windows que te permita gravar essa imagem em disco.
 
@@ -449,12 +478,15 @@ onde unidade equivale ao dispositivo desejado (geralmente sdb ou sdc, em caso de
 
 Vale ressaltar que o desempenho do sistema pode variar de acordo com a máquina testada. Junta-se a isso o fato de que as versões mais recentes do sistema não foram ou estão sendo testadas diretamente na máquina física, como sistema operacional principal. Caso algum problema ocorra ao executar o Hexagonix/Andromeda em uma máquina física, por favor reporte o erro detalhado [aqui](https://github.com/hexagonix/Distro/issues), em português ou inglês, informando dados como marca do dispositivo, processador, quantidade de memória RAM, placa de vídeo (se disponível) e periféricos conectados, bem como o dispositivo utilizado para instalar o sistema (unidade de disco interna ou mídia removível USB).
 
+</div>
+
 </details>
 
 <details title="Primeiro uso e login" align='left'>
 <br>
 <summary align='left'><strong>5️⃣ Primeiro uso e login</strong></summary>
 
+<div align="justify">
 
 Ao iniciar o sistema, você deverá introduzir um nome de usuário e senha. Para o primeiro uso, utilize
 
@@ -465,13 +497,19 @@ Senha: root
 
 Você pode adicionar outro usuário alterando o arquivo 'USUARIO.UNX' na raiz do disco. Lembre-se de não remover o usuário raiz (root). Isso pode tornar o sistema inoperante de forma permanente.
 
+</div>
+
 </details>
 
 <details title="Reportar erros" align='left'>
 <br>
 <summary align='left'><strong>6️⃣ Reportar erros</strong></summary>
 
+<div align="justify">
+
 Você pode reportar erros e ajudar a desenvolver o sistema. Para isso, abra uma notificação de erro [aqui](https://github.com/hexagonix/Distro/issues), informando o erro da forma mais detalhada possível (como marca do dispositivo, processador, quantidade de memória RAM, placa de vídeo e periféricos conectados, bem como o dispositivo utilizado para instalar o sistema, como unidade de disco interna ou mídia removível USB). Lembre-se de informar em qual aplicativo ocorreu o erro, caso o erro ocorra já com o sistema em operação. Caso o problema se dê no processo de inicialização, informe o que foi exibido/o comportamento observado da máquina.
+
+</div>
 
 </details>
 
@@ -519,13 +557,19 @@ Você pode ver mais [aqui](https://github.com/hexagonix/Distro/tree/main/Img).
 <br>
 <summary align='left'><strong>🎲 Idiomas</strong></summary>
 
+<div align="justify">
+
 Neste momento, tanto o sistema quanto a documentação estão disponíveis apenas em português. O documentação em inglês estará disponível em breve, e há planos para suporte ao inglês como possibilidade de idioma principal, além do português (grande parte do trabalho já foi feita).
+
+</div>
 
 </details>
 
 <details title="Inspirações" align='left'>
 <br>
 <summary align='left'><strong>🖼 Insipirações</strong></summary>
+
+<div align="justify">
 
 Este projeto foi possível e hoje consegue ver a luz do dia graças a muitos outros que já vieram antes e contribuiram com ideias de design e ensinando como deve funcionar um sistema operacional, mesmo que simples. São eles:
 
@@ -541,6 +585,8 @@ Além disso, outros projetos auxiliaram no desenvolvimento do Hexagonix/Andromed
 
 * [Snowdrop OS](http://www.sebastianmihai.com/snowdrop/), que me inspirou a escrever várias rotinas de controle de hardware e outras funções 16-bit disponíveis no HBoot. O código deste sistema foi liberado em domínio público.
 * [Alotware](https://github.com/0x5CE/alotware), que me inspirou a criar as funções de gerenciamento de processos nas versões iniciais do Hexagon (hoje, já reescritas inúmeras vezes). O código deste sistema foi liberado em domínio público.
+
+</div>
 
 </details>
 
@@ -570,9 +616,13 @@ Além disso, outros projetos auxiliaram no desenvolvimento do Hexagonix/Andromed
 <br>
 <summary align='left'><strong>📝 Notas de direitos autorais</strong></summary>
 
+<div align="justify">
+
 O Hexagonix/Andromeda foi desenvolvido por [Felipe Lunkes](https://github.com/felipenlunkes).
 
 Leia a licença para mais informações sobre direitos autorais, propriedade de código e redistribuição que se aplicam apenas aos arquivos disponíveis neste repositório (não se aplicam ao conjunto de arquivos de dados e de código fonte que compõem o Hexagonix/Andromeda). Vale ressaltar que o código dos componentes do sistema estão sendo liberados aos poucos e que cada pacote pode ser liberado com uma licença diferente. Sempre fique atento ao arquivo 'LICENSE' disponível em casa repositório para estar ciente dos direitos e obrigações legais.
+
+</div>
 
 </details>
 
