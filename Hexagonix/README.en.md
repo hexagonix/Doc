@@ -513,7 +513,7 @@ Feel free to contact me, report bugs or be interested in participating in the pr
 
 Hexagonix/Andromeda was developed from scratch by [Felipe Lunkes](https://github.com/felipenlunkes).
 
-Read the [license](LICENSE) for more information on copyright, code ownership, and redistribution that apply only to files available in this repository (does not apply to the set of data and source code files that make up Hexagonix/Andromeda) . It is worth mentioning that the code of the system components is being released little by little and that each package can be released with a different license. Always keep an eye on the 'LICENSE' file available in each repository to be aware of legal rights and obligations.
+Read the license for more information on copyright, code ownership, and redistribution that apply only to files available in this repository (does not apply to the set of data and source code files that make up Hexagonix/Andromeda) . It is worth mentioning that the code of the system components is being released little by little and that each package can be released with a different license. Always keep an eye on the 'LICENSE' file available in each repository to be aware of legal rights and obligations.
 
 </details>
 

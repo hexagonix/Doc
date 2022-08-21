@@ -514,9 +514,9 @@ Além disso, outros projetos auxiliaram no desenvolvimento do Hexagonix/Andromed
 <br>
 <summary align='left'><strong>📝 Notas de direitos autorais</strong></summary>
 
-O Hexagonix/Andromeda foi desenvolvido do zero por [Felipe Lunkes](https://github.com/felipenlunkes).
+O Hexagonix/Andromeda foi desenvolvido por [Felipe Lunkes](https://github.com/felipenlunkes).
 
-Leia a [licença](LICENSE) para mais informações sobre direitos autorais, propriedade de código e redistribuição que se aplicam apenas aos arquivos disponíveis neste repositório (não se aplicam ao conjunto de arquivos de dados e de código fonte que compõem o Hexagonix/Andromeda). Vale ressaltar que o código dos componentes do sistema estão sendo liberados aos poucos e que cada pacote pode ser liberado com uma licença diferente. Sempre fique atento ao arquivo 'LICENSE' disponível em casa repositório para estar ciente dos direitos e obrigações legais.
+Leia a licença para mais informações sobre direitos autorais, propriedade de código e redistribuição que se aplicam apenas aos arquivos disponíveis neste repositório (não se aplicam ao conjunto de arquivos de dados e de código fonte que compõem o Hexagonix/Andromeda). Vale ressaltar que o código dos componentes do sistema estão sendo liberados aos poucos e que cada pacote pode ser liberado com uma licença diferente. Sempre fique atento ao arquivo 'LICENSE' disponível em casa repositório para estar ciente dos direitos e obrigações legais.
 
 </details>
 
