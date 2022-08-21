@@ -311,7 +311,7 @@ The Andromeda environment is built on the solid foundation provided by Hexagonix
 * `System Settings (config)`
 * `Quartzo text editor`
 * `Lyoko IDE for application development`
-* `Electronic piano return Piano;`
+* `return Piano;`
 * `Serial communication utility`
 * `Andromeda Shell (ASH)` - A new shell for Andromeda
 * `Andromeda calculator`
