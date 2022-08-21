@@ -7,14 +7,11 @@ Todos os direitos reservados.
 
 -->
 
-# Sistema Operacional Hexagonix/Andromeda
-
 <p align="center">
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix.png" width="150" height="150">
 </p>
 
 # Ponto de partida
-
 
 <details title="Licença" align='left'>
 <br>

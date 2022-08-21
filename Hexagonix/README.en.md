@@ -7,8 +7,6 @@ All rights reserved.
 
 -->
 
-# Hexagonix/Andromeda Operating System
-
 <p align="center">
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix.png" width="150" height="150">
 </p>
