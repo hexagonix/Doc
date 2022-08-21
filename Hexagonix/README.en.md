@@ -85,9 +85,9 @@ You can go to the [releases](https://github.com/hexagonix/hexagonix/releases) se
 
 </details>
 
-<details title="Help with the development of Hexagonix/Andromeda" align='left'>
+<details title="Help with the development of Hexagonix" align='left'>
 <br>
-<summary align='left'><strong>5️⃣ Help with the development of Hexagonix/Andromeda</strong></summary>
+<summary align='left'><strong>5️⃣ Help with the development of Hexagonix</strong></summary>
 
 <div align="justify">
 

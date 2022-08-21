@@ -86,9 +86,9 @@ Você pode ir até a sessão de [lançamentos](https://github.com/hexagonix/hexa
 
 </details>
 
-<details title="Ajude no desenvolvimento do Hexagonix/Andromeda" align='left'>
+<details title="Contribua no desenvolvimento do Hexagonix" align='left'>
 <br>
-<summary align='left'><strong>5️⃣ Ajude no desenvolvimento do Hexagonix/Andromeda</strong></summary>
+<summary align='left'><strong>5️⃣ Contribua no desenvolvimento do Hexagonix</strong></summary>
 
 <div align="justify">
 
