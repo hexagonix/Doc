@@ -59,9 +59,13 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 <br>
 <summary align='left'><strong>2️⃣ Download and test the system right now</strong></summary>
 
+<div align="justify">
+
 At [end of this file](https://github.com/hexagonix/Doc/blob/main/Hexagonix/README.en.md#how-to-test-hexagonix-or-andromeda) you will find a tutorial to run the Hexagonix/Andromeda on your computer, either in a virtualized or native version. Remember that it is necessary to have an x86 architecture computer or an emulator, if you are using a device of another architecture for testing.
 
 You can go to the [releases](https://github.com/hexagonix/hexagonix/releases) session for stable system releases. You can access the Hexagonix/Andromeda [release announcement](REL.en.md) file. Whenever possible, get the latest release and download the available .img images or the complete package in zip format. The versions available directly in this repository are always development versions (beta and release candidate), which can also be run and are minimally functional. At the end of each development cycle, the final versions will be available in the [releases](https://github.com/hexagonix/hexagonix/releases) session.
+
+</div>
 
 </details>
 
@@ -85,7 +89,11 @@ You can go to the [releases](https://github.com/hexagonix/hexagonix/releases) se
 <br>
 <summary align='left'><strong>5️⃣ Help with the development of Hexagonix/Andromeda</strong></summary>
 
+<div align="justify">
+
 If you have knowledge of writing x86 assembly code and would like to help develop the system, feel free to send me an email! See [here](https://github.com/hexagonix/Doc/blob/main/Hexagonix/README.en.md#author) how to contact me!
+
+</div>
 
 </details>
 
@@ -105,7 +113,11 @@ You can report system errors [here](https://github.com/hexagonix/hexagonix/issue
 <br>
 <summary align='left'><strong>1️⃣ Development</strong></summary>
 
+<div align="justify">
+
 Hexagonix/Andromeda and all its components have been developed since 2015 and were written completely in Assembly language.
+
+</div>
 
 </details>
 
@@ -113,9 +125,13 @@ Hexagonix/Andromeda and all its components have been developed since 2015 and we
 <br>
 <summary align='left'><strong>2️⃣ Why two names? Hexagonix and Andromeda, what are they?</strong></summary>
 
+<div align="justify">
+
 In the beginning, Andromeda was intended to be a complete operating system, composed of the kernel, libraries, graphical and text interface and utilities. Later, with the passage of time and the change in approach to the architecture and objectives of the system, the components were separated and became independent projects in terms of functioning, organization and development. As you will see below, the Andromeda core was separated from the rest of the Andromeda code tree, becoming an independent project, even given a name, Hexagon. From then on, the idea arose of making the composition of the system more flexible and allowing the development of distributions, as in GNU/Linux. In this way, distributions of Hexagon could be created, grouping the necessary components for the basic functioning (Hexagonix) and allowing the extension of the system if necessary, with new components, modules and utilities, being the userland defined in each case. With the change of architecture of the system itself, with the core approaching a Unix-like architecture, new utilities in Unix style and syntax were developed and kept separate, in another project. From the original Andromeda project we have the Andromeda-specific applications and graphics libraries. A base system was then created, which by itself can already be fully executed, and became the base of Andromeda. This base system is called Hexagonix, and it consists of the HBoot boot loader, the Hexagon kernel, the shell, Unix environment libraries (here called Hexagonix environment) and Unix utilities. This system is fully functional, but lacks graphical resources and applications developed for the Andromeda environment. In this way, Andromeda stands out for being one more layer built on top of Hexagonix, with graphics resources, a graphics library and utilities that work on top of Hexagonix and extend its function. This built environment was named the Andromeda environment. To meet different needs, the two distributions will always be kept. Both versions are functional and can be used depending on the desired end use. In summary, both Hexagonix and Andromeda are distributions of the Hexagon kernel, differing in the components included.
 
 To better understand this distribution model, a suitable example would be what happens with macOS (Apple)[^1]. macOS is a Unix-like operating system built on top of Darwin, a free operating system composed of the XNU kernel, libraries and utilities, adding on top of Darwin the Aqua graphical interface and other applications and utilities developed by Apple and other vendors. The Darwin environment is easily accessed and observed through macOS, such as using the terminal, for example. Darwin is a complete and functional system, but it lacks some graphical resources, for example, which are only distributed together with macOS. In this analogy, we have macOS as Andromeda and Darwin as Hexagonix.
+
+</div>
 
 </details>
 
@@ -123,7 +139,11 @@ To better understand this distribution model, a suitable example would be what h
 <br>
 <summary align='left'><strong>3️⃣ What about the source code?</strong></summary>
 
+<div align="justify">
+
 The project's source code has now been made publicly available. The kernel code and Unix-like utilities and Andromeda applications are available, as well as the source package that makes up HBoot. Disk images with both Hexagonix and Andromeda are now available and free to distribute. Please note the [license](LICENSE) available in this repository for more information. It is worth mentioning that the license of each code package that makes up the system (Hexagon, HBoot, Hexagonix utilities, Andromeda utilities, fonts and other components) may vary. Each package can be released with a different license type (like GPL, MIT or BSD, for example). Keep an eye on each license in the respective repositories. Components that are not available in the official repository are still closed source, governed by a proprietary Hexagonix license, which can be found [here](https://github.com/hexagonix/Doc/blob/main/LICENSES/Hexagonix ).
+
+</div>
 
 </details>
 
@@ -131,7 +151,11 @@ The project's source code has now been made publicly available. The kernel code 
 <br>
 <summary align='left'><strong>4️⃣ The Hexagonix/Andromeda story</strong></summary>
 
+<div align="justify">
+
 Andromeda started as an implementation in a structure similar to DOS-like systems, with an interpreter with built-in commands with names, syntax and results similar to a generic DOS. The command interpreter presented file manipulation and other commands internally, as in conventional DOS systems. Disk drives were also defined as letters. Later, there was a growing interest and fascination in the functioning of Unix systems and all the code was rewritten or adapted to make the System kernel a Unix-like kernel. All System components, as in DOS, were kept in a single tree until then. With Andromeda version 1.5, codenamed "Unix-like", the kernel has been heavily modified and rewritten to fit the Unix philosophy. Changes even included the way devices were handled, writing a hardware abstraction layer managing devices as files, and adding open(), close(), write() and to read(). The Unix-based utilities were also written, removing commands from the default interpreter, which was rewritten to make way for a Unix-like shell. The internal commands were moved to the utilities, which now have a Unix-style structure and syntax. The rest of the utilities, such as mount, were written already taking advantage of the open() call, which is also used to mount volume, in addition to opening ordinary files from the volume. The open() call is also used to start other peripherals such as serial and parallel ports. The write() call also works with devices and files, as well as close(). A VFS (Virtual File System) was also introduced, which will support multiple file systems in the future and make file management transparent to the System, programmers and users. Also included are new hardware management functions and many improvements and bug fixes. The System gains new Unix utilities until the present moment. After this change in the proposal and architecture, the components were separated and allocated to specific projects. The union of these components forms the operating system. In the case of Hexagonix, we have HBoot, Hexagon, shell, Unix libraries and applications, while Andromeda extends Hexagonix, incorporating other libraries and applications that use them.
+
+</div>
 
 </details>
 
@@ -143,7 +167,11 @@ Andromeda started as an implementation in a structure similar to DOS-like system
 <br>
 <summary align='left'><strong>1️⃣ Saturno</strong></summary>
 
+<div align="justify">
+
 The first component of Hexagonix/Andromeda is Saturno. It is responsible for taking control of the boot process performed by the BIOS/UEFI and looking in the volume for the second boot stage. For that, it implements a driver for reading a FAT16 file system. The second boot stage (see below) can implement drivers for other filesystems and is responsible for finding Hexagon, loading HBoot modules or loading a compatible DOS-like system (BETA version).
+
+</div>
 
 </details>
 
