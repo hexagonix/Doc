@@ -8,13 +8,14 @@ All rights reserved.
 -->
 
 <p>
-<img align="right" src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix.png" width="150" height="150">
+<img align="right" src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix.png" width="180" height="180">
 </p>
 
 <details title="License" align='left'>
 <br>
 <summary align='left'><strong>1️⃣ License</strong></summary>
 
+<p align="justify">
 Hexagonix Operating System
 
 BSD 3-Clause License
@@ -46,6 +47,8 @@ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+</p>
 
 </details>
 
