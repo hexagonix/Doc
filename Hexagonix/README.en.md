@@ -13,7 +13,7 @@ All rights reserved.
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix.png" width="150" height="150">
 </p>
 
-# First of all - a shortcut to get straight to the point
+# Starting point
 
 <details title="License" align='left'>
 <br>
