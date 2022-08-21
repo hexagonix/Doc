@@ -376,7 +376,7 @@ Abaixo, uma lista de requisitos mínimos e recomendados para testar o Hexagonix/
 
 <details title="Requisitos mínimos" align='left'>
 <br>
-<summary align='left'><strong>☑️ Requisitos mínimos</strong></summary>
+<summary align='left'><strong>⚠️ Requisitos mínimos</strong></summary>
 
 * Processador: Pentium III (1999) com suporte a SSE e MMX ou mais recente;
 * Memória RAM: 32 Mb mínimo (uma instalação mínima com 32 Mb costuma ser suficiente, na maioria dos casos);
