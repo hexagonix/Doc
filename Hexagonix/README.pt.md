@@ -567,7 +567,7 @@ Neste momento, tanto o sistema quanto a documentação estão disponíveis apena
 
 <details title="Inspirações" align='left'>
 <br>
-<summary align='left'><strong>🖼 Insipirações</strong></summary>
+<summary align='left'><strong>🖼 Inspirações</strong></summary>
 
 <div align="justify">
 
