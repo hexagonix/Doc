@@ -255,20 +255,20 @@ Hexagonix implements, together with Hexagon, a series of Unix-like utilities, wi
 
 Hexagonix includes many of the Unix utilities you may already be familiar with, such as:
 
-* init
-* login
-* ls
-* cat
-* cp
-* rm
-* clear
-* top
-* ps
-* man
-* su
-* sh (shell padrão)
-* uname
-* whoami, among others.
+* `init`
+* `login`
+* `ls`
+* `cat`
+* `cp`
+* `rm`
+* `clear`
+* `top`
+* `ps`
+* `man`
+* `su`
+* `sh` (default shell)
+* `uname`
+* `whoami`, among others.
 
 Some applications and utilities were developed exclusively for Hexagonix, such as:
 
@@ -286,7 +286,7 @@ It is worth remembering that Hexagonix utilities try to implement a POSIX interf
 
 * [Flat Assembler (fasm)](https://flatassembler.net/index.php)
 
-Hexagonix received a port of the [`fasm`](https://flatassembler.net/index.php) assembler, which was adapted for Hexagonix, allowing the user to develop applications directly on the system. This port is called `fasmX`. Changes added to the code, as well as the software license, can be found in the [fasm repository for Hexagonix](https://github.com/hexagonix/fasm). This repository is a fork of [original repository](https://github.com/tgrysztar/fasm). Added code is based on modifications made to the original code and authorial additions. This modified/authored code can be found in the repository, [clicking here](https://github.com/hexagonix/fasm/tree/master/SOURCE/HEXAGONIX). fasmX, the fasm port for Hexagonix, is always updated when new features are added to the fasm repository. To indicate that it is a stable and tested version, the fasmX version number always inherits the fasm numbering, followed by a character x (for example, the version based on fasm 1.73.30, after testing, receives the numbering 1.73 .30x). You can report bugs or code generation or optimization issues in the Hexagonix version [here](https://github.com/hexagonix/fasm/issues). To report general fasm bugs, use the [official](https://github.com/tgrysztar/fasm) repository.
+Hexagonix received a port of the [`fasm`](https://flatassembler.net/index.php) assembler, which was adapted for Hexagonix, allowing the user to develop applications directly on the system. This port is called `fasmX`. Changes added to the code, as well as the software license, can be found in the [fasm repository for Hexagonix](https://github.com/hexagonix/fasm). This repository is a fork of [original repository](https://github.com/tgrysztar/fasm). Added code is based on modifications made to the original code and authorial additions. This modified/authored code can be found in the repository, [clicking here](https://github.com/hexagonix/fasm/tree/master/SOURCE/HEXAGONIX). fasmX, the fasm port for Hexagonix, is always updated when new features are added to the fasm repository. To indicate that it is a stable and tested version, the fasmX version number always inherits the fasm numbering, followed by a character x (for example, the version based on fasm 1.73.30, after testing, receives the numbering 1.73.30x). You can report bugs or code generation or optimization issues in the Hexagonix version [here](https://github.com/hexagonix/fasm/issues). To report general fasm bugs, use the [official](https://github.com/tgrysztar/fasm) repository.
 
 </div>
 
@@ -298,7 +298,7 @@ Hexagonix received a port of the [`fasm`](https://flatassembler.net/index.php) a
 
 <div align="justify">
 
-The Andromeda environment is built on the solid foundation provided by Hexagonix, including applications and utilities that do not implement the Unix philosophy or have a very different syntax and usage than you would expect from a Unix environment. In this way, they are separated as **Andromeda apps**, and are not part of the standard distribution of Hexagonix. Here are the System settings app, calculator, font manager, text editors and the IDE developed for Andromeda. These utilities may or may not have a graphical interface. Together with them, the Andromeda environment comprises libraries developed to allow the development of applications, such as the `Estelar` library. This environment is only available in the `Andromeda` distribution.
+The Andromeda environment is built on the solid foundation provided by Hexagonix, including applications and utilities that do not implement the Unix philosophy or have a very different syntax and usage than you would expect from a Unix environment. In this way, they are separated as `Andromeda apps`, and are not part of the standard distribution of Hexagonix. Here are the System settings app, calculator, font manager, text editors and the IDE developed for Andromeda. These utilities may or may not have a graphical interface. Together with them, the Andromeda environment comprises libraries developed to allow the development of applications, such as the `Estelar` library. This environment is only available in the `Andromeda` distribution.
 
 </div>
 
@@ -308,15 +308,15 @@ The Andromeda environment is built on the solid foundation provided by Hexagonix
 
 <div align="justify">
 
-* System Settings (config)
-* Quartzo text editor
-* Lyoko IDE for application development
-* Electronic piano return Piano;
-* Serial communication utility
-* Andromeda Shell (ASH) - A new shell for Andromeda
-* Andromeda calculator
-* Font change utility
-* Andromeda shutdown utility
+* `System Settings (config)`
+* `Quartzo text editor`
+* `Lyoko IDE for application development`
+* `Electronic piano return Piano;`
+* `Serial communication utility`
+* `Andromeda Shell (ASH)` - A new shell for Andromeda
+* `Andromeda calculator`
+* `Font change utility`
+* `Andromeda shutdown utility`
 
 ### Third-party apps available for Andromeda
 
