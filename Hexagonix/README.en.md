@@ -11,8 +11,6 @@ All rights reserved.
 <img align="right" src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix.png" width="150" height="150">
 </p>
 
-# Starting point
-
 <details title="License" align='left'>
 <br>
 <summary align='left'><strong>1️⃣ License</strong></summary>
