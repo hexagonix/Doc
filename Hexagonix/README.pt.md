@@ -234,7 +234,7 @@ O Hexagon é um núcleo (kernel) monolítico executado em modo protegido 32-bit,
 
 <div align="justify">
 
-As chamadas de sistema são realizadas no estilo BSD, com o número da função presente na pilha e os parâmetros/argumentos junto aos registradores. Para uma lista completa de chamadas de sistema disponíveis na versão atual do sistema, dê uma olhada na biblioteca do Hexagon na [libasm para fasm](https://github.com/hexagonix/lib/blob/main/fasm/hexagon.s) ou [libasm para nasm](https://github.com/hexagonix/lib/blob/main/nasm/hexagon.s).
+As chamadas de sistema são realizadas no estilo ´BSD´, com o número da função presente na pilha e os parâmetros/argumentos junto aos registradores. Para uma lista completa de chamadas de sistema disponíveis na versão atual do sistema, dê uma olhada na biblioteca do Hexagon na [libasm para fasm](https://github.com/hexagonix/lib/blob/main/fasm/hexagon.s) ou [libasm para nasm](https://github.com/hexagonix/lib/blob/main/nasm/hexagon.s).
 
 </div>
 
