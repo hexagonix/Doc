@@ -413,8 +413,8 @@ Abaixo, uma lista de requisitos mínimos e recomendados para testar o Hexagonix/
 
 Para testar o Hexagonix ou Andromeda, você vai precisar de uma das imagens de disco disponíveis, bem como a ferramenta [qemu](https://www.qemu.org) instalada em seu computador, caso deseje testar o sistema em ambiente virtualizado. A imagem também pode ser utilizada para a gravação em um disco físico em uma máquina real.
 
-Para testar o Hexagonix, obtenha o arquivo ['hexagonix.img'](https://github.com/hexagonix/hexagonix/blob/main/hexagonix.img).
-Para testar o Andromeda, obtenha o arquivo ['andromeda.img'](https://github.com/hexagonix/hexagonix/blob/main/andromeda.img).
+Para testar o Hexagonix, obtenha o arquivo [`hexagonix.img`](https://github.com/hexagonix/hexagonix/blob/main/hexagonix.img).
+Para testar o Andromeda, obtenha o arquivo [`andromeda.img`](https://github.com/hexagonix/hexagonix/blob/main/andromeda.img).
 
 </div>
 
@@ -430,7 +430,7 @@ Primeiramente, você deve instalar a ferramenta qemu, que irá gerenciar a máqu
 
 > Instalar no Debian, Ubuntu, Pop_OS! e derivados:
 
-Para o ´Ubuntu´, a linha a seguir irá instalar o qemu e todas as suas dependências (privilégios de superusuário necessários):
+Para o `Ubuntu`, a linha a seguir irá instalar o qemu e todas as suas dependências (privilégios de superusuário necessários):
 
 ```
 sudo apt install qemu qemu-system-i386
@@ -438,7 +438,7 @@ sudo apt install qemu qemu-system-i386
 
 > Instalar no Fedora, CentOS e derivados:
 
-Para o ´Fedora´, a linha a seguir irá instalar o qemu e todas as suas dependências (privilégios de superusuário necessários):
+Para o `Fedora`, a linha a seguir irá instalar o qemu e todas as suas dependências (privilégios de superusuário necessários):
 
 ```
 sudo dnf install qemu qemu-system-i386
@@ -455,7 +455,7 @@ qemu-system-i386 -hda hexagonix.img -m 32 -soundhw pcspk --enable-kvm -serial fi
 
 Você pode omitir o parâmetro -serial caso queira. Esse parâmetro garante que a saída de debug do Hexagon e aplicativos serão direcionados para um arquivo em seu computador, onde você poderá consultar o que foi enviado. Você também pode omitir o parâmetro -soundhw, responsável por direcionar a saída de som do sistema virtual para seu computador físico. Em alguns sistema Linux, a configuração acima pode entrar em conflito com o pulseaudio, e pode ser omitida. Lembre-se que ao omitir o parâmetro, os sons do sistema não serão emitidos para você.
 
-Lembrando que você deve utilizar uma versão/edição do qemu que consiga executar software escrito para a arquitetura x86 (i386 ou x86_64). Para realizar o download e instalação do ´qemu´, clique [aqui](https://www.qemu.org/download/).
+Lembrando que você deve utilizar uma versão/edição do qemu que consiga executar software escrito para a arquitetura x86 (i386 ou x86_64). Para realizar o download e instalação do `qemu`, clique [aqui](https://www.qemu.org/download/).
 
 </div>
 
@@ -469,12 +469,12 @@ Lembrando que você deve utilizar uma versão/edição do qemu que consiga execu
 
 Você deve utilizar o Linux/macOS ou alguma ferramenta disponível para o Windows que te permita gravar essa imagem em disco.
 
-No ´Linux/macOS/Unix´, use a linha abaixo:
+No `Linux/macOS/Unix`, use a linha abaixo:
 
 ```
 dd if=andromeda.img of=/dev/unidade
 ```
-onde ´unidade´ equivale ao dispositivo desejado (geralmente ´sdb´ ou ´sdc´, em caso de dispositivos USB e ´hda´, ´hdb´, ´sda´ ou ´sdb´, para unidades de disco rígido/estado sólido). Reinicie seu computador e teste o sistema. Vale lembrar que o modo de boot seguro não é suportado, além de que o boot só é suportado em BIOS ou no modo legado BIOS do UEFI.
+onde `unidade` equivale ao dispositivo desejado (geralmente `sdb` ou `sdc`, em caso de dispositivos USB e `hda`, `hdb`, `sda` ou `sdb`, para unidades de disco rígido/estado sólido). Reinicie seu computador e teste o sistema. Vale lembrar que o modo de boot seguro não é suportado, além de que o boot só é suportado em BIOS ou no modo legado BIOS do UEFI.
 
 Vale ressaltar que o desempenho do sistema pode variar de acordo com a máquina testada. Junta-se a isso o fato de que as versões mais recentes do sistema não foram ou estão sendo testadas diretamente na máquina física, como sistema operacional principal. Caso algum problema ocorra ao executar o Hexagonix/Andromeda em uma máquina física, por favor reporte o erro detalhado [aqui](https://github.com/hexagonix/Distro/issues), em português ou inglês, informando dados como marca do dispositivo, processador, quantidade de memória RAM, placa de vídeo (se disponível) e periféricos conectados, bem como o dispositivo utilizado para instalar o sistema (unidade de disco interna ou mídia removível USB).
 
@@ -495,7 +495,7 @@ Usuário: root
 Senha: root
 ```
 
-Você pode adicionar outro usuário alterando o arquivo ´USUARIO.UNX´ na raiz do disco. Lembre-se de não remover o usuário ´raiz´ (root). Isso pode tornar o sistema inoperante de forma permanente.
+Você pode adicionar outro usuário alterando o arquivo `USUARIO.UNX` na raiz do disco. Lembre-se de não remover o usuário raiz `(root)`. Isso pode tornar o sistema inoperante de forma permanente.
 
 </div>
 
@@ -619,7 +619,7 @@ Além disso, outros projetos auxiliaram no desenvolvimento do Hexagonix/Andromed
 
 O Hexagonix/Andromeda foi desenvolvido por [Felipe Lunkes](https://github.com/felipenlunkes).
 
-Leia a licença para mais informações sobre direitos autorais, propriedade de código e redistribuição que se aplicam apenas aos arquivos disponíveis neste repositório (não se aplicam ao conjunto de arquivos de dados e de código fonte que compõem o Hexagonix/Andromeda). Vale ressaltar que o código dos componentes do sistema estão sendo liberados aos poucos e que cada pacote pode ser liberado com uma licença diferente. Sempre fique atento ao arquivo ´LICENSE´ disponível em casa repositório para estar ciente dos direitos e obrigações legais.
+Leia a licença para mais informações sobre direitos autorais, propriedade de código e redistribuição que se aplicam apenas aos arquivos disponíveis neste repositório (não se aplicam ao conjunto de arquivos de dados e de código fonte que compõem o Hexagonix/Andromeda). Vale ressaltar que o código dos componentes do sistema estão sendo liberados aos poucos e que cada pacote pode ser liberado com uma licença diferente. Sempre fique atento ao arquivo `LICENSE` disponível em casa repositório para estar ciente dos direitos e obrigações legais.
 
 </div>
 
