@@ -61,9 +61,9 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 <div align="justify">
 
-At [end of this file](https://github.com/hexagonix/Doc/blob/main/Hexagonix/README.en.md#how-to-test-hexagonix-or-andromeda) you will find a tutorial to run the Hexagonix/Andromeda on your computer, either in a virtualized or native version. Remember that it is necessary to have an x86 architecture computer or an emulator, if you are using a device of another architecture for testing.
+At [`end of this file`](https://github.com/hexagonix/Doc/blob/main/Hexagonix/README.en.md#how-to-test-hexagonix-or-andromeda) you will find a tutorial to run the Hexagonix/Andromeda on your computer, either in a virtualized or native version. Remember that it is necessary to have an x86 architecture computer or an emulator, if you are using a device of another architecture for testing.
 
-You can go to the [releases](https://github.com/hexagonix/hexagonix/releases) session for stable system releases. You can access the Hexagonix/Andromeda [release announcement](REL.en.md) file. Whenever possible, get the latest release and download the available .img images or the complete package in zip format. The versions available directly in this repository are always development versions (beta and release candidate), which can also be run and are minimally functional. At the end of each development cycle, the final versions will be available in the [releases](https://github.com/hexagonix/hexagonix/releases) session.
+You can go to the [`releases`](https://github.com/hexagonix/hexagonix/releases) session for stable system releases. You can access the Hexagonix/Andromeda [release announcement](REL.en.md) file. Whenever possible, get the latest release and download the available .img images or the complete package in zip format. The versions available directly in this repository are always development versions (beta and release candidate), which can also be run and are minimally functional. At the end of each development cycle, the final versions will be available in the [releases](https://github.com/hexagonix/hexagonix/releases) session.
 
 </div>
 
@@ -81,7 +81,7 @@ You can go to the [releases](https://github.com/hexagonix/hexagonix/releases) se
 <br>
 <summary align='left'><strong>4️⃣ Building the system</strong></summary>
 
-* [Build the system](https://github.com/hexagonix/build/blob/main/README.en.md)
+* [Build the system (English)](https://github.com/hexagonix/build/blob/main/README.en.md)
 
 </details>
 
@@ -115,7 +115,7 @@ You can report system errors [here](https://github.com/hexagonix/hexagonix/issue
 
 <div align="justify">
 
-Hexagonix/Andromeda and all its components have been developed since 2015 and were written completely in Assembly language.
+Hexagonix/Andromeda and all its components have been developed since 2015 and were written completely in `Assembly` language.
 
 </div>
 
@@ -141,7 +141,7 @@ To better understand this distribution model, a suitable example would be what h
 
 <div align="justify">
 
-The project's source code has now been made publicly available. The kernel code and Unix-like utilities and Andromeda applications are available, as well as the source package that makes up HBoot. Disk images with both Hexagonix and Andromeda are now available and free to distribute. Please note the [license](LICENSE) available in this repository for more information. It is worth mentioning that the license of each code package that makes up the system (Hexagon, HBoot, Hexagonix utilities, Andromeda utilities, fonts and other components) may vary. Each package can be released with a different license type (like GPL, MIT or BSD, for example). Keep an eye on each license in the respective repositories. Components that are not available in the official repository are still closed source, governed by a proprietary Hexagonix license, which can be found [here](https://github.com/hexagonix/Doc/blob/main/LICENSES/Hexagonix ).
+The project's source code has now been made publicly available. The kernel code and Unix-like utilities and Andromeda applications are available, as well as the source package that makes up HBoot. Disk images with both Hexagonix and Andromeda are now available and free to distribute. Please note the [`license`](LICENSE) available in this repository for more information. It is worth mentioning that the license of each code package that makes up the system (Hexagon, HBoot, Hexagonix utilities, Andromeda utilities, fonts and other components) may vary. Each package can be released with a different license type (like GPL, MIT or BSD, for example). Keep an eye on each license in the respective repositories. Components that are not available in the official repository are still closed source, governed by a proprietary Hexagonix license, which can be found [here](https://github.com/hexagonix/Doc/blob/main/LICENSES/Hexagonix ).
 
 </div>
 
@@ -181,7 +181,7 @@ The first component of Hexagonix/Andromeda is Saturno. It is responsible for tak
 
 <div align="justify">
 
-Hexagon Boot (HBoot) is a component designed to allow the Hexagon kernel to boot. Until then, initialization was performed by just one stage, which defined a very basic environment, loaded Hexagon into memory and immediately executed it, providing a very limited set of parameters. This is due to the fact that the code of this stage is restricted to 512 bytes, which limits the performance of several tests and data processing. With HBoot, it was possible to expand the number of tasks performed before running Hexagon, as well as the possibility to provide more information about the device and boot environment. This is particularly important to allow the creation of a device tree that Hexagon can use to decide how to handle each identified device. HBoot is able to check which disk drives are available on the machine, emit a boot tone, obtain the amount of available RAM memory installed and allow or not to proceed with the boot process according to this information. If no user interaction is detected (within 3 seconds after HBoot is started and messages are displayed to the user), HBoot will perform additional tests to verify the device's ability to run the system and will load and run Hexagon (present in a file on the volume named **HEXAGON.SIS**). After loading, HBoot transfers control to Hexagon, which is initialized and stores the data provided by HBoot in the kernel environment.
+Hexagon Boot (HBoot) is a component designed to allow the Hexagon kernel to boot. Until then, initialization was performed by just one stage, which defined a very basic environment, loaded Hexagon into memory and immediately executed it, providing a very limited set of parameters. This is due to the fact that the code of this stage is restricted to 512 bytes, which limits the performance of several tests and data processing. With HBoot, it was possible to expand the number of tasks performed before running Hexagon, as well as the possibility to provide more information about the device and boot environment. This is particularly important to allow the creation of a device tree that Hexagon can use to decide how to handle each identified device. HBoot is able to check which disk drives are available on the machine, emit a boot tone, obtain the amount of available RAM memory installed and allow or not to proceed with the boot process according to this information. If no user interaction is detected (within 3 seconds after HBoot is started and messages are displayed to the user), HBoot will perform additional tests to verify the device's ability to run the system and will load and run Hexagon (present in a file on the volume named `HEXAGON.SIS`). After loading, HBoot transfers control to Hexagon, which is initialized and stores the data provided by HBoot in the kernel environment.
 
 </div>
 
@@ -191,7 +191,7 @@ Hexagon Boot (HBoot) is a component designed to allow the Hexagon kernel to boot
 
 <div align="justify">
 
-Interaction with HBoot takes place by pressing the F8 key after booting and displaying messages on the screen. HBoot waits for 3 seconds for any interaction and, if none has occurred, it continues executing the boot protocol. The interaction with HBoot can be interesting to load modules in the HBoot format, provide boot parameters to Hexagon, load a DOS-type system whose files are present on the same volume or even load HAPP images from other cores (if the developer wants to use the HBoot implementation in your project). Below, see some more details of additional and diagnostic functions that can be performed via interaction with HBoot before loading Hexagonix.
+Interaction with HBoot takes place by pressing the `F8` key after booting and displaying messages on the screen. HBoot waits for 3 seconds for any interaction and, if none has occurred, it continues executing the boot protocol. The interaction with HBoot can be interesting to load modules in the HBoot format, provide boot parameters to Hexagon, load a DOS-type system whose files are present on the same volume or even load HAPP images from other cores (if the developer wants to use the HBoot implementation in your project). Below, see some more details of additional and diagnostic functions that can be performed via interaction with HBoot before loading Hexagonix.
 
 <div>
 
@@ -231,7 +231,7 @@ Hexagon is a monolithic kernel running in 32-bit protected mode, designed with t
 
 <div align="justify">
 
-System calls are BSD-style, with the function number present on the stack and the parameters/arguments next to the registers. For a complete list of system calls available in the current version of the system, have a look at the Hexagon library at [libasm for fasm](https://github.com/hexagonix/libasm/blob/main/fasm/hexagon.s ) or [libasm to nasm](https://github.com/hexagonix/libasm/blob/main/nasm/hexagon.s).
+System calls are `BSD-style`, with the function number present on the stack and the parameters/arguments next to the registers. For a complete list of system calls available in the current version of the system, have a look at the Hexagon library at [libasm for fasm](https://github.com/hexagonix/lib/blob/main/fasm/hexagon.s ) or [libasm to nasm](https://github.com/hexagonix/lib/blob/main/nasm/hexagon.s).
 
 </div>
 
@@ -243,7 +243,7 @@ System calls are BSD-style, with the function number present on the stack and th
 
 <div align="justify">
 
-Hexagonix implements, together with Hexagon, a series of Unix-like utilities, with functionality and syntax similar to UNIX and Unix-like systems. **Utilities such as init, login, sh, top, ps, cp, rm, cat, clear, man, among others, are included in the standard distribution of Hexagonix**. These utilities make up the Hexagonix base utilities package. The login and user-mode environment startup tools are in this package, as well as several configuration files for this environment. These utilities generally do not have a graphical interface, only a command-line interface (CLI). However, they can be requested by applications that have a graphical interface. This environment is available in both the [Hexagonix](https://github.com/hexagonix/hexagonix/blob/main/hexagonix.img) distribution and the [Andromeda](https://github.com/hexagonix/hexagonix/blob/main/andromeda.img) distribution.
+Hexagonix implements, together with Hexagon, a series of Unix-like utilities, with functionality and syntax similar to UNIX and Unix-like systems. **Utilities such as init, login, sh, top, ps, cp, rm, cat, clear, man, among others, are included in the standard distribution of Hexagonix**. These utilities make up the Hexagonix base utilities package. The login and user-mode environment startup tools are in this package, as well as several configuration files for this environment. These utilities generally do not have a graphical interface, only a command-line interface (CLI). However, they can be requested by applications that have a graphical interface. This environment is available in both the [`Hexagonix`](https://github.com/hexagonix/hexagonix/blob/main/hexagonix.img) distribution and the [`Andromeda`](https://github.com/hexagonix/hexagonix/blob/main/andromeda.img) distribution.
 
 </div>
 
@@ -286,7 +286,7 @@ It is worth remembering that Hexagonix utilities try to implement a POSIX interf
 
 * [Flat Assembler (fasm)](https://flatassembler.net/index.php)
 
-Hexagonix received a port of the [fasm](https://flatassembler.net/index.php) assembler, which was adapted for Hexagonix, allowing the user to develop applications directly on the system. This port is called fasmX. Changes added to the code, as well as the software license, can be found in the [fasm repository for Hexagonix](https://github.com/hexagonix/fasm). This repository is a fork of [original repository](https://github.com/tgrysztar/fasm). Added code is based on modifications made to the original code and authorial additions. This modified/authored code can be found in the repository, [clicking here](https://github.com/hexagonix/fasm/tree/master/SOURCE/HEXAGONIX). fasmX, the fasm port for Hexagonix, is always updated when new features are added to the fasm repository. To indicate that it is a stable and tested version, the fasmX version number always inherits the fasm numbering, followed by a character x (for example, the version based on fasm 1.73.30, after testing, receives the numbering 1.73 .30x). You can report bugs or code generation or optimization issues in the Hexagonix version [here](https://github.com/hexagonix/fasm/issues). To report general fasm bugs, use the [official](https://github.com/tgrysztar/fasm) repository.
+Hexagonix received a port of the [`fasm`](https://flatassembler.net/index.php) assembler, which was adapted for Hexagonix, allowing the user to develop applications directly on the system. This port is called `fasmX`. Changes added to the code, as well as the software license, can be found in the [fasm repository for Hexagonix](https://github.com/hexagonix/fasm). This repository is a fork of [original repository](https://github.com/tgrysztar/fasm). Added code is based on modifications made to the original code and authorial additions. This modified/authored code can be found in the repository, [clicking here](https://github.com/hexagonix/fasm/tree/master/SOURCE/HEXAGONIX). fasmX, the fasm port for Hexagonix, is always updated when new features are added to the fasm repository. To indicate that it is a stable and tested version, the fasmX version number always inherits the fasm numbering, followed by a character x (for example, the version based on fasm 1.73.30, after testing, receives the numbering 1.73 .30x). You can report bugs or code generation or optimization issues in the Hexagonix version [here](https://github.com/hexagonix/fasm/issues). To report general fasm bugs, use the [official](https://github.com/tgrysztar/fasm) repository.
 
 </div>
 
@@ -298,7 +298,7 @@ Hexagonix received a port of the [fasm](https://flatassembler.net/index.php) ass
 
 <div align="justify">
 
-The Andromeda environment is built on the solid foundation provided by Hexagonix, including applications and utilities that do not implement the Unix philosophy or have a very different syntax and usage than you would expect from a Unix environment. In this way, they are separated as **Andromeda apps**, and are not part of the standard distribution of Hexagonix. Here are the System settings app, calculator, font manager, text editors and the IDE developed for Andromeda. These utilities may or may not have a graphical interface. Together with them, the Andromeda environment comprises libraries developed to allow the development of applications, such as the **Estelar** library. This environment is only available in the [Andromeda](andromeda.img) distribution.
+The Andromeda environment is built on the solid foundation provided by Hexagonix, including applications and utilities that do not implement the Unix philosophy or have a very different syntax and usage than you would expect from a Unix environment. In this way, they are separated as **Andromeda apps**, and are not part of the standard distribution of Hexagonix. Here are the System settings app, calculator, font manager, text editors and the IDE developed for Andromeda. These utilities may or may not have a graphical interface. Together with them, the Andromeda environment comprises libraries developed to allow the development of applications, such as the `Estelar` library. This environment is only available in the `Andromeda` distribution.
 
 </div>
 
@@ -350,7 +350,7 @@ Graphics mode fonts for Hexagon are developed as a bitmap in Assembly which, whe
 
 Hexagonix/Andromeda also provides functions that must be used to interact with the system environment itself. Libraries are used to access functions implemented by Hexagon or by the libraries themselves, allowing easy development of applications and utilities for both the Hexagonix and Andromeda environments. The libraries implement functions for displaying text, mathematical calculations, sending messages, opening files and devices, and much more. The core library (hexagon.s) provides functions accessible to both possible distribution environments, while other libraries may be unique to the Andromeda environment. These libraries include graphical functions to build interfaces in graphical mode (Andromeda), as well as functions to check the currently running system version (Hexagonix and Andromeda). The Hexagonix base utilities perform the Hexagon version check to see if they can be run, using the Unix utility uname or directly via a Hexagon system call.
 
-To learn more and check each function available in the system development libraries, see the [libasm] repository (https://github.com/hexagonix/libasm).
+To learn more and check each function available in the system development libraries, see the [libasm](https://github.com/hexagonix/lib) repository.
 
 </div>
 
@@ -409,10 +409,10 @@ Below is a list of minimum and recommended requirements for testing Hexagonix/An
 
 <div align="justify">
 
-To test Hexagonix or Andromeda, you will need one of the disk images available, as well as the [qemu](https://www.qemu.org) tool installed on your computer, if you want to test the system in an environment virtualized. The image can also be used for writing to a physical disk on a real machine.
+To test Hexagonix or Andromeda, you will need one of the disk images available, as well as the [`qemu`](https://www.qemu.org) tool installed on your computer, if you want to test the system in an environment virtualized. The image can also be used for writing to a physical disk on a real machine.
 
-To test Hexagonix, get the ['hexagonix.img'](https://github.com/hexagonix/hexagonix/blob/main/hexagonix.img).
-To test Andromeda, get the ['andromeda.img'](https://github.com/hexagonix/hexagonix/blob/main/andromeda.img).
+To test Hexagonix, get the [`hexagonix.img`](https://github.com/hexagonix/hexagonix/blob/main/hexagonix.img).
+To test Andromeda, get the [`andromeda.img`](https://github.com/hexagonix/hexagonix/blob/main/andromeda.img).
 
 </div>
 
@@ -424,11 +424,11 @@ To test Andromeda, get the ['andromeda.img'](https://github.com/hexagonix/hexago
 
 <div align="justify">
 
-First, you must install the qemu tool, which will manage the virtual machine. To do so, you can install qemu using official Linux distribution repositories or by accessing [here](https://www.qemu.org) to get installation files for Windows and macOS. 
+First, you must install the qemu tool, which will manage the virtual machine. To do so, you can install qemu using official Linux distribution repositories or by accessing [here](https://www.qemu.org) to get installation files for Windows and macOS.
 
 > Install on Debian, Ubuntu, Pop!_OS and derivatives
 
-For Ubuntu, the following line will install qemu and all its dependencies (root privileges required):
+For `Ubuntu`, the following line will install qemu and all its dependencies (root privileges required):
 
 ```
 sudo apt install qemu qemu-system-i386
@@ -436,7 +436,7 @@ sudo apt install qemu qemu-system-i386
 
 > Install on Fedora, CentOS and derivatives
 
-For Fedora, the following line will install qemu and all its dependencies (root privileges required):
+For `Fedora`, the following line will install qemu and all its dependencies (root privileges required):
 
 ```
 sudo dnf install qemu qemu-system-i386
@@ -467,12 +467,12 @@ Remembering that you must use a version/edition of qemu that can run software wr
 
 You must use Linux/macOS or some tool available for Windows that allows you to burn this image to disk.
 
-On Linux/macOS/Unix, use the line below:
+On `Linux/macOS/Unix`, use the line below:
 
 ```
-dd if=andromeda.img of=/dev/device
+dd if=andromeda.img of=/dev/drive
 ```
-where drive is the desired device (usually sdb or sdc for USB devices and hda, hdb, sda or sdb for hard/solid state drives). Restart your computer and test the system. It is worth remembering that secure boot mode is not supported, and booting is only supported in BIOS or UEFI legacy BIOS mode.
+where `drive` is the desired device (usually `sdb` or `sdc` for USB devices and `hda`, `hdb`, `sda` or `sdb` for hard/solid state drives). Restart your computer and test the system. It is worth remembering that secure boot mode is not supported, and booting is only supported in BIOS or UEFI legacy BIOS mode.
 
 Note that system performance may vary depending on the machine being tested. Added to this is the fact that the latest versions of the system have not been or are being tested directly on the physical machine, as the main operating system. If any problem occurs when running Hexagonix/Andromeda on a physical machine, please report the detailed error [here](https://github.com/hexagonix/Distro/issues), in Portuguese or English, informing data such as device, processor, amount of RAM memory, video card (if available) and peripherals connected, as well as the device used to install the system (internal disk drive or USB removable media).
 
@@ -493,7 +493,7 @@ User: root
 Password: root
 ```
 
-You can add another user by changing the 'USUARIO.UNX' file at the root of the disk. Remember not to remove the root user. This can make the system permanently inoperable.
+You can add another user by changing the `USUARIO.UNX` file at the root of the disk. Remember not to remove the `root user`. This can make the system permanently inoperable.
 
 </div>
 
@@ -620,7 +620,7 @@ Feel free to contact me, report bugs or be interested in participating in the pr
 
 Hexagonix/Andromeda was developed from scratch by [Felipe Lunkes](https://github.com/felipenlunkes).
 
-Read the license for more information on copyright, code ownership, and redistribution that apply only to files available in this repository (does not apply to the set of data and source code files that make up Hexagonix/Andromeda) . It is worth mentioning that the code of the system components is being released little by little and that each package can be released with a different license. Always keep an eye on the 'LICENSE' file available in each repository to be aware of legal rights and obligations.
+Read the license for more information on copyright, code ownership, and redistribution that apply only to files available in this repository (does not apply to the set of data and source code files that make up Hexagonix/Andromeda) . It is worth mentioning that the code of the system components is being released little by little and that each package can be released with a different license. Always keep an eye on the `LICENSE` file available in each repository to be aware of legal rights and obligations.
 
 </div>
 
