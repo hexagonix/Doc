@@ -234,7 +234,7 @@ O Hexagon é um núcleo (kernel) monolítico executado em modo protegido 32-bit,
 
 <div align="justify">
 
-As chamadas de sistema são realizadas no estilo BSD, com o número da função presente na pilha e os parâmetros/argumentos junto aos registradores. Para uma lista completa de chamadas de sistema disponíveis na versão atual do sistema, dê uma olhada na biblioteca do Hexagon na [libasm para fasm](https://github.com/hexagonix/libasm/blob/main/fasm/hexagon.s) ou [libasm para nasm](https://github.com/hexagonix/libasm/blob/main/nasm/hexagon.s).
+As chamadas de sistema são realizadas no estilo BSD, com o número da função presente na pilha e os parâmetros/argumentos junto aos registradores. Para uma lista completa de chamadas de sistema disponíveis na versão atual do sistema, dê uma olhada na biblioteca do Hexagon na [libasm para fasm](https://github.com/hexagonix/lib/blob/main/fasm/hexagon.s) ou [libasm para nasm](https://github.com/hexagonix/lib/blob/main/nasm/hexagon.s).
 
 </div>
 
@@ -300,7 +300,7 @@ O Hexagonix recebeu um port do montador [Fasm](https://flatassembler.net/index.p
 
 <div align="justify">
 
-O ambiente Andromeda é construído sobre a base sólida fornecida pelo Hexagonix, incluindo aplicativos e utilitários que não implementam a filosofia Unix ou apresentam sintaxe e forma de uso bastante diferentes do que se esperaria de um ambiente Unix. Desta forma, eles são separados como **aplicativos Andromeda**, e não fazem parte da distribuição padrão do Hexagonix. Aqui estão o aplicativo de configurações do Sistema, calculadora, gerenciador de fontes, editores de texto e a IDE desenvolvida para o Andromeda. Estes utilitários podem ou não apresentar uma interface gráfica. Juntamente a eles, compõem o ambiente Andromeda bibliotecas desenvolvidas para permitir o desenvolvimento de aplicativos, como a biblioteca **Estelar**. Esse ambiente só está disponível na distribuição [Andromeda](andromeda.img).
+O ambiente Andromeda é construído sobre a base sólida fornecida pelo Hexagonix, incluindo aplicativos e utilitários que não implementam a filosofia Unix ou apresentam sintaxe e forma de uso bastante diferentes do que se esperaria de um ambiente Unix. Desta forma, eles são separados como **aplicativos Andromeda**, e não fazem parte da distribuição padrão do Hexagonix. Aqui estão o aplicativo de configurações do Sistema, calculadora, gerenciador de fontes, editores de texto e a IDE desenvolvida para o Andromeda. Estes utilitários podem ou não apresentar uma interface gráfica. Juntamente a eles, compõem o ambiente Andromeda bibliotecas desenvolvidas para permitir o desenvolvimento de aplicativos, como a biblioteca ´Estelar´. Esse ambiente só está disponível na distribuição Andromeda.
 
 </div>
 
@@ -336,7 +336,7 @@ Ainda não existem aplicativos de terceiros disponíveis para o ambiente Androme
 
 A instalação padrão do Hexagonix também fornece uma série de fontes que podem ser carregadas pelo aplicativo de configurações ou utilitário de fontes (gerenciador de fontes). Esses arquivos são utilizados para alterar a fonte de exibição em modo gráfico do Hexagonix e Andromeda.
 
-As fontes de modo gráfico para Hexagon são desenvolvidas como um bitmap em Assembly que, compiladas, geram uma imagem binária da fonte com representações de cada caractere. Os códigos das fontes padrão do Hexagonix já foram liberados como código livre e estão disponíveis no [repositório de fontes do Hexagonix](https://github.com/hexagonix/xfnt). 
+As fontes de modo gráfico para Hexagon são desenvolvidas como um bitmap em Assembly que, compiladas, geram uma imagem binária da fonte com representações de cada caractere. Os códigos das fontes padrão do Hexagonix já foram liberados como código livre e estão disponíveis no [repositório de fontes do Hexagonix](https://github.com/hexagonix/xfnt).
 
 </div>
 
@@ -352,7 +352,7 @@ As fontes de modo gráfico para Hexagon são desenvolvidas como um bitmap em Ass
 
 O Hexagonix/Andromeda também fornece funções que devem ser utilizadas para interagir com o próprio ambiente do sistema. As bibliotecas são utilizadas para acessar funções implementadas pelo Hexagon ou pelas próprias bibliotecas, permitindo o desenvolvimento facilitado de aplicativos e utilitários tanto para o ambiente Hexagonix quanto para o Andromeda. As bibliotecas implementam funções para exibição de texto, cálculos matemáticos, envio de mensagens, abertura de arquivos e dispositivos e muito mais. A biblioteca básica (hexagon.s) fornece funções acessíveis para ambos os ambientes possíveis de distribuição, enquanto outras bibliotecas podem ser exclusivas do ambiente Andromeda. Essas bibliotecas incluem funções gráficas para montar interfaces em modo gráfico (Andromeda), bem como funções para verificar a versão do sistema atualmente em execução (Hexagonix e Andromeda). Os utilitários base Hexagonix realizam a checagem da versão do Hexagon para verificar se podem ser executados, utilizando o utilitário Unix uname ou diretamente por uma chamada de sistema do Hexagon.
 
-Para saber mais e verificar cada função disponível nas bibliotecas de desenvolvimento do sistema, veja o repositório da [libasm](https://github.com/hexagonix/libasm).
+Para saber mais e verificar cada função disponível nas bibliotecas de desenvolvimento do sistema, veja o repositório da [libasm](https://github.com/hexagonix/lib).
 
 </div>
 
