@@ -83,7 +83,7 @@ You can go to the [releases](https://github.com/hexagonix/hexagonix/releases) se
 <br>
 <summary align='left'><strong>5️⃣ Help with the development of Hexagonix/Andromeda</strong></summary>
 
-If you have knowledge of writing x86 assembly code and would like to help develop the system, feel free to send me an email! See [here](https://github.com/hexagonix/hexagonix/blob/main/README.en.md#author--contact) how to contact me!
+If you have knowledge of writing x86 assembly code and would like to help develop the system, feel free to send me an email! See [here](https://github.com/hexagonix/Doc/blob/main/Hexagonix/README.en.md#author) how to contact me!
 
 </details>
 
@@ -91,7 +91,7 @@ If you have knowledge of writing x86 assembly code and would like to help develo
 <br>
 <summary align='left'><strong>6️⃣ Report system errors</strong></summary>
 
-You can report system errors [here](https://github.com/hexagonix/hexagonix/blob/main/README.en.md#reportar-errors).
+You can report system errors [here](https://github.com/hexagonix/hexagonix/issues).
 
 </details>
 
@@ -191,7 +191,7 @@ System calls are BSD-style, with the function number present on the stack and th
 <br>
 <summary align='left'><strong>4️⃣ Hexagonix environment</strong></summary>
 
-Hexagonix implements, together with Hexagon, a series of Unix-like utilities, with functionality and syntax similar to UNIX and Unix-like systems. **Utilities such as init, login, sh, top, ps, cp, rm, cat, clear, man, among others, are included in the standard distribution of Hexagonix**. These utilities make up the Hexagonix base utilities package. The login and user-mode environment startup tools are in this package, as well as several configuration files for this environment. These utilities generally do not have a graphical interface, only a command-line interface (CLI). However, they can be requested by applications that have a graphical interface. This environment is available in both the [Hexagonix](hexagonix.img) distribution and the [Andromeda](andromeda.img) distribution.
+Hexagonix implements, together with Hexagon, a series of Unix-like utilities, with functionality and syntax similar to UNIX and Unix-like systems. **Utilities such as init, login, sh, top, ps, cp, rm, cat, clear, man, among others, are included in the standard distribution of Hexagonix**. These utilities make up the Hexagonix base utilities package. The login and user-mode environment startup tools are in this package, as well as several configuration files for this environment. These utilities generally do not have a graphical interface, only a command-line interface (CLI). However, they can be requested by applications that have a graphical interface. This environment is available in both the [Hexagonix](https://github.com/hexagonix/hexagonix/blob/main/hexagonix.img) distribution and the [Andromeda](https://github.com/hexagonix/hexagonix/blob/main/andromeda.img) distribution.
 
 [![Unix-Apps](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=unix-apps&theme=dark)](https://github.com/hexagonix/unix-apps)
 
@@ -266,7 +266,7 @@ There are no third-party applications available for the Andromeda environment ye
 
 The default installation of Hexagonix also provides a number of fonts that can be loaded by the settings application or the font utility (font manager). These files are used to change the graphical display font for Hexagonix and Andromeda.
 
-Graphics mode fonts for Hexagon are developed as a bitmap in Assembly which, when compiled, generate a binary image of the font with representations of each character. The standard Hexagonix fonts have now been released as open source and are available in the [Hexagonix font repository](https://github.com/hexagonix/Fontes).
+Graphics mode fonts for Hexagon are developed as a bitmap in Assembly which, when compiled, generate a binary image of the font with representations of each character. The standard Hexagonix fonts have now been released as open source and are available in the [Hexagonix font repository](https://github.com/hexagonix/xfnt).
 
 [![Andromeda-Apps](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=xfnt&theme=dark)](https://github.com/hexagonix/xfnt)
 
