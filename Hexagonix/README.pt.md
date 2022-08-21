@@ -603,12 +603,11 @@ Além disso, outros projetos auxiliaram no desenvolvimento do Hexagonix/Andromed
 
 ## E-mail
 
-* hexagonixdev@gmail.com (PT/EN) 
-* felipemiguel_nery@hotmail.com (PT/EN)
+* hexagonixdev@gmail.com (PT/EN)
 
 ## Redes sociais
 
-* [Twitter](https://twitter.com/felipeldev) (Felipe Miguel Nery Lunkes)
+* [Felipe Miguel Nery Lunkes](https://twitter.com/felipeldev) (Twitter)
 
 </details>
 
@@ -631,4 +630,3 @@ Leia a licença para mais informações sobre direitos autorais, propriedade de 
 [^3]: A inicialização em modo DOS foi possível após pesquisa na documentação do FreeDOS, especialmente no arquivo "SYS.C" (que pode ser encontrado [aqui](http://www.ibiblio.org/pub/micro/pc-stuff/freedos/files/dos/sys/2043/)), que indica em qual segmento o kernel espera ser carregado e quais parâmetros são necessários para inicializar o kernel corretamente. Cada sistema DOS apresenta um segmento de carregamento preferencial e esse carregamento de outras edições do DOS pode ser implementada futuramente com o auxílio de novos módulos HBoot (em caso de sistema proprietário, o usuário deverá ter uma licença). Todo o código para o carregamento do núcleo foi desenvolvido do zero e não se baseia em algum existente (a implementação do HBoot e do modDOS, que são originais, se dão em Assembly, enquanto o código de carregamento do FreeDOS é desenvolvido em C). A implementação original do código do modDOS e de outros módulos para sistemas DOS também livra a implementação de qualquer problema legal.
 [^4]: A iniciação em modo de compatibilidade DOS do HBoot (modDOS) pode ser útil para rodar ferramentas de verificação de erros no volume, desfragmentação do volume, particionador e outras ferramentas de diagnóstico, bem como de desenvolvimento, como compiladores e montadores que não são suportados pelo Hexagonix/Andromeda (as ferramentas de 16 bits, por exemplo).
 [^5]: Compatível com as chamadas open(), close(), read() e write(), pelo menos em conceito. As chamadas de sistema são realizadas sempre no estilo BSD, com número de função na pilha e parâmetros nos registradores.
-

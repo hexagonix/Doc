@@ -605,11 +605,10 @@ Feel free to contact me, report bugs or be interested in participating in the pr
 ## Email
 
 * hexagonixdev@gmail.com (PT/EN)
-* felipemiguel_nery@hotmail.com (PT/EN)
 
 ## Social networks
 
-* [Twitter](https://twitter.com/felipemnlunkes) (Felipe Miguel Nery Lunkes)
+* [Felipe Miguel Nery Lunkes](https://twitter.com/felipeldev) (Twitter)
 
 </details>
 
