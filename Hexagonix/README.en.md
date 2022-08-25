@@ -11,6 +11,21 @@ All rights reserved.
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix.png" width="150" height="150">
 </p>
 
+<div align="center">
+   
+![](https://img.shields.io/github/license/hexagonix/hexagonix.svg)
+![](https://img.shields.io/github/stars/hexagonix/hexagonix.svg)
+![](https://img.shields.io/github/issues/hexagonix/hexagonix.svg)
+![](https://img.shields.io/github/issues-closed/hexagonix/hexagonix.svg)
+![](https://img.shields.io/github/issues-pr/hexagonix/hexagonix.svg)
+![](https://img.shields.io/github/issues-pr-closed/hexagonix/hexagonix.svg)
+![](https://img.shields.io/github/downloads/hexagonix/hexagonix/total.svg)
+![](https://img.shields.io/github/release/hexagonix/hexagonix.svg)
+
+</div>
+
+<hr>
+
 # Starting point
 
 <details title="License" align='left'>
