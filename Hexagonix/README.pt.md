@@ -8,7 +8,7 @@ Todos os direitos reservados.
 -->
 
 <p align="center">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix.png" width="150" height="150">
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/banner.png">
 </p>
 
 <div align="center">
