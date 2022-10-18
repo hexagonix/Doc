@@ -51,7 +51,7 @@ This is the first extensively tested and marked stable version of the system. He
 
 <div align="justify">
 
-Hexagonix H1 R1 (codenamed Caladan) is the first patch pack for the H1 version of Hexagonix. Many improvements have been made to various Hexagonix Unix utilities, as well as enhancements and fixes have been made to the Andromeda userland. Hexagon has been updated to version 9.3, with many bug fixes, stability improvements, increased performance and smaller memory footprint, as well as fixed support for PS/2 mice (and USB via PS/2 emulation) and other devices. Go to the [releases] area(https://github.com/hexagonix/hexagonix/releases) and look for version H1 R1.
+Hexagonix H1 R1 (codenamed Caladan) is the first patch pack for the H1 version of Hexagonix. Many improvements have been made to various Hexagonix Unix utilities, as well as enhancements and fixes have been made to the Andromeda userland. Hexagon has been updated to version 9.3, with many bug fixes, stability improvements, increased performance and smaller memory footprint, as well as fixed support for PS/2 mice (and USB via PS/2 emulation) and other devices. Go to the [releases](https://github.com/hexagonix/hexagonix/releases) area and look for version H1 R1.
 
 </div>
 
@@ -69,7 +69,7 @@ Second update package for Hexagonix/Andromeda version H1, which includes:
 - Improvements in several Hexagonix utilities;
 - Improvements in various Andromeda utilities;
 
-Several runtime failures have been identified in various Andromeda utilities that have been fixed in this release. Updates were also added to Hexagon, decreasing memory pressure and targeting errors identified during system execution. The system manuals have also been updated, as well as the naming used in a number of utilities. From now on, the next H1 version update will focus on improvements and adding new features. Go to the [releases] area(https://github.com/hexagonix/hexagonix/releases) and look for the H1 R2 version.
+Several runtime failures have been identified in various Andromeda utilities that have been fixed in this release. Updates were also added to Hexagon, decreasing memory pressure and targeting errors identified during system execution. The system manuals have also been updated, as well as the naming used in a number of utilities. From now on, the next H1 version update will focus on improvements and adding new features. Go to the [releases](https://github.com/hexagonix/hexagonix/releases) area and look for the H1 R2 version.
 
 </div>
 
@@ -89,7 +89,7 @@ Final release of the H1 version of the system. This is the release analogous to 
 - Stability fixes in various utilities;
 - Improvements in Andromeda Settings;
 
-Go to the [releases] area(https://github.com/hexagonix/hexagonix/releases) and look for version H1 R3.
+Go to the [releases](https://github.com/hexagonix/hexagonix/releases) area and look for version H1 R3.
 
 </div>
 
