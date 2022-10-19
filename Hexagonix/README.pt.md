@@ -526,6 +526,11 @@ Você pode reportar erros e ajudar a desenvolver o sistema. Para isso, abra uma 
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix3.png" width="500" height="400">
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix4.png" width="500" height="400">
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix5.png" width="500" height="400">
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix6.png" width="500" height="400">
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix7.png" width="500" height="400">
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix8.png" width="500" height="400">
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix9.png" width="500" height="400">
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix10.png" width="500" height="400">
 </p>
 
 Você pode ver mais [aqui](https://github.com/hexagonix/Distro/tree/main/Img).
