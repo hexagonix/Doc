@@ -131,3 +131,22 @@ Essa atualização do sistema conserta vários bugs no sistema, incluindo proble
 </details>
 
 </details>
+
+<details title="Hexagonix H2" align='left'>
+<br>
+<summary align='left'><strong>Hexagonix H2-dev.beta1</strong></summary>
+
+<div align="justify">
+
+A versão em desenvolvimento, H2 (codenome Vita Nova), é a próxima versão do Hexagonix. Até o momento, as alterações e melhorias em relação ao Hexagonix H1-R6 são:
+
+- Kernel Hexagon v1.1.2;
+- Fusão das distribuições Hexagonix e Andromeda em uma única distribuição;
+- Remoção de extensão de arquivo para os binários do sistema;
+- Adição de termos de licença na imagem do sistema;
+- Melhorias em utilitários Unix e Hexagonix-Andromeda (antigos aplicativos Andromeda);
+- Hexagon Boot v0.3 (incompatível com a versão H1).
+
+</div>
+
+</details>
