@@ -134,6 +134,10 @@ Essa atualização do sistema conserta vários bugs no sistema, incluindo proble
 
 <details title="Hexagonix H2" align='left'>
 <br>
+<summary align='left'><strong>Hexagonix H2</strong></summary>
+
+<details title="Hexagonix H2-dev.beta1" align='left'>
+<br>
 <summary align='left'><strong>Hexagonix H2-dev.beta1</strong></summary>
 
 <div align="justify">
@@ -148,5 +152,7 @@ A versão em desenvolvimento, H2 (codenome Vita Nova), é a próxima versão do 
 - Hexagon Boot v0.3 (incompatível com a versão H1).
 
 </div>
+
+</details>
 
 </details>
