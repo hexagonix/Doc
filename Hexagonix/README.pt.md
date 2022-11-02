@@ -233,6 +233,14 @@ Você pode adicionar outro usuário alterando o arquivo `USUARIO.UNX` na raiz do
 
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
+# Contribuir e reportar erros
+
+<div align="justify">
+     
+Abaixo você poderá saber mais sobre como contribuir e reportar erros encontrados no Hexagonix.
+     
+</div>
+
 <details title="Contribua no desenvolvimento do Hexagonix" align='left'>
 <br>
 <summary align='left'>Contribua no desenvolvimento do Hexagonix</summary>
