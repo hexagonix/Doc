@@ -23,9 +23,9 @@
 
 > **A documentação está em construção.**
 
-* [Documentação do Hexagonix](https://github.com/hexagonix/Doc/tree/main/Hexagonix/README.md)
-* [Documentação do Hexagon](https://github.com/hexagonix/Doc/tree/main/Hexagon/README.md)
-* [Documentação do HBoot](https://github.com/hexagonix/Doc/tree/main/HBoot/README.md) 
+* [Documentação do Hexagonix](https://github.com/hexagonix/Doc/tree/main/Hexagonix/README.pt.md)
+* [Documentação do Hexagon](https://github.com/hexagonix/Doc/tree/main/Hexagon/README.pt.md)
+* [Documentação do HBoot](https://github.com/hexagonix/Doc/tree/main/HBoot/README.pt.md) 
 
 </details>
 
