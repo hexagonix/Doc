@@ -82,7 +82,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
-# Fazer download e testar o sistema agora mesmo
+# Fazer download e executar o sistema agora mesmo
 
 <div align="justify">
 
@@ -104,7 +104,7 @@ Você pode ir até a sessão de [`lançamentos`](https://github.com/hexagonix/he
 
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
-# Como testar o Hexagonix
+# Como executar o Hexagonix
 
 ## Requisitos do sistema
 
