@@ -138,20 +138,20 @@ O Hexagonix implementa, junto ao Hexagon, uma série de utilitários Unix-like, 
 
 O Hexagonix inclui muitos dos utilitários Unix que você pode já estar familiarizado, como por exemplo:
 
-- [x] `init`
-- [x] `login`
-- [x] `ls`
-- [x] `cat`
-- [x] `cp`
-- [x] `rm`
-- [x] `clear`
-- [x] `top`
-- [x] `ps`
-- [x] `man`
-- [x] `su`
-- [x] `sh` (shell padrão)
-- [x] `uname`
-- [x] `whoami`, entre outros.
+- [x] init
+- [x] login
+- [x] ls
+- [x] cat
+- [x] cp
+- [x] rm
+- [x] clear
+- [x] top
+- [x] ps
+- [x] man
+- [x] su
+- [x] sh`(shell padrão)
+- [x] uname
+- [x] whoami, entre outros.
 
 Alguns aplicativos e utilitários foram desenvolvidos exclusivamente para o Hexagonix, como:
 
@@ -188,15 +188,15 @@ O ambiente Andromeda do Hexagonix (Hexagonix-Andromeda) é construído sobre a b
 
 <div align="justify">
 
-- [x] `Configurações do sistema (Config)`
-- [x] `Editor de texto Quartzo`
-- [x] `IDE Lyoko para desenvolvimento de aplicativos`
-- [x] `Piano eletrônico return Piano;`
-- [x] `Utilitário de comunicação serial`
-- [x] `Andromeda Shell (ASH)` - Um novo shell para o Hexagonix
-- [x] `Calculadora do Hexagonix`
-- [x] `Utilitário de alteração de fonte`
-- [x] `Utilitário de desligamento do Hexagonix`
+- [x] Configurações do sistema (Config)
+- [x] Editor de texto Quartzo
+- [x] IDE Lyoko para desenvolvimento de aplicativos
+- [x] Piano eletrônico return Piano;
+- [x] Utilitário de comunicação serial
+- [x] Andromeda Shell (ASH) - Um novo shell para o Hexagonix
+- [x] Calculadora do Hexagonix
+- [x] Utilitário de alteração de fonte
+- [x] Utilitário de desligamento do Hexagonix
 
 ### Aplicativos de terceiros disponíveis para o Hexagonix-Andromeda
 
@@ -236,6 +236,25 @@ Para saber mais e verificar cada função disponível nas bibliotecas de desenvo
 
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
+## 🌙 Capturas de tela
+
+<p align="center">
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix1.png" width="500" height="400">
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix2.png" width="500" height="400">
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix3.png" width="500" height="400">
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix4.png" width="500" height="400">
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix5.png" width="500" height="400">
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix6.png" width="500" height="400">
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix7.png" width="500" height="400">
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix8.png" width="500" height="400">
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix9.png" width="500" height="400">
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix10.png" width="500" height="400">
+</p>
+
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+
 ## Contribuir e reportar erros
 
 <div align="justify">
@@ -246,7 +265,7 @@ Abaixo você poderá saber mais sobre como contribuir e reportar erros encontrad
 
 <details title="Contribua no desenvolvimento do Hexagonix" align='left'>
 <br>
-<summary align='left'>5Contribua no desenvolvimento do Hexagonix</summary>
+<summary align='left'>Contribua no desenvolvimento do Hexagonix</summary>
 
 <div align="justify">
 
@@ -267,25 +286,6 @@ Você pode reportar erros e ajudar a desenvolver o sistema. Para isso, abra uma 
 </div>
 
 </details>
-
-<!-- Vai funcionar como <hr> -->
-
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
-
-## 🌙 Capturas de tela
-
-<p align="center">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix1.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix2.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix3.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix4.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix5.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix6.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix7.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix8.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix9.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix10.png" width="500" height="400">
-</p>
 
 <!-- Vai funcionar como <hr> -->
 
