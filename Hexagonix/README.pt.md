@@ -197,7 +197,7 @@ Lembrando que você deve utilizar uma versão/edição do qemu que consiga execu
 
 </div>
 
-## Testar o Hexagonix em máquina física</summary>
+## Testar o Hexagonix em máquina física
 
 <div align="justify">
 
@@ -214,7 +214,7 @@ Vale ressaltar que o desempenho do sistema pode variar de acordo com a máquina 
 
 </div>
 
-## Primeiro uso e login</summary>
+## Primeiro uso e login
 
 <div align="justify">
 
