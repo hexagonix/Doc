@@ -104,7 +104,7 @@ The first component of Hexagonix is the Saturn. It is responsible for taking con
 
 <div align="center">
    
-[![Saturn](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=Saturn&theme=dark)](https://github.com/hexagonix/Saturn)
+[![Saturno](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=Saturn&theme=dark)](https://github.com/hexagonix/Saturno)
    
 </div>
 
@@ -172,7 +172,7 @@ Hexagonix implements, together with Hexagon, a series of Unix-like utilities, wi
 
 <div align="center">
    
-[![Unix-Apps](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=unix-apps&theme=dark)](https://github.com/hexagonix/unix -apps)
+[![Unix-Apps](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=unix-apps&theme=dark)](https://github.com/hexagonix/unix-apps)
 
 </div>
 
@@ -208,6 +208,7 @@ Some applications and utilities were developed exclusively for Hexagonix, such a
 * lshmod (gets and displays information from HBoot modules and HBoot itself)
 
 It is worth remembering that Hexagonix utilities try to implement a POSIX interface as far as possible, similar in syntax to Unix utilities (FreeBSD and Linux used as a model).
+   
 ### Third party applications available for Hexagonix
 
 * [Flat Assembler (fasm)](https://flatassembler.net/index.php)
@@ -228,7 +229,7 @@ The Hexagonix Andromeda environment (Hexagonix-Andromeda) is built on the solid 
 
 <div align="center">
 
-[![Andromeda-Apps](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=andromeda-apps&theme=dark)](https://github.com/hexagonix/andromeda -apps)
+[![Andromeda-Apps](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=andromeda-apps&theme=dark)](https://github.com/hexagonix/andromeda-apps)
 
 </div>
 
