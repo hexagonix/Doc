@@ -24,7 +24,9 @@ All rights reserved.
 
 </div>
 
-<hr>
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
 # Starting point
 
@@ -120,7 +122,9 @@ You can report system errors [here](https://github.com/hexagonix/hexagonix/issue
 
 </details>
 
-<hr>
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
 # About the system
 
@@ -160,7 +164,9 @@ Hexagonix started as an implementation in a structure similar to DOS-like system
 
 </details>
 
-<hr>
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
 # System components
 
@@ -510,7 +516,9 @@ You can report bugs and help develop the system. To do this, open an error notif
 
 </details>
 
-<hr>
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
 # Screenshots
 
@@ -535,7 +543,9 @@ You can see more [here](https://github.com/hexagonix/Distro/tree/main/Img).
 
 </details>
 
-<hr>
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
 # More information
 
