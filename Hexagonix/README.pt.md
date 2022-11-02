@@ -94,7 +94,7 @@ Você pode ir até a sessão de [`lançamentos`](https://github.com/hexagonix/he
 
 <details title="Documentação do sistema" align='left'>
 <br>
-<summary align='left'>3Documentação do sistema</summary>
+<summary align='left'>Documentação do sistema</summary>
 
 * [Documentação do sistema (em construção)](https://github.com/hexagonix/Doc)
 
@@ -155,7 +155,7 @@ Para testar o Hexagonix, obtenha o arquivo [`hexagonix.img`](https://github.com/
 
 <div align="justify">
 
-Primeiramente, você deve instalar a ferramenta qemu, que irá gerenciar a máquina virtual. Para isso, você pode instalar o qemu utilizando repositórios oficiais de distribuições Linux ou acessando [aqui](https://www.qemu.org) para obter os arquivos de instalação para Windows e macOS.
+Primeiramente, você deve instalar a ferramenta `qemu`, que irá gerenciar a máquina virtual. Para isso, você pode instalar o qemu utilizando repositórios oficiais de distribuições Linux ou acessando [aqui](https://www.qemu.org) para obter os arquivos de instalação para Windows e macOS.
 
 > Instalar no Debian, Ubuntu, Pop_OS! e derivados:
 
@@ -173,6 +173,16 @@ Para o `Fedora`, a linha a seguir irá instalar o qemu e todas as suas dependên
 sudo dnf install qemu qemu-system-i386
 ```
 
+> Instalar no FreeBSD e derivados:
+
+Para o `FreeBSD`, a linha a seguir irá instalar o qemu e todas as suas dependências (privilégios de superusuário necessários):
+
+```
+su
+pkg update
+pkg install qemu
+```
+     
 Agora que você tem o qemu instalado em seu computador, você pode prosseguir com a execução do sistema.
 
 Para executar o sistema de maneira satisfatória, você deve fornecer ao menos 32 MB de RAM para a máquina virtual. Isso se deve a arquitetura de gerenciamento de memória do Hexagon, que exige 16 MB de RAM exclusiva para o kernel a ao menos 16 MB para alocar os aplicativos, utilitários e arquivos abertos. O Hexagon não admite menos que isso para ser executado. Caso mais memória seja fornecida, a memória adicional será sempre reservada, com prioridade, para ser disponibilizada aos processos do usuário. Normalmente, a linha de comando abaixo cumpre todos os requisitos para a execução do sistema:
