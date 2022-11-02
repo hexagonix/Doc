@@ -61,7 +61,7 @@ Algumas características do Hexagonix:
 
 <details title="Licença" align='left'>
 <br>
-<summary align='left'>Licença</summary>
+<summary align='left'>Licença do Hexagonix</summary>
 
 <div align="justify">
    
