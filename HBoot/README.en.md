@@ -11,14 +11,14 @@ Todos os direitos reservados.
 
 <div align="center">
 
-![](https://img.shields.io/github/license/hexagonix/hexagonix.svg)
-![](https://img.shields.io/github/stars/hexagonix/hexagonix.svg)
-![](https://img.shields.io/github/issues/hexagonix/hexagonix.svg)
-![](https://img.shields.io/github/issues-closed/hexagonix/hexagonix.svg)
-![](https://img.shields.io/github/issues-pr/hexagonix/hexagonix.svg)
-![](https://img.shields.io/github/issues-pr-closed/hexagonix/hexagonix.svg)
-![](https://img.shields.io/github/downloads/hexagonix/hexagonix/total.svg)
-![](https://img.shields.io/github/release/hexagonix/hexagonix.svg)
+![](https://img.shields.io/github/license/hexagonix/HBoot.svg)
+![](https://img.shields.io/github/stars/hexagonix/HBoot.svg)
+![](https://img.shields.io/github/issues/hexagonix/HBoot.svg)
+![](https://img.shields.io/github/issues-closed/hexagonix/HBoot.svg)
+![](https://img.shields.io/github/issues-pr/hexagonix/HBoot.svg)
+![](https://img.shields.io/github/issues-pr-closed/hexagonix/HBoot.svg)
+![](https://img.shields.io/github/downloads/hexagonix/HBoot/total.svg)
+![](https://img.shields.io/github/release/hexagonix/HBoot.svg)
 
 </div>
 
