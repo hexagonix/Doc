@@ -15,7 +15,9 @@
 
 </div>
 
-<hr>
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
 # Kernel Hexagon
 
@@ -57,7 +59,9 @@ Outras características que estão sendo desenvolvidas:
 
 </div>
 
-<hr>
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
 ### História do desenvolvimento
 
@@ -67,7 +71,9 @@ O kernel foi inicialmente desenhado e escrito visando uma estrutura e funcioname
 
 </div>
 
-<hr>
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
 ### Sessões da documentação sobre o Hexagon
 
@@ -591,7 +597,9 @@ inicioAPP:
 
 </details>
 
-<hr>
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
 ### Em busca de colaboradores
 
