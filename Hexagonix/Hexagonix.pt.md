@@ -64,6 +64,8 @@ Algumas características do Hexagonix:
 
 ## Componentes do sistema
 
+O Hexagonix é dividido em uma série de componentes, que atuam em conjunto desde que o dispositivo é ligado. Abaixo você poderá conhecer brevemente cada um deles.
+
 ### Saturno
 
 <div align="justify">
@@ -74,11 +76,13 @@ O primeiro componente do Hexagonix é o Saturno. Ele é responsável por receber
 
 </div>
 
+<hr>
+
 ### Hexagon Boot (HBoot)
 
 O Hexagon Boot (HBoot) é um componente desenvolvido para permitir a inicialização do kernel Hexagon. Até então, a inicialização era realizada por apenas um estágio, que definia um ambiente bem básico, carregava o Hexagon na memória e imediatamente o executava, fornecendo um conjunto bem limitado de parâmetros. Isso se deve ao fato de que o código desse estágio fica restrito a 512 bytes, o que limita a realização de diversos testes e processamento de dados. Como o HBoot, foi possível expandir o número de tarefas realizadas antes da execução do Hexagon, além da possibilidade de fornecer mais informações a respeito do ambiente do dispositivo e de inicialização. Isso é particularmente importante para permitir a criação de uma árvore de dispositivos que pode ser utilizada pelo Hexagon para decidir como manipular cada dispositivo identificado. O HBoot é capaz de verificar quais unidades de disco estão disponíveis na máquina, emitir um tom de inicialização, obter a quantidade de memória RAM disponível instalada e permitir ou não o prosseguimento do processo de boot de acordo com essa informação. Caso nenhuma interação do usuário seja detectada (em um tempo de 3 segundos após a inicialização do HBoot e exibição de mensagens ao usuário), o HBoot irá realizar testes adicionais para verificar a capacidade do dispositivo em executar o sistema e irá carregar e executar o Hexagon (presente em um arquivo no volume nomeado de `HEXAGON.SIS`). Após o carregamento, o HBoot transfere o controle para o Hexagon, que é inicializado e armazena no ambiente do kernel os dados fornecidos pelo HBoot.
 
-![HBoot](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=HBoot&theme=dark)](https://github.com/hexagonix/Hboot)
+[![HBoot](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=HBoot&theme=dark)](https://github.com/hexagonix/Hboot)
 
 #### Como interagir com o HBoot
 
@@ -100,6 +104,8 @@ O HBoot ganhou muita complexidade desde o início de seu desenvolvimento, em 202
 
 </div>
 
+<hr>
+
 ### Kernel Hexagon
 
 <div align="justify">
@@ -113,6 +119,8 @@ O Hexagon é um núcleo (kernel) monolítico executado em modo protegido 32-bit,
 </p>
 
 [![Hexagon Kernel](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=Hexagon&theme=dark)](https://github.com/hexagonix/Hexagon)
+
+<hr>
 
 ### Utilitários do ambiente Unix do Hexagonix
 
@@ -130,20 +138,20 @@ O Hexagonix implementa, junto ao Hexagon, uma série de utilitários Unix-like, 
 
 O Hexagonix inclui muitos dos utilitários Unix que você pode já estar familiarizado, como por exemplo:
 
-* `init`
-* `login`
-* `ls`
-* `cat`
-* `cp`
-* `rm`
-* `clear`
-* `top`
-* `ps`
-* `man`
-* `su`
-* `sh` (shell padrão)
-* `uname`
-* `whoami`, entre outros.
+- [x] `init`
+- [x] `login`
+- [x] `ls`
+- [x] `cat`
+- [x] `cp`
+- [x] `rm`
+- [x] `clear`
+- [x] `top`
+- [x] `ps`
+- [x] `man`
+- [x] `su`
+- [x] `sh` (shell padrão)
+- [x] `uname`
+- [x] `whoami`, entre outros.
 
 Alguns aplicativos e utilitários foram desenvolvidos exclusivamente para o Hexagonix, como:
 
@@ -164,6 +172,8 @@ O Hexagonix recebeu um port do montador [`fasm`](https://flatassembler.net/index
 
 </div>
 
+<hr>
+
 ### Utilitários do ambiente gráfico do Hexagonix
 
 <div align="justify">
@@ -178,21 +188,23 @@ O ambiente Andromeda do Hexagonix (Hexagonix-Andromeda) é construído sobre a b
 
 <div align="justify">
 
-* `Configurações do sistema (Config)`
-* `Editor de texto Quartzo`
-* `IDE Lyoko para desenvolvimento de aplicativos`
-* `Piano eletrônico return Piano;`
-* `Utilitário de comunicação serial`
-* `Andromeda Shell (ASH)` - Um novo shell para o Hexagonix
-* `Calculadora do Hexagonix`
-* `Utilitário de alteração de fonte`
-* `Utilitário de desligamento do Hexagonix`
+- [x] `Configurações do sistema (Config)`
+- [x] `Editor de texto Quartzo`
+- [x] `IDE Lyoko para desenvolvimento de aplicativos`
+- [x] `Piano eletrônico return Piano;`
+- [x] `Utilitário de comunicação serial`
+- [x] `Andromeda Shell (ASH)` - Um novo shell para o Hexagonix
+- [x] `Calculadora do Hexagonix`
+- [x] `Utilitário de alteração de fonte`
+- [x] `Utilitário de desligamento do Hexagonix`
 
 ### Aplicativos de terceiros disponíveis para o Hexagonix-Andromeda
 
 Ainda não existem aplicativos de terceiros disponíveis para o ambiente Hexagonix-Andromeda. Caso esteja interessado, você pode construir o primeiro!
 
 </div>
+
+<hr>
 
 ### Fontes gráficas do Hexagonix
 
@@ -205,6 +217,8 @@ As fontes de modo gráfico para Hexagon são desenvolvidas como um bitmap em Ass
 </div>
 
 [![Hexagonix-xfnt](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=xfnt&theme=dark)](https://github.com/hexagonix/xfnt)
+
+<hr>
 
 ### Bibliotecas de desenvolvimento do sistema
 
@@ -222,9 +236,17 @@ Para saber mais e verificar cada função disponível nas bibliotecas de desenvo
 
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
+## Contribuir e reportar erros
+
+<div align="justify">
+   
+Abaixo você poderá saber mais sobre como contribuir e reportar erros encontrados no Hexagonix.
+
+</div>
+
 <details title="Contribua no desenvolvimento do Hexagonix" align='left'>
 <br>
-<summary align='left'>5️⃣ Contribua no desenvolvimento do Hexagonix</summary>
+<summary align='left'>5Contribua no desenvolvimento do Hexagonix</summary>
 
 <div align="justify">
 
@@ -236,7 +258,7 @@ Se você tem conhecimento em criar código em Assembly x86 e gostaria de ajudar 
 
 <details title="Reportar erros" align='left'>
 <br>
-<summary align='left'>6️⃣ Reportar erros</summary>
+<summary align='left'>Reportar erros</summary>
 
 <div align="justify">
 
@@ -250,11 +272,7 @@ Você pode reportar erros e ajudar a desenvolver o sistema. Para isso, abra uma 
 
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
-## Capturas de tela
-
-<details title="Hexagonix" align='left'>
-<br>
-<summary align='left'>🌙 Hexagonix</summary>
+## 🌙 Capturas de tela
 
 <p align="center">
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix1.png" width="500" height="400">
@@ -269,9 +287,9 @@ Você pode reportar erros e ajudar a desenvolver o sistema. Para isso, abra uma 
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix10.png" width="500" height="400">
 </p>
 
-</details>
+<!-- Vai funcionar como <hr> -->
 
-<hr>
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
 ## Outras informações
 
