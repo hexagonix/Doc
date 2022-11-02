@@ -25,12 +25,9 @@
 
 > **A documentação está em construção.**
 
-* [Documentação do Hexagonix](https://github.com/hexagonix/Doc/tree/main/Hexagonix/README.pt.md)
-* [Documentação do Hexagon](https://github.com/hexagonix/Doc/tree/main/Hexagon/README.pt.md)
-* [Documentação do HBoot](https://github.com/hexagonix/Doc/tree/main/HBoot/README.pt.md) 
-
-<br>
-
+* 📚 [Documentação do Hexagonix](https://github.com/hexagonix/Doc/tree/main/Hexagonix/README.pt.md)
+* 📚 [Documentação do Hexagon](https://github.com/hexagonix/Doc/tree/main/Hexagon/README.pt.md)
+* 📚 [Documentação do HBoot](https://github.com/hexagonix/Doc/tree/main/HBoot/README.pt.md) 
 * ⚒️ [Construir o sistema](https://github.com/hexagonix/build/blob/main/README.pt.md)
 
 </details>
@@ -41,12 +38,9 @@
 
 > **The documentation is under constrution.**
 
-* [Hexagonix Documentation](https://github.com/hexagonix/Doc/tree/main/Hexagonix/README.en.md)
-* [Hexagon Documentation](https://github.com/hexagonix/Doc/tree/main/Hexagon/README.en.md)
-* [HBoot Documentation](https://github.com/hexagonix/Doc/tree/main/HBoot/README.en.md)
-
-<br>
-
+* 📚 [Hexagonix Documentation](https://github.com/hexagonix/Doc/tree/main/Hexagonix/README.en.md)
+* 📚 [Hexagon Documentation](https://github.com/hexagonix/Doc/tree/main/Hexagon/README.en.md)
+* 📚 [HBoot Documentation](https://github.com/hexagonix/Doc/tree/main/HBoot/README.en.md)
 * ⚒️ [Build the system](https://github.com/hexagonix/build/blob/main/README.en.md)
 
 </details>
