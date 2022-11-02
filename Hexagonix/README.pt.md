@@ -30,9 +30,15 @@ Todos os direitos reservados.
 
 # Ponto de partida
 
+<div align="justify")
+     
+Antes de mais nada, leia a licença abaixo, relativa ao uso e redistribuição do Hexagonix (binários e código-fonte).
+
+</div>
+
 <details title="Licença" align='left'>
 <br>
-<summary align='left'>1️⃣ Licença</summary>
+<summary align='left'>Licença de uso e redistribuição do Hexagonix (BSD-3-Clause)</summary>
 
 <div align="justify">
 
@@ -72,310 +78,35 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 </details>
 
-<details title="Fazer download e testar o sistema agora mesmo" align='left'>
-<br>
-<summary align='left'>2️⃣ Fazer download e testar o sistema agora mesmo</summary>
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+
+# Fazer download e executar o sistema agora mesmo
 
 <div align="justify">
 
-No [`final deste arquivo`](https://github.com/hexagonix/Doc/blob/main/Hexagonix/README.pt.md#como-testar-o-hexagonix) você encontra um tutorial para executar o Hexagonix em seu computador, tanto em uma versão virtualizada como de forma nativa. Lembre-se que é necessário possuir um computador de arquitetura x86 ou um emulador, caso esteja utilizando um dispositivo de outra arquitetura para testes.
+Neste documento, você encontra um tutorial para executar o Hexagonix em seu computador, tanto em uma versão virtualizada como de forma nativa. Lembre-se que é necessário possuir um computador de arquitetura x86 ou um emulador, caso esteja utilizando um dispositivo de outra arquitetura para testes.
 
-Você pode ir até a sessão de [`lançamentos`](https://github.com/hexagonix/hexagonix/releases) para obter as versões estáveis do sistema. Você pode acessar o arquivo de [anúncio de versões](REL.pt.md) do Hexagonix. Sempre que possível, obtenha o último lançamento e realize o download das imagens .img disponíveis ou do pacote completo em formato zip. As versões disponíveis diretamente neste repositório são sempre versões de desenvolvimento (beta e release candidate), que também podem ser executadas e estão minimamente funcionais. Ao final de cada ciclo de desenvolvimento, as versões finais estarão disponíveis na sessão [lançamentos](https://github.com/hexagonix/hexagonix/releases).
+Você pode ir até a sessão de [`lançamentos`](https://github.com/hexagonix/hexagonix/releases) para obter as versões estáveis mais recentes do sistema. Você pode acessar o arquivo de [anúncio de versões](REL.pt.md) do Hexagonix. Sempre que possível, obtenha o último lançamento e realize o download das imagens .img ou .vdi disponíveis ou do pacote completo em formato zip. As versões disponíveis diretamente neste repositório são sempre versões de desenvolvimento (beta e release candidate), que também podem ser executadas e estão minimamente funcionais. Ao final de cada ciclo de desenvolvimento, as versões finais estarão disponíveis na sessão [lançamentos](https://github.com/hexagonix/hexagonix/releases).
 
 </div>
 
-</details>
-
 <details title="Documentação do sistema" align='left'>
 <br>
-<summary align='left'>3️⃣ Documentação do sistema</summary>
-
+<summary align='left'>Documentação do sistema</summary>
 
 * [Documentação do sistema (em construção)](https://github.com/hexagonix/Doc)
 
 </details>
 
-<details title="Construir o sistema" align='left'>
-<br>
-<summary align='left'>4️⃣ Construir o sistema</summary>
-
-* [Construir o sistema (Português)](https://github.com/hexagonix/build/blob/main/README.pt.md)
-
-</details>
-
-<details title="Contribua no desenvolvimento do Hexagonix" align='left'>
-<br>
-<summary align='left'>5️⃣ Contribua no desenvolvimento do Hexagonix</summary>
-
-<div align="justify">
-
-Se você tem conhecimento em criar código em Assembly x86 e gostaria de ajudar no desenvolvimento do sistema, sinta-se a vontade em me enviar um email! Veja [aqui](https://github.com/hexagonix/Doc/blob/main/Hexagonix/README.pt.md#autor) como entrar em contato comigo!
-
-</div>
-
-</details>
-
-<details title="Reporte erros no sistema" align='left'>
-<br>
-<summary align='left'>6️⃣ Reporte erros no sistema</summary>
-
-Você pode reportar erros do sistema [aqui](https://github.com/hexagonix/hexagonix/issues).
-
-</details>
-
 <!-- Vai funcionar como <hr> -->
 
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
-# Sobre o sistema
+# Como executar o Hexagonix
 
-<details title="Desenvolvimento" align='left'>
-<br>
-<summary align='left'>1️⃣ Desenvolvimento</summary>
-
-<div align="justify">
-
-O Hexagonix e todos os seus componentes vêm sendo desenvolvidos desde 2015 e foram escritos completamente em linguagem `Assembly`.
-
-</div>
-
-</details>
-
-<details title="E o código-fonte?" align='left'>
-<br>
-<summary align='left'>2️⃣ E o código-fonte?</summary>
-
-<div align="justify">
-
-O código-fonte do projeto já foi disponibilizado publicamente. O código do kernel e dos utilitários Unix-like e aplicativos Hexagonix-Andromeda estão disponíveis, assim como o pacote de fontes que compõe o HBoot. As imagens de disco do Hexagonix já estão disponíveis e sua distribuição é livre, obedescendo a licenã BSD-3-clause. Observe a [`licença`](LICENSE) disponível neste repositório para mais informações. Vale ressaltar que a licença de cada pacote de código que compõe o sistema (Hexagon, HBoot, utilitarios Hexagonix, utilitários Hexagonix-Andromeda, fontes e outros componentes) pode variar. Cada pacote pode ser liberado com um tipo de licença diferente (como GPL, MIT ou BSD, por exemplo). Fique atento a cada licença nos respectivos repositórios. Os componentes que não estão disponíveis no repositório oficial ainda se encontram em código fechado, regidos por uma licença proprietária Hexagonix, que pode ser encontrada [aqui](https://github.com/hexagonix/Doc/blob/main/LICENSES/Hexagonix).
-
-</div>
-
-</details>
-
-<details title="A história do Hexagonix" align='left'>
-<br>
-<summary align='left'>3️⃣ A história do Hexagonix</summary>
-
-<div align="justify">
-
-O Hexagonix começou como uma implementação em estrutura similar a sistemas do tipo DOS, com um interpretador com comandos internos com nomes, sintaxes e resultados semelhantes a um DOS genérico. O interpretador de comandos apresentava comandos de manipulação de arquivos e outros internamente, como em sistemas DOS convencionais. As unidades de disco também eram definidas como letras. Mais tarde, surgiu um interesse crescente e fascínio no funcionamento de sistemas Unix e todo o código foi reescrito ou adaptado para tornar o kernel do sistema um kernel Unix-like. Todos os componentes do sistema, assim como no DOS, eram mantidos em uma única árvore até então. Com a versão 1.5 do Hexagonix, com nome de código "Unix-like", o kernel foi bastante modificado e reescrito para se adequar à filosofia Unix. As mudanças incluíram até mesmo a forma como os dispositivos eram tratados, com a escrita de uma camada de abstração de hardware com o gerenciamento de dispositivos como arquivos, além da adição das chamadas de sistema abrir(), fechar(), escrever() e ler(). Também foram escritos os utilitários base Unix, com a retirada de comandos do interpretador padrão, que foi reescrito para dar lugar a um shell Unix-like. Os camandos internos foram movidos para os utilitários, que passaram a contar com estrutura e sintaxe no estilo Unix. O restante dos utilitários, como mount, foi escrita, já tirando proveito da chamada abrir(), que também é utilizada para montar volume, além de abrir arquivos ordinários do volume. A chamada abrir() também é utilizada para iniciar outros periféricos, como portas seriais e paralelas. A chamada escrever() também funciona com dispositivos e arquivos, bem como fechar(). Foi também introduzido um VFS (Virtual File System), que suportará no futuro vários sistemas de arquivos e que torna transparente para o sistema, programadores e usuários o gerenciamento de arquivos. Também foram incluídas novas funções de gerenciamento de hardware e muitos aprimoramentos e correções de bugs. O sistema ganha novos utilitários Unix até o presente momento. Após essa alteração da proposta e arquitetura, os componentes foram separados e alocados em projetos específicos. A união destes componentes forma o sistema operacional. No caso do Hexagonix, temos o HBoot, Hexagon, shell, bibliotecas e aplicativos Unix, enquanto o ambiente Hexagonix-Andromeda estende o Hexagonix, incorporando outras bibliotecas e aplicativos que as utilizam.
-
-</div>
-
-</details>
-
-<!-- Vai funcionar como <hr> -->
-
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
-
-# Componentes do sistema
-
-<details title="Saturno" align='left'>
-<br>
-<summary align='left'>1️⃣ Saturno</summary>
-
-<div align="justify">
-
-O primeiro componente do Hexagonix é o Saturno. Ele é responsável por receber o controle do processo de inicialização realizado pelo BIOS/UEFI e procurar no volume o segundo estágio de inicialização. Para isso, ele implementa um driver para leitura de um sistema de arquivos FAT16. O segundo estágio de inicialização (ver adiante) pode implementar drivers para outros sistemas de arquivos e é responsável por encontrar o Hexagon, carregar módulos HBoot ou carregar um sistema do tipo DOS compatível (versão BETA).
-
-</div>
-
-[![Saturno](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=Saturno&theme=dark)](https://github.com/hexagonix/Saturno)
-
-</details>
-
-<details title="Hexagon Boot (HBoot)" align='left'>
-<br>
-<summary align='left'>2️⃣ Hexagon Boot (HBoot)</summary>
-
-<div align="justify">
-
-O Hexagon Boot (HBoot) é um componente desenvolvido para permitir a inicialização do kernel Hexagon. Até então, a inicialização era realizada por apenas um estágio, que definia um ambiente bem básico, carregava o Hexagon na memória e imediatamente o executava, fornecendo um conjunto bem limitado de parâmetros. Isso se deve ao fato de que o código desse estágio fica restrito a 512 bytes, o que limita a realização de diversos testes e processamento de dados. Como o HBoot, foi possível expandir o número de tarefas realizadas antes da execução do Hexagon, além da possibilidade de fornecer mais informações a respeito do ambiente do dispositivo e de inicialização. Isso é particularmente importante para permitir a criação de uma árvore de dispositivos que pode ser utilizada pelo Hexagon para decidir como manipular cada dispositivo identificado. O HBoot é capaz de verificar quais unidades de disco estão disponíveis na máquina, emitir um tom de inicialização, obter a quantidade de memória RAM disponível instalada e permitir ou não o prosseguimento do processo de boot de acordo com essa informação. Caso nenhuma interação do usuário seja detectada (em um tempo de 3 segundos após a inicialização do HBoot e exibição de mensagens ao usuário), o HBoot irá realizar testes adicionais para verificar a capacidade do dispositivo em executar o sistema e irá carregar e executar o Hexagon (presente em um arquivo no volume nomeado de `HEXAGON.SIS`). Após o carregamento, o HBoot transfere o controle para o Hexagon, que é inicializado e armazena no ambiente do kernel os dados fornecidos pelo HBoot.
-
-</div>
-
-[![HBoot](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=HBoot&theme=dark)](https://github.com/hexagonix/Hboot)
-
-### Como interagir com o HBoot
-
-<div align="justify">
-
-A interação com o HBoot se dá pelo pressionamento da tecla `F8` após a inicialização e exibição de mensagens na tela. O HBoot aguarda por 3 segundos alguma intereação e, caso nenhuma tenha ocorrido, continua a executar o protocolo de boot. A interação com o HBoot pode ser interessante para carregar módulos no formato HBoot, fornecer parâmetros de inicialização ao Hexagon, carregar algum sistema do tipo DOS cujos arquivos estejam presentes no mesmo volume ou ainda carregar imagens HAPP de outros núcleos (caso o desenvolvedor deseje utilizar a implementação HBoot em seu projeto). Abaixo, veja mais alguns detalhes de funções adicionais e de diagnóstico que podem ser realizadas via interação com o HBoot antes do carregamento do Hexagonix.
-
-</div>
-
-<p align="center">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/HBoot.png" width="600" height="500">
-</p>
-
-### Reportar bugs
-
-<div align="justify">
-
-O HBoot ganhou muita complexidade desde o início de seu desenvolvimento, em 2020. Devido a esse aumento de código e a natureza de sua operação (16-bit), bugs podem ser encontrados. Os mesmos podem ser reportados no repositório ou por email, disponível no final deste arquivo.
-
-</div>
-
-</details>
-
-<details title="Kernel Hexagon" align='left'>
-<br>
-<summary align='left'>3️⃣ Kernel Hexagon</summary>
-
-### O que é
-
-<div align="justify">
-
-O Hexagon é um núcleo (kernel) monolítico executado em modo protegido 32-bit, desenvolvido tendo como alvo a arquitetura PC (x86). É um kernel escrito do zero, visando a velocidade e a compatibilidade de harware moderno mas também sendo capaz de ser executado em hardware mais antigo (como um Pentium III). No momento, garante um ambiente monoutilizador, apesar do uso de terminais virtuais, e monotarefa, apesar da capacidade de carregar, manter em memória e controlar mais de um processo, em uma pilha de execução. Futuramente, o kernel poderá receber suporte a execução de múltiplos processos em multitarefa preemptiva. O Hexagon é um kernel Unix-like e tenta implementar uma compatibilidade POSIX, embora longe desta, e compõe a base do Sistema Operacional Hexagonix, embora independente deste. Ele executa imagens executáveis no formato HAPP, desenvolvido exclusivamente para o Hexagon. O Hexagon também implementa uma API bastante sofisticada acessível através de uma chamada de sistema.
-
-</div>
-
-<p align="center">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/LogoHexagon.png" width="180" height="180">
-</p>
-
-[![Hexagon Kernel](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=Hexagon&theme=dark)](https://github.com/hexagonix/Hexagon)
-
-### Chamadas de sistema
-
-<div align="justify">
-
-As chamadas de sistema são realizadas no estilo `BSD`, com o número da função presente na pilha e os parâmetros/argumentos junto aos registradores. Para uma lista completa de chamadas de sistema disponíveis na versão atual do sistema, dê uma olhada na biblioteca do Hexagon na [libasm para fasm](https://github.com/hexagonix/lib/blob/main/fasm/hexagon.s) ou [libasm para nasm](https://github.com/hexagonix/lib/blob/main/nasm/hexagon.s).
-
-</div>
-
-</details>
-
-<details title="Ambiente Hexagonix" align='left'>
-<br>
-<summary align='left'>4️⃣ Ambiente Hexagonix</summary>
-
-<div align="justify">
-
-O Hexagonix implementa, junto ao Hexagon, uma série de utilitários Unix-like, com funcionalidade e sintaxe de uso semelhante à sistemas UNIX e Unix-like. **Utilitários como init, login, sh, top, ps, cp, rm, cat, clear, man, dentre outros, estão inclusos na distribuição padrão do Hexagonix**. Estes utilitários compõem o pacote de utilitários base do Hexagonix. As ferramentas de inicialização de ambiente de modo usuário e login estão neste pacote, bem como vários arquivos de configuração deste ambiente. Estes utilitários não apresentam, no geral, uma interface gráfica, apenas uma interface em linha de comando (CLI). Entretanto, podem ser solicitados por aplicativos que apresentem interface gráfica. Este ambiente está disponível na distribuição do [`Hexagonix`](https://github.com/hexagonix/hexagonix/blob/main/hexagonix.img).
-
-</div>
-
-[![Unix-Apps](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=unix-apps&theme=dark)](https://github.com/hexagonix/unix-apps)
-
-### Alguns aplicativos e utilitários do ambiente Hexagonix
-
-<div align="justify">
-
-O Hexagonix inclui muitos dos utilitários Unix que você pode já estar familiarizado, como por exemplo:
-
-* `init`
-* `login`
-* `ls`
-* `cat`
-* `cp`
-* `rm`
-* `clear`
-* `top`
-* `ps`
-* `man`
-* `su`
-* `sh` (shell padrão)
-* `uname`
-* `whoami`, entre outros.
-
-Alguns aplicativos e utilitários foram desenvolvidos exclusivamente para o Hexagonix, como:
-
-* atop (versão alternativa de top)
-* energia (controle de estado do computador)
-* fnt (utilitário de alteração de fonte gráfica do Hexagonix)
-* hash (shell alternativo)
-* log (utilizado para obter logs internos do Hexagon, mas já obsoleto)
-* lshapp (obtém e exibe informações de imagens HAPP)
-* lshmod (obtém e exibe informações de módulos HBoot e do próprio HBoot)
-
-Vale lembrar que os utilitários do Hexagonix tentam implementar uma interface POSIX na medida do possível, se assemelhando em sintaxe aos utilitários Unix (FreeBSD e Linux utilizados como modelo).
-### Aplicativos de terceiros disponíveis para o Hexagonix
-
-* [Flat Assembler (fasm)](https://flatassembler.net/index.php)
-
-O Hexagonix recebeu um port do montador [`fasm`](https://flatassembler.net/index.php), que foi adaptado para o Hexagonix, permitindo ao usuário desenvolver aplicativos diretamente no sistema. Este port é chamado de `fasmX`. As alterações adicionadas ao código, assim como licença do software, podem ser encontradas no [repositório do fasm para o Hexagonix](https://github.com/hexagonix/fasm). Este repositório é um fork do [repositório original](https://github.com/tgrysztar/fasm). O código adicionado é baseado em modificações realizadas do código original e adições autorais. Esse código modificado/autoral pode ser encontrado no repositório, [clicando aqui](https://github.com/hexagonix/fasm/tree/master/SOURCE/HEXAGONIX). O fasmX, port do fasm para Hexagonix, sempre é atualizado quando novidades são adicionadas no repositório do fasm. Para indicar que se trata de uma versão estável e testada, o número de versão do fasmX sempre herda a numeração do fasm, sucedido por um caractere x (como exemplo, a versão baseada no fasm 1.73.30, após teste, recebe a numeração 1.73.30x). Você pode reportar bugs ou problemas de geração ou otimização de código na versão para Hexagonix [aqui](https://github.com/hexagonix/fasm/issues). Para reportar erros gerais do fasm, utilize o repositório [oficial](https://github.com/tgrysztar/fasm).
-
-</div>
-
-</details>
-
-<details title="Ambiente Hexagonix-Andromeda" align='left'>
-<br>
-<summary align='left'>5️⃣ Ambiente Hexagonix-Andromeda</summary>
-
-<div align="justify">
-
-O ambiente Andromeda do Hexagonix (Hexagonix-Andromeda) é construído sobre a base sólida fornecida pelo Hexagonix, incluindo aplicativos e utilitários que não implementam a filosofia Unix ou apresentam sintaxe e forma de uso bastante diferentes do que se esperaria de um ambiente Unix. Aqui estão o aplicativo de configurações do sistema, calculadora, gerenciador de fontes, editores de texto e a IDE desenvolvida para o Hexagonix. Estes utilitários podem ou não apresentar uma interface gráfica. Juntamente a eles, compõem o ambiente Hexagonix-Andromeda bibliotecas desenvolvidas para permitir o desenvolvimento de aplicativos, como a biblioteca `Estelar`. 
-
-</div>
-
-[![Andromeda-Apps](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=andromeda-apps&theme=dark)](https://github.com/hexagonix/andromeda-apps)
-
-### Alguns aplicativos e utilitários do ambiente Andromeda
-
-<div align="justify">
-
-* `Configurações do sistema (Config)`
-* `Editor de texto Quartzo`
-* `IDE Lyoko para desenvolvimento de aplicativos`
-* `Piano eletrônico return Piano;`
-* `Utilitário de comunicação serial`
-* `Andromeda Shell (ASH)` - Um novo shell para o Hexagonix
-* `Calculadora do Hexagonix`
-* `Utilitário de alteração de fonte`
-* `Utilitário de desligamento do Hexagonix`
-
-### Aplicativos de terceiros disponíveis para o Hexagonix-Andromeda
-
-Ainda não existem aplicativos de terceiros disponíveis para o ambiente Hexagonix-Andromeda. Caso esteja interessado, você pode construir o primeiro!
-
-</div>
-
-</details>
-
-<details title="Fontes gráficas do Hexagonix" align='left'>
-<br>
-<summary align='left'>6️⃣ Fontes gráficas do Hexagonix</summary>
-
-<div align="justify">
-
-A instalação padrão do Hexagonix também fornece uma série de fontes que podem ser carregadas pelo aplicativo de configurações ou utilitário de fontes (gerenciador de fontes). Esses arquivos são utilizados para alterar a fonte de exibição em modo gráfico do Hexagonix.
-
-As fontes de modo gráfico para Hexagon são desenvolvidas como um bitmap em Assembly que, compiladas, geram uma imagem binária da fonte com representações de cada caractere. Os códigos das fontes padrão do Hexagonix já foram liberados como código livre e estão disponíveis no [repositório de fontes do Hexagonix](https://github.com/hexagonix/xfnt).
-
-</div>
-
-[![Hexagonix-xfnt](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=xfnt&theme=dark)](https://github.com/hexagonix/xfnt)
-
-</details>
-
-<details title="Bibliotecas de desenvolvimento do sistema" align='left'>
-<br>
-<summary align='left'>7️⃣ Bibliotecas de desenvolvimento do sistema</summary>
-
-<div align="justify">
-
-O Hexagonix também fornece funções que devem ser utilizadas para interagir com o próprio ambiente do sistema. As bibliotecas são utilizadas para acessar funções implementadas pelo Hexagon ou pelas próprias bibliotecas, permitindo o desenvolvimento facilitado de aplicativos e utilitários tanto para o ambiente Hexagonix quanto para o Hexagonix-Andromeda. As bibliotecas implementam funções para exibição de texto, cálculos matemáticos, envio de mensagens, abertura de arquivos e dispositivos e muito mais. A biblioteca básica (hexagon.s) fornece funções acessíveis para ambos os ambientes possíveis de distribuição, enquanto outras bibliotecas podem ser exclusivas do ambiente Hexagonix-Andromeda. Essas bibliotecas incluem funções gráficas para montar interfaces em modo gráfico (Hexagonix-Andromeda), bem como funções para verificar a versão do sistema atualmente em execução. Os utilitários base Hexagonix realizam a checagem da versão do Hexagon para verificar se podem ser executados, utilizando o utilitário Unix uname ou diretamente por uma chamada de sistema do Hexagon.
-
-Para saber mais e verificar cada função disponível nas bibliotecas de desenvolvimento do sistema, veja o repositório da [libasm](https://github.com/hexagonix/lib).
-
-</div>
-
-[![lib](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=lib&theme=dark)](https://github.com/hexagonix/lib)
-
-</details>
-
-<!-- Vai funcionar como <hr> -->
-
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
-
-# Como testar o Hexagonix
-
-<details title="Requisitos do sistema" align='left'>
-<br>
-<summary align='left'>1️⃣ Requisitos do sistema</summary>
+## Requisitos do sistema
 
 <div align="justify">
 
@@ -383,10 +114,10 @@ Abaixo, uma lista de requisitos mínimos e recomendados para testar o Hexagonix 
 
 </div>
 
-<details title="Requisitos mínimos" align='left'>
-<br>
-<summary align='left'>⚠️ Requisitos mínimos</summary>
+### Requisítos mínimos:
 
+<div align="justify">
+   
 * Processador: Pentium III (1999) com suporte a SSE e MMX ou mais recente;
 * Memória RAM: 32 Mb mínimo (uma instalação mínima com 32 Mb costuma ser suficiente, na maioria dos casos);
 * Disco rígido: disco rígido IDE ou SATA com mínimo de 50 Mb;
@@ -396,27 +127,21 @@ Abaixo, uma lista de requisitos mínimos e recomendados para testar o Hexagonix 
   * Teclado PS/2 ou USB;
   * Placa de vídeo VGA com 2 Mb de memória de vídeo (com suporte a cores).
 
-</details>
+</div>
+   
+#### Recomendado:
 
-<details title="Recomendado" align='left'>
-<br>
-<summary align='left'>✅️ Recomendado</summary>
-
+<div align="justify">
+   
 * Processador: Pentium D ou mais recente;
 * Memória RAM: 50 Mb;
 * Periféricos opcionais:
   * Mouse PS/2 ou USB;
   * Placa de vídeo com > 2 Mb de memória de vídeo.
 
-</details>
-
-</details>
-
-> Executando o Hexagonix
-
-<details title="Obter as imagens de disco com a instação do sistema" align='left'>
-<br>
-<summary align='left'>2️⃣ Obter as imagens de disco com a instação do sistema</summary>
+</div>
+   
+## Obter as imagens de disco com a instação do sistema
 
 <div align="justify">
 
@@ -426,15 +151,11 @@ Para testar o Hexagonix, obtenha o arquivo [`hexagonix.img`](https://github.com/
 
 </div>
 
-</details>
-
-<details title="Testar o Hexagonix em sistema virtualizado" align='left'>
-<br>
-<summary align='left'>3️⃣ Testar o Hexagonix em sistema virtualizado</summary>
+## Testar o Hexagonix em sistema virtualizado
 
 <div align="justify">
 
-Primeiramente, você deve instalar a ferramenta qemu, que irá gerenciar a máquina virtual. Para isso, você pode instalar o qemu utilizando repositórios oficiais de distribuições Linux ou acessando [aqui](https://www.qemu.org) para obter os arquivos de instalação para Windows e macOS.
+Primeiramente, você deve instalar a ferramenta `qemu`, que irá gerenciar a máquina virtual. Para isso, você pode instalar o qemu utilizando repositórios oficiais de distribuições Linux ou acessando [aqui](https://www.qemu.org) para obter os arquivos de instalação para Windows e macOS.
 
 > Instalar no Debian, Ubuntu, Pop_OS! e derivados:
 
@@ -452,6 +173,16 @@ Para o `Fedora`, a linha a seguir irá instalar o qemu e todas as suas dependên
 sudo dnf install qemu qemu-system-i386
 ```
 
+> Instalar no FreeBSD e derivados:
+
+Para o `FreeBSD`, a linha a seguir irá instalar o qemu e todas as suas dependências (privilégios de superusuário necessários):
+
+```
+su
+pkg update
+pkg install qemu
+```
+     
 Agora que você tem o qemu instalado em seu computador, você pode prosseguir com a execução do sistema.
 
 Para executar o sistema de maneira satisfatória, você deve fornecer ao menos 32 MB de RAM para a máquina virtual. Isso se deve a arquitetura de gerenciamento de memória do Hexagon, que exige 16 MB de RAM exclusiva para o kernel a ao menos 16 MB para alocar os aplicativos, utilitários e arquivos abertos. O Hexagon não admite menos que isso para ser executado. Caso mais memória seja fornecida, a memória adicional será sempre reservada, com prioridade, para ser disponibilizada aos processos do usuário. Normalmente, a linha de comando abaixo cumpre todos os requisitos para a execução do sistema:
@@ -466,17 +197,13 @@ Lembrando que você deve utilizar uma versão/edição do qemu que consiga execu
 
 </div>
 
-</details>
-
-<details title="Testar o Hexagonix em máquina física" align='left'>
-<br>
-<summary align='left'>4️⃣ Testar o Hexagonix em máquina física</summary>
+## Testar o Hexagonix em máquina física</summary>
 
 <div align="justify">
 
 Você deve utilizar o Linux/macOS ou alguma ferramenta disponível para o Windows que te permita gravar essa imagem em disco.
 
-No `Linux/macOS/Unix`, use a linha abaixo:
+No `Linux/BSD/macOS/Unix`, use a linha abaixo:
 
 ```
 dd if=hexagonix.img of=/dev/unidade
@@ -487,11 +214,7 @@ Vale ressaltar que o desempenho do sistema pode variar de acordo com a máquina 
 
 </div>
 
-</details>
-
-<details title="Primeiro uso e login" align='left'>
-<br>
-<summary align='left'>5️⃣ Primeiro uso e login</summary>
+## Primeiro uso e login</summary>
 
 <div align="justify">
 
@@ -506,45 +229,40 @@ Você pode adicionar outro usuário alterando o arquivo `USUARIO.UNX` na raiz do
 
 </div>
 
-</details>
+<!-- Vai funcionar como <hr> -->
 
-<details title="Reportar erros" align='left'>
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+
+# Contribuir e reportar erros
+
+<div align="justify">
+     
+Abaixo você poderá saber mais sobre como contribuir e reportar erros encontrados no Hexagonix.
+     
+</div>
+
+<details title="Contribua no desenvolvimento do Hexagonix" align='left'>
 <br>
-<summary align='left'>6️⃣ Reportar erros</summary>
+<summary align='left'>Contribua no desenvolvimento do Hexagonix</summary>
 
 <div align="justify">
 
-Você pode reportar erros e ajudar a desenvolver o sistema. Para isso, abra uma notificação de erro [aqui](https://github.com/hexagonix/Distro/issues), informando o erro da forma mais detalhada possível (como marca do dispositivo, processador, quantidade de memória RAM, placa de vídeo e periféricos conectados, bem como o dispositivo utilizado para instalar o sistema, como unidade de disco interna ou mídia removível USB). Lembre-se de informar em qual aplicativo ocorreu o erro, caso o erro ocorra já com o sistema em operação. Caso o problema se dê no processo de inicialização, informe o que foi exibido/o comportamento observado da máquina.
+Se você tem conhecimento em criar código em Assembly x86 e gostaria de ajudar no desenvolvimento do sistema, sinta-se a vontade em me enviar um email! Veja [aqui](https://github.com/hexagonix/Doc/blob/main/Hexagonix/README.pt.md#autor) como entrar em contato comigo!
 
 </div>
 
 </details>
 
-<!-- Vai funcionar como <hr> -->
-
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
-
-# Capturas de tela
-
-<details title="Hexagonix" align='left'>
+<details title="Reporte erros no sistema" align='left'>
 <br>
-<summary align='left'>🌙 Hexagonix</summary>
+<summary align='left'>Reporte erros no sistema</summary>
 
-<p align="center">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix1.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix2.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix3.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix4.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix5.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix6.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix7.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix8.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix9.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix10.png" width="500" height="400">
-</p>
+<div align="justify">
+   
+Você pode reportar erros e ajudar a desenvolver o sistema. Para isso, abra uma notificação de erro [aqui](https://github.com/hexagonix/Distro/issues), informando o erro da forma mais detalhada possível (como marca do dispositivo, processador, quantidade de memória RAM, placa de vídeo e periféricos conectados, bem como o dispositivo utilizado para instalar o sistema, como unidade de disco interna ou mídia removível USB). Lembre-se de informar em qual aplicativo ocorreu o erro, caso o erro ocorra já com o sistema em operação. Caso o problema se dê no processo de inicialização, informe o que foi exibido/o comportamento observado da máquina.
 
-Você pode ver mais [aqui](https://github.com/hexagonix/Distro/tree/main/Img).
-
+</div>
+   
 </details>
 
 <!-- Vai funcionar como <hr> -->
