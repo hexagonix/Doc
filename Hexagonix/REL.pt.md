@@ -47,7 +47,7 @@ Essa é a primeira versão amplamente testada e marcada como estável do sistema
 
 <details title="Hexagonix H1 R1 (Caladan)" align='left'>
 <br>
-<summary align='left'><strong>Hexagonix H1 R1 (Caladan)</strong></summary>
+<summary align='left'>Hexagonix H1 R1 (Caladan)</summary>
 
 <div align="justify">
 
@@ -59,7 +59,7 @@ O Hexagonix H1 R1 (codenome Caladan) é o primeiro pacote de correções para a 
 
 <details title="Hexagonix H1 R2 (Caladan)" align='left'>
 <br>
-<summary align='left'><strong>Hexagonix H1 R2 (Caladan)</strong></summary>
+<summary align='left'>Hexagonix H1 R2 (Caladan)</summary>
 
 <div align="justify">
 
@@ -77,7 +77,7 @@ Foram identificadas diversas falhas de execução em vários utilitários do And
 
 <details title="Hexagonix H1 R3 (Duna)" align='left'>
 <br>
-<summary align='left'><strong>Hexagonix H1 R3 (Duna)</strong></summary>
+<summary align='left'>Hexagonix H1 R3 (Duna)</summary>
 
 <div align="justify">
 
@@ -97,7 +97,7 @@ Vá até a área de [lançamentos](https://github.com/hexagonix/hexagonix/releas
 
 <details title="Hexagonix H1 R4 (Vega)" align='left'>
 <br>
-<summary align='left'><strong>Hexagonix H1 R4 (Vega)</strong></summary>
+<summary align='left'>Hexagonix H1 R4 (Vega)</summary>
 
 <div align="justify">
 
@@ -114,7 +114,7 @@ Melhorias e correção de bugs em todo o sistema.
 
 <details title="Hexagonix H1 R5 (Orion)" align='left'>
 <br>
-<summary align='left'><strong>Hexagonix H1 R5 (Orion)</strong></summary>
+<summary align='left'>Hexagonix H1 R5 (Orion)</summary>
 
 <div align="justify">
 
@@ -138,7 +138,7 @@ Essa atualização do sistema conserta vários bugs no sistema, incluindo proble
 
 <details title="Hexagonix H2-dev.beta1" align='left'>
 <br>
-<summary align='left'><strong>Hexagonix H2-dev.beta1</strong></summary>
+<summary align='left'>Hexagonix H2-dev.beta1</summary>
 
 <div align="justify">
 
