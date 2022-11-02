@@ -591,6 +591,8 @@ inicioAPP:
 
 </details>
 
+<hr>
+
 ### Em busca de colaboradores
 
 <div align="justify">
