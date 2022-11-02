@@ -21,13 +21,41 @@
 
 <div align="justify">
 
-O Hexagon é um núcleo (kernel) monolítico executado em modo protegido 32-bit, desenvolvido tendo como alvo a arquitetura PC (x86). É um kernel escrito do zero, visando a velocidade e a compatibilidade de harware moderno mas também sendo capaz de ser executado em hardware mais antigo. No momento, garante um ambiente monoutilizador, apesar do uso de terminais virtuais, e monotarefa, apesar da capacidade de carregar, manter em memória e controlar mais de um processo, em uma pilha de execução de ordem cronológica. Futuramente o kernel poderá receber suporte a execução de múltiplos processos em multitarefa preemptiva. O Hexagon é um kernel Unix-like e compõe a base do Sistema Operacional Hexagonix, embora independente deste. Ele executa imagens executáveis no formato HAPP, desenvolvido para o Hexagon. Implementa uma API bastante sofisticada acessível através de uma chamada de sistema.
+O Hexagon é um `núcleo` (kernel) monolítico executado em `modo protegido` 32-bit, desenvolvido puramente em Assembly para a arquitetura PC (x86). É um kernel escrito do zero, visando a velocidade e a compatibilidade de harware moderno, mas também sendo capaz de ser executado em hardware mais antigo (Pentium III ou superiores, com 32 MB de memória RAM ou mais). No momento, garante um ambiente monoutilizador, apesar do uso de terminais virtuais, e monotarefa, apesar da capacidade de carregar, manter em memória e controlar mais de um processo por vez, em uma pilha de execução de ordem cronológica. Futuramente o kernel poderá receber suporte a execução de múltiplos processos em multitarefa preemptiva. O Hexagon foi projetado para ser um kernel Unix-like e compõe a base do `Hexagonix`, embora independente deste. Ele executa imagens executáveis no formato `HAPP`, desenvolvido exclusivamente para o Hexagon. Ele também implementa uma API bastante sofisticada acessível através de uma chamada de sistema padronizada e documentada, como você pode ver abaixo.
+
+Algumas características do Hexagon:
+
+- [x] Suporte a processadores x86 (Pentium III ou superiores);
+- [x] Suporte a dispositivos com 32 MB de memória RAM ou mais;
+- [x] Suporte a ambiente de usuário;
+- [x] Chamada de sistema com 68 funções sofisticadas acessadas pelo ambiente de usuário;
+- [x] Formato binário executável próprio (HAPP);
+- [x] Unix-like;
+- [x] Completamente escrito em Assembly x86;
+- [x] Self-hosting (o montador usado para construir o Hexagon pode ser executado sobre ele);
+- [x] Sistema de arquivos virtual;
+- [x] Abstração de dispositivos;
+- [x] Suporte total a leitura e escrita em sistemas de arquivos FAT16;
+- [x] Suporte a gráficos VESA VBE e em múltiplas resoluções;
+- [x] Suporte a modo texto;
+- [x] Motor de renderização de fontes gráficas, que podem ser alteradas pelo usuário;
+- [x] Suporte a relógio em tempo real;
+- [x] Suporte a portas seriais e paralelas (comunicação serial, debug e impressão);
+- [x] Compatível com carregador de inicialização próprio (Hexagon Boot - HBoot);
+- [x] Suporte a usuários e permissões.
+
+Outras características que estão sendo desenvolvidas:
+
+- [ ] Procura e enumeração de todos os dispositivos PCI;
+- [ ] Multitarefa preemptiva.
 
 </div>
 
 <p align="center">
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/LogoHexagon.png" width="250" height="250">
 </p>
+
+<hr>
 
 ### História do desenvolvimento
 
@@ -36,6 +64,8 @@ O Hexagon é um núcleo (kernel) monolítico executado em modo protegido 32-bit,
 O kernel foi inicialmente desenhado e escrito visando uma estrutura e funcionamento próximos de sistemas DOS (Disk Operating System), como MS-DOS, nos ano de 2015 a 2017. Sendo assim, muitas chamadas de sistema e nomes de dispositivo seguiam uma sintaxe e nomes DOS. Com o passar do tempo, houve o interesse de aproximar o então núcleo do Andromeda, que a essa altura não possuia nome e era mantido junto ao código da distribuição, a uma estrutura e funcionamento mais próximos de sistemas do tipo Unix, como BSD ou Linux, por exemplo. Desta forma, muitas partes do kernel foram reimplementadas tendo em mente o novo objetivo. O código do núcleo foi separado do restante do Sistema e se tornou independente, em questão de desenvolvimento e também de funcionamento, além de ganhar um nome, Hexagon. Foi escrita uma camada de abstração de hardware com a inclusão de chamadas de sistema conhecidas no mundo Unix, como abrir(), fechar(), ler() e escrever(). Os dispositivos ganharam nome e as unidades de disco mudaram da nomenclatura DOS e foram para nomes de dispositivo Unix. O kernel então passa a seguir um processo de inicialização conhecido, com a execução, com PID 1, do primeiro processo do usuário, init, que então carrega o restante dos componentes. Foram então escritos utilitários Unix-like que passassem a utilizar a API Unix-like do kernel, e várias ferramentas Unix-like já foram escritas desde então (2017 em diante).
 
 </div>
+
+<hr>
 
 ### Sessões da documentação sobre o Hexagon
 
