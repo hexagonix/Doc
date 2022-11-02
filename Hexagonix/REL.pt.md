@@ -17,7 +17,9 @@
 
 </div>
 
-<hr>
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
 # Lançamentos do Hexagonix
 
