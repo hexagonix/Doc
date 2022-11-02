@@ -15,7 +15,7 @@
 
 </div>
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hx.png" width="100%" height="2px" />
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="5px" />
 
 # Ponto de partida
 
