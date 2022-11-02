@@ -365,7 +365,9 @@ To learn more and check each function available in the system development librar
 
 </details>
 
-<hr>
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
 # How to test Hexagonix
 
