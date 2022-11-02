@@ -24,7 +24,9 @@ Todos os direitos reservados.
 
 </div>
 
-<hr>
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
 # Ponto de partida
 
@@ -121,7 +123,9 @@ Você pode reportar erros do sistema [aqui](https://github.com/hexagonix/hexagon
 
 </details>
 
-<hr>
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
 # Sobre o sistema
 
@@ -161,7 +165,9 @@ O Hexagonix começou como uma implementação em estrutura similar a sistemas do
 
 </details>
 
-<hr>
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
 # Componentes do sistema
 
@@ -361,7 +367,9 @@ Para saber mais e verificar cada função disponível nas bibliotecas de desenvo
 
 </details>
 
-<hr>
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
 # Como testar o Hexagonix
 
@@ -512,7 +520,9 @@ Você pode reportar erros e ajudar a desenvolver o sistema. Para isso, abra uma 
 
 </details>
 
-<hr>
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
 # Capturas de tela
 
@@ -537,7 +547,9 @@ Você pode ver mais [aqui](https://github.com/hexagonix/Distro/tree/main/Img).
 
 </details>
 
-<hr>
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
 # Outras informações
 
