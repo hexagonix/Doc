@@ -94,7 +94,7 @@ Você pode ir até a sessão de [`lançamentos`](https://github.com/hexagonix/he
 
 <details title="Documentação do sistema" align='left'>
 <br>
-<summary align='left'>3️⃣ Documentação do sistema</summary>
+<summary align='left'>3Documentação do sistema</summary>
 
 * [Documentação do sistema (em construção)](https://github.com/hexagonix/Doc)
 
@@ -106,9 +106,7 @@ Você pode ir até a sessão de [`lançamentos`](https://github.com/hexagonix/he
 
 # Como testar o Hexagonix
 
-<details title="Requisitos do sistema" align='left'>
-<br>
-<summary align='left'>1️⃣ Requisitos do sistema</summary>
+## Requisitos do sistema
 
 <div align="justify">
 
@@ -116,7 +114,7 @@ Abaixo, uma lista de requisitos mínimos e recomendados para testar o Hexagonix 
 
 </div>
 
-## Requisítos mínimos:
+### Requisítos mínimos:
 
 <div align="justify">
    
@@ -131,7 +129,7 @@ Abaixo, uma lista de requisitos mínimos e recomendados para testar o Hexagonix 
 
 </div>
    
-### Recomendado:
+#### Recomendado:
 
 <div align="justify">
    
