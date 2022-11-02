@@ -15,11 +15,13 @@
 
 </div>
 
-<hr>
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
 <details title="Português (Brasil)" align='left'>
 <br>
-<summary align='left'><strong>Português</strong></summary>
+<summary align='left'>Português</summary>
 
 > **A documentação está em construção.**
 
@@ -31,7 +33,7 @@
 
 <details title="English" align='left'>
 <br>
-<summary align='left'><strong>English</strong></summary>
+<summary align='left'>English</summary>
 
 > **The documentation is under constrution.**
 
