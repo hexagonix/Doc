@@ -30,7 +30,7 @@ Todos os direitos reservados.
 
 <details title="Licença" align='left'>
 <br>
-<summary align='left'><strong>1️⃣ Licença</strong></summary>
+<summary align='left'>1️⃣ Licença</summary>
 
 <div align="justify">
 
@@ -72,7 +72,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 <details title="Fazer download e testar o sistema agora mesmo" align='left'>
 <br>
-<summary align='left'><strong>2️⃣ Fazer download e testar o sistema agora mesmo</strong></summary>
+<summary align='left'>2️⃣ Fazer download e testar o sistema agora mesmo</summary>
 
 <div align="justify">
 
@@ -86,7 +86,7 @@ Você pode ir até a sessão de [`lançamentos`](https://github.com/hexagonix/he
 
 <details title="Documentação do sistema" align='left'>
 <br>
-<summary align='left'><strong>3️⃣ Documentação do sistema</strong></summary>
+<summary align='left'>3️⃣ Documentação do sistema</summary>
 
 
 * [Documentação do sistema (em construção)](https://github.com/hexagonix/Doc)
@@ -95,7 +95,7 @@ Você pode ir até a sessão de [`lançamentos`](https://github.com/hexagonix/he
 
 <details title="Construir o sistema" align='left'>
 <br>
-<summary align='left'><strong>4️⃣ Construir o sistema</strong></summary>
+<summary align='left'>4️⃣ Construir o sistema</summary>
 
 * [Construir o sistema (Português)](https://github.com/hexagonix/build/blob/main/README.pt.md)
 
@@ -103,7 +103,7 @@ Você pode ir até a sessão de [`lançamentos`](https://github.com/hexagonix/he
 
 <details title="Contribua no desenvolvimento do Hexagonix" align='left'>
 <br>
-<summary align='left'><strong>5️⃣ Contribua no desenvolvimento do Hexagonix</strong></summary>
+<summary align='left'>5️⃣ Contribua no desenvolvimento do Hexagonix</summary>
 
 <div align="justify">
 
@@ -115,7 +115,7 @@ Se você tem conhecimento em criar código em Assembly x86 e gostaria de ajudar 
 
 <details title="Reporte erros no sistema" align='left'>
 <br>
-<summary align='left'><strong>6️⃣ Reporte erros no sistema</strong></summary>
+<summary align='left'>6️⃣ Reporte erros no sistema</summary>
 
 Você pode reportar erros do sistema [aqui](https://github.com/hexagonix/hexagonix/issues).
 
@@ -127,7 +127,7 @@ Você pode reportar erros do sistema [aqui](https://github.com/hexagonix/hexagon
 
 <details title="Desenvolvimento" align='left'>
 <br>
-<summary align='left'><strong>1️⃣ Desenvolvimento</strong></summary>
+<summary align='left'>1️⃣ Desenvolvimento</summary>
 
 <div align="justify">
 
@@ -139,7 +139,7 @@ O Hexagonix e todos os seus componentes vêm sendo desenvolvidos desde 2015 e fo
 
 <details title="E o código-fonte?" align='left'>
 <br>
-<summary align='left'><strong>2️⃣ E o código-fonte?</strong></summary>
+<summary align='left'>2️⃣ E o código-fonte?</summary>
 
 <div align="justify">
 
@@ -151,7 +151,7 @@ O código-fonte do projeto já foi disponibilizado publicamente. O código do ke
 
 <details title="A história do Hexagonix" align='left'>
 <br>
-<summary align='left'><strong>3️⃣ A história do Hexagonix</strong></summary>
+<summary align='left'>3️⃣ A história do Hexagonix</summary>
 
 <div align="justify">
 
@@ -167,7 +167,7 @@ O Hexagonix começou como uma implementação em estrutura similar a sistemas do
 
 <details title="Saturno" align='left'>
 <br>
-<summary align='left'><strong>1️⃣ Saturno</strong></summary>
+<summary align='left'>1️⃣ Saturno</summary>
 
 <div align="justify">
 
@@ -181,7 +181,7 @@ O primeiro componente do Hexagonix é o Saturno. Ele é responsável por receber
 
 <details title="Hexagon Boot (HBoot)" align='left'>
 <br>
-<summary align='left'><strong>2️⃣ Hexagon Boot (HBoot)</strong></summary>
+<summary align='left'>2️⃣ Hexagon Boot (HBoot)</summary>
 
 <div align="justify">
 
@@ -215,7 +215,7 @@ O HBoot ganhou muita complexidade desde o início de seu desenvolvimento, em 202
 
 <details title="Kernel Hexagon" align='left'>
 <br>
-<summary align='left'><strong>3️⃣ Kernel Hexagon</strong></summary>
+<summary align='left'>3️⃣ Kernel Hexagon</summary>
 
 ### O que é
 
@@ -243,7 +243,7 @@ As chamadas de sistema são realizadas no estilo `BSD`, com o número da funçã
 
 <details title="Ambiente Hexagonix" align='left'>
 <br>
-<summary align='left'><strong>4️⃣ Ambiente Hexagonix</strong></summary>
+<summary align='left'>4️⃣ Ambiente Hexagonix</summary>
 
 <div align="justify">
 
@@ -297,7 +297,7 @@ O Hexagonix recebeu um port do montador [`fasm`](https://flatassembler.net/index
 
 <details title="Ambiente Hexagonix-Andromeda" align='left'>
 <br>
-<summary align='left'><strong>5️⃣ Ambiente Hexagonix-Andromeda</strong></summary>
+<summary align='left'>5️⃣ Ambiente Hexagonix-Andromeda</summary>
 
 <div align="justify">
 
@@ -331,7 +331,7 @@ Ainda não existem aplicativos de terceiros disponíveis para o ambiente Hexagon
 
 <details title="Fontes gráficas do Hexagonix" align='left'>
 <br>
-<summary align='left'><strong>6️⃣ Fontes gráficas do Hexagonix</strong></summary>
+<summary align='left'>6️⃣ Fontes gráficas do Hexagonix</summary>
 
 <div align="justify">
 
@@ -347,7 +347,7 @@ As fontes de modo gráfico para Hexagon são desenvolvidas como um bitmap em Ass
 
 <details title="Bibliotecas de desenvolvimento do sistema" align='left'>
 <br>
-<summary align='left'><strong>7️⃣ Bibliotecas de desenvolvimento do sistema</strong></summary>
+<summary align='left'>7️⃣ Bibliotecas de desenvolvimento do sistema</summary>
 
 <div align="justify">
 
@@ -367,7 +367,7 @@ Para saber mais e verificar cada função disponível nas bibliotecas de desenvo
 
 <details title="Requisitos do sistema" align='left'>
 <br>
-<summary align='left'><strong>1️⃣ Requisitos do sistema</strong></summary>
+<summary align='left'>1️⃣ Requisitos do sistema</summary>
 
 <div align="justify">
 
@@ -377,7 +377,7 @@ Abaixo, uma lista de requisitos mínimos e recomendados para testar o Hexagonix 
 
 <details title="Requisitos mínimos" align='left'>
 <br>
-<summary align='left'><strong>⚠️ Requisitos mínimos</strong></summary>
+<summary align='left'>⚠️ Requisitos mínimos</summary>
 
 * Processador: Pentium III (1999) com suporte a SSE e MMX ou mais recente;
 * Memória RAM: 32 Mb mínimo (uma instalação mínima com 32 Mb costuma ser suficiente, na maioria dos casos);
@@ -392,7 +392,7 @@ Abaixo, uma lista de requisitos mínimos e recomendados para testar o Hexagonix 
 
 <details title="Recomendado" align='left'>
 <br>
-<summary align='left'><strong>✅️ Recomendado</strong></summary>
+<summary align='left'>✅️ Recomendado</summary>
 
 * Processador: Pentium D ou mais recente;
 * Memória RAM: 50 Mb;
@@ -408,7 +408,7 @@ Abaixo, uma lista de requisitos mínimos e recomendados para testar o Hexagonix 
 
 <details title="Obter as imagens de disco com a instação do sistema" align='left'>
 <br>
-<summary align='left'><strong>2️⃣ Obter as imagens de disco com a instação do sistema</strong></summary>
+<summary align='left'>2️⃣ Obter as imagens de disco com a instação do sistema</summary>
 
 <div align="justify">
 
@@ -422,7 +422,7 @@ Para testar o Hexagonix, obtenha o arquivo [`hexagonix.img`](https://github.com/
 
 <details title="Testar o Hexagonix em sistema virtualizado" align='left'>
 <br>
-<summary align='left'><strong>3️⃣ Testar o Hexagonix em sistema virtualizado</strong></summary>
+<summary align='left'>3️⃣ Testar o Hexagonix em sistema virtualizado</summary>
 
 <div align="justify">
 
@@ -462,7 +462,7 @@ Lembrando que você deve utilizar uma versão/edição do qemu que consiga execu
 
 <details title="Testar o Hexagonix em máquina física" align='left'>
 <br>
-<summary align='left'><strong>4️⃣ Testar o Hexagonix em máquina física</strong></summary>
+<summary align='left'>4️⃣ Testar o Hexagonix em máquina física</summary>
 
 <div align="justify">
 
@@ -483,7 +483,7 @@ Vale ressaltar que o desempenho do sistema pode variar de acordo com a máquina 
 
 <details title="Primeiro uso e login" align='left'>
 <br>
-<summary align='left'><strong>5️⃣ Primeiro uso e login</strong></summary>
+<summary align='left'>5️⃣ Primeiro uso e login</summary>
 
 <div align="justify">
 
@@ -502,7 +502,7 @@ Você pode adicionar outro usuário alterando o arquivo `USUARIO.UNX` na raiz do
 
 <details title="Reportar erros" align='left'>
 <br>
-<summary align='left'><strong>6️⃣ Reportar erros</strong></summary>
+<summary align='left'>6️⃣ Reportar erros</summary>
 
 <div align="justify">
 
@@ -518,7 +518,7 @@ Você pode reportar erros e ajudar a desenvolver o sistema. Para isso, abra uma 
 
 <details title="Hexagonix" align='left'>
 <br>
-<summary align='left'><strong>🌙 Hexagonix</strong></summary>
+<summary align='left'>🌙 Hexagonix</summary>
 
 <p align="center">
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix1.png" width="500" height="400">
@@ -543,7 +543,7 @@ Você pode ver mais [aqui](https://github.com/hexagonix/Distro/tree/main/Img).
 
 <details title="Idiomas" align='left'>
 <br>
-<summary align='left'><strong>🎲 Idiomas</strong></summary>
+<summary align='left'>🎲 Idiomas</summary>
 
 <div align="justify">
 
@@ -555,7 +555,7 @@ Neste momento, tanto o sistema quanto a documentação estão disponíveis apena
 
 <details title="Inspirações" align='left'>
 <br>
-<summary align='left'><strong>🖼 Inspirações</strong></summary>
+<summary align='left'>🖼 Inspirações</summary>
 
 <div align="justify">
 
@@ -580,7 +580,7 @@ Além disso, outros projetos auxiliaram no desenvolvimento do Hexagonix, seja fo
 
 <details title="Autor, contribuidores e contatos" align='left'>
 <br>
-<summary align='left'><strong>👥️️ Autor, contribuidores e contatos</strong></summary>
+<summary align='left'>👥️️ Autor, contribuidores e contatos</summary>
 
 ## Autor
 
@@ -601,7 +601,7 @@ Além disso, outros projetos auxiliaram no desenvolvimento do Hexagonix, seja fo
 
 <details title="Notas de direitos autorais" align='left'>
 <br>
-<summary align='left'><strong>📝 Notas de direitos autorais</strong></summary>
+<summary align='left'>📝 Notas de direitos autorais</summary>
 
 <div align="justify">
 
