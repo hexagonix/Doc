@@ -203,7 +203,7 @@ Lembrando que você deve utilizar uma versão/edição do qemu que consiga execu
 
 Você deve utilizar o Linux/macOS ou alguma ferramenta disponível para o Windows que te permita gravar essa imagem em disco.
 
-No `Linux/macOS/Unix`, use a linha abaixo:
+No `Linux/BSD/macOS/Unix`, use a linha abaixo:
 
 ```
 dd if=hexagonix.img of=/dev/unidade
