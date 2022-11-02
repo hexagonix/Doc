@@ -4,41 +4,42 @@
 
 <div align="center">
 
-![](https://img.shields.io/github/license/hexagonix/Hexagon.svg)
-![](https://img.shields.io/github/stars/hexagonix/Hexagon.svg)
-![](https://img.shields.io/github/issues/hexagonix/Hexagon.svg)
-![](https://img.shields.io/github/issues-closed/hexagonix/Hexagon.svg)
-![](https://img.shields.io/github/issues-pr/hexagonix/Hexagon.svg)
-![](https://img.shields.io/github/issues-pr-closed/hexagonix/Hexagon.svg)
-![](https://img.shields.io/github/downloads/hexagonix/Hexagon/total.svg)
-![](https://img.shields.io/github/release/hexagonix/Hexagon.svg)
+![](https://img.shields.io/github/license/hexagonix/Doc.svg)
+![](https://img.shields.io/github/stars/hexagonix/Doc.svg)
+![](https://img.shields.io/github/issues/hexagonix/Doc.svg)
+![](https://img.shields.io/github/issues-closed/hexagonix/Doc.svg)
+![](https://img.shields.io/github/issues-pr/hexagonix/Doc.svg)
+![](https://img.shields.io/github/issues-pr-closed/hexagonix/Doc.svg)
+![](https://img.shields.io/github/downloads/hexagonix/Doc/total.svg)
+![](https://img.shields.io/github/release/hexagonix/Doc.svg)
 
 </div>
 
 <hr>
 
-# Escolha seu idioma/choose your language
+<details title="Português (Brasil)" align='left'>
+<br>
+<summary align='left'><strong>Português</strong></summary>
 
-* [Português](https://github.com/hexagonix/Doc#pegue-um-atalho)
-* [English](https://github.com/hexagonix/Doc#take-a-shortcut)
+> **A documentação está em construção.**
 
-## Pegue um atalho
-
-> **A documentação está em construção. Alguns links podem estar quebrados.**
-
-* [Documentação do Hexagonix (em construção)](https://github.com/hexagonix/Doc/tree/main/Hexagonix/README.md)
+* [Documentação do Hexagonix](https://github.com/hexagonix/Doc/tree/main/Hexagonix/README.md)
 * [Documentação do Hexagon](https://github.com/hexagonix/Doc/tree/main/Hexagon/README.md)
 * [Documentação do HBoot](https://github.com/hexagonix/Doc/tree/main/HBoot/README.md) 
 
-<!-- Documentação im inglês -->
+</details>
 
-## Take a shortcut
+<details title="English" align='left'>
+<br>
+<summary align='left'><strong>English</strong></summary>
 
-> **The documentation is under constrution. Some link may be broken.**
+> **The documentation is under constrution.**
 
-* [Hexagonix Documentation (under construction)](https://github.com/hexagonix/Doc/tree/main/Hexagonix/README.en.md)
+* [Hexagonix Documentation](https://github.com/hexagonix/Doc/tree/main/Hexagonix/README.en.md)
 * [Hexagon Documentation](https://github.com/hexagonix/Doc/tree/main/Hexagon/README.en.md)
 * [HBoot Documentation](https://github.com/hexagonix/Doc/tree/main/HBoot/README.en.md)
+
+</details>
 
 <!--
 
