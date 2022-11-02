@@ -104,7 +104,7 @@ The first component of Hexagonix is the Saturn. It is responsible for taking con
 
 <div align="center">
    
-[![Saturno](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=Saturn&theme=dark)](https://github.com/hexagonix/Saturno)
+[![Saturno](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=Saturno&theme=dark)](https://github.com/hexagonix/Saturno)
    
 </div>
 
