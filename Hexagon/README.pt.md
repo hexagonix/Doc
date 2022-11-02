@@ -591,6 +591,14 @@ inicioAPP:
 
 </details>
 
+### Em busca de colaboradores
+
+<div align="justify">
+
+O Hexagon, bem como todo o Hexagonix, busca colaboradores dispostos a contribuir em seu desenvolvimento. Caso você se interesse por Assembly, C, em ajudar na escrita de documentação ou apenas ajudar na tradução, sinta-se a vontade em entrar em contato! Todos são bem vindos!
+
+</div>
+
 <!--
 
 Versão deste arquivo: 2.0
