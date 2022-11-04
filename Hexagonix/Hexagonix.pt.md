@@ -32,7 +32,7 @@
    
 O `Hexagonix` é um sistema operacional Unix-like, escrito em linguagem Assembly para a arquitetura PC (x86). Ele é construído sobre o `Hexagon`, um núcleo (kernel) monolítico simples e leve, desenvolvido para ser rápido e compatível com hardware recente e mais antigo (Pentium III e mais recentes, com 32 MB de memória RAM ou mais).
 
-O Hexagonix é composto pelo carregador de inicialização do Hexagon (`Hexagon Boot` ou `HBoot`), pelo Hexagon (kernel), shells compatíveis, utilitários e bibliotecas. Todos esses componentes foram liberados sob licença BSD-3-Clause.
+O Hexagonix é composto pelo carregador de inicialização do Hexagon ([`Hexagon Boot`](https://github.com/hexagonix/HBoot) ou `HBoot`), pelo [Hexagon](https://github.com/hexagonix/Hexagon) (kernel), shells compatíveis, utilitários e bibliotecas. Todos esses componentes foram liberados sob licença BSD-3-Clause.
    
 Algumas características do Hexagonix:
    
@@ -44,7 +44,7 @@ Algumas características do Hexagonix:
 - [x] Chamada de sistema com 68 funções sofisticadas acessadas pelo ambiente de usuário;
 - [x] Requisitos mínimos baixos, compatível com uma ampla gama de dispositivos;
 - [x] Formato binário executável próprio (HAPP);
-- [x] Self-hosting (o montador usado para construir o Hexagonix pode ser executado sobre ele);
+- [x] Self-hosting (o [montador usado para construir o Hexagonix](https://github.com/hexagonix/fasmX) pode ser executado sobre ele);
 - [x] Abstração de dispositivos;
 - [x] Suporte a gráficos VESA VBE em várias resoluções;
 - [x] Suporte a modo texto;
@@ -236,7 +236,7 @@ O ambiente Andromeda do Hexagonix (Hexagonix-Andromeda) é construído sobre a b
 
 <div align="justify">
 
-- [x] Configurações do sistema (Config)
+- [x] Configurações do sistema (config)
 - [x] Editor de texto Quartzo
 - [x] IDE Lyoko para desenvolvimento de aplicativos
 - [x] Piano eletrônico return Piano;

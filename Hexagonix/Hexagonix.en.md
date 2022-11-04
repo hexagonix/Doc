@@ -32,7 +32,7 @@
    
 `Hexagonix` is a Unix-like operating system written in assembly language for the PC (x86) architecture. It is built on top of `Hexagon`, a simple and lightweight monolithic kernel designed to be fast and compatible with newer and older hardware (Pentium III and newer with 32 MB of RAM or more).
 
-Hexagonix consists of the Hexagon boot loader (`Hexagon Boot` or `HBoot`), the Hexagon (kernel), compatible shells, utilities and libraries. All these components were released under the BSD-3-Clause license.
+Hexagonix consists of the Hexagon boot loader ([`Hexagon Boot`](https:\\github.com/hexagonix/HBoot) or `HBoot`), the [Hexagon](https://github.com/hexagonix/Hexagon) (kernel), compatible shells, utilities and libraries. All these components were released under the BSD-3-Clause license.
    
 Some features of Hexagonix:
    
@@ -44,7 +44,7 @@ Some features of Hexagonix:
 - [x] System call with 68 sophisticated functions accessed by the user environment;
 - [x] Low minimum requirements, compatible with a wide range of devices;
 - [x] Own executable binary format (HAPP);
-- [x] Self-hosting (the assembler used to build Hexagonix can run on top of it);
+- [x] Self-hosting ([the assembler used to build Hexagonix](https://github.com/hexagonix/fasmX) can run on top of it);
 - [x] Device abstraction;
 - [x] VESA VBE graphics support in various resolutions;
 - [x] Text mode support;
@@ -95,11 +95,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 Hexagonix is divided into a series of components, which work together as soon as the device is turned on. Below you will be able to know briefly each one of them.
 
-### Saturn
+### Saturno
 
 <div align="justify">
 
-The first component of Hexagonix is the Saturn. It is responsible for taking control of the boot process performed by the BIOS/UEFI and looking in the volume for the second boot stage. For that, it implements a driver for reading a FAT16 file system. The second boot stage (see below) can implement drivers for other filesystems and is responsible for finding Hexagon, loading HBoot modules or loading a compatible DOS-like system (BETA version).
+The first component of Hexagonix is the Saturno. It is responsible for taking control of the boot process performed by the BIOS/UEFI and looking in the volume for the second boot stage. For that, it implements a driver for reading a FAT16 file system. The second boot stage (see below) can implement drivers for other filesystems and is responsible for finding Hexagon, loading HBoot modules or loading a compatible DOS-like system (BETA version).
 
 </div>
 
@@ -192,7 +192,7 @@ Hexagonix includes many of the Unix utilities you may already be familiar with, 
 - [x] clear
 - [x] top
 - [x] ps
-- [X Man
+- [x] man
 - [x] su
 - [x] sh (default shell)
 - [x] uname
@@ -213,7 +213,7 @@ It is worth remembering that Hexagonix utilities try to implement a POSIX interf
 
 * [Flat Assembler (fasm)](https://flatassembler.net/index.php)
 
-Hexagonix received a port of the [`fasm`](https://flatassembler.net/index.php) assembler, which was adapted for Hexagonix, allowing the user to develop applications directly on the system. This port is called `fasmX`. Changes added to the code, as well as the software license, can be found in the [fasm repository for Hexagonix](https://github.com/hexagonix/fasm). This repository is a fork of [original repository](https://github.com/tgrysztar/fasm). Added code is based on modifications made to the original code and authorial additions. This modified/authored code can be found in the repository, [clicking here](https://github.com/hexagonix/fasm/tree/master/SOURCE/HEXAGONIX). fasmX, the fasm port for Hexagonix, is always updated when new features are added to the fasm repository. To indicate that it is a stable and tested version, the fasmX version number always inherits the fasm numbering, followed by a character x (for example, the version based on fasm 1.73.30, after testing, receives the numbering 1.73 .30x). You can report bugs or code generation or optimization issues in the Hexagonix version [here](https://github.com/hexagonix/fasm/issues). To report general fasm bugs, use the [official](https://github.com/tgrysztar/fasm) repository.
+Hexagonix received a port of the [`fasm`](https://flatassembler.net/index.php) assembler, which was adapted for Hexagonix, allowing the user to develop applications directly on the system. This port is called `fasmX`. Changes added to the code, as well as the software license, can be found in the [fasm repository for Hexagonix](https://github.com/hexagonix/fasm). This repository is a fork of [original repository](https://github.com/tgrysztar/fasm). Added code is based on modifications made to the original code and authorial additions. This modified/authored code can be found in the repository, [clicking here](https://github.com/hexagonix/fasm/tree/master/SOURCE/HEXAGONIX). fasmX, the fasm port for Hexagonix, is always updated when new features are added to the fasm repository. To indicate that it is a stable and tested version, the fasmX version number always inherits the fasm numbering, followed by a character x (for example, the version based on fasm 1.73.30, after testing, receives the numbering 1.73.30x). You can report bugs or code generation or optimization issues in the Hexagonix version [here](https://github.com/hexagonix/fasm/issues). To report general fasm bugs, use the [official](https://github.com/tgrysztar/fasm) repository.
 
 </div>
 
@@ -237,8 +237,8 @@ The Hexagonix Andromeda environment (Hexagonix-Andromeda) is built on the solid 
 
 <div align="justify">
 
-- [x] System Settings (Config)
-- [x] Quartz text editor
+- [x] System Settings (config)
+- [x] Quartzo text editor
 - [x] Lyoko IDE for application development
 - [x] Electronic piano return Piano;
 - [x] Serial Communication Utility
