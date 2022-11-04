@@ -12,6 +12,7 @@
 ![](https://img.shields.io/github/issues-pr-closed/hexagonix/hexagonix.svg)
 ![](https://img.shields.io/github/downloads/hexagonix/hexagonix/total.svg)
 ![](https://img.shields.io/github/release/hexagonix/hexagonix.svg)
+![](https://img.shields.io/twitter/follow/hexagonix.svg?style=social&label=Follow_HexagonixOS)
 
 </div>
 
