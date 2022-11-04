@@ -193,7 +193,7 @@ Hexagonix includes many of the Unix utilities you may already be familiar with, 
 - [x] ps
 - [X Man
 - [x] su
-- [x] sh`(default shell)
+- [x] sh (default shell)
 - [x] uname
 - [x] whoami, among others.
 
@@ -203,7 +203,6 @@ Some applications and utilities were developed exclusively for Hexagonix, such a
 * power (computer state control)
 * fnt (Hexagonix graphic font change utility)
 * hash (alternate shell)
-* log (used to get internal Hexagon logs, but now deprecated)
 * lshapp (gets and displays information from HAPP images)
 * lshmod (gets and displays information from HBoot modules and HBoot itself)
 

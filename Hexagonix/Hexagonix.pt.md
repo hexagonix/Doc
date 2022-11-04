@@ -193,7 +193,7 @@ O Hexagonix inclui muitos dos utilitários Unix que você pode já estar familia
 - [x] ps
 - [x] man
 - [x] su
-- [x] sh`(shell padrão)
+- [x] sh (shell padrão)
 - [x] uname
 - [x] whoami, entre outros.
 
@@ -203,7 +203,6 @@ Alguns aplicativos e utilitários foram desenvolvidos exclusivamente para o Hexa
 * energia (controle de estado do computador)
 * fnt (utilitário de alteração de fonte gráfica do Hexagonix)
 * hash (shell alternativo)
-* log (utilizado para obter logs internos do Hexagon, mas já obsoleto)
 * lshapp (obtém e exibe informações de imagens HAPP)
 * lshmod (obtém e exibe informações de módulos HBoot e do próprio HBoot)
 
@@ -222,7 +221,7 @@ O Hexagonix recebeu um port do montador [`fasm`](https://flatassembler.net/index
 
 <div align="justify">
 
-O ambiente Andromeda do Hexagonix (Hexagonix-Andromeda) é construído sobre a base sólida fornecida pelo Hexagonix, incluindo aplicativos e utilitários que não implementam a filosofia Unix ou apresentam sintaxe e forma de uso bastante diferentes do que se esperaria de um ambiente Unix. Aqui estão o aplicativo de configurações do sistema, calculadora, gerenciador de fontes, editores de texto e a IDE desenvolvida para o Hexagonix. Estes utilitários podem ou não apresentar uma interface gráfica. Juntamente a eles, compõem o ambiente Hexagonix-Andromeda bibliotecas desenvolvidas para permitir o desenvolvimento de aplicativos, como a biblioteca `Estelar`. 
+O ambiente Andromeda do Hexagonix (Hexagonix-Andromeda) é construído sobre a base sólida fornecida pelo Hexagonix, incluindo aplicativos e utilitários que não implementam a filosofia Unix ou apresentam sintaxe e forma de uso bastante diferentes do que se esperaria de um ambiente Unix. Aqui estão o aplicativo de configurações do sistema, calculadora, gerenciador de fontes, editores de texto e a IDE desenvolvida para o Hexagonix. Estes utilitários podem ou não apresentar uma interface gráfica. Juntamente a eles, compõem o ambiente Hexagonix-Andromeda bibliotecas desenvolvidas para permitir o desenvolvimento de aplicativos, como a biblioteca `Estelar`.
 
 </div>
 
