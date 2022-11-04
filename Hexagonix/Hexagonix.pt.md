@@ -236,7 +236,7 @@ O ambiente Andromeda do Hexagonix (Hexagonix-Andromeda) é construído sobre a b
 
 <div align="justify">
 
-- [x] Configurações do sistema (Config)
+- [x] Configurações do sistema (config)
 - [x] Editor de texto Quartzo
 - [x] IDE Lyoko para desenvolvimento de aplicativos
 - [x] Piano eletrônico return Piano;
