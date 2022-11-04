@@ -12,6 +12,7 @@
 ![](https://img.shields.io/github/issues-pr-closed/hexagonix/Doc.svg)
 ![](https://img.shields.io/github/downloads/hexagonix/Doc/total.svg)
 ![](https://img.shields.io/github/release/hexagonix/Doc.svg)
+[![](https://img.shields.io/twitter/follow/hexagonixOS.svg?style=social&label=Follow%20%40HexagonixOS)](https://twitter.com/hexagonixOS)
 
 </div>
 
@@ -19,6 +20,8 @@
 
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
+# Escolha o idioma/choose language
+ 
 <details title="Português (Brasil)" align='left'>
 <br>
 <summary align='left'>🇧🇷 Português (Brasil)</summary>
