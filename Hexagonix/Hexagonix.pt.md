@@ -13,9 +13,6 @@
 ![](https://img.shields.io/github/downloads/hexagonix/hexagonix/total.svg)
 ![](https://img.shields.io/github/release/hexagonix/hexagonix.svg)
 [![](https://img.shields.io/twitter/follow/hexagonixOS.svg?style=social&label=Follow%20%40HexagonixOS)](https://twitter.com/hexagonixOS)
-[![](https://sonarcloud.io/api/project_badges/measure?project=Hexagonix_hexagonix&metric=ncloc)](https://sonarcloud.io/dashboard?id=Hexagonix_hexagonix)
-[![](https://img.shields.io/discord/830522505605283862.svg?logo=discord&logoColor=white&logoWidth=20&labelColor=7289DA&label=Discord&color=17cf48)](https://discord.gg/serenityos)
-
 
 </div>
 
