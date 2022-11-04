@@ -32,7 +32,7 @@
    
 `Hexagonix` is a Unix-like operating system written in assembly language for the PC (x86) architecture. It is built on top of `Hexagon`, a simple and lightweight monolithic kernel designed to be fast and compatible with newer and older hardware (Pentium III and newer with 32 MB of RAM or more).
 
-Hexagonix consists of the Hexagon boot loader (`Hexagon Boot` or `HBoot`), the Hexagon (kernel), compatible shells, utilities and libraries. All these components were released under the BSD-3-Clause license.
+Hexagonix consists of the Hexagon boot loader ([`Hexagon Boot`](https:\\github.com/hexagonix/HBoot) or `HBoot`), the [Hexagon](https://github.com/hexagonix/Hexagon) (kernel), compatible shells, utilities and libraries. All these components were released under the BSD-3-Clause license.
    
 Some features of Hexagonix:
    
@@ -44,7 +44,7 @@ Some features of Hexagonix:
 - [x] System call with 68 sophisticated functions accessed by the user environment;
 - [x] Low minimum requirements, compatible with a wide range of devices;
 - [x] Own executable binary format (HAPP);
-- [x] Self-hosting (the assembler used to build Hexagonix can run on top of it);
+- [x] Self-hosting ([the assembler used to build Hexagonix](https://github.com/hexagonix/fasmX) can run on top of it);
 - [x] Device abstraction;
 - [x] VESA VBE graphics support in various resolutions;
 - [x] Text mode support;
@@ -95,11 +95,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 Hexagonix is divided into a series of components, which work together as soon as the device is turned on. Below you will be able to know briefly each one of them.
 
-### Saturn
+### Saturno
 
 <div align="justify">
 
-The first component of Hexagonix is the Saturn. It is responsible for taking control of the boot process performed by the BIOS/UEFI and looking in the volume for the second boot stage. For that, it implements a driver for reading a FAT16 file system. The second boot stage (see below) can implement drivers for other filesystems and is responsible for finding Hexagon, loading HBoot modules or loading a compatible DOS-like system (BETA version).
+The first component of Hexagonix is the Saturno. It is responsible for taking control of the boot process performed by the BIOS/UEFI and looking in the volume for the second boot stage. For that, it implements a driver for reading a FAT16 file system. The second boot stage (see below) can implement drivers for other filesystems and is responsible for finding Hexagon, loading HBoot modules or loading a compatible DOS-like system (BETA version).
 
 </div>
 
