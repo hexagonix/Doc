@@ -24,7 +24,7 @@
 
 <div align="justify">
 
-The default installation of Hexagonix also provides a number of fonts that can be loaded by the settings application or the font utility (font manager). These files are used to change the graphical display font for Hexagonix.
+The default installation of Hexagonix also provides a number of fonts that can be loaded by the settings application or the font utility (fnt). These files are used to change the graphical display font for Hexagonix.
 
 Graphics mode fonts for Hexagon are developed as a bitmap in Assembly which, when compiled, generate a binary image of the font with representations of each character. The standard Hexagonix fonts have now been released as open source and are available in the [Hexagonix font repository](https://github.com/hexagonix/xfnt).
 
