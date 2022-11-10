@@ -30,7 +30,7 @@ As fontes de modo gráfico para Hexagon são desenvolvidas como um bitmap em Ass
 
 </div>
 
-### Como criar sua própria fonte gráfica
+## Como criar sua própria fonte gráfica
 
 <div align="justify">
 
