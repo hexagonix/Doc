@@ -158,4 +158,44 @@ A versão em desenvolvimento, H2 (codenome Vita Nova), é a próxima versão do 
 
 </details>
 
+<details title="Hexagonix H2-dev.beta4" align='left'>
+<br>
+<summary align='left'>Hexagonix H2-dev.beta4</summary>
+
+<div align="justify">
+
+- Alteração profunda no utilitário Unix atop;
+- atop renomeado para htop;
+- Melhorias no daemon logind;
+- Fonte hint renomeada para Avatar;
+- Remoção do arquivo Unix.sh da libasm;
+- Constantes de Unix.s movidas para o utilitário Unix man.
+
+</div>
+
+</details>
+
+<details title="Hexagonix H2-dev.beta5" align='left'>
+<br>
+<summary align='left'>Hexagonix H2-dev.beta5</summary>
+
+<div align="justify">
+
+- Correção de emergência do Hexagon (v1.1.7), devido à problemas de vazamento de memória ao solicitar a reinicialização do dispositivo (afeta as versões H2-dev.beta1 a H2-dev.beta4);
+- Utilitário init v2.0, com suporte a execução de múltiplos serviços em lista.
+- Desativação do modo de login "moderno" em logind. A interface de login padrão segue o observado em sistemas Unix-like (FreeBSD como maior inspiração);
+- Melhorias gerais nos seguintes utilitários Unix:
+  - [x] login;
+  - [x] energia;
+  - [x] htop;
+  - [x] man;
+  - [x] su;
+  - [x] top;
+  - [x] uname;
+- Testes executados para verificar o funcionamento correto do sistema (nenhum novo problema encontrado).
+
+</div>
+
+</details>
+
 </details>

@@ -158,4 +158,44 @@ The development version, H2 (codenamed Vita Nova), is the next version of Hexago
 
 </details>
 
+<details title="Hexagonix H2-dev.beta4" align='left'>
+<br>
+<summary align='left'>Hexagonix H2-dev.beta4</summary>
+
+<div align="justify">
+
+- Deep change in the Unix atop utility;
+- Renamed atop to htop;
+- Improvements in the logind daemon;
+- Font hint renamed to Avatar;
+- Removal of Unix.sh file from libasm;
+- Constants from Unix.s moved to Unix man utility.
+
+</div>
+
+</details>
+
+<details title="Hexagonix H2-dev.beta5" align='left'>
+<br>
+<summary align='left'>Hexagonix H2-dev.beta5</summary>
+
+<div align="justify">
+
+- Hexagon emergency fix (v1.1.7) due to memory leak issues when requesting device restart (affects versions H2-dev.beta1 to H2-dev.beta4);
+- init v2.0, with support to run multiple services in list.
+- Disabling "modern" login mode in logind. The default login interface follows that seen on Unix-like systems (FreeBSD as a major inspiration);
+- General improvements to the following Unix utilities:
+  - [x] login;
+  - [x] energia;
+  - [x] htop;
+  - [X] man;
+  - [x] su;
+  - [x] top;
+  - [x] uname;
+- Tests run to verify proper system operation (no new issues found).
+
+</div>
+
+</details>
+
 </details>
