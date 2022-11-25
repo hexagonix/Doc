@@ -20,7 +20,7 @@
 
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
-# Kernel Hexagon
+# Hexagon kernel
 
 <p align="center">
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/LogoHexagon.png" width="200" height="200">
