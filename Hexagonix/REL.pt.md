@@ -202,13 +202,13 @@ A versão em desenvolvimento, H2 (codenome Vita Nova), é a próxima versão do 
 
 </details>
 
-<details title="Hexagonix H2-dev.beta5" align='left'>
+<details title="Hexagonix H2-dev.beta6" align='left'>
 <br>
 <summary align='left'>Hexagonix H2-dev.beta6</summary>
 
 <div align="justify">
 
-- A versão H2-dev.beta6 veio padronizar uma série de serviços do Hexagonix, bem como aplicar conformidade nos fontes e comentários do sistema. A maioria das alterações dessa versão não são visíveis ao usuário, mas são importantes para garantir a estabilidade do sistema. Veja as alterações mais importantes:
+A versão H2-dev.beta6 veio padronizar uma série de serviços do Hexagonix, bem como aplicar conformidade nos fontes e comentários do sistema. A maioria das alterações dessa versão não são visíveis ao usuário, mas são importantes para garantir a estabilidade do sistema. Veja as alterações mais importantes:
 
 - Melhorias nas mensagens dos utilitários do sistema, sobretudo em mensagens de erro;
 - Correções nos seguintes utilitários do sistema:

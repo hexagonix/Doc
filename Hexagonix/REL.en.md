@@ -202,7 +202,7 @@ The development version, H2 (codenamed Vita Nova), is the next version of Hexago
 
 </details>
 
-<details title="Hexagonix H2-dev.beta5" align='left'>
+<details title="Hexagonix H2-dev.beta6" align='left'>
 <br>
 <summary align='left'>Hexagonix H2-dev.beta6</summary>
 
