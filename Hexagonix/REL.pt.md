@@ -202,7 +202,7 @@ A versão em desenvolvimento, H2 (codenome Vita Nova), é a próxima versão do 
 
 </details>
 
-<details title="Hexagonix H2-dev.beta5" align='left'>
+<details title="Hexagonix H2-dev.beta6" align='left'>
 <br>
 <summary align='left'>Hexagonix H2-dev.beta6</summary>
 
@@ -210,19 +210,20 @@ A versão em desenvolvimento, H2 (codenome Vita Nova), é a próxima versão do 
 
 A versão H2-dev.beta6 veio padronizar uma série de serviços do Hexagonix, bem como aplicar conformidade nos fontes e comentários do sistema. A maioria das alterações dessa versão não são visíveis ao usuário, mas são importantes para garantir a estabilidade do sistema. Veja as alterações mais importantes:
 
-- Melhorias nas mensagens dos utilitários do sistema, sobretudo em mensagens de erro;
-- Correções nos seguintes utilitários do sistema:
+* Melhorias nas mensagens dos utilitários do sistema, sobretudo em mensagens de erro;
+* Correções nos seguintes utilitários do sistema:
   - [x] DOSsh;
   - [x] init;
-  - [x] su - Um erro de definição poderia levar ao travamento ou não funcionamento do utilitário, uma vez que tentaria carregar o shell padrão (sh) com o nome sh.app;
+  - [x] su;
   - [x] login;
-- Remoção total de referências ao Andromeda, uma vez que a distribuição foi fundida ao Hexagonix (ver Hexagonix H2-dev.beta1). A remoção se deu em:
+* Um erro de definição em su poderia levar ao travamento ou não funcionamento do utilitário, uma vez que tentaria carregar o shell padrão (sh) com o nome sh.app;
+* Remoção total de referências ao Andromeda, uma vez que a distribuição foi fundida ao Hexagonix (ver Hexagonix H2-dev.beta1). A remoção se deu em:
   - Nome de funções;
   - Nome de variáveis e constantes;
   - Comentários;
-- Melhoria nas páginas de manual de todos os utilitários;
-- Melhoria na documentação online do Hexagon;
-- Alteração no nome de versão de "Vita Nova" para "VitaNova", impedindo problemas ao verificar o nome de host gerado durante a construção do sistema.
+* Melhoria nas páginas de manual de todos os utilitários;
+* Melhoria na documentação online do Hexagon;
+* Alteração no nome de versão de "Vita Nova" para "VitaNova", impedindo problemas ao verificar o nome de host gerado durante a construção do sistema.
 
 - [x] Data de lançamento: 25/11/2022
 

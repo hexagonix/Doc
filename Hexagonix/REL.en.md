@@ -202,7 +202,7 @@ The development version, H2 (codenamed Vita Nova), is the next version of Hexago
 
 </details>
 
-<details title="Hexagonix H2-dev.beta5" align='left'>
+<details title="Hexagonix H2-dev.beta6" align='left'>
 <br>
 <summary align='left'>Hexagonix H2-dev.beta6</summary>
 
@@ -210,19 +210,20 @@ The development version, H2 (codenamed Vita Nova), is the next version of Hexago
 
 The H2-dev.beta6 version came to standardize a number of Hexagonix services, as well as enforce compliance in system fonts and comments. Most of the changes in this version are not visible to the user, but they are important to guarantee the stability of the system. See the most important changes:
 
-- Improvements in the messages of the system utilities, especially in error messages;
-- Fixes in the following system utilities:
+* Improvements in the messages of the system utilities, especially in error messages;
+* Fixes in the following system utilities:
   - [x] DOSsh;
   - [x] init;
-  - [x] su - A definition error could lead to the utility crashing or not working, since it would try to load the default shell (sh) with the name sh.app;
+  - [x] su;
   - [x] login;
-- Complete removal of references to Andromeda, since the distribution was merged into Hexagonix (see Hexagonix H2-dev.beta1). Removal took place at:
+* A definition error in su could lead to the utility crashing or not working, since it would try to load the default shell (sh) with the name sh.app;
+* Complete removal of references to Andromeda, since the distribution was merged into Hexagonix (see Hexagonix H2-dev.beta1). Removal took place at:
   - Name of functions;
   - Name of variables and constants;
   - Comments;
-- Improved manual pages for all utilities;
-- Improved Hexagon online documentation;
-- Changed the version name from "Vita Nova" to "VitaNova", preventing issues when checking the hostname generated during system build.
+* Improved manual pages for all utilities;
+* Improved Hexagon online documentation;
+* Changed the version name from "Vita Nova" to "VitaNova", preventing issues when checking the hostname generated during system build.
 
 - [x] Release date: 25/11/2022 (dd/mm/yyyy)
 
