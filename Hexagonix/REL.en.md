@@ -214,8 +214,9 @@ The H2-dev.beta6 version came to standardize a number of Hexagonix services, as 
 - Fixes in the following system utilities:
   - [x] DOSsh;
   - [x] init;
-  - [x] su - A definition error could lead to the utility crashing or not working, since it would try to load the default shell (sh) with the name sh.app;
+  - [x] su;
   - [x] login;
+- A definition error in su could lead to the utility crashing or not working, since it would try to load the default shell (sh) with the name sh.app;
 - Complete removal of references to Andromeda, since the distribution was merged into Hexagonix (see Hexagonix H2-dev.beta1). Removal took place at:
   - Name of functions;
   - Name of variables and constants;

@@ -214,8 +214,9 @@ A versão H2-dev.beta6 veio padronizar uma série de serviços do Hexagonix, bem
 - Correções nos seguintes utilitários do sistema:
   - [x] DOSsh;
   - [x] init;
-  - [x] su - Um erro de definição poderia levar ao travamento ou não funcionamento do utilitário, uma vez que tentaria carregar o shell padrão (sh) com o nome sh.app;
+  - [x] su;
   - [x] login;
+- Um erro de definição em su poderia levar ao travamento ou não funcionamento do utilitário, uma vez que tentaria carregar o shell padrão (sh) com o nome sh.app;
 - Remoção total de referências ao Andromeda, uma vez que a distribuição foi fundida ao Hexagonix (ver Hexagonix H2-dev.beta1). A remoção se deu em:
   - Nome de funções;
   - Nome de variáveis e constantes;
