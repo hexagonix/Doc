@@ -220,7 +220,8 @@ A versão H2-dev.beta6 veio padronizar uma série de serviços do Hexagonix, bem
   - Nome de variáveis e constantes;
   - Comentários;
 - Melhoria nas páginas de manual de todos os utilitários;
-- Melhoria na documentação online do Hexagon.
+- Melhoria na documentação online do Hexagon;
+- Alteração no nome de versão de "Vita Nova" para "VitaNova", impedindo problemas ao verificar o nome de host gerado durante a construção do sistema.
 
 - [x] Data de lançamento: 25/11/2022
 

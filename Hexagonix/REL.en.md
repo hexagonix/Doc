@@ -220,7 +220,8 @@ The H2-dev.beta6 version came to standardize a number of Hexagonix services, as 
   - Name of variables and constants;
   - Comments;
 - Improved manual pages for all utilities;
-- Improved Hexagon online documentation.
+- Improved Hexagon online documentation;
+- Changed the version name from "Vita Nova" to "VitaNova", preventing issues when checking the hostname generated during system build.
 
 - [x] Release date: 25/11/2022 (dd/mm/yyyy)
 
