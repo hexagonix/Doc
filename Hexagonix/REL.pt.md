@@ -140,6 +140,7 @@ Essa atualização do sistema conserta vários bugs no sistema, incluindo proble
 <summary align='left'><strong>Hexagonix H2</strong></summary>
 
 <details title="Hexagonix H2 (versões de desenvolvimento)" align='left'>
+<br>
 <summary align='left'>Hexagonix H2 (versões de desenvolvimento)</summary>
 
 <details title="Hexagonix H2-dev.beta1" align='left'>
