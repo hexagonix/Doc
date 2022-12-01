@@ -232,6 +232,20 @@ A versão H2-dev.beta6 veio padronizar uma série de serviços do Hexagonix, bem
 
 </details>
 
+<details title="Hexagonix H2-dev.beta7" align='left'>
+<br>
+<summary align='left'>Hexagonix H2-dev.beta7</summary>
+
+<div align="justify">
+
+Tradução das mensagens dos utilitários Unix para o inglês.
+
+- [x] Data de lançamento: 30/11/2022
+
+</div>
+
+</details>
+
 </details>
 
 </details>

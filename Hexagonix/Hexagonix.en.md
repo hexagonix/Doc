@@ -204,8 +204,8 @@ Hexagonix includes many of the Unix utilities you may already be familiar with, 
 
 Some applications and utilities were developed exclusively for Hexagonix, such as:
    
-* atop (alternate version of top)
-* power (computer state control)
+* htop (alternate version of top)
+* energia (computer state control)
 * fnt (Hexagonix graphic font change utility)
 * hash (alternate shell)
 * lshapp (gets and displays information from HAPP images)
@@ -245,9 +245,9 @@ The Hexagonix Andromeda environment (Hexagonix-Andromeda) is built on the solid 
 - [x] Quartzo text editor
 - [x] Lyoko IDE for application development
 - [x] Electronic piano return Piano;
-- [x] Serial Communication Utility
+- [x] Serial communication utility
 - [x] Andromeda Shell (ASH) - A new shell for Hexagonix
-- [x] Hexagonix Calculator
+- [x] Hexagonix calculator
 - [x] Font change utility
 - [x] Hexagonix shutdown utility
 

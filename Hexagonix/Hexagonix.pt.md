@@ -204,7 +204,7 @@ O Hexagonix inclui muitos dos utilitários Unix que você pode já estar familia
 
 Alguns aplicativos e utilitários foram desenvolvidos exclusivamente para o Hexagonix, como:
 
-* atop (versão alternativa de top)
+* htop (versão alternativa de top)
 * energia (controle de estado do computador)
 * fnt (utilitário de alteração de fonte gráfica do Hexagonix)
 * hash (shell alternativo)
