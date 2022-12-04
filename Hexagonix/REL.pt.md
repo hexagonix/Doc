@@ -246,6 +246,20 @@ Tradução das mensagens dos utilitários Unix para o inglês.
 
 </details>
 
+<details title="Hexagonix H2-dev.beta8" align='left'>
+<br>
+<summary align='left'>Hexagonix H2-dev.beta8</summary>
+
+<div align="justify">
+
+Mensagens dos utilitários Andromeda-Hexagonix e do HBoot traduzidas para o inglês.
+
+- [x] Data de lançamento: 04/12/2022
+
+</div>
+
+</details>
+
 </details>
 
 </details>
