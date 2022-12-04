@@ -359,7 +359,7 @@ Você pode reportar erros e ajudar a desenvolver o sistema. Para isso, abra uma 
 
 <div align="justify">
 
-Neste momento, tanto o sistema quanto a documentação estão disponíveis apenas em português. O documentação em inglês estará disponível em breve, e há planos para suporte ao inglês como possibilidade de idioma principal, além do português (grande parte do trabalho já foi feita).
+Neste momento, o sistema está disponível em inglês (com alguns componentes ainda em português) e a documentação está disponível tanto em português quanto em inglês. Os comentários e nomes de função nos arquivos que compõem o código-fonte do sistema estão em português.
 
 </div>
 
