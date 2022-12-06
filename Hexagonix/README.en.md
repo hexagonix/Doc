@@ -99,7 +99,11 @@ You can go to the [`releases`](https://github.com/hexagonix/hexagonix/releases) 
 <br>
 <summary align='left'>System documentation</summary>
 
-* [Hexagonix documentation (under construction)](https://github.com/hexagonix/Doc)
+<div align="center">
+
+[![Doc](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=Doc&theme=dark)](https://github.com/hexagonix/Doc)
+
+</div>
 
 </details>
 
