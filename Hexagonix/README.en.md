@@ -91,7 +91,9 @@ In this document, you will find a tutorial to run Hexagonix on your computer, bo
 
 You can go to the [`releases`](https://github.com/hexagonix/hexagonix/releases) session for the latest stable system releases. You can access the Hexagonix [release announcement](REL.en.md) file. Whenever possible, get the latest release and download the available .img or .vdi images or the complete package in zip format. The versions available directly in this repository are always development versions (beta and release candidate), which can also be run and are minimally functional. At the end of each development cycle, the final versions will be available in the [releases](https://github.com/hexagonix/hexagonix/releases) session.
 
-> Note: The version/build of Hexagonix available in the main branch of the repository is always current. That is, the latest trial version. Always go to the [releases](https://github.com/hexagonix/hexagonix/releases) tab to get the final images of each version of the system. As an example on UNIX systems such as FreeBSD, the main branch resembles the CURRENT version of the software and is not necessarily a stable version. For stable releases, go to the releases tab and look for a release without the terms: -dev, -dev.beta* or -CURRENT. Typically these versions have simple names such as H1, H1-R6, H2, H2-R1, and so on.
+> Note 1: The version/build of Hexagonix available in the main branch of the repository is always current. That is, the latest trial version. Always go to the [releases](https://github.com/hexagonix/hexagonix/releases) tab to get the final images of each version of the system. As an example on UNIX systems such as FreeBSD, the main branch resembles the CURRENT version of the software and is not necessarily a stable version. For stable releases, go to the releases tab and look for a release without the terms: -dev, -dev.beta* or -CURRENT. Typically these versions have simple names such as H1, H1-R6, H2, H2-R1, and so on.
+
+> Note 2: Always check the [release announcement](REL.en.md) to obtain the complete changelog of the version (what changes in relation to the previous version of the system).
 
 </div>
 
