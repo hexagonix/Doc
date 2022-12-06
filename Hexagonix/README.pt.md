@@ -91,6 +91,8 @@ Neste documento, você encontra um tutorial para executar o Hexagonix em seu com
 
 Você pode ir até a sessão de [`lançamentos`](https://github.com/hexagonix/hexagonix/releases) para obter as versões estáveis mais recentes do sistema. Você pode acessar o arquivo de [anúncio de versões](REL.pt.md) do Hexagonix. Sempre que possível, obtenha o último lançamento e realize o download das imagens .img ou .vdi disponíveis ou do pacote completo em formato zip. As versões disponíveis diretamente neste repositório são sempre versões de desenvolvimento (beta e release candidate), que também podem ser executadas e estão minimamente funcionais. Ao final de cada ciclo de desenvolvimento, as versões finais estarão disponíveis na sessão [lançamentos](https://github.com/hexagonix/hexagonix/releases).
 
+> Nota: A versão/build do Hexagonix disponibilizada no ramo principal do repositório é sempre a corrente. Isso é, a versão de testes mais recente. Vá sempre na aba de [lançamentos](https://github.com/hexagonix/hexagonix/releases) para obter as imagens finais de cada versão do sistema. Como exemplo em sistemas UNIX, como o FreeBSD, o ramo principal se assemelha à versão CURRENT do software, não sendo necessariamente uma versão estável. Para obter versões estáveis, vá na aba de lançamentos e busque uma versão sem os termos: -dev, -dev.beta* ou -CURRENT. Normalmente essas versões apresentam nomes simples, como H1, H1-R6, H2, H2-R1 e assim por diante.
+
 </div>
 
 <details title="Documentação do sistema" align='left'>
@@ -148,7 +150,9 @@ Abaixo, uma lista de requisitos mínimos e recomendados para testar o Hexagonix 
 
 Para testar o Hexagonix, você vai precisar de uma das imagens de disco disponíveis, bem como a ferramenta [`qemu`](https://www.qemu.org) instalada em seu computador, caso deseje testar o sistema em ambiente virtualizado. A imagem também pode ser utilizada para a gravação em um disco físico em uma máquina real.
 
-Para testar o Hexagonix, obtenha o arquivo [`hexagonix.img`](https://github.com/hexagonix/hexagonix/blob/main/hexagonix.img).
+Para testar o Hexagonix, obtenha o arquivo [`hexagonix.img`](https://github.com/hexagonix/hexagonix/blob/main/hexagonix.img) (qemu) ou [`hexagonix.vdi`](https://github.com/hexagonix/hexagonix/blob/main/hexagonix.vdi) (VirtuaBox e outros virtualizadores e gerenciadores de máquinas virtuais).
+
+> Nota: A imagem `hexagonix.img` é compatível apenas com o qemu. Além disso, ela é o único arquivo de imagem que pode ser utilizado para instalar o sistema em um disco rígido ou dispositivo flash USB. Para executar o Hexagonix utilizando o VirtualBox ou outros virtualizadores ou gerenciadores de máquinas virtuais, use a imagem `hexagonix.vdi` disponibilizada. A imagem VDI não pode ser utilizada para instalar o Hexagonix em um disco físico (disco rígido, SSD ou unidade USB).
 
 </div>
 
@@ -188,7 +192,7 @@ Agora que você tem o qemu instalado em seu computador, você pode prosseguir co
 
 Para executar o sistema de maneira satisfatória, você deve fornecer ao menos 32 MB de RAM para a máquina virtual. Isso se deve a arquitetura de gerenciamento de memória do Hexagon, que exige 16 MB de RAM exclusiva para o kernel a ao menos 16 MB para alocar os aplicativos, utilitários e arquivos abertos. O Hexagon não admite menos que isso para ser executado. Caso mais memória seja fornecida, a memória adicional será sempre reservada, com prioridade, para ser disponibilizada aos processos do usuário. Normalmente, a linha de comando abaixo cumpre todos os requisitos para a execução do sistema:
 
-> Nota: Para usuários do FreeBSD, omita a opção `--enable-kvm`. O uso de KVM só está disponível em sistemas Linux. Note que a execução do Hexagonix pode ficar mais lenta ao ser executado sem KVM. Neste caso, você pode utilizar o `VirtualBox`no FreeBSD para obter um bom desempenho. Para isso, faça o download do VirtualBox [aqui](https://www.virtualbox.org/) ou utilize, como usuário root, `pkg install -y virtualbox`. Para utilizar o VirtualBox, não faça o download da imagem `hexagonix.img`, compatível apenas com o `qemu`, mas sim a imagem [hexagonix.vdi](https://github.com/hexagonix/hexagonix/blob/main/hexagonix.vdi), uma imagem compatível com os principais virtualizadores e gerenciadores de máquinas virtuais, incluindo o qemu.
+> Nota 1: Para usuários do FreeBSD, omita a opção `--enable-kvm`. O uso de KVM só está disponível em sistemas Linux. Note que a execução do Hexagonix pode ficar mais lenta ao ser executado sem KVM. Neste caso, você pode utilizar o `VirtualBox`no FreeBSD para obter um bom desempenho. Para isso, faça o download do VirtualBox [aqui](https://www.virtualbox.org/) ou utilize, como usuário root, `pkg install -y virtualbox`. Para utilizar o VirtualBox, não faça o download da imagem `hexagonix.img`, compatível apenas com o `qemu`, mas sim a imagem [hexagonix.vdi](https://github.com/hexagonix/hexagonix/blob/main/hexagonix.vdi), uma imagem compatível com os principais virtualizadores e gerenciadores de máquinas virtuais, incluindo o qemu.
 
 > Nota 2: Para sistemas que utilizam PulseAudio, você pode encontrar problemas de som na máquina virtual ao utilizar a opção `-soundhw pcspk`. Caso isso ocorra, omita esse parâmetro ao executar o sistema no qemu. Aos usuários de Pipewire, esses artefatos parecem não ocorrer.
 
