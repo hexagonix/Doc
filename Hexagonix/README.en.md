@@ -188,11 +188,15 @@ Now that you have qemu installed on your computer, you can proceed with running 
 
 To run the system satisfactorily, you must provide at least 32 MB of RAM to the virtual machine. This is due to Hexagon's memory management architecture, which requires 16 MB of RAM dedicated to the kernel and at least 16 MB for allocating applications, utilities and open files. Hexagon doesn't allow less than that to run. If more memory is provided, the additional memory will always be reserved, with priority, to be made available to user processes. Normally, the command line below fulfills all requirements for running the system:
 
+> Note: For FreeBSD users, omit the `--enable-kvm` option. Using KVM is only available on Linux systems. Note that Hexagonix may run slower when running without KVM. In this case, you can use `VirtualBox` on FreeBSD to get good performance. To do so, download VirtualBox [here](https://www.virtualbox.org/) or use, as root user, `pkg install -y virtualbox`. To use VirtualBox, do not download the `hexagonix.img` image, compatible only with `qemu`, but the [hexagonix.vdi](https://github.com/hexagonix/hexagonix/blob/main/hexagonix.vdi), an image compatible with leading virtualizers and virtual machine managers, including qemu.
+
+> Note 2: For systems using PulseAudio, you may encounter sound problems in the virtual machine when using the `-soundhw pcspk` option. If this occurs, omit this parameter when running the system on qemu. For Pipewire users, these artifacts do not seem to occur.
+
 ```
 qemu-system-i386 -hda hexagonix.img -m 32 -soundhw pcspk --enable-kvm -serial file:"Serial.txt"
 ```
 
-You can omit the -serial parameter if you want. This parameter ensures that debug output from Hexagon and applications will be directed to a file on your computer, where you can see what was sent. You can also omit the -soundhw parameter, which is responsible for directing the sound output from the virtual system to your physical computer. On some Linux system, the above configuration may conflict with pulseaudio, and may be omitted. Remember that by omitting the parameter, system sounds will not be output to you.
+You can omit the -serial parameter if you want. This parameter ensures that debug output from Hexagon and applications will be directed to a file on your computer, where you can see what was sent. You can also omit the -soundhw parameter, which is responsible for directing the sound output from the virtual system to your physical computer. On some Linux system, the above configuration may conflict with PulseAudio, and may be omitted. Remember that by omitting the parameter, system sounds will not be output to you.
 
 Remembering that you must use a version/edition of qemu that can run software written for the x86 architecture (i386 or x86_64). To download and install `qemu`, click [here](https://www.qemu.org/download/).
 
