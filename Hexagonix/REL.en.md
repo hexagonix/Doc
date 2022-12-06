@@ -252,7 +252,10 @@ Translation of messages from Unix utilities into English.
 
 <div align="justify">
 
-Messages from Andromeda-Hexagonix utilities and HBoot translated into English.
+* Messages from Andromeda-Hexagonix utilities and HBoot translated into English;
+* Hexagon messages translated into English;
+
+> It is worth noting that the names of functions, as well as comments in files that make up the system, will remain in Portuguese at this time.
 
 - [x] Release date: 04/12/2022 (dd/mm/yyyy)
 
