@@ -252,7 +252,10 @@ Tradução das mensagens dos utilitários Unix para o inglês.
 
 <div align="justify">
 
-Mensagens dos utilitários Andromeda-Hexagonix e do HBoot traduzidas para o inglês.
+* Mensagens dos utilitários Andromeda-Hexagonix e do HBoot traduzidas para o inglês;
+* Mensagens do Hexagon traduzidas para o inglês;
+
+> Vale ressaltar que os nomes de funções, bem como os comentários em arquivos que compõem o sistema, permanecerão em português nesse momento.
 
 - [x] Data de lançamento: 04/12/2022
 
