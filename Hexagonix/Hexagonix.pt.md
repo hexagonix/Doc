@@ -236,7 +236,7 @@ O ambiente Andromeda do Hexagonix (Hexagonix-Andromeda) é construído sobre a b
 
 </div>
 
-#### Alguns aplicativos e utilitários do ambiente Andromeda
+#### Alguns aplicativos e utilitários do ambiente Hexagonix-Andromeda
 
 <div align="justify">
 

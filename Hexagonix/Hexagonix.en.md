@@ -237,7 +237,7 @@ The Hexagonix Andromeda environment (Hexagonix-Andromeda) is built on the solid 
 
 </div>
 
-#### Some Andromeda applications and utilities
+#### Some Hexagonix-Andromeda applications and utilities
 
 <div align="justify">
 
