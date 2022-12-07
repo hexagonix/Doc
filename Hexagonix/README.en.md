@@ -191,7 +191,7 @@ For `FreeBSD`, the following line will install qemu and all its dependencies (ro
 ```
 su
 pkg update
-pkg install qemu
+pkg install -y qemu
 ```
      
 Now that you have qemu installed on your computer, you can proceed with running the system.
@@ -224,6 +224,8 @@ On `Linux/BSD/macOS/Unix`, use the line below:
 dd if=hexagonix.img of=/dev/unit
 ```
 where `drive` is the desired device (usually `sdb` or `sdc` for USB devices and `hda`, `hdb`, `sda` or `sdb` for hard/solid state drives). Restart your computer and test the system. Note that secure boot mode is not supported, and booting is only supported in BIOS or UEFI legacy BIOS mode.
+
+> Note: The disk device name varies between UNIX and Unix-like systems. While you can install the system to a USB flash drive on Linux via the `/dev/sdb` path, for example, on macOS the device name might look like `/dev/rdisk1`. Properly check the device path before executing the command mentioned above.
 
 Note that system performance may vary depending on the machine being tested. Added to this is the fact that the latest versions of the system have not been or are being tested directly on the physical machine, as the main operating system. If any problem occurs when running Hexagonix on a physical machine, please report the detailed error [here](https://github.com/hexagonix/Distro/issues), in Portuguese or English, informing data such as device brand, processor, amount of RAM memory, video card (if available) and peripherals connected, as well as the device used to install the system (internal disk drive or USB removable media).
 
@@ -292,7 +294,7 @@ You can report bugs and help develop the system. To do so, open an error notific
 
 <div align="justify">
 
-At this moment, both the system and the documentation are only available in Portuguese. Documentation in English will be available soon, and there are plans to support English as a primary language possibility in addition to Portuguese (most of the work has already been done).
+At the moment, the system is available in English (with some components still in Portuguese) and the documentation is available in both Portuguese and English. The comments and function names in the files that make up the source code of the system are in Portuguese.
 
 </div>
 
