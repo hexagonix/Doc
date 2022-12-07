@@ -294,7 +294,7 @@ You can report bugs and help develop the system. To do so, open an error notific
 
 <div align="justify">
 
-At this moment, both the system and the documentation are only available in Portuguese. Documentation in English will be available soon, and there are plans to support English as a primary language possibility in addition to Portuguese (most of the work has already been done).
+At the moment, the system is available in English (with some components still in Portuguese) and the documentation is available in both Portuguese and English. The comments and function names in the files that make up the source code of the system are in Portuguese.
 
 </div>
 
