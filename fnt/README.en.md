@@ -34,7 +34,7 @@ Graphics mode fonts for Hexagon are developed as a bitmap in Assembly which, whe
 
 <div align="justify">
 
-Feel free to download the font [model](https://github.com/hexagonix/xfnt/blob/main/modelo.asm), which is already structured but with blank characters, and draw the your own graphic font! For that, you need to know some technical information about them:
+Feel free to download the font [modelo](https://github.com/hexagonix/xfnt/blob/main/modelo.asm), which is already structured but with blank characters, and draw the your own graphic font! For that, you need to know some technical information about them:
 
 * Fonts have a height of 16 and a width of 8 pixels. This information is necessary to ensure that your font does not experience problems during use.
 * You can freely divide the placeholders for accents and other graphic features of each character, such as cedilla or portions that fall below the character line, such as y, comma, etc.
