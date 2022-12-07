@@ -170,7 +170,7 @@ Primeiramente, você deve instalar a ferramenta `qemu`, que irá gerenciar a má
 
 > Instalar no Debian, Ubuntu, Pop_OS! e derivados:
 
-Para o `Ubuntu`, a linha a seguir irá instalar o qemu e todas as suas dependências (privilégios de superusuário necessários):
+Para o `Ubuntu`, a linha a seguir irá instalar o qemu e todas as suas dependências (privilégios de usuário root necessários):
 
 ```
 sudo apt install qemu qemu-system-i386
@@ -178,7 +178,7 @@ sudo apt install qemu qemu-system-i386
 
 > Instalar no Fedora, CentOS e derivados:
 
-Para o `Fedora`, a linha a seguir irá instalar o qemu e todas as suas dependências (privilégios de superusuário necessários):
+Para o `Fedora`, a linha a seguir irá instalar o qemu e todas as suas dependências (privilégios de usuário root necessários):
 
 ```
 sudo dnf install qemu qemu-system-i386
@@ -186,12 +186,12 @@ sudo dnf install qemu qemu-system-i386
 
 > Instalar no FreeBSD e derivados:
 
-Para o `FreeBSD`, a linha a seguir irá instalar o qemu e todas as suas dependências (privilégios de superusuário necessários):
+Para o `FreeBSD`, a linha a seguir irá instalar o qemu e todas as suas dependências (privilégios de usuário root necessários):
 
 ```
 su
 pkg update
-pkg install qemu
+pkg install -y qemu
 ```
      
 Agora que você tem o qemu instalado em seu computador, você pode prosseguir com a execução do sistema.
@@ -224,6 +224,8 @@ No `Linux/BSD/macOS/Unix`, use a linha abaixo:
 dd if=hexagonix.img of=/dev/unidade
 ```
 onde `unidade` equivale ao dispositivo desejado (geralmente `sdb` ou `sdc`, em caso de dispositivos USB e `hda`, `hdb`, `sda` ou `sdb`, para unidades de disco rígido/estado sólido). Reinicie seu computador e teste o sistema. Vale lembrar que o modo de boot seguro não é suportado, além de que o boot só é suportado em BIOS ou no modo legado BIOS do UEFI.
+
+> Nota: O nome de dispositivo de disco varia entre os sistemas UNIX e Unix-like. Enquanto você pode instalar o sistema em uma unidade flash USB no Linux através do caminho `/dev/sdb`, por exemplo, no macOS o nome de dispositivo pode se parecer com `/dev/rdisk1`. Verifique corretamente o caminho do dispositivo antes de executar o comando citado acima.
 
 Vale ressaltar que o desempenho do sistema pode variar de acordo com a máquina testada. Junta-se a isso o fato de que as versões mais recentes do sistema não foram ou estão sendo testadas diretamente na máquina física, como sistema operacional principal. Caso algum problema ocorra ao executar o Hexagonix em uma máquina física, por favor reporte o erro detalhado [aqui](https://github.com/hexagonix/Distro/issues), em português ou inglês, informando dados como marca do dispositivo, processador, quantidade de memória RAM, placa de vídeo (se disponível) e periféricos conectados, bem como o dispositivo utilizado para instalar o sistema (unidade de disco interna ou mídia removível USB).
 
