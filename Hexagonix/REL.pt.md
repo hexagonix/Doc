@@ -265,4 +265,53 @@ Tradução das mensagens dos utilitários Unix para o inglês.
 
 </details>
 
+<details title="Hexagonix H2-RELEASE" align='left'>
+<br>
+<summary align='left'>Hexagonix H2-RELEASE</summary>
+
+Consolidação das versões de desenvolvimento, com:
+
+- Kernel Hexagon v1.2.5;
+- HBoot v0.4 (incompatível com Hexagonix H1 a H1-R6);
+- Fusão das distribuições Hexagonix e Andromeda em uma única distribuição;
+- Remoção de extensão de arquivo para os binários do sistema;
+- Adição de termos de licença na imagem do sistema;
+- Melhorias em utilitários Unix e Hexagonix-Andromeda (antigos aplicativos Andromeda);
+- Alteração profunda no utilitário Unix atop;
+- atop renomeado para htop;
+- Melhorias no daemon logind;
+- Fonte hint renomeada para Avatar;
+- Utilitário init v2.0, com suporte a execução de múltiplos serviços em lista.
+- Desativação do modo de login "moderno" em logind. A interface de login padrão segue o observado em sistemas Unix-like (FreeBSD como maior inspiração);
+- Melhorias gerais nos seguintes utilitários Unix:
+  - [x] login;
+  - [x] energia;
+  - [x] htop;
+  - [x] man;
+  - [x] su;
+  - [x] top;
+  - [x] uname;
+- Melhorias nas mensagens dos utilitários do sistema, sobretudo em mensagens de erro;
+- Correções nos seguintes utilitários do sistema:
+  - [x] DOSsh;
+  - [x] init;
+  - [x] su;
+  - [x] login;
+- Um erro de definição em su poderia levar ao travamento ou não funcionamento do utilitário, uma vez que tentaria carregar o shell padrão (sh) com o nome sh.app;
+- Remoção total de referências ao Andromeda, uma vez que a distribuição foi fundida ao Hexagonix (ver Hexagonix H2-dev.beta1). A remoção se deu em:
+  - Nome de funções;
+  - Nome de variáveis e constantes;
+  - Comentários;
+- Melhoria nas páginas de manual de todos os utilitários;
+- Melhoria na documentação online do Hexagon;
+- Alteração no nome de versão de "Vita Nova" para "VitaNova", impedindo problemas ao verificar o nome de host gerado durante a construção do sistema;
+- Alteração na formatação da declaração de serviços de init;
+- Tradução das mensagens dos utilitários Unix para o inglês;
+- Mensagens dos utilitários Andromeda-Hexagonix e do HBoot traduzidas para o inglês;
+- Mensagens do Hexagon traduzidas para o inglês.
+
+- [x] Data de lançamento: 12/12/2022
+
+</details>
+
 </details>

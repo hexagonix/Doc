@@ -265,4 +265,53 @@ Translation of messages from Unix utilities into English.
 
 </details>
 
+<details title="Hexagonix H2-RELEASE" align='left'>
+<br>
+<summary align='left'>Hexagonix H2-RELEASE</summary>
+
+Consolidation of development versions, with:
+
+- Kernel Hexagon v1.2.5;
+- HBoot v0.4 (incompatible with Hexagonix H1 to H1-R6);
+- Fusion of Hexagonix and Andromeda distributions into a single distribution;
+- File extension removal for system binaries;
+- Addition of license terms in the system image;
+- Improvements in Unix utilities and Hexagonix-Andromeda (old Andromeda applications);
+- Deep change in the Unix atop utility;
+- Renamed atop to htop;
+- Improvements in the logind daemon;
+- Font hint renamed to Avatar;
+- Utility init v2.0, with support to run multiple services in list.
+- Disabling "modern" login mode in logind. The default login interface follows that seen on Unix-like systems (FreeBSD as a major inspiration);
+- General improvements to the following Unix utilities:
+  - [x] login;
+  - [x] energia;
+  - [x] htop;
+  - [x] man;
+  - [x] su;
+  - [x] top;
+  - [x] uname;
+- Improvements in the messages of the system utilities, especially in error messages;
+- Fixes in the following system utilities:
+  - [x] DOSsh;
+  - [x] init;
+  - [x] su;
+  - [x] login;
+- A definition error in su could lead to the utility crashing or not working, since it would try to load the default shell (sh) with the name sh.app;
+- Complete removal of references to Andromeda, since the distribution was merged into Hexagonix (see Hexagonix H2-dev.beta1). Removal took place at:
+  - Name of functions;
+  - Name of variables and constants;
+  - Comments;
+- Improved manual pages for all utilities;
+- Improved Hexagon online documentation;
+- Changed the version name from "Vita Nova" to "VitaNova", preventing problems when checking the hostname generated during system construction;
+- Change in the formatting of the init services declaration;
+- Translation of messages from Unix utilities into English;
+- Messages from Andromeda-Hexagonix and HBoot utilities translated into English;
+- Hexagon messages translated into English.
+
+- [x] Release date: 12/12/2022 (dd/mm/yyyy)
+
+</details>
+
 </details>
