@@ -271,7 +271,7 @@ Translation of messages from Unix utilities into English.
 
 Consolidation of development versions, with:
 
-- Kernel Hexagon v1.2.5;
+- Hexagon kernel v1.2.5;
 - HBoot v0.4 (incompatible with Hexagonix H1 to H1-R6);
 - Fusion of Hexagonix and Andromeda distributions into a single distribution;
 - File extension removal for system binaries;
