@@ -372,7 +372,12 @@ At the moment, the system is available in English (with some components still in
 
 <div align="justify">
 
-This project was possible and today it can see the light of day thanks to many others who have come before and contributed with design ideas and teaching how an operating system should work, even if simple. Are they:
+Several projects helped in the development of Hexagonix, either providing new design ideas that deviate from the traditional organization of an operating system, or providing well-documented code that allowed understanding the functioning of certain parts of an operating system, or contributing with examples of code that more later came to inspire functions that were written exclusively for Hexagonix (mainly the kernel code). The code of these public domain projects, written in Assembly x86, made it possible for the operation of certain computer components to be better understood, opening doors for copyright codes to be written based on the study and reimplementation of the code of these projects. It is worth noting that the projects below were released by their original developers into the public domain. Are they:
+
+* [Snowdrop OS](http://www.sebastianmihai.com/snowdrop/), which inspired me to write various hardware control routines and other 16-bit functions available in HBoot. The code for this system has been released into the public domain. This system remains under development. Access the [project page](http://www.sebastianmihai.com/snowdrop/) to get disk images and system source files.
+* [Alotware](https://github.com/0x5CE/alotware), which helped create process management functions in early versions of Hexagon (now rewritten numerous times to expand the kernel). The code for this system was released into the public domain and has not been updated since then.
+
+This project was possible and today it manages to see the light of day thanks to many other projects that came before and contributed with design ideas and demonstrating how an operating system should work, even a simple one. Are they:
 
 * MS-DOS, with code available [here](https://github.com/microsoft/MS-DOS)
 * [MikeOS](http://mikeos.sourceforge.net/)
@@ -382,10 +387,7 @@ This project was possible and today it can see the light of day thanks to many o
 * [LittleKernel](https://github.com/littlekernel/lk)
 * [Google Fuchsia](https://fuchsia.googlesource.com/fuchsia/)
 
-In addition, other projects helped in the development of Hexagonix, either by providing new design ideas that go beyond the traditional organization of an operating system, or providing well-documented code that allowed us to understand the functioning of certain parts of an operating system, or contributing with examples of code that later came to inspire functions that were written exclusively for Hexagonix (mainly the kernel code). Despite not having been copied and reused in the system, the code of these public domain projects made it possible to understand the operation of certain computer components, opening doors for copyright codes to be written based on the study of the code of these projects. It is worth mentioning that the projects below were released by their original developers in the public domain. Are they:
-
-* [Snowdrop OS](http://www.sebastianmihai.com/snowdrop/), which inspired me to write various hardware control routines and other 16-bit functions available in HBoot. The code for this system has been released into the public domain.
-* [Alotware](https://github.com/0x5CE/alotware), which inspired me to create the process management functions in early versions of Hexagon (now rewritten numerous times). The code for this system has been released into the public domain.
+To all these projects and developers, a huge thank you.
 
 </div>
 
