@@ -2,7 +2,7 @@
 
 Versão deste arquivo: 5.0
 
-Copyright © 2021-2022 Felipe Miguel Nery Lunkes
+Copyright © 2021-2023 Felipe Miguel Nery Lunkes
 Todos os direitos reservados.
 
 -->
@@ -47,7 +47,7 @@ Hexagonix Operating System
 
 BSD 3-Clause License
 
-Copyright (c) 2015-2022, Felipe Miguel Nery Lunkes <br>
+Copyright (c) 2015-2023, Felipe Miguel Nery Lunkes <br>
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without

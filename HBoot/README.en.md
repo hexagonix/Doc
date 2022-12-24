@@ -1,6 +1,6 @@
 <!--
 
-Copyright © 2021-2022 Felipe Miguel Nery Lunkes
+Copyright © 2021-2023 Felipe Miguel Nery Lunkes
 Todos os direitos reservados.
 
 -->
