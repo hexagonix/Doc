@@ -156,7 +156,7 @@ Abaixo, uma lista de requisitos mínimos e recomendados para testar o Hexagonix 
 
 Para testar o Hexagonix, você vai precisar de uma das imagens de disco disponíveis, bem como a ferramenta [`qemu`](https://www.qemu.org) instalada em seu computador, caso deseje testar o sistema em ambiente virtualizado. A imagem também pode ser utilizada para a gravação em um disco físico em uma máquina real.
 
-Para testar o Hexagonix, obtenha o arquivo [`hexagonix.img`](https://github.com/hexagonix/hexagonix/blob/main/hexagonix.img) (qemu) ou [`hexagonix.vdi`](https://github.com/hexagonix/hexagonix/blob/main/hexagonix.vdi) (VirtuaBox e outros virtualizadores e gerenciadores de máquinas virtuais).
+Para testar o Hexagonix, obtenha o arquivo [`hexagonix.img`](https://github.com/hexagonix/hexagonix/blob/main/hexagonix.img) (qemu) ou [`hexagonix.vdi`](https://github.com/hexagonix/hexagonix/blob/main/hexagonix.vdi) (VirtualBox e outros virtualizadores e gerenciadores de máquinas virtuais).
 
 > Nota: A imagem `hexagonix.img` é compatível apenas com o qemu. Além disso, ela é o único arquivo de imagem que pode ser utilizado para instalar o sistema em um disco rígido ou dispositivo flash USB. Para executar o Hexagonix utilizando o VirtualBox ou outros virtualizadores ou gerenciadores de máquinas virtuais, use a imagem `hexagonix.vdi` disponibilizada. A imagem VDI não pode ser utilizada para instalar o Hexagonix em um disco físico (disco rígido, SSD ou unidade USB).
 
