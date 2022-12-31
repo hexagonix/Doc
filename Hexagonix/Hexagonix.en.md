@@ -197,15 +197,15 @@ Hexagonix includes many of the Unix utilities you may already be familiar with, 
 - [x] top
 - [x] ps
 - [x] man
-- [x] su
 - [x] sh (default shell)
+- [x] shutdown
+- [x] su
 - [x] uname
 - [x] whoami, among others.
 
 Some applications and utilities were developed exclusively for Hexagonix, such as:
    
 * htop (alternate version of top)
-* energia (computer state control)
 * fnt (Hexagonix graphic font change utility)
 * hash (alternate shell)
 * lshapp (gets and displays information from HAPP images)

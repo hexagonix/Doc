@@ -44,6 +44,7 @@ Diversos utilitários no padrão Unix estão incluidos até o momento. São eles
 * ps
 * rm
 * sh
+* shutdown
 * su
 * top
 * uname
@@ -52,7 +53,6 @@ Diversos utilitários no padrão Unix estão incluidos até o momento. São eles
 Outros utilitários são exclusivos do Hexagonix. São eles:
 
 * htop (versão alternativa de top)
-* energia (controle de estado energético)
 * hash (shell alternativo)
 * lshapp (lê e exibe informações de imagens HAPP)
 

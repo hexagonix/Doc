@@ -44,6 +44,7 @@ Several Unix-standard utilities are included so far. Are they:
 * ps
 * rm
 * sh
+* shutdown
 * su
 * top
 * uname
@@ -52,7 +53,6 @@ Several Unix-standard utilities are included so far. Are they:
 Other utilities are exclusive to Hexagonix. Are they:
 
 * htop (alternate version of top)
-* energia (energy state control)
 * hash (alternate shell)
 * lshapp (reads and displays information from HAPP images)
 

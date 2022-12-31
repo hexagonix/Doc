@@ -197,15 +197,15 @@ O Hexagonix inclui muitos dos utilitários Unix que você pode já estar familia
 - [x] top
 - [x] ps
 - [x] man
-- [x] su
 - [x] sh (shell padrão)
+- [x] shutdown
+- [x] su
 - [x] uname
 - [x] whoami, entre outros.
 
 Alguns aplicativos e utilitários foram desenvolvidos exclusivamente para o Hexagonix, como:
 
 * htop (versão alternativa de top)
-* energia (controle de estado do computador)
 * fnt (utilitário de alteração de fonte gráfica do Hexagonix)
 * hash (shell alternativo)
 * lshapp (obtém e exibe informações de imagens HAPP)
