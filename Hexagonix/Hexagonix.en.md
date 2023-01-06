@@ -20,7 +20,7 @@
 
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
-# The Hexagonix operating system
+# The Hexagonix Operating System
 
 <div align="center">
    
