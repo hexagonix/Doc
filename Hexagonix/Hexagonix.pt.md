@@ -383,11 +383,11 @@ Vários projetos auxiliaram no desenvolvimento do Hexagonix, seja fornecendo nov
 Além dos projetos citados acima, o Hexagonix só é possível graças a uma série de projetos, desenvolvedores e pessoas que vieram antes. Vários projetos contribuiram com uma documentação consolidada, ideias de design sólidas e demonstrações de como desenvolver um sistema operacional, mesmo que simples. São eles:
 
 * [Version 7 UNIX](https://github.com/felipenlunkes/unix-history-repo/tree/Research-V7-Snapshot-Development)
+* [FreeBSD](https://www.freebsd.org/)
+* [Linux 0.1.1](https://kernel.org)
+* [XNU/Darwin](https://github.com/apple/darwin-xnu)
 * MS-DOS, com código disponível [aqui](https://github.com/microsoft/MS-DOS)
 * [MikeOS](http://mikeos.sourceforge.net/)
-* [Linux 0.1.1](https://kernel.org)
-* [FreeBSD](https://www.freebsd.org/)
-* [XNU/Darwin](https://github.com/apple/darwin-xnu)
 * [LittleKernel](https://github.com/littlekernel/lk)
 * [Google Fuchsia](https://fuchsia.googlesource.com/fuchsia/)
 
