@@ -301,7 +301,6 @@ Neste momento, o sistema está disponível em inglês (com alguns componentes ai
 </details>
 
 <details title="Autor, contribuidores e contatos" align='left'>
-<br>
 <summary align='left'>👥️️ Autor, contribuidores e contatos</summary>
 
 ## Autor

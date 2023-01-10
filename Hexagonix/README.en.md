@@ -301,7 +301,6 @@ At the moment, the system is available in English (with some components still in
 </details>
 
 <details title="Author, contributors and contacts" align='left'>
-<br>
 <summary align='left'>👥️️ Author, contributors and contacts</summary>
 
 ## Author
