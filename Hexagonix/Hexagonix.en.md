@@ -392,7 +392,7 @@ In addition to the projects mentioned above, Hexagonix is ​​only possible th
 * [LittleKernel](https://github.com/littlekernel/lk)
 * [Google Fuchsia](https://fuchsia.googlesource.com/fuchsia/)
 
-To all these projects and developers, a huge thank you.
+To all these projects and developers, a huge thank you :heart:.
 
 </div>
 
