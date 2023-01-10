@@ -42,6 +42,7 @@ Some features of Hexagonix:
 - [x] Full kernel with less than 30 kbytes;
 - [x] User environment support;
 - [x] System call with 68 sophisticated functions accessed by the user environment;
+- [x] Architecture inspired by Version 7 UNIX[^1];
 - [x] Low minimum requirements, compatible with a wide range of devices;
 - [x] Own executable binary format (HAPP);
 - [x] Self-hosting ([the assembler used to build Hexagonix](https://github.com/hexagonix/fasmX) can run on top of it);
@@ -58,7 +59,7 @@ Some features of Hexagonix:
 - [x] Easily extensible;
 - [x] Fully licensed under `BSD-3-Clause`.
 
-Hexagonix (framework and utilities) was heavily inspired by the elegance and simplicity of Version 7 UNIX, although it does not aim for any compatibility or share any code with it.
+[^1]: The architecture of Hexagonix (structure and utilities) was heavily inspired by the elegance and simplicity of Version 7 UNIX, although it does not aim for any compatibility or share any code  with it.
    
 </div>
 
