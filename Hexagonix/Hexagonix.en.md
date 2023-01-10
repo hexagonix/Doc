@@ -57,10 +57,11 @@ Some features of Hexagonix:
 - [x] Supports own boot loader (Hexagon Boot - HBoot);
 - [x] Support for users and permissions.
 - [x] Easily extensible;
-- [x] Fully licensed under `BSD-3-Clause`.
+- [x] Fully licensed under `BSD-3-Clause`[^2].
 
 [^1]: The architecture of Hexagonix (structure and utilities) was heavily inspired by the elegance and simplicity of Version 7 UNIX, although it does not aim for any compatibility or share any code  with it.
-   
+[^2]: You can get more information about the license [here](https://docs.freebsd.org/en/articles/bsdl-gpl/) or [in this article](https://en.wikipedia.org/wiki/Licen%C3%A7a_BSD) available on Wikipedia.
+
 </div>
 
 <details title="License" align='left'>
@@ -429,9 +430,3 @@ Read the license for more information about copyright, code ownership, and redis
 </div>
 
 </details>
-
-[^1]: You can get more information about the relationship between Darwin and macOS [here](https://en.wikipedia.org/wiki/Darwin_(operating_system)).
-[^2]: You can find the project page [here](https://www.freedos.org/).
-[^3]: Booting in DOS mode was possible after searching the FreeDOS documentation, especially the "SYS.C" file (which can be found [here](http://www.ibiblio.org/pub/micro/ pc-stuff/freedos/files/dos/sys/2043/)), which indicates in which thread the kernel expects to be loaded and which parameters are needed to boot the kernel correctly. Each DOS system has a preferred loading segment and this loading of other DOS editions can be implemented in the future with the help of new HBoot modules (in case of a proprietary system, the user must have a license). All the code for loading the kernel was developed from scratch and not based on any existing ones (the HBoot and modDOS implementations, which are original, are done in Assembly, while the FreeDOS loading code is developed in C). The original implementation of modDOS code and other modules for DOS systems also frees the implementation from any legal problems.
-[^4]: HBoot's DOS compatibility mode (modDOS) boot can be useful for running volume error checking, volume defrag, partitioning and other diagnostic as well as development tools such as compilers and assemblers that are not supported by Hexagonix (the 16-bit tools, for example).
-[^5]: Supports open(), close(), read() and write() calls, at least in concept. System calls are always BSD-style, with function numbers on the stack and parameters in registers.
