@@ -380,7 +380,7 @@ Vários projetos auxiliaram no desenvolvimento do Hexagonix, seja fornecendo nov
 * [Snowdrop OS](http://www.sebastianmihai.com/snowdrop/), que me inspirou a escrever várias rotinas de controle de hardware e outras funções 16-bit disponíveis no HBoot. O código deste sistema foi liberado em domínio público. Este sistema permanece em desenvolvimento. Acesse o [site](http://www.sebastianmihai.com/snowdrop/) para obter imagens de disco e os arquivos-fonte do sistema.
 * [Alotware](https://github.com/0x5CE/alotware), que auxiliou na criação de funções de gerenciamento de processos nas versões iniciais do Hexagon (hoje, já reescritas inúmeras vezes para expandir o kernel). O código deste sistema foi liberado em domínio público e não vem mais sendo atualizado desde então.
 
-Este projeto foi possível e hoje consegue ver a luz do dia graças a muitos outros projetos que já vieram antes e contribuiram com ideias de design e demonstrando como deve funcionar um sistema operacional, mesmo que simples. São eles:
+Além dos projetos citados acima, o Hexagonix só é possível graças a uma série de projetos, desenvolvedores e pessoas que vieram antes. Vários projetos contribuiram com uma documentação consolidada, ideias de design sólidas e demonstrações de como desenvolver um sistema operacional, mesmo que simples. São eles:
 
 * [Version 7 UNIX](https://github.com/felipenlunkes/unix-history-repo/tree/Research-V7-Snapshot-Development)
 * MS-DOS, com código disponível [aqui](https://github.com/microsoft/MS-DOS)
