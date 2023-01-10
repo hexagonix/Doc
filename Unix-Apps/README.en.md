@@ -55,5 +55,6 @@ Other utilities are exclusive to Hexagonix. Are they:
 * htop (alternate version of top)
 * hash (alternate shell)
 * lshapp (reads and displays information from HAPP images)
+* lshmod (reads and displays information from HBoot images)
 
 </div>

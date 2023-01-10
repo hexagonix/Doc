@@ -30,15 +30,15 @@ This repository contains Hexagonix graphical applications and utilities.
 
 Andromeda SHell, or simply ASH, was developed as an alternative to Hexagonix's default shell, sh. sh resembles what is expected in appearance and basic functionality of a Unix-like system. ASH has no such claim, and has and will receive functions that expand its capability and usefulness.
 
-## Calculator
+## Calc
 
 The calculator allows the user to perform basic calculations.
 
-## Desligar
+## Poweroff
 
 The utility allows the user to easily shut down or restart the computer.
 
-## Fonte
+## GFont
 
 This utility allows you to interactively change the system's default graphic font.
 
