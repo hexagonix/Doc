@@ -383,6 +383,8 @@ Several projects helped in the development of Hexagonix, either providing new de
 This project was possible and today it manages to see the light of day thanks to many other projects that came before and contributed with design ideas and demonstrating how an operating system should work, even a simple one. Are they:
 
 * [Version 7 UNIX](https://github.com/felipenlunkes/unix-history-repo/tree/Research-V7-Snapshot-Development)
+* [Alotware](https://github.com/0x5CE/alotware)
+* [Snowdrop OS](http://www.sebastianmihai.com/snowdrop/)
 * MS-DOS, with code available [here](https://github.com/microsoft/MS-DOS)
 * [MikeOS](http://mikeos.sourceforge.net/)
 * [Linux 0.1.1](https://kernel.org)
