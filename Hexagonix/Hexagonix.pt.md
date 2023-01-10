@@ -391,7 +391,7 @@ Além dos projetos citados acima, o Hexagonix só é possível graças a uma sé
 * [LittleKernel](https://github.com/littlekernel/lk)
 * [Google Fuchsia](https://fuchsia.googlesource.com/fuchsia/)
 
-A todos esses projetos e desenvolvedores, um enorme agradecimento.
+A todos esses projetos e desenvolvedores, um enorme agradecimento :heart:.
 
 </div>
 
