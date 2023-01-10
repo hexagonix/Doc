@@ -151,7 +151,7 @@ HBoot has gained a lot of complexity since the beginning of its development in 2
 
 <hr>
 
-### Kernel Hexagon
+### Hexagon kernel
 
 <p align="center">
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/LogoHexagon.png" width="180" height="180">
