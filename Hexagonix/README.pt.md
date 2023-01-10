@@ -300,31 +300,6 @@ Neste momento, o sistema está disponível em inglês (com alguns componentes ai
 
 </details>
 
-<details title="Inspirações" align='left'>
-<br>
-<summary align='left'>🖼 Inspirações</summary>
-
-<div align="justify">
-
-Este projeto foi possível e hoje consegue ver a luz do dia graças a muitos outros que já vieram antes e contribuiram com ideias de design e ensinando como deve funcionar um sistema operacional, mesmo que simples. São eles:
-
-* MS-DOS, com código disponível [aqui](https://github.com/microsoft/MS-DOS)
-* [MikeOS](http://mikeos.sourceforge.net/)
-* [Linux 0.1.1](https://kernel.org)
-* [FreeBSD](https://www.freebsd.org/)
-* [XNU/Darwin](https://github.com/apple/darwin-xnu)
-* [LittleKernel](https://github.com/littlekernel/lk)
-* [Google Fuchsia](https://fuchsia.googlesource.com/fuchsia/)
-
-Além disso, outros projetos auxiliaram no desenvolvimento do Hexagonix, seja fornecendo novas ideias de design que fogem da organização tradicional de um sistema operacional, seja fornecendo código bem documentado que permitia entender o funcionamento de certas partes de um sistema operacional, seja contribuindo com exemplos de código que mais tarde vieram a inspirar funções que foram escritas exclusivamente para o Hexagonix (principalmente o código do kernel). Apesar de não terem sido copiados e reutilizados no sistema, o código destes projetos de domínio público possibilitaram que o funcionamento de determinados componentes do computador fossem compreendidos, abrindo portas para que códigos autorais fossem escritos com base no estudo do código destes projetos. Vale ressaltar que os projetos abaixo foram liberados pelos seus desenvolvedores originais em domínio público. São eles:
-
-* [Snowdrop OS](http://www.sebastianmihai.com/snowdrop/), que me inspirou a escrever várias rotinas de controle de hardware e outras funções 16-bit disponíveis no HBoot. O código deste sistema foi liberado em domínio público.
-* [Alotware](https://github.com/0x5CE/alotware), que me inspirou a criar as funções de gerenciamento de processos nas versões iniciais do Hexagon (hoje, já reescritas inúmeras vezes). O código deste sistema foi liberado em domínio público.
-
-</div>
-
-</details>
-
 <details title="Autor, contribuidores e contatos" align='left'>
 <br>
 <summary align='left'>👥️️ Autor, contribuidores e contatos</summary>

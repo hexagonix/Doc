@@ -300,31 +300,6 @@ At the moment, the system is available in English (with some components still in
 
 </details>
 
-<details title="Inspirations" align='left'>
-<br>
-<summary align='left'>🖼 Inspirations</summary>
-
-<div align="justify">
-
-This project was possible and today it can see the light of day thanks to many others who have come before and contributed with design ideas and teaching how an operating system should work, even if simple. Are they:
-
-* MS-DOS, with code available [here](https://github.com/microsoft/MS-DOS)
-* [MikeOS](http://mikeos.sourceforge.net/)
-* [Linux 0.1.1](https://kernel.org)
-* [FreeBSD](https://www.freebsd.org/)
-* [XNU/Darwin](https://github.com/apple/darwin-xnu)
-* [LittleKernel](https://github.com/littlekernel/lk)
-* [Google Fuchsia](https://fuchsia.googlesource.com/fuchsia/)
-
-In addition, other projects helped in the development of Hexagonix, either by providing new design ideas that go beyond the traditional organization of an operating system, or providing well-documented code that allowed us to understand the functioning of certain parts of an operating system, or contributing with examples of code that later came to inspire functions that were written exclusively for Hexagonix (mainly the kernel code). Despite not having been copied and reused in the system, the code of these public domain projects made it possible to understand the operation of certain computer components, opening doors for copyright codes to be written based on the study of the code of these projects. It is worth mentioning that the projects below were released by their original developers in the public domain. Are they:
-
-* [Snowdrop OS](http://www.sebastianmihai.com/snowdrop/), which inspired me to write various hardware control routines and other 16-bit functions available in HBoot. The code for this system has been released into the public domain.
-* [Alotware](https://github.com/0x5CE/alotware), which inspired me to create the process management functions in early versions of Hexagon (now rewritten numerous times). The code for this system has been released into the public domain.
-
-</div>
-
-</details>
-
 <details title="Author, contributors and contacts" align='left'>
 <br>
 <summary align='left'>👥️️ Author, contributors and contacts</summary>
