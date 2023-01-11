@@ -23,17 +23,17 @@
 # The Hexagonix Operating System
 
 <div align="center">
-   
+
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix1.png" width="500" height="400">
 
 </div>
 
 <div align="justify">
-   
+
 `Hexagonix` is a new Unix-like operating system developed from scratch, written in Assembly language for the PC architecture (x86). It is built on `Hexagon`, a simple and lightweight monolithic kernel designed to be fast and compatible with newer and older hardware (Pentium III and newer with 32 MB of RAM or more).
 
 Hexagonix consists of the [Hexagon boot loader](https:\\github.com/hexagonix/HBoot) (`Hexagon Boot` or `HBoot`), the [Hexagon](https://github.com/hexagonix/Hexagon) (kernel), compatible shells, utilities and libraries. All these components were released under the BSD-3-Clause license.
-   
+
 Some features of Hexagonix:
 
 - [x] 32-bit operating system;
@@ -70,7 +70,7 @@ Some features of Hexagonix:
 <summary align='left'>Hexagonix License</summary>
 
 <div align="justify">
-   
+
 Hexagonix Operating System
 
 BSD 3-Clause License
@@ -87,9 +87,9 @@ Redistributions in binary form must reproduce the above copyright notice, this l
 Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-   
+
 </div>
-   
+
 </details>
 
 <!-- Vai funcionar como <hr> -->
@@ -109,9 +109,9 @@ The first component of Hexagonix is the Saturno. It is responsible for taking co
 </div>
 
 <div align="center">
-   
+
 [![Saturno](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=Saturno&theme=dark)](https://github.com/hexagonix/Saturno)
-   
+
 </div>
 
 <hr>
@@ -217,7 +217,7 @@ Some applications and utilities were developed exclusively for Hexagonix, such a
 * lshmod (gets and displays information from HBoot modules and HBoot itself)
 
 It is worth remembering that Hexagonix utilities try to implement a POSIX interface as far as possible, similar in syntax to Unix utilities (FreeBSD and Linux used as a model).
-   
+
 ### Third party applications available for Hexagonix
 
 * [Flat Assembler (fasm)](https://flatassembler.net/index.php)
@@ -279,7 +279,7 @@ Graphics mode fonts for Hexagon are developed as a bitmap in Assembly which, whe
 [![Hexagonix-xfnt](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=xfnt&theme=dark)](https://github.com/hexagonix/xfnt)
 
 </div>
-   
+
 <hr>
 
 ### System development libraries
@@ -293,7 +293,7 @@ To learn more and check each function available in the system development librar
 </div>
 
 <div align="center">
-   
+
 [![lib](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=lib&theme=dark)](https://github.com/hexagonix/lib)
 
 </div>
@@ -324,7 +324,7 @@ To learn more and check each function available in the system development librar
 ## Contribute and report bugs
 
 <div align="justify">
-   
+
 Below you can learn more about how to contribute and report bugs found in Hexagonix.
 
 </div>
@@ -400,7 +400,6 @@ To all these projects and developers, a huge thank you :heart:.
 </details>
 
 <details title="Author, contributors and contacts" align='left'>
-<br>
 <summary align='left'>👥️️ Author, contributors and contacts</summary>
 
 ## Author

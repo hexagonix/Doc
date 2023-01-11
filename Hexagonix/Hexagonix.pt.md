@@ -70,7 +70,7 @@ Algumas características do Hexagonix:
 <summary align='left'>Licença do Hexagonix</summary>
 
 <div align="justify">
-   
+
 Hexagonix Operating System
 
 BSD 3-Clause License
@@ -87,9 +87,9 @@ Redistributions in binary form must reproduce the above copyright notice, this l
 Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-   
+
 </div>
-   
+
 </details>
 
 <!-- Vai funcionar como <hr> -->
@@ -109,9 +109,9 @@ O primeiro componente do Hexagonix é o Saturno. Ele é responsável por receber
 </div>
 
 <div align="center">
-   
+
 [![Saturno](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=Saturno&theme=dark)](https://github.com/hexagonix/Saturno)
-   
+
 </div>
 
 <hr>
@@ -181,7 +181,7 @@ O Hexagonix implementa, junto ao Hexagon, uma série de utilitários Unix-like, 
 </div>
 
 <div align="center">
-   
+
 [![Unix-Apps](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=unix-apps&theme=dark)](https://github.com/hexagonix/unix-apps)
 
 </div>
@@ -274,11 +274,11 @@ As fontes de modo gráfico para Hexagon são desenvolvidas como um bitmap em Ass
 </div>
 
 <div align="center">
-   
+
 [![Hexagonix-xfnt](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=xfnt&theme=dark)](https://github.com/hexagonix/xfnt)
 
 </div>
-   
+
 <hr>
 
 ### Bibliotecas de desenvolvimento do sistema
@@ -292,7 +292,7 @@ Para saber mais e verificar cada função disponível nas bibliotecas de desenvo
 </div>
 
 <div align="center">
-   
+
 [![lib](https://github-readme-stats.vercel.app/api/pin/?username=Hexagonix&repo=lib&theme=dark)](https://github.com/hexagonix/lib)
 
 </div>
@@ -399,7 +399,6 @@ A todos esses projetos e desenvolvedores, um enorme agradecimento :heart:.
 </details>
 
 <details title="Autor, contribuidores e contatos" align='left'>
-<br>
 <summary align='left'>👥️️ Autor, contribuidores e contatos</summary>
 
 ## Autor
@@ -430,4 +429,3 @@ Leia a licença para mais informações sobre direitos autorais, propriedade de 
 </div>
 
 </details>
-
