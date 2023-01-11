@@ -220,7 +220,7 @@ It is worth remembering that Hexagonix utilities try to implement a POSIX interf
 
 ### Third party applications available for Hexagonix
 
-* [Flat Assembler (fasm)](https://flatassembler.net/index.php)
+* [flat assembler (fasm)](https://flatassembler.net/index.php)
 
 Hexagonix received a port of the [`fasm`](https://flatassembler.net/index.php) assembler, which was adapted for Hexagonix, allowing the user to develop applications directly on the system. This port is called `fasmX`. Changes added to the code, as well as the software license, can be found in the [fasm repository for Hexagonix](https://github.com/hexagonix/fasm). This repository is a fork of [original repository](https://github.com/tgrysztar/fasm). Added code is based on modifications made to the original code and authorial additions. This modified/authored code can be found in the repository, [clicking here](https://github.com/hexagonix/fasm/tree/master/SOURCE/HEXAGONIX). fasmX, the fasm port for Hexagonix, is always updated when new features are added to the fasm repository. To indicate that it is a stable and tested version, the fasmX version number always inherits the fasm numbering, followed by a character x (for example, the version based on fasm 1.73.30, after testing, receives the numbering 1.73.30x). You can report bugs or code generation or optimization issues in the Hexagonix version [here](https://github.com/hexagonix/fasm/issues). To report general fasm bugs, use the [official](https://github.com/tgrysztar/fasm) repository.
 
