@@ -43,7 +43,7 @@ Some features of Hexagonix:
 - [x] Full kernel with less than 30 kbytes;
 - [x] User environment support;
 - [x] System call with 68 sophisticated functions accessed by the user environment;
-- [x] Inspired by the design of Version 7 UNIX[^1], but entirely written in x86 Assembly;
+- [x] Inspired by the design of Version 7 UNIX[^1], but completely written from scratch in x86 Assembly;
 - [x] Low minimum requirements, compatible with a wide range of devices;
 - [x] Own executable binary format (HAPP);
 - [x] Self-hosting ([the assembler used to build Hexagonix](https://github.com/hexagonix/fasmX) can run on top of it);
