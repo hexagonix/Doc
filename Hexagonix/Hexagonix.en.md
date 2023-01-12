@@ -37,10 +37,10 @@ Hexagonix consists of the [Hexagon boot loader](https:\\github.com/hexagonix/HBo
 Some features of Hexagonix:
 
 - [x] 32-bit operating system;
+- [x] Completely written in x86 Assembly, being fast and light;
 - [x] Inspired by the design of Version 7 UNIX[^1], but completely written from scratch;
 - [x] Compatible with Intel Pentium III (1999) or newer processors;
 - [x] Compatible with devices with 32 MB of RAM or more;
-- [x] Completely written in x86 Assembly, being fast and light;
 - [x] Full kernel with less than 30 kbytes;
 - [x] User environment support;
 - [x] System call with 68 sophisticated functions accessed by the user environment;
