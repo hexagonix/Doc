@@ -60,7 +60,7 @@ Some features of Hexagonix:
 - [x] Easily extensible;
 - [x] Fully licensed under `BSD-3-Clause`[^2].
 
-[^1]: The architecture of Hexagonix (structure and utilities) was inspired by the elegance and simplicity of [Version 7 UNIX](https://github.com/felipenlunkes/unix-history-repo/tree/Research-V7-Snapshot-Development), although it does not aim for any compatibility or share any code with it. Hexagonix does not use any code derived from Version 7 UNIX or other projects. Hexagonix utilities were written to resemble the function and appearance of their counterparts in Version 7 UNIX.
+[^1]: The architecture of Hexagonix (structure and utilities) was inspired by the elegance and simplicity of [Version 7 UNIX](https://github.com/dspinellis/unix-history-repo/tree/Research-V7-Snapshot-Development), although it does not aim for any compatibility or share any code with it. Hexagonix does not use any code derived from Version 7 UNIX or other projects. Hexagonix utilities were written to resemble the function and appearance of their counterparts in Version 7 UNIX.
 [^2]: You can get more information about the license [in this article](https://docs.freebsd.org/en/articles/bsdl-gpl/) of the FreeBSD project, [in the article](https://opensource.org/licenses/BSD-3-Clause) from the Open Source Initiative or the license page on [Wikipedia](https://en.wikipedia.org/wiki/BSD_licenses).
 
 </div>
@@ -384,7 +384,7 @@ Several projects helped in the development of Hexagonix, either providing new de
 
 In addition to the projects mentioned above, Hexagonix is ​​only possible thanks to a series of projects, developers and people that came before. Several projects contributed with consolidated documentation, solid design ideas and demonstrations of how to develop an operating system, even a simple one. Are they:
 
-* [Version 7 UNIX](https://github.com/felipenlunkes/unix-history-repo/tree/Research-V7-Snapshot-Development)
+* [Version 7 UNIX](https://github.com/dspinellis/unix-history-repo/tree/Research-V7-Snapshot-Development)
 * [FreeBSD](https://www.freebsd.org/)
 * [Linux 0.1.1](https://kernel.org)
 * [XNU/Darwin](https://github.com/apple/darwin-xnu)
