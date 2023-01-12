@@ -37,13 +37,14 @@ O Hexagonix é composto pelo [carregador de inicialização do Hexagon](https://
 Algumas características do Hexagonix:
 
 - [x] Sistema operacional de 32-bit;
+- [x] Inspirado no design do Version 7 UNIX[^1], mas totalmente escrito do zero;
 - [x] Compatível com processadores Intel Pentium III (1999) ou mais recentes;
 - [x] Compatível com dispositivos com 32 MB de memória RAM ou mais;
 - [x] Completamente escrito em Assembly x86, sendo rápido e leve;
 - [x] Kernel completo com menos de 30 kbytes;
 - [x] Suporte a ambiente de usuário;
 - [x] Chamada de sistema com 68 funções sofisticadas acessadas pelo ambiente de usuário;
-- [x] Inspirado no design do Version 7 UNIX[^1], mas totalmente escrito do zero em Assembly x86;
+- [x] Inspirado no design do Version 7 UNIX[^1], mas totalmente escrito do zero;
 - [x] Requisitos mínimos baixos, compatível com uma ampla gama de dispositivos;
 - [x] Formato binário executável próprio (HAPP);
 - [x] Self-hosting (o [montador usado para construir o Hexagonix](https://github.com/hexagonix/fasmX) pode ser executado sobre ele);
