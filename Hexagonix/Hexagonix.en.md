@@ -43,7 +43,7 @@ Some features of Hexagonix:
 - [x] Full kernel with less than 30 kbytes;
 - [x] User environment support;
 - [x] System call with 68 sophisticated functions accessed by the user environment;
-- [x] Architecture inspired by Version 7 UNIX[^1];
+- [x] Inspired by the design of Version 7 UNIX[^1], but entirely written in x86 Assembly;
 - [x] Low minimum requirements, compatible with a wide range of devices;
 - [x] Own executable binary format (HAPP);
 - [x] Self-hosting ([the assembler used to build Hexagonix](https://github.com/hexagonix/fasmX) can run on top of it);
@@ -60,7 +60,7 @@ Some features of Hexagonix:
 - [x] Easily extensible;
 - [x] Fully licensed under `BSD-3-Clause`[^2].
 
-[^1]: The architecture of Hexagonix (structure and utilities) was heavily inspired by the elegance and simplicity of Version 7 UNIX, although it does not aim for any compatibility or share any code  with it.
+[^1]: The architecture of Hexagonix (structure and utilities) was inspired by the elegance and simplicity of [Version 7 UNIX](https://github.com/felipenlunkes/unix-history-repo/tree/Research-V7-Snapshot-Development), although it does not aim for any compatibility or share any code with it. Hexagonix does not use any code derived from Version 7 UNIX or other projects. Hexagonix utilities were written to resemble the function and appearance of their counterparts in Version 7 UNIX.
 [^2]: You can get more information about the license [in this article](https://docs.freebsd.org/en/articles/bsdl-gpl/) of the FreeBSD project, [in the article](https://opensource.org/licenses/BSD-3-Clause) from the Open Source Initiative or the license page on [Wikipedia](https://en.wikipedia.org/wiki/BSD_licenses).
 
 </div>
