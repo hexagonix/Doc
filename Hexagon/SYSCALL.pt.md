@@ -188,9 +188,9 @@ instalarISR = 26       ;; Instalar rotina de serviço de interrupção
 ;;
 ;;************************************************************************************
 
-reiniciarPC = 27       ;; Reiniciar o computador
+reiniciarPC = 27       ;; Solicita o reinício do dispositivo
                     
-desligarPC = 28        ;; Chama rotina da implementação APM do Hexagonix® para desligar o computador
+desligarPC = 28        ;; Solicita o desligamento do dispositivo
 
 ;;************************************************************************************
 ;;
