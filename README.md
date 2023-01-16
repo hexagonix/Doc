@@ -24,32 +24,34 @@
  
 <details title="Português (Brasil)" align='left'>
 <br>
-<summary align='left'>🇧🇷 Português (Brasil)</summary>
+<summary align='left'>:br: Português (Brasil)</summary>
 
 > **A documentação está em construção.**
 
-* 1️⃣ [Documentação do Hexagonix](https://github.com/hexagonix/Doc/tree/main/Hexagonix/Hexagonix.pt.md)
-* 2️⃣ [Documentação do Hexagon](https://github.com/hexagonix/Doc/tree/main/Hexagon/README.pt.md)
-* 3️⃣ [Documentação do HBoot](https://github.com/hexagonix/Doc/tree/main/HBoot/README.pt.md)
-* 4️⃣ [Documentação das fontes gráficas do Hexagonix](https://github.com/hexagonix/Doc/tree/main/fnt/README.pt.md)
-* 5️⃣ [Documentação dos utilitários Unix-like](https://github.com/hexagonix/Doc/tree/main/Unix-Apps/README.pt.md)
-* 6️⃣ [Documentação dos utilitários gráficos do Hexagonix](https://github.com/hexagonix/Doc/tree/main/Andromeda-Apps/README.pt.md)
+* :one: [Documentação do Hexagonix](https://github.com/hexagonix/Doc/tree/main/Hexagonix/Hexagonix.pt.md)
+* :two: [Documentação do Hexagon](https://github.com/hexagonix/Doc/tree/main/Hexagon/README.pt.md)
+* :three: [Documentação do HBoot](https://github.com/hexagonix/Doc/tree/main/HBoot/README.pt.md)
+* :four: [Documentação das fontes gráficas do Hexagonix](https://github.com/hexagonix/Doc/tree/main/fnt/README.pt.md)
+* :five: [Documentação dos utilitários Unix-like](https://github.com/hexagonix/Doc/tree/main/Unix-Apps/README.pt.md)
+* :six: [Documentação dos utilitários gráficos do Hexagonix](https://github.com/hexagonix/Doc/tree/main/Andromeda-Apps/README.pt.md)
+* :seven: [Documentação das chamadas de sistema do Hexagon](https://github.com/hexagonix/Doc/tree/main/Hexagon/SYSCALL.md)
 * ⚒️ [Construir o sistema](https://github.com/hexagonix/build/blob/main/README.pt.md)
 
 </details>
 
 <details title="English" align='left'>
 <br>
-<summary align='left'>🇬🇧 English</summary>
+<summary align='left'>:uk: English</summary>
 
 > **The documentation is under constrution.**
 
-* 1️⃣ [Hexagonix Documentation](https://github.com/hexagonix/Doc/tree/main/Hexagonix/Hexagonix.en.md)
-* 2️⃣ [Hexagon Documentation](https://github.com/hexagonix/Doc/tree/main/Hexagon/README.en.md)
-* 3️⃣ [HBoot Documentation](https://github.com/hexagonix/Doc/tree/main/HBoot/README.en.md)
-* 4️⃣ [Documentation of Hexagonix graphics fonts](https://github.com/hexagonix/Doc/tree/main/fnt/README.en.md)
-* 5️⃣ [Documentation of the Unix-like utilities](https://github.com/hexagonix/Doc/tree/main/Unix-Apps/README.en.md)
-* 6️⃣ [Documentation of the Hexagonix graphical utilities](https://github.com/hexagonix/Doc/tree/main/Andromeda-Apps/README.en.md)
+* :one: [Hexagonix Documentation](https://github.com/hexagonix/Doc/tree/main/Hexagonix/Hexagonix.en.md)
+* :two: [Hexagon Documentation](https://github.com/hexagonix/Doc/tree/main/Hexagon/README.en.md)
+* :three: [HBoot Documentation](https://github.com/hexagonix/Doc/tree/main/HBoot/README.en.md)
+* :four: [Documentation of Hexagonix graphics fonts](https://github.com/hexagonix/Doc/tree/main/fnt/README.en.md)
+* :five: [Documentation of the Unix-like utilities](https://github.com/hexagonix/Doc/tree/main/Unix-Apps/README.en.md)
+* :six: [Documentation of the Hexagonix graphical utilities](https://github.com/hexagonix/Doc/tree/main/Andromeda-Apps/README.en.md)
+* :seven: [Documentation of the Hexagon syscalls](https://github.com/hexagonix/Doc/tree/main/Hexagon/SYSCALL.md)
 * ⚒️ [Build the system](https://github.com/hexagonix/build/blob/main/README.en.md)
 
 </details>
