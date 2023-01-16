@@ -334,16 +334,16 @@ compararPalavrasString = 53 ;; Comparar primeiras words de duas strings
 removerCaractereString = 54 ;; Remover um caractere de uma posição específica na string 
                             ;; Entrada: ESI - String; EAX - Posição do caractere
 
-inserirCaractere = 55    ;; Inserir um caractere em posição específica da string
-                         ;; Entrada: ESI - String; EDX - Caractere para inserir; AL - Caractere para inserir
+inserirCaractere = 55   ;; Inserir um caractere em posição específica da string
+                        ;; Entrada: ESI - String; EDX - Caractere para inserir; AL - Caractere para inserir
                                   
-tamanhoString = 56       ;; Onter o tamanho de uma string 
-                         ;; Entrada: ESI - String. 
-                         ;; Saída: AX - Tamanho da string
+tamanhoString = 56      ;; Onter o tamanho de uma string 
+                        ;; Entrada: ESI - String. 
+                        ;; Saída: AX - Tamanho da string
 
-compararString = 57      ;; Comparar duas strings 
-                         ;; Entrada: ESI - Primeira string; EDI - Segunda string 
-                         ;; Saída: CF definido se as duas forem iguais
+compararString = 57     ;; Comparar duas strings 
+                        ;; Entrada: ESI - Primeira string; EDI - Segunda string 
+                        ;; Saída: CF definido se as duas forem iguais
 
 stringParaMaiusculo = 58 ;; Converter string para maiúsculo
                          ;; Entrada: ESI - String
@@ -351,22 +351,22 @@ stringParaMaiusculo = 58 ;; Converter string para maiúsculo
 stringParaMinusculo = 59 ;; Converter string para minúsculo 
                          ;; Entrada: ESI - String 
 
-cortarString = 60        ;; Remover espaços em branco da string
-                         ;; Entrada: ESI - String.
+cortarString = 60       ;; Remover espaços em branco da string
+                        ;; Entrada: ESI - String.
 
-encontrarCaractere = 61  ;; Encontrar caractere específico na string
-                         ;; Entrada: ESI - String, AL - caractere para encontrar
-                         ;; Saída: EAX - Número de ocorrências do caractere
-                         ;; CF definido se caractere não encontrado
+encontrarCaractere = 61 ;; Encontrar caractere específico na string
+                        ;; Entrada: ESI - String, AL - caractere para encontrar
+                        ;; Saída: EAX - Número de ocorrências do caractere
+                        ;; CF definido se caractere não encontrado
                               
-stringParaInt = 62       ;; Converter um número string para número inteiro
-                         ;; Entrada: ESI - String
-                         ;; Saída: EAX - Inteiro
-                         ;; CF definido em caso e número inválido
+stringParaInt = 62      ;; Converter um número string para número inteiro
+                        ;; Entrada: ESI - String
+                        ;; Saída: EAX - Inteiro
+                        ;; CF definido em caso e número inválido
 
-paraString = 63          ;; Converte um número inteiro em uma string
-                         ;; Entrada: EAX - Inteiro à ser convertido
-                         ;; Saída: ESI - Ponteiro para o buffer contendo o conteúdo 
+paraString = 63         ;; Converte um número inteiro em uma string
+                        ;; Entrada: EAX - Inteiro à ser convertido
+                        ;; Saída: ESI - Ponteiro para o buffer contendo o conteúdo 
 
 ;;************************************************************************************
 ;;
