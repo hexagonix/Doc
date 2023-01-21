@@ -43,6 +43,14 @@ Um exemplo de como solicitar uma chamada de sistema:
 
 ```
 
+| Número da função | Nome | Grupo | Entrada | Saída | Família da função|
+|:----------------:|:----:|:-------:|:------:|:----:|:----------------:|
+| 1 | alocarMemoria | Gerenciamento de memória | EAX - Tamanho da memória solicitada, em bytes | EBX - Ponteiro para a memória alocada | Unix-like|
+| 2 | liberarMemoria | Gerenciamento de memória | EBX - Ponteiro para a memória alocada | ECX - Tamanho da memória alocada | Unix-like |
+
+
+
+
 Agora, uma tabela com as funções da chamada de sistema do Hexagonix. `A tabela está formatada como um arquivo contendo código Assembly x86`:
 
 > Vale lembrar que uma tabela de funções, padronizada segundo as funções disponíveis no Version 7 UNIX, está sendo desenvolvida. Nesse caso, não existe o objetivo de pareamento de número de função junto ao UNIX, mas conformidade no nome das funções. Por exemplo, `alocarMemoria` se tornaria `free`, e `retornarVersao`, `uname`. No futuro, ambas as nomenclaturas estarão disponíveis para permitir a migração de aplicativos e utilitários. Venha novamente nesse arquivo mais tarde para checar atualizações. 
