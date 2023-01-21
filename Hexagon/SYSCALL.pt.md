@@ -89,9 +89,9 @@ Um exemplo de como solicitar uma chamada de sistema:
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
 | 22 | retornarVersao | Serviços do Hexagon | Sem entrada | EAX = Número da versão; EBX = Número da subversão; CH = Caractere de revisão; EDX = Arquitetura; ESI = Nome do Kernel; EDI = Build do Kernel| Unix-like | Retorna a versão do Hexagon para os aplicativos| 
 | 23 | obterAleatorio | Serviços do Hexagon | EAX = Máximo | EAX = Número | Hexagonix | Obtêm um número aleatório|
-| 24 | alimentarAleatorio | Serviços do Hexagon | EAX - Número para criar entropia | Sem saída | Alimentar com entropia o gerador de números aleatórios do kernel|
-| 25 | causarAtraso | Serviços do Hexagon | ECX = Tempo em unidades de contagem para causar atraso | Sem saída | Causa um atraso (delay) em operações |
-| 26 | instalarISR | Serviços do Hexagon | EAX = Número da interrupção; ESI = Ponteiro para o manipulador | Sem saída | Instala rotina de serviço de interrupção|
+| 24 | alimentarAleatorio | Serviços do Hexagon | EAX - Número para criar entropia | Sem saída | Hexagonix | Alimentar com entropia o gerador de números aleatórios do kernel|
+| 25 | causarAtraso | Serviços do Hexagon | ECX = Tempo em unidades de contagem para causar atraso | Sem saída | Hexagonix | Causa um atraso (delay) em operações |
+| 26 | instalarISR | Serviços do Hexagon | EAX = Número da interrupção; ESI = Ponteiro para o manipulador | Sem saída | Hexagonix | Instala rotina de serviço de interrupção|
 
 </details>
 
