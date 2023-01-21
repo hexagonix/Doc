@@ -43,6 +43,10 @@ Um exemplo de como solicitar uma chamada de sistema:
 
 ```
 
+<details title="Gerenciamento de memória e processos" align='left'>
+<br>
+<summary align='left'>Funções de gerenciamento de memória e processos</summary>
+
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
 | 1 | alocarMemoria | Gerenciamento de memória e processos | EAX = Tamanho da memória solicitada, em bytes | EBX = Ponteiro para a memória alocada | Unix-like| Aloca memória para o processo|
@@ -61,15 +65,32 @@ Um exemplo de como solicitar uma chamada de sistema:
 | 15 | listarArquivos | Gerenciamento de arquivos e dispositivos | Sem entrada | ESI = Ponteiro para a lista de arquivos; EAX = Total de arquivos | Unix-like | Obtêm lista de arquivos presentes no volume |
 | 16 | arquivoExiste | Gerenciamento de arquivos e dispositivos | ESI = Nome do arquivo para checar |  EAX = Tamanho do arquivo; CF definido se o arquivo não existir | Hexagonix | Checar se um arquivo existe no volume |
 | 17 | obterDisco | Gerenciamento de arquivos e dispositivos | Sem entrada | ESI = Nome do dispositivo; EDI = Rótulo do volume utilizado | Hexagonix | Obtêm informações do disco montado em `/`|
+
+</details>
+
+<details title=" Gerenciamento de usuário e permissões" align='left'>
+<br>
+<summary align='left'>Funções de gerenciamento de usuário e permissões</summary>
+
 | 18 | travar | Gerenciamento de usuário e permissões | Sem entrada | Sem saída | Unix-like | Bloqueia o sinal de término de processo em primeiro plano por tecla especial|
 | 19 | destravar | Gerenciamento de usuário e permissões | Sem entrada | Sem saída | Unix-like | Habilita o sinal de término de processos em primeiro plano por uso de tecla especial|
 | 20 | definirUsuario | Gerenciamento de usuário e permissões | EAX = ID do grupo; ESI = Nome do usuário | Sem saída | Hexagonix | Define um usuário para a sessão atual|
 | 21 | obterUsuario | Gerenciamento de usuário e permissões | Sem entrada | EAX = ID do grupo; ESI = Nome do usuário| Hexagonix | Obtêm dados do usuário logado para a sessão atual|
-| 22 |  
-| 23 |  
-| 24 |  
+
+</details>
+
+<details title="Serviços do Hexagon" align='left'>
+<br>
+<summary align='left'>Serviços do Hexagon</summary>
+
+| 22 | retornarVersao | Serviços do Hexagon | Sem entrada | EAX = Número da versão; EBX = Número da subversão; CH = Caractere de revisão; EDX = Arquitetura; ESI = Nome do Kernel; EDI = Build do Kernel| Unix-like | Retorna a versão do Hexagon para os aplicativos| 
+| 23 | obterAleatorio | Serviços do Hexagon | EAX = Máximo | EAX = Número | Hexagonix | Obtêm um número aleatório|
+| 24 | alimentarAleatorio | Serviços do Hexagon | EAX - Número para criar entropia | Sem saída | ALimentar com entropia o gerador de números aleatórios do kernel|
 | 25 |  
 | 26 |  
+
+</details>
+
 | 27 |  
 | 28 |  
 
@@ -198,7 +219,7 @@ retornarVersao = 22    ;; Retorna a versão do sistema para os aplicativos
                        ;; ESI - Nome do Kernel 
                        ;; EDI - Build do Kernel
 
-obterAleatorio = 23    ;; Obtêr um número aleatório
+obterAleatorio = 23    ;; Obter um número aleatório
                        ;; Entrada: EAX - Máximo
                        ;; Saída: EAX - Número
 
