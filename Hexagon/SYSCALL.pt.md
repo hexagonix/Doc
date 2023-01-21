@@ -43,10 +43,22 @@ Um exemplo de como solicitar uma chamada de sistema:
 
 ```
 
-| Número da função | Nome | Grupo | Entrada | Saída | Família da função|
-|:----------------:|:----:|:-------:|:------:|:----:|:----------------:|
-| 1 | alocarMemoria | Gerenciamento de memória | EAX - Tamanho da memória solicitada, em bytes | EBX - Ponteiro para a memória alocada | Unix-like|
-| 2 | liberarMemoria | Gerenciamento de memória | EBX - Ponteiro para a memória alocada | ECX - Tamanho da memória alocada | Unix-like |
+| Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
+|:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
+| 1 | alocarMemoria | Gerenciamento de memória e processos | EAX - Tamanho da memória solicitada, em bytes | EBX - Ponteiro para a memória alocada | Unix-like|Aloca memória para o processo|
+| 2 | liberarMemoria | Gerenciamento de memória e processos | EBX - Ponteiro para a memória alocada; ECX - Tamanho da memória alocada | Sem saída | Unix-like | Libera a memória alocada previamente|
+| 3 | iniciarProcesso | Gerenciamento de memória e processos | ESI - Nome do programa; EDI - Argumentos; EAX = 0 se não forem passados argumentos| CF definido em caso de erro ou imagem não encontrada | Carrega e executa imagem presente no volume|  
+| 4 | encerrarProcesso | Gerenciamento de memória e processos | EAX - Código de erro, caso exista; EBX = 0 se apenas terminar a execução; EBX = 0x1234 para manter residente | Sem saída | Unix-like | FInaliza a execução de um processo | 
+| 5 |
+| 6 |
+| 7 | 
+| 8 |
+| 9 |
+| 10 |
+| 11 |
+| 12 |
+| 13 | 
+| 14 |  
 
 
 
