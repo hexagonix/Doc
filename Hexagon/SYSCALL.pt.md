@@ -131,59 +131,35 @@ Agora, uma tabela com as funções da chamada de sistema do Hexagonix.
 | 41 | atualizarTela | Serviços de vídeo e gráficos | Sem entrada | Sem saída | Hexagonix | Atualiza o console primário com conteúdo do primeiro console virtual|
 | 42 | definirResolucao | Serviços de vídeo e gráficos | EAX = Número relativo a resolução à ser utilizada (1 = Resolução de 800x600 pixels; 2 - Resolução de 1024x768 pixels; 3 - Alterar para modo texto)| Sem saída | Hexagonix | Define a resolução do console principal|
 | 43 | obterResolucao | Serviços de vídeo e gráficos | Sem entrada | EAX = Número relativo a resolução à ser utilizada (1 = Resolução de 800x600 pixels; 2 - Resolução de 1024x768 pixels) | Hexagonix | Ontêm a resolução utilizadapelo console principal|
-| 44 | obterCursor | Serviços de vídeo e gráficos | Sem entrada | DL = eixo X; DH = eixo Y | Hexagonix | Obtêm a posição do cursor|
+| 44 | obterCursor | Serviços de vídeo e gráficos | Sem entrada | DL = Eixo X; DH = Eixo Y | Hexagonix | Obtêm a posição do cursor|
 
 </details>
 
+<details title="Serviços de manipulação de teclado PS/2" align='left'>
+<br>
+<summary align='left'>Serviços de manipulação de teclado PS/2</summary>
 
-                                            
+| Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
+|:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
+| 45 | aguardarTeclado | Serviços de manipulação de teclado PS/2 | Sem entrada | AL = Caractere; AH - Scancode | Hexagonix | Espera o pressionamento de uma tecla no teclado|
+| 46 | obterString | Serviços de manipulação de teclado PS/2 | AL = Máximo de caracteres para obter | EBX = Presença ou não de eco durante a digitação (1234h para sem eco e qualquer valor para ativar) | ESI = String | Hexagonix | Obtêm uma string do teclado|
+| 47 | obterEstadoTeclas | Serviços de manipulação de teclado PS/2 | EAX = Status das teclas especiais (bit 0: Tecla Control; bit 1: Tecla Shift; bit 2-31: Reservado) | Hexagonix | Obtêm o estado das teclas especiais, como Control e Shift|
+| 48 | alterarFonte | Serviços de manipulação de teclado PS/2 | ESI = Ponteiro para o buffer contendo o nome do arquivo que contêm a fonte compatível com o Hexagonix | CF definido em caso de arquivo não encontrado ou incompatível | Hexagonix | Altera a fonte padrão de exibição do sistema| 
+| 49 | alterarLeiaute | Serviços de manipulação de teclado PS/2 | ESI = Arquivo contendo um leiaute de teclado válido | CF definido em caso de arquivo não encontrado ou incompatível | Hexagonix | Altera o leiaute do teclado|
 
-;;************************************************************************************
-;;
-;; Serviços de manipulação de teclado PS/2 do Hexagonix®
-;;
-;;************************************************************************************
+</details>
 
-aguardarTeclado = 45   ;; Esperar pelo pressionamento de uma tecla no teclado
-                       ;; Saída: AL - Caratere; AH - Scan code
-                              
-obterString = 46       ;; Obter string do teclado
-                       ;; Entrada: AL - Máximo de caracteres para receber
-                       ;; EBX - Presença ou não de eco durante a digitação - 1234h
-                       ;; para desativar o eco e <> 1234h para ativar
-                       ;; Saída: ESI - String
-                         
-obterEstadoTeclas = 47 ;; Obter status das teclas especiais
-                       ;; Saída: EAX - Status das teclas especiais
-                       ;; 
-                       ;; Formato:
-                       ;;
-                       ;; bit 0: Tecla Control
-                       ;; bit 1: Tecla Shift
-                       ;; bit 2-31: Reservado
+<details title="Serviços de manipulação de mouse PS/2" align='left'>
+<br>
+<summary align='left'>Serviços de manipulação de mouse PS/2</summary>
 
-alterarFonte = 48      ;; Altera a fonte padrão de exibição do sistema
-                       ;; Entrada: ESI - Ponteiro para o buffer contendo o nome do arquivo
-                       ;; que contêm a fonte compatível com o Sistema Operacional Hexagonix®
-                       ;; Saída: CF definido em caso de arquivo não encontrado                                                                          
+| Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
+|:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
+| 50 | aguardarMouse | Sem entrada |  EAX = Posição no eixo X; EBX = Posição no eixo Y; EDX = Botões | Hexagonix | Aguarda por evento do mouse|
+| 51 | obterMouse | Sem entrada | EAX = Posição no eixo X; EBX = Posição no eixo Y; EDX = Botões | Hexagonix | Obtêm posição atual do mouse e estado dos botões|
+| 52 | definirMouse | EAX = Posição no eixo X; EBX = Posição no eixo Y | Sem saída | Hexagonix | Define nova posição do mouse|
 
-alterarLeiaute = 49    ;; Altera o leiaute do teclado
-                       ;; Entrada: ESI - Arquivo contendo um leiaute de teclado válido
-
-;;************************************************************************************
-;;
-;; Serviços de manipulação de mouse PS/2 do Hexagonix®
-;;
-;;************************************************************************************
-
-aguardarMouse = 50     ;; Aguardar por evento do mouse
-                       ;; Saída: EAX - X; EBX - Y; EDX - Botões
-
-obterMouse = 51        ;; Obter posição atual do mouse e estado dos botões
-                       ;; Saída: EAX - X; EBX - Y; EDX - Botões
-
-definirMouse = 52      ;; Definir nova posição do mouse
-                       ;; Entrada: EAX - X; EBX Y
+</details>
 
 ;;************************************************************************************
 ;;
