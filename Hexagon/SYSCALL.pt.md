@@ -43,7 +43,7 @@ Um exemplo de como solicitar uma chamada de sistema:
 
 ```
 
-Agora, uma tabela com as funções da chamada de sistema do Hexagonix. As funções estão classificadas em categorias. Clique na categoria desejada para ter mais informações sobre as chamadas daquela categoria. As funções também foram classificadas em `Unix-like`, quando existem versões análogas no UNIX ou em sistema semelhantes, e `HEXAGONIX`, quando a função implementada não tem uma versão compatível em outros sistemas UNIX ou Unix-like.
+Agora, uma tabela com as funções da chamada de sistema do Hexagonix. As funções estão classificadas em categorias. Clique na categoria desejada para ter mais informações sobre as chamadas daquela categoria. As funções também foram classificadas em `Unix-like`, quando existem versões análogas no UNIX ou em sistema semelhantes, e `HEXAGONIX`, quando a função implementada não tem uma versão semelhante em outros sistemas UNIX ou Unix-like.
 
 > Vale lembrar que uma tabela de funções, padronizada segundo as funções disponíveis no Version 7 UNIX, está sendo desenvolvida. Nesse caso, não existe o objetivo de pareamento de número de função junto ao UNIX, mas conformidade no nome das funções. Por exemplo, `alocarMemoria` se tornaria `free`, e `retornarVersao`, `uname`. No futuro, ambas as nomenclaturas estarão disponíveis para permitir a migração de aplicativos e utilitários. Venha novamente nesse arquivo mais tarde para checar atualizações. 
 
