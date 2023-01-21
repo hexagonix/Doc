@@ -155,9 +155,9 @@ Agora, uma tabela com as funções da chamada de sistema do Hexagonix.
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
-| 50 | aguardarMouse | Sem entrada |  EAX = Posição no eixo X; EBX = Posição no eixo Y; EDX = Botões | Hexagonix | Aguarda por evento do mouse|
-| 51 | obterMouse | Sem entrada | EAX = Posição no eixo X; EBX = Posição no eixo Y; EDX = Botões | Hexagonix | Obtêm posição atual do mouse e estado dos botões|
-| 52 | definirMouse | EAX = Posição no eixo X; EBX = Posição no eixo Y | Sem saída | Hexagonix | Define nova posição do mouse|
+| 50 | aguardarMouse | Serviços de manipulação de mouse PS/2 | Sem entrada |  EAX = Posição no eixo X; EBX = Posição no eixo Y; EDX = Botões | Hexagonix | Aguarda por evento do mouse|
+| 51 | obterMouse | Serviços de manipulação de mouse PS/2 | Sem entrada | EAX = Posição no eixo X; EBX = Posição no eixo Y; EDX = Botões | Hexagonix | Obtêm posição atual do mouse e estado dos botões|
+| 52 | definirMouse | Serviços de manipulação de mouse PS/2 | EAX = Posição no eixo X; EBX = Posição no eixo Y | Sem saída | Hexagonix | Define nova posição do mouse|
 
 </details>
 
