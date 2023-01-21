@@ -45,12 +45,12 @@ Um exemplo de como solicitar uma chamada de sistema:
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
-| 1 | alocarMemoria | Gerenciamento de memória e processos | EAX - Tamanho da memória solicitada, em bytes | EBX - Ponteiro para a memória alocada | Unix-like|Aloca memória para o processo|
-| 2 | liberarMemoria | Gerenciamento de memória e processos | EBX - Ponteiro para a memória alocada; ECX - Tamanho da memória alocada | Sem saída | Unix-like | Libera a memória alocada previamente|
-| 3 | iniciarProcesso | Gerenciamento de memória e processos | ESI - Nome do programa; EDI - Argumentos; EAX = 0 se não forem passados argumentos| CF definido em caso de erro ou imagem não encontrada | Carrega e executa imagem presente no volume|  
-| 4 | encerrarProcesso | Gerenciamento de memória e processos | EAX - Código de erro, caso exista; EBX = 0 se apenas terminar a execução; EBX = 0x1234 para manter residente | Sem saída | Unix-like | FInaliza a execução de um processo | 
-| 5 |
-| 6 |
+| 1 | alocarMemoria | Gerenciamento de memória e processos | EAX = Tamanho da memória solicitada, em bytes | EBX = Ponteiro para a memória alocada | Unix-like|Aloca memória para o processo|
+| 2 | liberarMemoria | Gerenciamento de memória e processos | EBX = Ponteiro para a memória alocada; ECX = Tamanho da memória alocada | Sem saída | Unix-like | Libera a memória alocada previamente|
+| 3 | iniciarProcesso | Gerenciamento de memória e processos | ESI = Nome do programa; EDI = Argumentos; EAX = 0 se não forem passados argumentos| CF definido em caso de erro ou imagem não encontrada | Carrega e executa imagem presente no volume|  
+| 4 | encerrarProcesso | Gerenciamento de memória e processos | EAX = Código de erro, caso exista; EBX = 0 se apenas terminar a execução; EBX = 0x1234 para manter residente | Sem saída | Unix-like | FInaliza a execução de um processo | 
+| 5 | obterPID | Gerenciamento de memória e processos | Sem entrada | EAX = PID do processo atual | Unix-like | Opter o PID do processo em execução |
+| 6 | usoMemoria | Gerenciamento de memória e processos | Sem entrada | EAX = Memória utilizada, em bytes; EBX = Memória total disponível para uso, em bytes; ECX = Memória total disponível para uso, em Mbytes (menos preciso); EDX = Memória reservada para o Hexagon®, em bytes; ESI = Memória total alocada (resevada+processos), em kbytes| Unix-like | Obter o uso detalhado de memória pelo sistema| 
 | 7 | 
 | 8 |
 | 9 |
