@@ -161,96 +161,56 @@ Agora, uma tabela com as funções da chamada de sistema do Hexagonix.
 
 </details>
 
-;;************************************************************************************
-;;
-;; Serviços de manipulação e conversão de dados do Hexagonix®
-;;
-;;************************************************************************************
+<details title="Serviços de manipulação e conversão de dados" align='left'>
+<br>
+<summary align='left'>Serviços de manipulação e conversão de dados</summary>
 
-compararPalavrasString = 53 ;; Comparar primeiras words de duas strings 
-                            ;; Entrada: ESI - Primeira string; EDI - Segunda string 
-                            ;; Saída: CF definido se iguais
+| Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
+|:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
+| 53 | compararPalavrasString | Serviços de manipulação e conversão de dados | ESI = Primeira string; EDI = Segunda string | CF definido se iguais | Hexagonix | Compara primeiras words de duas strings|
+| 54 | removerCaractereString | Serviços de manipulação e conversão de dados | ESI = String; EAX = Posição do caractere | Sem saída | Hexagonix | Remove um caractere em uma posição específica de uma string|
+| 55 | inserirCaractere | Serviços de manipulação e conversão de dados |  ESI = String; EDX = Posição; AL = Caractere para inserir | Sem saída | Hexagonix |  Insere um caractere em posição específica da string|
+| 56 | tamanhoString | Serviços de manipulação e conversão de dados | ESI = String | EAX = Tamanho da string | Hexagonix | Obtêm o tamanho de uma string|
+| 57 | compararString | Serviços de manipulação e conversão de dados | ESI = Primeira string; EDI = Segunda string | CF definido se as duas forem iguais | Hexagonix | Compara de todos os caracteres de uma string são iguais|
+| 58 | stringParaMaiusculo | Serviços de manipulação e conversão de dados | ESI = String | String convertida | Hexagonix | Converte uma string para caracteres maiúsculos|
+| 59 | stringParaMinusculo | Serviços de manipulação e conversão de dados | ESI = String | String convertida | Hexagonix | Converte uma string para caracteres minúsculos|
+| 60 | cortarString | Serviços de manipulação e conversão de dados | ESI = String | String cortada | Hexagonix |  Remove espaços em branco da string|
+| 61 | encontrarCaractere | Serviços de manipulação e conversão de dados | ESI = String, AL = Caractere para encontrar | EAX = Número de ocorrências do caractere; CF definido se caractere não encontrado | Hexagonix | Encontra caractere específico na string|
+| 62 | stringParaInt | Serviços de manipulação e conversão de dados | ESI = String | EAX = Inteiro; CF definido em caso de número inválido | Hexagonix | Converte um número string para número inteiro|
+| 63 | paraString | Serviços de manipulação e conversão de dados | EAX = Inteiro à ser convertido | ESI = Ponteiro para o buffer contendo a string | Hexagonix | Converte um número inteiro em uma string|
 
-removerCaractereString = 54 ;; Remover um caractere de uma posição específica na string 
-                            ;; Entrada: ESI - String; EAX - Posição do caractere
+</details>
 
-inserirCaractere = 55   ;; Inserir um caractere em posição específica da string
-                        ;; Entrada: ESI - String; EDX - Caractere para inserir; AL - Caractere para inserir
-                                  
-tamanhoString = 56      ;; Onter o tamanho de uma string 
-                        ;; Entrada: ESI - String. 
-                        ;; Saída: AX - Tamanho da string
+<details title="Serviços de saída de som" align='left'>
+<br>
+<summary align='left'>Serviços de saída de som</summary>
 
-compararString = 57     ;; Comparar duas strings 
-                        ;; Entrada: ESI - Primeira string; EDI - Segunda string 
-                        ;; Saída: CF definido se as duas forem iguais
+| Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
+|:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
+| 64 | emitirSom | Serviços de saída de som | AX = Frequência a ser reproduzida | Sem saída | Hexagonix | Toca um tom no alto-falante interno do computador|
+| 65 | desligarSom | Serviços de saída de som| Sem entrada | Sem saída | Hexagonix |  Desliga o alto-falante interno do computador, interrompendo qualquer emissão de som em progresso|
 
-stringParaMaiusculo = 58 ;; Converter string para maiúsculo
-                         ;; Entrada: ESI - String
+</details>
 
-stringParaMinusculo = 59 ;; Converter string para minúsculo 
-                         ;; Entrada: ESI - String 
+<details title="Serviço de mensagens" align='left'>
+<br>
+<summary align='left'>Serviço de mensagens</summary>
 
-cortarString = 60       ;; Remover espaços em branco da string
-                        ;; Entrada: ESI - String.
+| Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
+|:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
+| 66 | enviarMensagemHexagon | Serviço de mensagens | ESI = Mensagem; EAX = Código de erro, se houver; EBX = Prioridade | Sem saída | Hexagonix | Envia uma mensagem de alta prioridade do Hexagon|
 
-encontrarCaractere = 61 ;; Encontrar caractere específico na string
-                        ;; Entrada: ESI - String, AL - caractere para encontrar
-                        ;; Saída: EAX - Número de ocorrências do caractere
-                        ;; CF definido se caractere não encontrado
-                              
-stringParaInt = 62      ;; Converter um número string para número inteiro
-                        ;; Entrada: ESI - String
-                        ;; Saída: EAX - Inteiro
-                        ;; CF definido em caso e número inválido
+</details>
 
-paraString = 63         ;; Converte um número inteiro em uma string
-                        ;; Entrada: EAX - Inteiro à ser convertido
-                        ;; Saída: ESI - Ponteiro para o buffer contendo o conteúdo 
+<details title="Serviços de relógio em tempo real" align='left'>
+<br>
+<summary align='left'>Serviços de relógio em tempo real</summary>
 
-;;************************************************************************************
-;;
-;;  Serviços de saída por som do Hexagonix®
-;;
-;;************************************************************************************  
+| Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
+|:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
+| 67 | retornarData | Serviços de relógio em tempo real | EAX = Dia, em ASCII;  EBX = Mês, em ASCII; ECX = Século, em ASCII; EDX = Ano, em ASCII  | Sem saída | Hexagonix | Retorna informações de relógio em tempo real em formato ASCII (String). Conversão para número pode ser necessária|
+| 68 | retornarHora | Serviços de relógio em tempo real | EAX = Hora, em ASCII; EBX = Minuto, em ASCII; ECX = Segundo, em ASCII | Sem saída | Hexagonix | Retorna informações de relógio em tempo real em formato ASCII (String). Conversão para número pode ser necessária|
 
-emitirSom = 64         ;; Toca um tom no alto-falante interno do computador
-                       ;; Entrada: AX - Frequência à ser reproduzida
-
-desligarSom = 65       ;; Desliga o alto-falante interno do computador, interrompendo
-                       ;; qualquer emissão de som em progresso                               
-
-;;************************************************************************************
-;;
-;;  Serviços de mensagens do Hexagonix®
-;;
-;;************************************************************************************  
-
-enviarMensagemHexagon = 66 ;; Envia uma mensagem de alta prioridade do Hexagon
-                           ;; Entrada: ESI - Mensagem
-                           ;;          EAX - Código de erro, se houver
-                           ;;          EBX - Prioridade 
-
-;;************************************************************************************                      
-
-;;************************************************************************************
-;;
-;;  Serviço de relógio em tempo real do Hexagon®
-;;
-;;************************************************************************************  
-
-retornarData = 67      ;; Retorna informações de relógio em tempo real em formato
-                       ;; ASCII (String). Conversão para número pode ser necessária
-                       ;; Saída: EAX - Dia, em ASCII
-                       ;;        EBX - Mês, em ASCII
-                       ;;        ECX - Século, em ASCII
-                       ;;        EDX - Ano, em ASCII
-
-retornarHora = 68      ;; Retorna informações de relógio em tempo real em formato
-                       ;; ASCII (String). Conversão para número pode ser necessária
-                       ;;        EAX - Hora, em ASCII
-                       ;;        EBX - Minuto, em ASCII
-                       ;;        ECX - Segundo, em ASCII
-```
+</details>
 
 </div>
