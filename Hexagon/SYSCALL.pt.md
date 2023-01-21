@@ -43,6 +43,11 @@ Um exemplo de como solicitar uma chamada de sistema:
 
 ```
 
+Agora, uma tabela com as funções da chamada de sistema do Hexagonix. `A tabela está formatada como um arquivo contendo código Assembly x86`:
+
+> Vale lembrar que uma tabela de funções, padronizada segundo as funções disponíveis no Version 7 UNIX, está sendo desenvolvida. Nesse caso, não existe o objetivo de pareamento de número de função junto ao UNIX, mas conformidade no nome das funções. Por exemplo, `alocarMemoria` se tornaria `free`, e `retornarVersao`, `uname`. No futuro, ambas as nomenclaturas estarão disponíveis para permitir a migração de aplicativos e utilitários. Venha novamente nesse arquivo mais tarde para checar atualizações. 
+
+
 <details title="Gerenciamento de memória e processos" align='left'>
 <br>
 <summary align='left'>Funções de gerenciamento de memória e processos</summary>
@@ -118,244 +123,19 @@ Um exemplo de como solicitar uma chamada de sistema:
 | 33 | rolarTela | Serviços de vídeos e gráficos | Sem entrada | Sem saída | Hexagonix | Rola o console para baixo uma linha|
 | 34 | definirCursor | Serviços de vídeo e gráficos | DL = posição no eixo X; DH = posição no eixo Y | Sem saída | Hexagonix | Define o cursor em uma posição específica|
 | 35 | desenharCaractere | Serviços de vídeo e gráficos |  EAX = posição no eixo X; EBX = posição no eixo Y; EDX = Cor em hexadecimal | Sem saída | Hexagonix | Coloca um pixel no console| 
-| 36 | desenharBloco | Serviços de vídeo e gráficos | EAX = posição no eixo X; EBX = posição no eixo Y; ESI = Comprimento; EDI = Altura; EDX = Cor em hexadecimal | Hexagonix | Desenha um bloco de cor específica|
-| 37 |
-| 38 | 
-| 39 |
-| 40 | 
-| 41 |
-| 42 | 
-| 43 |
-| 44 | 
+| 36 | desenharBloco | Serviços de vídeo e gráficos | EAX = posição no eixo X; EBX = posição no eixo Y; ESI = Comprimento; EDI = Altura; EDX = Cor em hexadecimal | Sem saída | Hexagonix | Desenha um bloco de cor específica|
+| 37 | imprimirCaractere | Serviços de vídeo e gráficos | AL = Caractere; EBX = 01h para reposicionar cursor | Sem saída | Hexagonix | Imprimir caractere no console na posição do cursor| 
+| 38 | definirCor | Serviços de vídeo e gráficos | EAX = Cor da fonte (RGB em hexadecimal); EBX = Cor do plano de fundo (RGB em hexadecimal); ECX = 1234h para alterar o tema padrão para os valores solicitados; Em modo texto, apenas preto e branco são permitidos | Sem saída | Hexagonix | Define cor de fundo e primeiro plano|
+| 39 | obterCor | Serviços de vídeo e gráficos | Sem entrada | EAX = Cor da fonte (RGB em hexadecimal); EBX = Cor do plano de fundo (RGB em hexadecimal); ECX = 1234h para alterar o tema padrão para os valores solicitados; Em modo texto, apenas preto e branco são permitidos | Hexagonix | Obtêm cor de fundo e primeiro plano|
+| 40 | obterInfoTela | Serviços de vídeo e gráficos | Sem entrada | EAX = Resolução X (bits 0..15), Y (bits 16..31); EBX = Colunas (bit 0..7), Linhas (8..15), Bits por pixel (16..23); EDX = Endereço do início do frame de vídeo; CF definido em caso de modo texto | Hexagonix | Obtêm informações do console atual|
+| 41 | atualizarTela | Serviços de vídeo e gráficos | Sem entrada | Sem saída | Hexagonix | Atualiza o console primário com conteúdo do primeiro console virtual|
+| 42 | definirResolucao | Serviços de vídeo e gráficos | EAX = Número relativo a resolução à ser utilizada (1 = Resolução de 800x600 pixels; 2 - Resolução de 1024x768 pixels; 3 - Alterar para modo texto)| Sem saída | Hexagonix | Define a resolução do console principal|
+| 43 | obterResolucao | Serviços de vídeo e gráficos | Sem entrada | EAX = Número relativo a resolução à ser utilizada (1 = Resolução de 800x600 pixels; 2 - Resolução de 1024x768 pixels) | Hexagonix | Ontêm a resolução utilizadapelo console principal|
+| 44 | obterCursor | Serviços de vídeo e gráficos | Sem entrada | DL = eixo X; DH = eixo Y | Hexagonix | Obtêm a posição do cursor|
+
+</details>
 
 
-
-Agora, uma tabela com as funções da chamada de sistema do Hexagonix. `A tabela está formatada como um arquivo contendo código Assembly x86`:
-
-> Vale lembrar que uma tabela de funções, padronizada segundo as funções disponíveis no Version 7 UNIX, está sendo desenvolvida. Nesse caso, não existe o objetivo de pareamento de número de função junto ao UNIX, mas conformidade no nome das funções. Por exemplo, `alocarMemoria` se tornaria `free`, e `retornarVersao`, `uname`. No futuro, ambas as nomenclaturas estarão disponíveis para permitir a migração de aplicativos e utilitários. Venha novamente nesse arquivo mais tarde para checar atualizações. 
-
-```assembly
-;;************************************************************************************
-;;
-;; Serviços de gerenciamento de memória e processos do Hexagonix®
-;;
-;;************************************************************************************
-
-alocarMemoria = 1      ;; Alocar memória
-                       ;; Entrada: EAX - Tamanho da memória solicitada, em bytes
-                       ;; Saída: EBX - Ponteiro para a memória alocada
-
-liberarMemoria = 2     ;; Liberar memória
-                       ;; Entrada: EBX - Ponteiro para a memória alocada
-                       ;; ECX - Tamanho da memória alocada
-
-iniciarProcesso = 3    ;; Carregar programa do disco e o executar
-                       ;; Entrada: ESI - Nome do programa; EDI - Argumentos; EAX = 0 se não forem passados argumentos
-                       ;; Saída: CF definido em caso de erro ou programa não encontrado
-
-encerrarProcesso = 4   ;; Terminar o processo atualmente em execução
-                       ;; Entrada: EAX - Código de erro, caso exista
-                       ;; EBX = 0 se apenas terminar a execução; EBX = 0x1234 para manter residente
-
-obterPID = 5           ;; Retorna o indentificador do processo em execução
-                       ;; Saída: EAX - PID do processo
-
-usoMemoria = 6         ;; Retorna estatísticas de uso deste recurso, calculados pelo sistema                                       
-                       ;; Saída: EAX - Memória utilizada, em bytes
-                       ;; EBX - Memória total disponível para uso, em bytes                        
-                       ;; ECX - Memória total disponível para uso, em Mbytes (menos preciso)
-                       ;; EDX - Memória reservada para o Hexagon®, em bytes
-                       ;; ESI - Memória total alocada (resevada+processos), em kbytes
-                                  
-obterProcessos = 7     ;; Obtêm os processos presentes na pilha de execução                                       
-                       ;; Saída: ESI - Lista de processos; EAX - Número de processos na pilha                                 
-
-obterCodigoErro = 8    ;; Obtém o código retornado pelo último processo em execução.
-                       ;; Saída: EAX - Código de erro (0 para sem erro/saída normal)
-
-;;************************************************************************************
-;;
-;; Serviços de gerenciamento de arquivos e dispositivos do Hexagonix®
-;;
-;;************************************************************************************
-
-abrir = 9              ;; Abre um canal de leitura/escrita com determinado dispositivo solicitado ou 
-                       ;; arquivo comum presente no disco (dispositivos e discos são tratados como
-                       ;; arquivos). Em caso de arquivo no disco, um endereço de carregamento deve ser 
-                       ;; fornecido.                                                    
-                       ;; Entrada: ESI - Ponteiro para o buffer que contêm o nome convencionado
-                       ;; EDI - Endereço de carregamento, em caso de arquivo
-                       ;; CF definido quando o nome do dispositivo for inválido ou arquivo não existir
-
-escrever = 10          ;; Envia dados para o dispositivo aberto
-                       ;; Entrada: SI - Ponteiro com o buffer contendo os dados
-                       ;; Saída: CF definido em caso de erro ou nenhum dispositivo aberto
-                       ;; Aviso! Futuramente, será utilizada para salvar arquivos.
-
-fechar = 11            ;; Fecha o último dispositivo aberto
-
-;;************************************************************************************
-;;
-;; Serviços de gerenciamento do Sistema de Arquivos e de volumes do Hexagonix®
-;;
-;;************************************************************************************
-
-salvarArquivo = 13     ;; Salvar um arquivo no disco
-                       ;; Entrada: ESI - Ponteiro para o nome do arquivo; EDI - Ponteiro para o conteúdo
-                       ;; Entrada: EAX - Tamanho do arquivo
-                       ;; Saída: CF definido em caso de erro ou arquivo já presente
-                         
-deletarArquivo  = 14   ;; Remover um arquivo do disco
-                       ;; Entrada: ESI - Ponteiro para o nome do arquivo
-                       ;; Saída: CF definido em caso de erro ou arquivo não existente
-
-listarArquivos  = 15   ;; Obter lista de arquivos       
-                       ;; Saída: ESI - Ponteiro para a lista de arquivos; EAX - Total de arquivos
-                                  
-arquivoExiste = 16     ;; Checar se um arquivo existe no disco
-                       ;; Entrada: ESI - Nome do arquivo para checar
-                       ;; Saída: EAX - Tamanho do arquivo
-                       ;; CF definido se o arquivo não existir             
-
-obterDisco = 17        ;; Obtêm o disco utilizado pelo sistema
-                       ;; Saída: ESI - Nome do dispositivo 
-                       ;;        EDI - Rótulo do volume utilizado                                
-
-;;************************************************************************************
-;;
-;; Serviços de gerenciamento de usuários do Hexagonix®
-;;
-;;************************************************************************************
-
-travar = 18            ;; Bloqueia o processo em primeiro plano, impedindo que o mesmo seja terminado
-                       ;; pelo usuário utilizando uma tecla especial ou combinação.
-                       ;; A tecla F1 é no Hexagonix® a tecla "Matar processo".
-                       ;; Esta tecla pode ter sua função removida com o tempo.
-
-destravar = 19         ;; Habilita que o usuário mate o processo em execução pressionando uma tecla especial
-                       ;; ou combinação de teclas. A tecla "Matar processo" (F1) se torna habilitada.
-                       ;; Esta tecla pode ter sua função removida com o tempo.
-                                   
-definirUsuario = 20    ;; Define um usuário para a sessão.
-                       ;; Entrada: EAX - ID do grupo; ESI - Nome do usuário
-
-obterUsuario = 21      ;; Obtêm dados do usuário logado na sessão
-                       ;; Saída: EAX - ID do grupo; ESI - Nome do usuário
-
-;;************************************************************************************
-;;
-;; Serviços oferecidos pelo Hexagonix®
-;;
-;;************************************************************************************
-
-retornarVersao = 22    ;; Retorna a versão do sistema para os aplicativos
-                       ;; Saída: EAX - Número da versão; EBX - Número da subversão 
-                       ;; CH - Caractere de revisão; EDX - Arquitetura
-                       ;; ESI - Nome do Kernel 
-                       ;; EDI - Build do Kernel
-
-obterAleatorio = 23    ;; Obter um número aleatório
-                       ;; Entrada: EAX - Máximo
-                       ;; Saída: EAX - Número
-
-alimentarAleatorio = 24 ;; Alimentar o gerador do números
-                        ;; Entrada: EAX - Número
-
-causarAtraso = 25      ;; Utilizada para causar um atraso (delay), utilizado para adaptar operações
-                       ;; de memória, operações de disco e possibilitar leitura da tela por parte
-                       ;; do usuário.
-                       ;; Entrada: ECX - Tempo em unidades de contagem para causar atraso
- 
-instalarISR = 26       ;; Instalar rotina de serviço de interrupção
-                       ;; Entrada: EAX - Número da interrupção; ESI - Ponteiro para o manipulador
-
-;;************************************************************************************
-;;
-;; Serviços de gerenciamento de energia do Hexagonix®
-;;
-;;************************************************************************************
-
-reiniciarPC = 27       ;; Solicita o reinício do dispositivo
-                    
-desligarPC = 28        ;; Solicita o desligamento do dispositivo
-
-;;************************************************************************************
-;;
-;; Serviços de saída em vídeo e gráficos do Hexagonix®
-;;
-;;************************************************************************************
-
-imprimir = 29          ;; Imprimir um conteúdo definido em um dispositivo de saída
-                       ;; Entrada:
-                       ;;
-                       ;; EAX - Conteúdo numérico, se este for o caso, respeitando os
-                       ;;       formatos abaixo designados. Os formatos devem ser informados!
-                       ;; ESI - Ponteiro para a string à ser impressa, se este for o caso.     
-                       ;; EBX - Tipo de entrada, que pode ser:
-                       ;;       01h - Inteiro decimal
-                       ;;       02h - Inteiro hexadecimal
-                       ;;       03h - Inteiro binário
-                       ;;       04h - String        
-                       ;; Dica! Utilize os macros no fim do arquivo para utilizar essa função                                                         
-
-limparTela = 30        ;; Limpa o console      
-                        
-limparLinha = 31       ;; Limpa uma linha específica no console
-                       ;; Entrada: AL - Número da linha 
-                        
-NULA  = 32             ;; Função nula, sem retorno ou função
-                       ;; Mantida para compatibilidade
-
-rolarTela = 33         ;; Rola o console para baixo uma linha
-
-definirCursor = 34     ;; Definir cursor em uma posição específica
-                       ;; Entrada: DL - X; DH - Y
-
-desenharCaractere = 35 ;; Colocar um pixel no console
-                       ;; Entrada: EAX - X; EBX - Y; EDX - Cor em hexadecimal
-
-desenharBloco = 36     ;; Desenhar um bloco de cor específica
-                       ;; Entrada: EAX - X; EBX - Y; ESI - Comprimento
-                       ;; Entrada: EDI - Altura; EDX - Cor em hexadecimal
-
-imprimirCaractere = 37 ;; Imprimir caractere na posição do cursor 
-                       ;; Entrada: AL - Caractere; EBX - 01h para posicionar cursor                             
-
-definirCor = 38        ;; Definir cor de fundo e primeiro plano
-                       ;; Entrada: EAX - Cor da fonte (RGB em hexadecimal)
-                       ;; EBX - Cor do plano de fundo (RGB em hexadecimal)
-                       ;; ECX - 1234h para alterar o tema padrão para os valores solicitados
-                       ;; Em modo texto, apenas preto e branco são permitidos
-                         
-obterCor = 39          ;; Obter cor de fundo e primeiro plano
-                       ;; Saída: EAX - Plano de fundo (RGB em hexadecimal)
-                       ;; EBX - Plano de fundo (RGB em hexadecimal)
-                       ;; ECX - Cor padrão da fonte, no tema atual
-                       ;; EDX - Cor padrão do plano de fundo, no tema atual
-                       ;; Em modo texto, apenas preto e branco são permitidos
-
-obterInfoTela = 40     ;; Obter informação da tela
-                       ;; Saída: EAX - Resolução X (bits 0..15), Y (bits 16..31),
-                       ;; EBX - Colunas (bit 0..7), Linhas (8..15), Bits por pixel (16..23),
-                       ;; EDX - Endereço do início do frame de vídeo
-                       ;; CF definido em caso de modo texto
-                                        
-atualizarTela = 41     ;; Atualizar a memória de vídeo com o conteúdo do Buffer
-                                
-definirResolucao = 42  ;; Utilizado para definir a resolução à ser utilizada no vídeo
-                       ;; Entrada: EAX - Número relativo a resolução à ser utilizada
-                       ;;       1 - Resolução de 800x600 pixels
-                       ;;       2 - Resolução de 1024x768 pixels  
-                       ;;       3 - Alterar para modo texto 
-
-obterResolucao = 43    ;; Utilizado para obter o código relativo à resolução utilizada 
-                       ;; no vídeo padrão
-                       ;; Saída: EAX - Número relativo a resolução atualmente utilizada
-                       ;;       1 - Resolução de 800x600 pixels
-                       ;;       2 - Resolução de 1024x768 pixels
-                                   
-obterCursor = 44       ;; Obter posição do cursor
-                       ;; Saída: DL - X, DH - Y
                                             
 
 ;;************************************************************************************
