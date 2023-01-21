@@ -143,7 +143,7 @@ Agora, uma tabela com as funções da chamada de sistema do Hexagonix.
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
 | 45 | aguardarTeclado | Serviços de manipulação de teclado PS/2 | Sem entrada | AL = Caractere; AH - Scancode | Hexagonix | Espera o pressionamento de uma tecla no teclado|
 | 46 | obterString | Serviços de manipulação de teclado PS/2 | AL = Máximo de caracteres para obter | EBX = Presença ou não de eco durante a digitação (1234h para sem eco e qualquer valor para ativar); ESI = String | Hexagonix | Obtêm uma string do teclado|
-| 47 | obterEstadoTeclas | Serviços de manipulação de teclado PS/2 | EAX = Status das teclas especiais (bit 0: Tecla Control; bit 1: Tecla Shift; bit 2-31: Reservado) | Hexagonix | Obtêm o estado das teclas especiais, como Control e Shift|
+| 47 | obterEstadoTeclas | Serviços de manipulação de teclado PS/2 | Sem entrada |  EAX = Status das teclas especiais (bit 0: Tecla Control; bit 1: Tecla Shift; bit 2-31: Reservado) | Hexagonix | Obtêm o estado das teclas especiais, como Control e Shift|
 | 48 | alterarFonte | Serviços de manipulação de teclado PS/2 | ESI = Ponteiro para o buffer contendo o nome do arquivo que contêm a fonte compatível com o Hexagonix | CF definido em caso de arquivo não encontrado ou incompatível | Hexagonix | Altera a fonte padrão de exibição do sistema| 
 | 49 | alterarLeiaute | Serviços de manipulação de teclado PS/2 | ESI = Arquivo contendo um leiaute de teclado válido | CF definido em caso de arquivo não encontrado ou incompatível | Hexagonix | Altera o leiaute do teclado|
 
