@@ -56,11 +56,22 @@ Um exemplo de como solicitar uma chamada de sistema:
 | 9 | abrir | Gerenciamento de arquivos e dispositivos | ESI = Ponteiro para o buffer que contêm o nome convencionado; EDI = Endereço de carregamento, em caso de arquivo| CF definido quando o nome do dispositivo for inválido ou arquivo não existir | Unix-like | Abre um canal de leitura/escrita em um dispositivo solicitado ou arquivo comum presente no disco (dispositivos e discos são tratados como arquivos). Em caso de arquivo no disco, um endereço de carregamento deve ser fornecido|
 | 10 | escrever | Gerenciamento de arquivos e dispositivos |  ESI = Ponteiro com o buffer contendo os dados | CF definido em caso de erro ou nenhum dispositivo aberto | Unix-like | Envia dados para o dispositivo aberto|
 | 11 | fechar | Gerenciamento de arquivos e dispositivos | Sem entrada | Sem saída | Unix-like | Fecha o último dispositivo aberto pelo processo atual|
-| 12 |
-| 13 | 
-| 14 |  
-
-
+| 13 | salvarArquivo | Gerenciamento de arquivos e dispositivos |  ESI = Ponteiro para o nome do arquivo; EDI = Ponteiro para o conteúdo; EAX = Tamanho do arquivo | CF definido em caso de erro ou arquivo já presente | Unix-like | Salva um arquivo no volume montado|
+| 14 | deletarArquivo | Gerenciamento de arquivos e dispositivos | ESI = Ponteiro para o nome do arquivo | CF definido em caso de erro ou arquivo não existente | Unix-like | Remove um arquivo no volume montado |
+| 15 | listarArquivos | Gerenciamento de arquivos e dispositivos | Sem entrada | ESI = Ponteiro para a lista de arquivos; EAX = Total de arquivos | Unix-like | Obtêm lista de arquivos presentes no volume |
+| 16 | arquivoExiste | Gerenciamento de arquivos e dispositivos | ESI = Nome do arquivo para checar |  EAX = Tamanho do arquivo; CF definido se o arquivo não existir | Hexagonix | Checar se um arquivo existe no volume |
+| 17 | obterDisco | Gerenciamento de arquivos e dispositivos | Sem entrada | ESI = Nome do dispositivo; EDI = Rótulo do volume utilizado | Hexagonix | Obtêm informações do disco montado em `/`|
+| 18 | travar | Gerenciamento de usuário e permissões | Sem entrada | Sem saída | Unix-like | Bloqueia o sinal de término de processo em primeiro plano por tecla especial|
+| 19 |  
+| 20 |  
+| 21 |  
+| 22 |  
+| 23 |  
+| 24 |  
+| 25 |  
+| 26 |  
+| 27 |  
+| 28 |  
 
 
 Agora, uma tabela com as funções da chamada de sistema do Hexagonix. `A tabela está formatada como um arquivo contendo código Assembly x86`:
