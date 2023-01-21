@@ -60,7 +60,6 @@ Um exemplo de como solicitar uma chamada de sistema:
 | 9 | abrir | Gerenciamento de arquivos e dispositivos | ESI = Ponteiro para o buffer que contêm o nome convencionado; EDI = Endereço de carregamento, em caso de arquivo| CF definido quando o nome do dispositivo for inválido ou arquivo não existir | Unix-like | Abre um canal de leitura/escrita em um dispositivo solicitado ou arquivo comum presente no disco (dispositivos e discos são tratados como arquivos). Em caso de arquivo no disco, um endereço de carregamento deve ser fornecido|
 | 10 | escrever | Gerenciamento de arquivos e dispositivos |  ESI = Ponteiro com o buffer contendo os dados | CF definido em caso de erro ou nenhum dispositivo aberto | Unix-like | Envia dados para o dispositivo aberto|
 | 11 | fechar | Gerenciamento de arquivos e dispositivos | Sem entrada | Sem saída | Unix-like | Fecha o último dispositivo aberto pelo processo atual|
-| 12 | Reservada | Reservada | Reservada | Reservada | Unix-like | Função reservada|
 | 13 | salvarArquivo | Gerenciamento de arquivos e dispositivos |  ESI = Ponteiro para o nome do arquivo; EDI = Ponteiro para o conteúdo; EAX = Tamanho do arquivo | CF definido em caso de erro ou arquivo já presente | Unix-like | Salva um arquivo no volume montado|
 | 14 | deletarArquivo | Gerenciamento de arquivos e dispositivos | ESI = Ponteiro para o nome do arquivo | CF definido em caso de erro ou arquivo não existente | Unix-like | Remove um arquivo no volume montado |
 | 15 | listarArquivos | Gerenciamento de arquivos e dispositivos | Sem entrada | ESI = Ponteiro para a lista de arquivos; EAX = Total de arquivos | Unix-like | Obtêm lista de arquivos presentes no volume |
@@ -107,10 +106,28 @@ Um exemplo de como solicitar uma chamada de sistema:
 
 </details>
 
+<details title="Serviços de vídeo e gráficos" align='left'>
+<br>
+<summary align='left'>Serviços de vídeos e gráficos</summary>
+
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
-| 27 | 
-| 28 |  
+| 29 | imprimir | Serviços de vídeos e gráficos | EAX = Conteúdo numérico, se este for o caso, respeitando os formatos designados. Os formatos devem ser informados; ESI = Ponteiro para a string à ser impressa, se este for o caso; EBX = Tipo de entrada (01h - inteiro decimal; 02h - inteiro hexadecimal; 03h - inteiro binário; 04h - string)| Hexagonix | Envia um conteúdo definido para um dispositivo de saída
+| 30 | limparTela | Serviços de vídeos e gráficos | Sem entrada | Sem saída | Hexagonix | Limpa o console atual|
+| 31 | limparLinha | Serviços de vídeos e gráficos | AL = Número da linha  | Sem saída | Hexagonix | Limpa uma linha específica no console|
+| 33 | rolarTela | Serviços de vídeos e gráficos | Sem entrada | Sem saída | Hexagonix | Rola o console para baixo uma linha|
+| 34 | 
+| 35 |
+| 36 | 
+| 37 |
+| 38 | 
+| 39 |
+| 40 | 
+| 41 |
+| 42 | 
+| 43 |
+| 44 | 
+
 
 
 Agora, uma tabela com as funções da chamada de sistema do Hexagonix. `A tabela está formatada como um arquivo contendo código Assembly x86`:
@@ -281,20 +298,20 @@ imprimir = 29          ;; Imprimir um conteúdo definido em um dispositivo de sa
                        ;;       04h - String        
                        ;; Dica! Utilize os macros no fim do arquivo para utilizar essa função                                                         
 
-limparTela = 30        ;; Limpa a tela      
+limparTela = 30        ;; Limpa o console      
                         
-limparLinha = 31       ;; Limpa uma linha específica na tela
+limparLinha = 31       ;; Limpa uma linha específica no console
                        ;; Entrada: AL - Número da linha 
                         
 NULA  = 32             ;; Função nula, sem retorno ou função
                        ;; Mantida para compatibilidade
 
-rolarTela = 33         ;; Rola a tela para baixo uma linha
+rolarTela = 33         ;; Rola o console para baixo uma linha
 
 definirCursor = 34     ;; Definir cursor em uma posição específica
                        ;; Entrada: DL - X; DH - Y
 
-desenharCaractere = 35 ;; Colocar um pixel na tela
+desenharCaractere = 35 ;; Colocar um pixel no console
                        ;; Entrada: EAX - X; EBX - Y; EDX - Cor em hexadecimal
 
 desenharBloco = 36     ;; Desenhar um bloco de cor específica
