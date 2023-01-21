@@ -47,7 +47,6 @@ Agora, uma tabela com as funções da chamada de sistema do Hexagonix. As funç�
 
 > Vale lembrar que uma tabela de funções, padronizada segundo as funções disponíveis no Version 7 UNIX, está sendo desenvolvida. Nesse caso, não existe o objetivo de pareamento de número de função junto ao UNIX, mas conformidade no nome das funções. Por exemplo, `alocarMemoria` se tornaria `free`, e `retornarVersao`, `uname`. No futuro, ambas as nomenclaturas estarão disponíveis para permitir a migração de aplicativos e utilitários. Venha novamente nesse arquivo mais tarde para checar atualizações. 
 
-
 <details title="Gerenciamento de memória e processos" align='left'>
 <br>
 <summary align='left'>Funções de gerenciamento de memória e processos</summary>
