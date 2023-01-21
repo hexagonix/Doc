@@ -112,13 +112,13 @@ Um exemplo de como solicitar uma chamada de sistema:
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
-| 29 | imprimir | Serviços de vídeos e gráficos | EAX = Conteúdo numérico, se este for o caso, respeitando os formatos designados. Os formatos devem ser informados; ESI = Ponteiro para a string à ser impressa, se este for o caso; EBX = Tipo de entrada (01h - inteiro decimal; 02h - inteiro hexadecimal; 03h - inteiro binário; 04h - string)| Hexagonix | Envia um conteúdo definido para um dispositivo de saída
+| 29 | imprimir | Serviços de vídeos e gráficos | EAX = Conteúdo numérico, se este for o caso, respeitando os formatos designados. Os formatos devem ser informados; ESI = Ponteiro para a string à ser impressa, se este for o caso; EBX = Tipo de entrada (01h - inteiro decimal; 02h - inteiro hexadecimal; 03h - inteiro binário; 04h - string)| Sem saída | Hexagonix | Envia um conteúdo definido para um dispositivo de saída
 | 30 | limparTela | Serviços de vídeos e gráficos | Sem entrada | Sem saída | Hexagonix | Limpa o console atual|
 | 31 | limparLinha | Serviços de vídeos e gráficos | AL = Número da linha  | Sem saída | Hexagonix | Limpa uma linha específica no console|
 | 33 | rolarTela | Serviços de vídeos e gráficos | Sem entrada | Sem saída | Hexagonix | Rola o console para baixo uma linha|
-| 34 | 
-| 35 |
-| 36 | 
+| 34 | definirCursor | Serviços de vídeo e gráficos | DL = posição no eixo X; DH = posição no eixo Y | Sem saída | Hexagonix | Define o cursor em uma posição específica|
+| 35 | desenharCaractere | Serviços de vídeo e gráficos |  EAX = posição no eixo X; EBX = posição no eixo Y; EDX = Cor em hexadecimal | Sem saída | Hexagonix | Coloca um pixel no console| 
+| 36 | desenharBloco | Serviços de vídeo e gráficos | EAX = posição no eixo X; EBX = posição no eixo Y; ESI = Comprimento; EDI = Altura; EDX = Cor em hexadecimal | Hexagonix | Desenha um bloco de cor específica|
 | 37 |
 | 38 | 
 | 39 |
