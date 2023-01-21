@@ -52,7 +52,7 @@ Now, a table with the Hexagonix system call functions. Functions are sorted into
 <summary align='left'>Memory and process management functions</summary>
 
 | Function number | Name | Group | Input | Output | Function family| Description |
-|:----------------:|:----:|:-------:|:------:|:--- -:|:----------------:|:---------:|
+|:---------------:|:----:|:-----:|:-----:|:------:|:--------------:|:-----------:|
 | 1 | allocateMemory | Memory and Process Management | EAX = Requested memory size, in bytes | EBX = Pointer to allocated memory | Unix-like| Allocate memory for the process|
 | 2 | freeMemory | Memory and Process Management | EBX = Pointer to allocated memory; ECX = Size of allocated memory | No output | Unix-like | Frees previously allocated memory|
 | 3 | startProcess | Memory and Process Management | ESI = Program name; EDI = Arguments; EAX = 0 if no arguments are passed | CF set on error or image not found | Unix-like | Loads and executes image present in the volume|
@@ -77,7 +77,7 @@ Now, a table with the Hexagonix system call functions. Functions are sorted into
 <summary align='left'>User management roles and permissions</summary>
 
 | Function number | Name | Group | Input | Output | Function family| Description |
-|:----------------:|:----:|:-------:|:------:|:--- -:|:----------------:|:---------:|
+|:---------------:|:----:|:-----:|:-----:|:------:|:--------------:|:-----------:|
 | 18 | lock | User Management and Permissions | No input | No output | Unix-like | Block foreground process termination signal by special key|
 | 19 | unlock | User Management and Permissions | No input | No output | Unix-like | Enable foreground process termination signal by special key use|
 | 20 | setUser | User Management and Permissions | EAX = Group ID; ESI = Username | No output | Hexagonix | Define a user for the current session|
@@ -90,7 +90,7 @@ Now, a table with the Hexagonix system call functions. Functions are sorted into
 <summary align='left'>Hexagon Services</summary>
 
 | Function number | Name | Group | Input | Output | Function family| Description |
-|:----------------:|:----:|:-------:|:------:|:--- -:|:----------------:|:---------:|
+|:---------------:|:----:|:-----:|:-----:|:------:|:--------------:|:-----------:|
 | 22 | returnVersion | Hexagon Services | No input | EAX = Version number; EBX = Subversion number; CH = Review character; EDX = Architecture; ESI = Kernel Name; EDI = Kernel Build| Unix-like | Returns Hexagon version for applications|
 | 23 | getRandom | Hexagon Services | EAX = Maximum | EAX = Number | Hexagonix | Get a random number|
 | 24 | feedRandom | Hexagon Services | EAX - Number to create entropy | No output | Hexagonix | Feed Entropy to Kernel Random Number Generator|
@@ -104,7 +104,7 @@ Now, a table with the Hexagonix system call functions. Functions are sorted into
 <summary align='left'>Power Management Services</summary>
 
 | Function number | Name | Group | Input | Output | Function family| Description |
-|:----------------:|:----:|:-------:|:------:|:--- -:|:----------------:|:---------:|
+|:---------------:|:----:|:-----:|:-----:|:------:|:--------------:|:-----------:|
 | 27 | restartPC | Power Management | No input | No output | Unix-like | Request device restart|
 | 28 | shutdownPC | Power Management | No input | No output | Unix-like | Prompts for device shutdown|
 
@@ -115,7 +115,7 @@ Now, a table with the Hexagonix system call functions. Functions are sorted into
 <summary align='left'>Video and graphics services</summary>
 
 | Function number | Name | Group | Input | Output | Function family| Description |
-|:----------------:|:----:|:-------:|:------:|:--- -:|:----------------:|:---------:|
+|:---------------:|:----:|:-----:|:-----:|:------:|:--------------:|:-----------:|
 | 29 | print | Video and Graphics Services | EAX = Numerical content, if this is the case, respecting the designated formats. The formats must be informed; ESI = Pointer to the string to be printed, if this is the case; EBX = Input type (01h - decimal integer; 02h - hexadecimal integer; 03h - binary integer; 04h - string)| No output | Hexagonix | Sends a defined content to an output device
 | 30 | clearScreen | Video and Graphics Services | No input | No output | Hexagonix | Clear current console|
 | 31 | clearLine | Video and Graphics Services | AL = Line number | No output | Hexagonix | Clears a specific line in the console|
@@ -139,7 +139,7 @@ Now, a table with the Hexagonix system call functions. Functions are sorted into
 <summary align='left'>PS/2 Keyboard Handling Services</summary>
 
 | Function number | Name | Group | Input | Output | Function family| Description |
-|:----------------:|:----:|:-------:|:------:|:--- -:|:----------------:|:---------:|
+|:---------------:|:----:|:-----:|:-----:|:------:|:--------------:|:-----------:|
 | 45 | awaitKeyboard | PS/2 Keyboard Handling Services | No input | AL = Character; AH - Scancode | Hexagonix | Waits for a keypress on the keyboard|
 | 46 | getString | PS/2 Keyboard Handling Services | AL = Maximum characters to get | EBX = Presence or absence of echo during typing (1234h for no echo and any value to activate); ESI = String | Hexagonix | Get a string from the keyboard|
 | 47 | getKeyState | PS/2 Keyboard Handling Services | No input | EAX = Status of special keys (bit 0: Control key; bit 1: Shift key; bit 2-31: Reserved) | Hexagonix | Get the state of special keys such as Control and Shift|
@@ -153,7 +153,7 @@ Now, a table with the Hexagonix system call functions. Functions are sorted into
 <summary align='left'>PS/2 Mouse Handling Services</summary>
 
 | Function number | Name | Group | Input | Output | Function family| Description |
-|:----------------:|:----:|:-------:|:------:|:--- -:|:----------------:|:---------:|
+|:---------------:|:----:|:-----:|:-----:|:------:|:--------------:|:-----------:|
 | 50 | waitMouse | PS/2 Mouse Handling Services | No input | EAX = Position on the X axis; EBX = Position on the Y axis; EDX = Buttons | Hexagonix | Wait for mouse event|
 | 51 | getMouse | PS/2 Mouse Handling Services | No input | EAX = Position on the X axis; EBX = Position on the Y axis; EDX = Buttons | Hexagonix | Get current mouse position and button state|
 | 52 | setMouse | PS/2 Mouse Handling Services | EAX = Position on the X axis; EBX = Position on the Y axis | No output | Hexagonix | Set new mouse position|
@@ -165,7 +165,7 @@ Now, a table with the Hexagonix system call functions. Functions are sorted into
 <summary align='left'>Data manipulation and conversion services</summary>
 
 | Function number | Name | Group | Input | Output | Function family| Description |
-|:----------------:|:----:|:-------:|:------:|:--- -:|:----------------:|:---------:|
+|:---------------:|:----:|:-----:|:-----:|:------:|:--------------:|:-----------:|
 | 53 | compareStringWords | Data manipulation and conversion services | ESI = First string; EDI = Second string | CF set if equal | Hexagonix | Compare first words of two strings |
 | 54 | removeCharacterString | Data manipulation and conversion services | ESI = String; EAX = Character Position | No output | Hexagonix | Removes a character at a specific position from a string|
 | 55 | insertCharacter | Data manipulation and conversion services | ESI = String; EDX = Position; AL = Character to insert | No output | Hexagonix | Inserts a character at a specific position in the string |
@@ -185,7 +185,7 @@ Now, a table with the Hexagonix system call functions. Functions are sorted into
 <summary align='left'>Sound output services</summary>
 
 | Function number | Name | Group | Input | Output | Function family| Description |
-|:----------------:|:----:|:-------:|:------:|:--- -:|:----------------:|:---------:|
+|:---------------:|:----:|:-----:|:-----:|:------:|:--------------:|:-----------:|
 | 64 | emitSound | Sound Output Services | AX = Frequency to play | No output | Hexagonix | Plays a tone on the computer's internal speaker|
 | 65 | offSound | Sound Output Services| No input | No output | Hexagonix | Turns off the computer's internal speaker, stopping any sound in progress|
 
@@ -196,7 +196,7 @@ Now, a table with the Hexagonix system call functions. Functions are sorted into
 <summary align='left'>Message service</summary>
 
 | Function number | Name | Group | Input | Output | Function family| Description |
-|:----------------:|:----:|:-------:|:------:|:--- -:|:----------------:|:---------:|
+|:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
 | 66 | sendMessageHexagon | Messaging Service | ESI = Message; EAX = Error code, if any; EBX = Priority | No output | Hexagonix | Sends a high priority message from Hexagon|
 
 </details>
@@ -207,7 +207,7 @@ Now, a table with the Hexagonix system call functions. Functions are sorted into
 <summary align='left'>Real-time clock services</summary>
 
 | Function number | Name | Group | Input | Output | Function family| Description |
-|:----------------:|:----:|:-------:|:------:|:--- -:|:----------------:|:---------:|
+|:---------------:|:----:|:-----:|:-----:|:------:|:--------------:|:-----------:|
 | 67 | returnDate | Real Time Clock Services | EAX = Day, in ASCII; EBX = Month, in ASCII; ECX = Century, in ASCII; EDX = Year, in ASCII | No output | Hexagonix | Returns real-time clock information in ASCII (String) format. Conversion to number may be required|
 | 68 | returnTime | Real Time Clock Services | EAX = Time, in ASCII; EBX = Minute, in ASCII; ECX = Second, in ASCII | No output | Hexagonix | Returns real-time clock information in ASCII (String) format. Conversion to number may be required|
 
