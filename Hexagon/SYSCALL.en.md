@@ -61,6 +61,15 @@ Now, a table with the Hexagonix system call functions. Functions are sorted into
 | 6 | memoryUse | Memory and Process Management | No input | EAX = Used memory, in bytes; EBX = Total memory available for use, in bytes; ECX = Total memory available for use, in Mbytes (less accurate); EDX = Memory reserved for the Hexagon®, in bytes; ESI = Total allocated memory (reserved+processes), in kbytes| Unix-like | Get Detailed System Memory Usage|
 | 7 | getProcesses | Memory and Process Management | No input | ESI = List of processes; EAX = Number of running processes | Unix-like | Get running processes |
 | 8 | getErrorCode | Memory and Process Management | No input | EAX = Error code (0 for no error)| Hexagonix | Get the code returned by the last running process |
+
+</details>
+
+<details title="File and Device Management" align='left'>
+<br>
+<summary align='left'>File and Device Management</summary>
+
+| Function number | Name | Group | Input | Output | Function family| Description |
+|:---------------:|:----:|:-----:|:-----:|:------:|:--------------:|:-----------:|
 | 9 | open | File and Device Management | ESI = Pointer to the buffer containing the agreed name; EDI = Loading address, in case of file| CF set when device name is invalid or file does not exist | Unix-like | Opens a read/write channel on a requested device or common file present on disk (devices and disks are treated as files). In case of file on disk, a load address must be provided |
 | 10 | write | File and Device Management | ESI = Pointer to the buffer containing the data | CF set on error or no device open | Unix-like | Send data to open device|
 | 11 | close | File and Device Management | No input | No output | Unix-like | Closes the last device opened by the current process|

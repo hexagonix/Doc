@@ -61,6 +61,15 @@ Agora, uma tabela com as funções da chamada de sistema do Hexagonix. As funç�
 | 6 | usoMemoria | Gerenciamento de memória e processos | Sem entrada | EAX = Memória utilizada, em bytes; EBX = Memória total disponível para uso, em bytes; ECX = Memória total disponível para uso, em Mbytes (menos preciso); EDX = Memória reservada para o Hexagon®, em bytes; ESI = Memória total alocada (resevada+processos), em kbytes| Unix-like | Obter o uso detalhado de memória pelo sistema| 
 | 7 | obterProcessos | Gerenciamento de memória e processos | Sem entrada | ESI = Lista de processos; EAX = Número de processos em execução | Unix-like | Obtêm os processos em execução|
 | 8 | obterCodigoErro | Gerenciamento de memória e processos | Sem entrada | EAX = Código de erro (0 para sem erro)| Hexagonix | Obtêm o código retornado pelo último processo em execução|
+
+</details>
+
+<details title="Gerenciamento de arquivos e dispositivos" align='left'>
+<br>
+<summary align='left'>Gerenciamento de arquivos e dispositivos</summary>
+
+| Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
+|:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
 | 9 | abrir | Gerenciamento de arquivos e dispositivos | ESI = Ponteiro para o buffer que contêm o nome convencionado; EDI = Endereço de carregamento, em caso de arquivo| CF definido quando o nome do dispositivo for inválido ou arquivo não existir | Unix-like | Abre um canal de leitura/escrita em um dispositivo solicitado ou arquivo comum presente no disco (dispositivos e discos são tratados como arquivos). Em caso de arquivo no disco, um endereço de carregamento deve ser fornecido|
 | 10 | escrever | Gerenciamento de arquivos e dispositivos |  ESI = Ponteiro com o buffer contendo os dados | CF definido em caso de erro ou nenhum dispositivo aberto | Unix-like | Envia dados para o dispositivo aberto|
 | 11 | fechar | Gerenciamento de arquivos e dispositivos | Sem entrada | Sem saída | Unix-like | Fecha o último dispositivo aberto pelo processo atual|
