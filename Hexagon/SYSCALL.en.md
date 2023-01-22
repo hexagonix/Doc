@@ -22,6 +22,8 @@
 
 <div align="justify">
 
+<!-- Em revisão para corrigir erros de inglês-->
+
 # Hexagon system calls
 
 Hexagon provides a series of well-documented system calls for developing utilities and applications. System calls can be accessed through software interrupt number `69h`. When requesting a system call, you must also supply parameters that identify the chosen function, as well as the required parameters for it. You can find the required parameters for them in the table below.
