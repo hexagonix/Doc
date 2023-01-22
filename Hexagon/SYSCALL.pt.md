@@ -44,6 +44,8 @@ Um exemplo de como solicitar uma chamada de sistema:
 ```
 Vá até a [tabela de funções](#tabela-de-funções-disponibilzadas-pelo-hexagon) disponibilizadas pelo Hexagon para obter mais informações sobre cada uma delas.
 
+</div>
+
 <!-- Vai funcionar como <hr> -->
 
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
