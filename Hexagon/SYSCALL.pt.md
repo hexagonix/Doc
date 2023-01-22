@@ -43,30 +43,24 @@ Um exemplo de como solicitar uma chamada de sistema:
 
 ```
 
-Agora, uma tabela com as funções da chamada de sistema do Hexagonix. As funções estão classificadas em categorias. Clique na categoria desejada para ter mais informações sobre as chamadas daquela categoria. As funções também foram classificadas em `Unix-like`, quando existem versões análogas no UNIX ou em sistema semelhantes, e `HEXAGONIX`, quando a função implementada não tem uma versão semelhante em outros sistemas UNIX ou Unix-like.
+Agora, uma tabela com as funções da chamada de sistema do Hexagonix. As funções estão classificadas em categorias. As funções também foram classificadas em `Unix-like`, quando existem versões análogas no UNIX ou em sistema semelhantes, e `HEXAGONIX`, quando a função implementada não tem uma versão semelhante em outros sistemas UNIX ou Unix-like.
 
-> Vale lembrar que uma tabela de funções, padronizada segundo as funções disponíveis no Version 7 UNIX, está sendo desenvolvida. Nesse caso, não existe o objetivo de pareamento de número de função junto ao UNIX, mas conformidade no nome das funções. Por exemplo, `alocarMemoria` se tornaria `free`, e `retornarVersao`, `uname`. No futuro, ambas as nomenclaturas estarão disponíveis para permitir a migração de aplicativos e utilitários. Venha novamente nesse arquivo mais tarde para checar atualizações. 
+> Vale lembrar que uma tabela de funções, padronizada segundo as funções disponíveis no Version 7 UNIX, está sendo desenvolvida. Nesse caso, não existe o objetivo de pareamento de número de função junto ao UNIX, mas conformidade no nome das funções. Por exemplo, `alocarMemoria` se tornaria `free`, e `retornarVersao`, `uname`. No futuro, ambas as nomenclaturas estarão disponíveis para permitir a migração de aplicativos e utilitários. Venha novamente nesse arquivo mais tarde para checar atualizações.
 
-<details title="Gerenciamento de memória e processos" align='left'>
-<br>
-<summary align='left'>Funções de gerenciamento de memória e processos</summary>
+## Funções de gerenciamento de memória e processos
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
 | 1 | alocarMemoria | Gerenciamento de memória e processos | EAX = Tamanho da memória solicitada, em bytes | EBX = Ponteiro para a memória alocada | Unix-like| Aloca memória para o processo|
 | 2 | liberarMemoria | Gerenciamento de memória e processos | EBX = Ponteiro para a memória alocada; ECX = Tamanho da memória alocada | Sem saída | Unix-like | Libera a memória alocada previamente|
 | 3 | iniciarProcesso | Gerenciamento de memória e processos | ESI = Nome do programa; EDI = Argumentos; EAX = 0 se não forem passados argumentos| CF definido em caso de erro ou imagem não encontrada | Unix-like | Carrega e executa imagem presente no volume|  
-| 4 | encerrarProcesso | Gerenciamento de memória e processos | EAX = Código de erro, caso exista; EBX = 0 se apenas terminar a execução; EBX = 0x1234 para manter residente | Sem saída | Unix-like | FInaliza a execução de um processo | 
+| 4 | encerrarProcesso | Gerenciamento de memória e processos | EAX = Código de erro, caso exista; EBX = 0 se apenas terminar a execução; EBX = 0x1234 para manter residente | Sem saída | Unix-like | FInaliza a execução de um processo |
 | 5 | obterPID | Gerenciamento de memória e processos | Sem entrada | EAX = PID do processo atual | Unix-like | Obtêm o PID do processo em execução |
-| 6 | usoMemoria | Gerenciamento de memória e processos | Sem entrada | EAX = Memória utilizada, em bytes; EBX = Memória total disponível para uso, em bytes; ECX = Memória total disponível para uso, em Mbytes (menos preciso); EDX = Memória reservada para o Hexagon®, em bytes; ESI = Memória total alocada (resevada+processos), em kbytes| Unix-like | Obter o uso detalhado de memória pelo sistema| 
+| 6 | usoMemoria | Gerenciamento de memória e processos | Sem entrada | EAX = Memória utilizada, em bytes; EBX = Memória total disponível para uso, em bytes; ECX = Memória total disponível para uso, em Mbytes (menos preciso); EDX = Memória reservada para o Hexagon®, em bytes; ESI = Memória total alocada (resevada+processos), em kbytes| Unix-like | Obter o uso detalhado de memória pelo sistema|
 | 7 | obterProcessos | Gerenciamento de memória e processos | Sem entrada | ESI = Lista de processos; EAX = Número de processos em execução | Unix-like | Obtêm os processos em execução|
 | 8 | obterCodigoErro | Gerenciamento de memória e processos | Sem entrada | EAX = Código de erro (0 para sem erro)| Hexagonix | Obtêm o código retornado pelo último processo em execução|
 
-</details>
-
-<details title="Gerenciamento de arquivos e dispositivos" align='left'>
-<br>
-<summary align='left'>Gerenciamento de arquivos e dispositivos</summary>
+## Gerenciamento de arquivos e dispositivos
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
@@ -79,11 +73,7 @@ Agora, uma tabela com as funções da chamada de sistema do Hexagonix. As funç�
 | 16 | arquivoExiste | Gerenciamento de arquivos e dispositivos | ESI = Nome do arquivo para checar |  EAX = Tamanho do arquivo; CF definido se o arquivo não existir | Hexagonix | Checar se um arquivo existe no volume |
 | 17 | obterDisco | Gerenciamento de arquivos e dispositivos | Sem entrada | ESI = Nome do dispositivo; EDI = Rótulo do volume utilizado | Hexagonix | Obtêm informações do disco montado em `/`|
 
-</details>
-
-<details title=" Gerenciamento de usuário e permissões" align='left'>
-<br>
-<summary align='left'>Funções de gerenciamento de usuário e permissões</summary>
+## Funções de gerenciamento de usuário e permissões
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
@@ -92,36 +82,24 @@ Agora, uma tabela com as funções da chamada de sistema do Hexagonix. As funç�
 | 20 | definirUsuario | Gerenciamento de usuário e permissões | EAX = ID do grupo; ESI = Nome do usuário | Sem saída | Hexagonix | Define um usuário para a sessão atual|
 | 21 | obterUsuario | Gerenciamento de usuário e permissões | Sem entrada | EAX = ID do grupo; ESI = Nome do usuário| Hexagonix | Obtêm dados do usuário logado para a sessão atual|
 
-</details>
-
-<details title="Serviços do Hexagon" align='left'>
-<br>
-<summary align='left'>Serviços do Hexagon</summary>
+## Serviços do Hexagon
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
-| 22 | retornarVersao | Serviços do Hexagon | Sem entrada | EAX = Número da versão; EBX = Número da subversão; CH = Caractere de revisão; EDX = Arquitetura; ESI = Nome do Kernel; EDI = Build do Kernel| Unix-like | Retorna a versão do Hexagon para os aplicativos| 
+| 22 | retornarVersao | Serviços do Hexagon | Sem entrada | EAX = Número da versão; EBX = Número da subversão; CH = Caractere de revisão; EDX = Arquitetura; ESI = Nome do Kernel; EDI = Build do Kernel| Unix-like | Retorna a versão do Hexagon para os aplicativos|
 | 23 | obterAleatorio | Serviços do Hexagon | EAX = Máximo | EAX = Número | Hexagonix | Obtêm um número aleatório|
 | 24 | alimentarAleatorio | Serviços do Hexagon | EAX - Número para criar entropia | Sem saída | Hexagonix | Alimenta com entropia o gerador de números aleatórios do kernel|
 | 25 | causarAtraso | Serviços do Hexagon | ECX = Tempo em unidades de contagem para causar atraso | Sem saída | Hexagonix | Causa um atraso (delay) em operações |
 | 26 | instalarISR | Serviços do Hexagon | EAX = Número da interrupção; ESI = Ponteiro para o manipulador | Sem saída | Hexagonix | Instala rotina de serviço de interrupção|
 
-</details>
-
-<details title="Serviços do gerenciamento de energia" align='left'>
-<br>
-<summary align='left'>Serviços de gerenciamento de energia</summary>
+## Serviços de gerenciamento de energia
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
 | 27 | reiniciarPC | Gerenciamento de energia | Sem entrada | Sem saída | Unix-like | Solicita o reinicio do dispositivo|
 | 28 | desligarPC | Gerenciamento de energia | Sem entrada | Sem saída | Unix-like | Solicita o desligamento do dispositivo|
 
-</details>
-
-<details title="Serviços de vídeo e gráficos" align='left'>
-<br>
-<summary align='left'>Serviços de vídeos e gráficos</summary>
+## Serviços de vídeos e gráficos
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
@@ -141,25 +119,17 @@ Agora, uma tabela com as funções da chamada de sistema do Hexagonix. As funç�
 | 43 | obterResolucao | Serviços de vídeo e gráficos | Sem entrada | EAX = Número relativo a resolução à ser utilizada (1 = Resolução de 800x600 pixels; 2 - Resolução de 1024x768 pixels) | Hexagonix | Ontêm a resolução utilizadapelo console principal|
 | 44 | obterCursor | Serviços de vídeo e gráficos | Sem entrada | DL = Eixo X; DH = Eixo Y | Hexagonix | Obtêm a posição do cursor|
 
-</details>
-
-<details title="Serviços de manipulação de teclado PS/2" align='left'>
-<br>
-<summary align='left'>Serviços de manipulação de teclado PS/2</summary>
+## Serviços de manipulação de teclado PS/2
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
 | 45 | aguardarTeclado | Serviços de manipulação de teclado PS/2 | Sem entrada | AL = Caractere; AH - Scancode | Hexagonix | Espera o pressionamento de uma tecla no teclado|
 | 46 | obterString | Serviços de manipulação de teclado PS/2 | AL = Máximo de caracteres para obter | EBX = Presença ou não de eco durante a digitação (1234h para sem eco e qualquer valor para ativar); ESI = String | Hexagonix | Obtêm uma string do teclado|
 | 47 | obterEstadoTeclas | Serviços de manipulação de teclado PS/2 | Sem entrada | EAX = Status das teclas especiais (bit 0: Tecla Control; bit 1: Tecla Shift; bit 2-31: Reservado) | Hexagonix | Obtêm o estado das teclas especiais, como Control e Shift|
-| 48 | alterarFonte | Serviços de manipulação de teclado PS/2 | ESI = Ponteiro para o buffer contendo o nome do arquivo que contêm a fonte compatível com o Hexagonix | CF definido em caso de arquivo não encontrado ou incompatível | Hexagonix | Altera a fonte padrão de exibição do sistema| 
+| 48 | alterarFonte | Serviços de manipulação de teclado PS/2 | ESI = Ponteiro para o buffer contendo o nome do arquivo que contêm a fonte compatível com o Hexagonix | CF definido em caso de arquivo não encontrado ou incompatível | Hexagonix | Altera a fonte padrão de exibição do sistema|
 | 49 | alterarLeiaute | Serviços de manipulação de teclado PS/2 | ESI = Arquivo contendo um leiaute de teclado válido | CF definido em caso de arquivo não encontrado ou incompatível | Hexagonix | Altera o leiaute do teclado|
 
-</details>
-
-<details title="Serviços de manipulação de mouse PS/2" align='left'>
-<br>
-<summary align='left'>Serviços de manipulação de mouse PS/2</summary>
+## Serviços de manipulação de mouse PS/2
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
@@ -167,11 +137,7 @@ Agora, uma tabela com as funções da chamada de sistema do Hexagonix. As funç�
 | 51 | obterMouse | Serviços de manipulação de mouse PS/2 | Sem entrada | EAX = Posição no eixo X; EBX = Posição no eixo Y; EDX = Botões | Hexagonix | Obtêm posição atual do mouse e estado dos botões|
 | 52 | definirMouse | Serviços de manipulação de mouse PS/2 | EAX = Posição no eixo X; EBX = Posição no eixo Y | Sem saída | Hexagonix | Define nova posição do mouse|
 
-</details>
-
-<details title="Serviços de manipulação e conversão de dados" align='left'>
-<br>
-<summary align='left'>Serviços de manipulação e conversão de dados</summary>
+## Serviços de manipulação e conversão de dados
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
@@ -187,38 +153,24 @@ Agora, uma tabela com as funções da chamada de sistema do Hexagonix. As funç�
 | 62 | stringParaInt | Serviços de manipulação e conversão de dados | ESI = String | EAX = Inteiro; CF definido em caso de número inválido | Hexagonix | Converte um número string para número inteiro|
 | 63 | paraString | Serviços de manipulação e conversão de dados | EAX = Inteiro à ser convertido | ESI = Ponteiro para o buffer contendo a string | Hexagonix | Converte um número inteiro em uma string|
 
-</details>
-
-<details title="Serviços de saída de som" align='left'>
-<br>
-<summary align='left'>Serviços de saída de som</summary>
+## Serviços de saída de som
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
 | 64 | emitirSom | Serviços de saída de som | AX = Frequência a ser reproduzida | Sem saída | Hexagonix | Toca um tom no alto-falante interno do computador|
 | 65 | desligarSom | Serviços de saída de som| Sem entrada | Sem saída | Hexagonix |  Desliga o alto-falante interno do computador, interrompendo qualquer emissão de som em progresso|
 
-</details>
-
-<details title="Serviço de mensagens" align='left'>
-<br>
-<summary align='left'>Serviço de mensagens</summary>
+## Serviço de mensagens
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
 | 66 | enviarMensagemHexagon | Serviço de mensagens | ESI = Mensagem; EAX = Código de erro, se houver; EBX = Prioridade | Sem saída | Hexagonix | Envia uma mensagem de alta prioridade do Hexagon|
 
-</details>
-
-<details title="Serviços de relógio em tempo real" align='left'>
-<br>
-<summary align='left'>Serviços de relógio em tempo real</summary>
+## Serviços de relógio em tempo real
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
 | 67 | retornarData | Serviços de relógio em tempo real | EAX = Dia, em ASCII;  EBX = Mês, em ASCII; ECX = Século, em ASCII; EDX = Ano, em ASCII  | Sem saída | Hexagonix | Retorna informações de relógio em tempo real em formato ASCII (String). Conversão para número pode ser necessária|
 | 68 | retornarHora | Serviços de relógio em tempo real | EAX = Hora, em ASCII; EBX = Minuto, em ASCII; ECX = Segundo, em ASCII | Sem saída | Hexagonix | Retorna informações de relógio em tempo real em formato ASCII (String). Conversão para número pode ser necessária|
-
-</details>
 
 </div>
