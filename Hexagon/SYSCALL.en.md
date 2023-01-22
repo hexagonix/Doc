@@ -55,7 +55,7 @@ Go to [table of functions](#table-of-functions-provides-by-hexagon) provided by 
 
 ## Table of functions provides by Hexagon
 
-Now, a table with the Hexagonix system call functions. Functions are sorted into categories. Functions were also classified as `Unix-like`, when analogous versions exist on UNIX or similar systems, and `HEXAGONIX`, when the implemented function does not have a similar version on other UNIX or Unix-like systems.
+Now, a table with the Hexagonix system call functions. Functions are sorted into categories. Functions were also classified as `Unix-like`, when analogous versions exist on UNIX or similar systems, and `Hexagonix`, when the implemented function does not have a similar version on other UNIX or Unix-like systems.
 
 > Remember that a table of functions, standardized according to the functions available in Version 7 UNIX, is being developed. In this case, there is no purpose of function number pairing with UNIX, but conformity in function names. For example, `allocateMemory` would become `free`, and `returnVersion`, `uname`. In the future, both nomenclatures will be available to allow migration of applications and utilities. Come back to this file later to check for updates.
 
