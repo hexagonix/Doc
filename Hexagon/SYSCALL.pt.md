@@ -42,6 +42,15 @@ Um exemplo de como solicitar uma chamada de sistema:
     int 69h 
 
 ```
+Vá até a [tabela de funções](#tabela-de-funções-disponibilzadas-pelo-hexagon) disponibilizadas pelo Hexagon para obter mais informações sobre cada uma delas.
+
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+
+<div align="justify">
+
+## Tabela de funções disponibilzadas pelo Hexagon
 
 Agora, uma tabela com as funções da chamada de sistema do Hexagonix. As funções estão classificadas em categorias. As funções também foram classificadas em `Unix-like`, quando existem versões análogas no UNIX ou em sistema semelhantes, e `HEXAGONIX`, quando a função implementada não tem uma versão semelhante em outros sistemas UNIX ou Unix-like.
 
@@ -82,7 +91,7 @@ Agora, uma tabela com as funções da chamada de sistema do Hexagonix. As funç�
 | 20 | definirUsuario | Gerenciamento de usuário e permissões | EAX = ID do grupo; ESI = Nome do usuário | Sem saída | Hexagonix | Define um usuário para a sessão atual|
 | 21 | obterUsuario | Gerenciamento de usuário e permissões | Sem entrada | EAX = ID do grupo; ESI = Nome do usuário| Hexagonix | Obtêm dados do usuário logado para a sessão atual|
 
-## Serviços do Hexagon
+### Serviços do Hexagon
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
