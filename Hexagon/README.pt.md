@@ -35,7 +35,7 @@ Algumas características do Hexagon:
 - [x] Suporte a processadores x86 (Pentium III ou superiores);
 - [x] Suporte a dispositivos com 32 MB de memória RAM ou mais;
 - [x] Suporte a ambiente de usuário;
-- [x] Chamada de sistema com 68 funções sofisticadas acessadas pelo ambiente de usuário;
+- [x] [Chamada de sistema](SYSCALL.pt.md) com 68 funções sofisticadas acessadas pelo ambiente de usuário;
 - [x] Formato binário executável próprio (HAPP);
 - [x] Unix-like;
 - [x] Completamente escrito em Assembly x86;
@@ -127,11 +127,11 @@ Nessa sessão, você encontrará a documentação relevante sobre como desenvolv
 
 <div align="justify">
 
-O Hexagon implementa uma série de funções que são expostas ao ambiente de usuário, para que possam ser utilizadas pelos desenvolvedores para construir utilitários que utilizem a API do Hexagon. Essa API é acessível atráves de chamadas de sistema, ou mais facilmente pelas bibliotecas de desenvolvimento compatíveis, como a [libasm](https://github.com/hexagonix/lib). 
+O Hexagon implementa uma série de funções que são expostas ao ambiente de usuário, para que possam ser utilizadas pelos desenvolvedores para construir utilitários que utilizem a API do Hexagon. Essa API é acessível atráves de [chamadas de sistema](SYSCALL.pt.md), ou mais facilmente pelas bibliotecas de desenvolvimento compatíveis, como a [libasm](https://github.com/hexagonix/lib).
 
-O número de chamadas de sistema podem variar de acordo com os lançamentos de novas versões do Hexagon, visto que a tendência é que a maioria das funções não críticas sejam movidas para bibliotecas, não permanecendo no núcleo. Entretanto, com a evolução natural do kernel, outras funções e chamadas podem ser implementadas. 
+O número de chamadas de sistema podem variar de acordo com os lançamentos de novas versões do Hexagon, visto que a tendência é que a maioria das funções não críticas sejam movidas para bibliotecas, não permanecendo no núcleo. Entretanto, com a evolução natural do kernel, outras funções e chamadas podem ser implementadas.
 
-Neste momento, existem 68 chamadas de sistema que são expostas ao ambiente de usuário pelo Hexagon. Para isso, ele implementa um sistema de interrupção que é acessível por qualquer aplicativo através da interrupção 69h (`int 69h`). 
+Neste momento, existem [68 chamadas de sistema](SYSCALL.pt.md) que são expostas ao ambiente de usuário pelo Hexagon. Para isso, ele implementa um sistema de interrupção que é acessível por qualquer aplicativo através da interrupção 69h (`int 69h`).
 
 O formato de passagem de parâmetros para o manipulador de interrupção do Hexagon é um misto do observado para o implementado no MS-DOS e nos sistemas BSD. Parte dos parâmetros é passado na pilha (como em sistemas BSD), enquanto outros parâmetros são passados por meio dos registradores (como no MS-DOS), da seguinte forma:
 

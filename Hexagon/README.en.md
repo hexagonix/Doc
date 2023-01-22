@@ -35,7 +35,7 @@ Some features of Hexagon:
 - [x] Support for x86 processors (Pentium III or higher);
 - [x] Support for devices with 32 MB of RAM or more;
 - [x] User environment support;
-- [x] System call with 68 sophisticated functions accessed by the user environment;
+- [x] [System call](SYSCALL.en.md) with 68 sophisticated functions accessed by the user environment;
 - [x] Own executable binary format (HAPP);
 - [x] Unix-like;
 - [x] Completely written in x86 Assembly;
@@ -55,7 +55,7 @@ Other features being developed:
 
 - [ ] Search and enumeration of all PCI devices;
 - [ ] Preemptive multitasking.
-    
+
 > You can help implement the above development functions!
 
 <details title="License" align='left'>
@@ -127,11 +127,11 @@ In this session, you will find relevant documentation on how to develop Hexagon 
 
 <div align="justify">
 
-Hexagon implements a series of functions that are exposed to the user environment, so that they can be used by developers to build utilities that use the Hexagon API. This API is accessible via system calls, or more easily via compatible development libraries such as [libasm](https://github.com/hexagonix/lib).
+Hexagon implements a series of functions that are exposed to the user environment, so that they can be used by developers to build utilities that use the Hexagon API. This API is accessible via [system calls](SYSCALL.en.md), or more easily via compatible development libraries such as [libasm](https://github.com/hexagonix/lib).
 
 The number of system calls may vary with new Hexagon releases, as the tendency is for most non-critical functions to be moved to libraries, not staying in the core. However, with the natural evolution of the kernel, other functions and calls can be implemented.
 
-At this time, there are 68 system calls that are exposed to the user environment by Hexagon. To do so, it implements an interrupt system that is accessible by any application via interrupt 69h (`int 69h`).
+At this time, there are [68 system calls](SYSCALL.en.md) that are exposed to the user environment by Hexagon. To do so, it implements an interrupt system that is accessible by any application via interrupt 69h (`int 69h`).
 
 The format for passing parameters to the Hexagon interrupt handler is a mix of what is observed for what is implemented in MS-DOS and BSD systems. Some of the parameters are passed on the stack (as in BSD systems), while other parameters are passed through registers (as in MS-DOS), as follows:
 
