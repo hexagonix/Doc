@@ -47,7 +47,7 @@ Agora, uma tabela com as funções da chamada de sistema do Hexagonix. As funç�
 
 > Vale lembrar que uma tabela de funções, padronizada segundo as funções disponíveis no Version 7 UNIX, está sendo desenvolvida. Nesse caso, não existe o objetivo de pareamento de número de função junto ao UNIX, mas conformidade no nome das funções. Por exemplo, `alocarMemoria` se tornaria `free`, e `retornarVersao`, `uname`. No futuro, ambas as nomenclaturas estarão disponíveis para permitir a migração de aplicativos e utilitários. Venha novamente nesse arquivo mais tarde para checar atualizações.
 
-## Funções de gerenciamento de memória e processos
+### Funções de gerenciamento de memória e processos
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
@@ -60,7 +60,7 @@ Agora, uma tabela com as funções da chamada de sistema do Hexagonix. As funç�
 | 7 | obterProcessos | Gerenciamento de memória e processos | Sem entrada | ESI = Lista de processos; EAX = Número de processos em execução | Unix-like | Obtêm os processos em execução|
 | 8 | obterCodigoErro | Gerenciamento de memória e processos | Sem entrada | EAX = Código de erro (0 para sem erro)| Hexagonix | Obtêm o código retornado pelo último processo em execução|
 
-## Gerenciamento de arquivos e dispositivos
+### Gerenciamento de arquivos e dispositivos
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
@@ -73,7 +73,7 @@ Agora, uma tabela com as funções da chamada de sistema do Hexagonix. As funç�
 | 16 | arquivoExiste | Gerenciamento de arquivos e dispositivos | ESI = Nome do arquivo para checar |  EAX = Tamanho do arquivo; CF definido se o arquivo não existir | Hexagonix | Checar se um arquivo existe no volume |
 | 17 | obterDisco | Gerenciamento de arquivos e dispositivos | Sem entrada | ESI = Nome do dispositivo; EDI = Rótulo do volume utilizado | Hexagonix | Obtêm informações do disco montado em `/`|
 
-## Funções de gerenciamento de usuário e permissões
+### Funções de gerenciamento de usuário e permissões
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
@@ -92,14 +92,14 @@ Agora, uma tabela com as funções da chamada de sistema do Hexagonix. As funç�
 | 25 | causarAtraso | Serviços do Hexagon | ECX = Tempo em unidades de contagem para causar atraso | Sem saída | Hexagonix | Causa um atraso (delay) em operações |
 | 26 | instalarISR | Serviços do Hexagon | EAX = Número da interrupção; ESI = Ponteiro para o manipulador | Sem saída | Hexagonix | Instala rotina de serviço de interrupção|
 
-## Serviços de gerenciamento de energia
+### Serviços de gerenciamento de energia
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
 | 27 | reiniciarPC | Gerenciamento de energia | Sem entrada | Sem saída | Unix-like | Solicita o reinicio do dispositivo|
 | 28 | desligarPC | Gerenciamento de energia | Sem entrada | Sem saída | Unix-like | Solicita o desligamento do dispositivo|
 
-## Serviços de vídeos e gráficos
+### Serviços de vídeos e gráficos
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
@@ -119,7 +119,7 @@ Agora, uma tabela com as funções da chamada de sistema do Hexagonix. As funç�
 | 43 | obterResolucao | Serviços de vídeo e gráficos | Sem entrada | EAX = Número relativo a resolução à ser utilizada (1 = Resolução de 800x600 pixels; 2 - Resolução de 1024x768 pixels) | Hexagonix | Ontêm a resolução utilizadapelo console principal|
 | 44 | obterCursor | Serviços de vídeo e gráficos | Sem entrada | DL = Eixo X; DH = Eixo Y | Hexagonix | Obtêm a posição do cursor|
 
-## Serviços de manipulação de teclado PS/2
+### Serviços de manipulação de teclado PS/2
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
@@ -129,7 +129,7 @@ Agora, uma tabela com as funções da chamada de sistema do Hexagonix. As funç�
 | 48 | alterarFonte | Serviços de manipulação de teclado PS/2 | ESI = Ponteiro para o buffer contendo o nome do arquivo que contêm a fonte compatível com o Hexagonix | CF definido em caso de arquivo não encontrado ou incompatível | Hexagonix | Altera a fonte padrão de exibição do sistema|
 | 49 | alterarLeiaute | Serviços de manipulação de teclado PS/2 | ESI = Arquivo contendo um leiaute de teclado válido | CF definido em caso de arquivo não encontrado ou incompatível | Hexagonix | Altera o leiaute do teclado|
 
-## Serviços de manipulação de mouse PS/2
+### Serviços de manipulação de mouse PS/2
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
@@ -153,20 +153,20 @@ Agora, uma tabela com as funções da chamada de sistema do Hexagonix. As funç�
 | 62 | stringParaInt | Serviços de manipulação e conversão de dados | ESI = String | EAX = Inteiro; CF definido em caso de número inválido | Hexagonix | Converte um número string para número inteiro|
 | 63 | paraString | Serviços de manipulação e conversão de dados | EAX = Inteiro à ser convertido | ESI = Ponteiro para o buffer contendo a string | Hexagonix | Converte um número inteiro em uma string|
 
-## Serviços de saída de som
+### Serviços de saída de som
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
 | 64 | emitirSom | Serviços de saída de som | AX = Frequência a ser reproduzida | Sem saída | Hexagonix | Toca um tom no alto-falante interno do computador|
 | 65 | desligarSom | Serviços de saída de som| Sem entrada | Sem saída | Hexagonix |  Desliga o alto-falante interno do computador, interrompendo qualquer emissão de som em progresso|
 
-## Serviço de mensagens
+### Serviço de mensagens
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
 | 66 | enviarMensagemHexagon | Serviço de mensagens | ESI = Mensagem; EAX = Código de erro, se houver; EBX = Prioridade | Sem saída | Hexagonix | Envia uma mensagem de alta prioridade do Hexagon|
 
-## Serviços de relógio em tempo real
+### Serviços de relógio em tempo real
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
