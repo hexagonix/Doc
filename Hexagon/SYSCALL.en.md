@@ -245,7 +245,7 @@ VERSION equ "1.1" ;; Application version
 gapp:
 
 .hellomessage: db 10, 10, "This is a sample Hexagonix(R) graphical HAPP application!", 10, 10
-               db 10, 10, "Press any key to end this program...", 10, 10, 0
+               db 10, 10, "Press any key to exit...", 10, 10, 0
 
 .TITLE:  db "Welcome!", 0
 .FOOTER: db "[", VERSION, "] | Press any key to continue...", 0
