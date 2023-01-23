@@ -250,7 +250,7 @@ gapp:
 .TITLE:  db "Welcome!", 0
 .FOOTER: db "[", VERSION, "] | Press any key to continue...", 0
 
-.vd0: db "vd0", 0 ;; Main console
+.vd0:    db "vd0", 0 ;; Main console
 
 ;;************************************************************************************
 
