@@ -24,7 +24,7 @@
 
 # Chamadas de sistema do Hexagon
 
-O Hexagon fornece uma série de chamadas de sistema bem documentadas para o desenvolvimento de utilitários e aplicativos. As chamadas de sistema podem ser acessadas por meio da interrupção de software de número `69h`. Ao solicitar uma chamada de sistema, você também deve fornecer parâmetros que identifiquem a função escolhida, bem como os parâmetros exigidos para ela. Você pode encontrar os parâmetros exigidos ara elas na tabela abaixo.
+O Hexagon fornece uma série de chamadas de sistema bem documentadas para o desenvolvimento de utilitários e aplicativos. As chamadas de sistema podem ser acessadas por meio da interrupção de software de número `69h`. Ao solicitar uma chamada de sistema, você também deve fornecer parâmetros que identifiquem a função escolhida, bem como os parâmetros exigidos para ela. Você pode encontrar os parâmetros exigidos para elas na tabela abaixo.
 
 Um exemplo de como solicitar uma chamada de sistema:
 
@@ -44,6 +44,8 @@ Um exemplo de como solicitar uma chamada de sistema:
 ```
 
 Vá até a [tabela de funções](#tabela-de-funções-disponibilzadas-pelo-hexagon) disponibilizadas pelo Hexagon para obter mais informações sobre cada uma delas.
+
+O número e parâmetros de uma função na chamada de sistema são sempre mantidas conservados dentro de uma versão do Hexagonix. Desta forma, qualquer aplicativo desenvolvido mirando a versão H2 deverá funcionar dentro de todas as revisões e lançamentos da versão. Uma mudança poderia ocorrer, entretanto, em uma versão futura, como H3. A ABI e API do Hexagonix têm um ciclo de vida que se inspira no ciclo de vida destes no FreeBSD.
 
 </div>
 

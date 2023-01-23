@@ -47,6 +47,8 @@ An example of how to request a system call:
 
 Go to [table of functions](#table-of-functions-provides-by-hexagon) provided by Hexagon for more information about each one of them.
 
+The number and parameters of a function in the system call are always kept within a version of Hexagonix. In this way, any application developed targeting the H2 version should work within all revisions and releases of the version. A change could occur, however, in a future version such as H3. The Hexagonix ABI and API have a lifecycle that is modeled on their FreeBSD lifecycle.
+
 </div>
 
 <!-- Vai funcionar como <hr> -->
