@@ -262,7 +262,7 @@ entryPoint:
 
     mov esi, gapp.vd0
 
-    hx.syscall open ;; o=Open device
+    hx.syscall open ;; Open device
 
 ;; Okay, now let's continue. First, clear output and get information
 ;; of resolution
