@@ -193,6 +193,8 @@ Agora, uma tabela com as funções da chamada de sistema do Hexagonix. As funç�
 
 ## Exemplo de código
 
+Abaixo, temos um exemplo de aplicativo que utiliza uma série de funções disponibilizadas pelo Hexagon. Você verá funções para obter informações e limpar o console, abrir dispositivos para escrita, exibir conteúdo no console e finalizar um processo em execução. Você verá que alguns macros são utilizados. Esses macros podem ser encontrados e estudados diretamente no repositório da [libasm](https://github.com/hexagonix/lib/blob/main/fasm/hexagon.s). O exemplo abaixo foi escrito em `Assembly x86` com sintaxe Intel, visando o montador fasm (flat assembler).
+
 ```assembly
 format binary as "app" ;; Especifica o formato e extensao do arquivo
 

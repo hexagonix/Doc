@@ -197,6 +197,8 @@ Now, a table with the Hexagonix system call functions. Functions are sorted into
 
 ## Sample code
 
+Below, we have an example of an application that uses a series of functions provided by Hexagon. You'll see functions for getting information from and clearing the console, opening devices for writing, displaying content on the console, and terminating a running process. You will see that some macros are used. These macros can be found and studied directly in the [libasm](https://github.com/hexagonix/lib/blob/main/fasm/hexagon.s) repository. The example below was written in `x86 Assembly` with Intel syntax, targeting the fasm (flat assembler) assembler.
+
 ```assembly
 format binary as "app" ;; Specifies the file format and extension
 
@@ -251,7 +253,6 @@ gapp:
 .vd0: db "vd0", 0 ;; Main console
 
 ;;************************************************************************************
-
 
 entryPoint:
 
