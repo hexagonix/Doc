@@ -43,7 +43,7 @@ Um exemplo de como solicitar uma chamada de sistema:
 
 ```
 
-Vá até a [tabela de funções](#tabela-de-funções-disponibilzadas-pelo-hexagon) disponibilizadas pelo Hexagon para obter mais informações sobre cada uma delas.
+Vá até a [tabela de funções](#tabela-de-funções-disponibilzadas-pelo-hexagon) disponibilizadas pelo Hexagon para obter mais informações sobre cada uma delas. Você também pode visualizar um [exemplo de código](#exemplo-de-código) em `Assembly x86`.
 
 O número e parâmetros de uma função na chamada de sistema são sempre mantidas conservados dentro de uma versão do Hexagonix. Desta forma, qualquer aplicativo desenvolvido mirando a versão H2 deverá funcionar dentro de todas as revisões e lançamentos da versão. Uma mudança poderia ocorrer, entretanto, em uma versão futura, como H3. A ABI e API do Hexagonix têm um ciclo de vida que se inspira no ciclo de vida destes no FreeBSD.
 
@@ -186,5 +186,130 @@ Agora, uma tabela com as funções da chamada de sistema do Hexagonix. As funç�
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
 | 67 | retornarData | Serviços de relógio em tempo real | EAX = Dia, em ASCII;  EBX = Mês, em ASCII; ECX = Século, em ASCII; EDX = Ano, em ASCII  | Sem saída | Hexagonix | Retorna informações de relógio em tempo real em formato ASCII (String). Conversão para número pode ser necessária|
 | 68 | retornarHora | Serviços de relógio em tempo real | EAX = Hora, em ASCII; EBX = Minuto, em ASCII; ECX = Segundo, em ASCII | Sem saída | Hexagonix | Retorna informações de relógio em tempo real em formato ASCII (String). Conversão para número pode ser necessária|
+
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+
+## Exemplo de código
+
+```assembly
+format binary as "app" ;; Especifica o formato e extensao do arquivo
+
+use32
+
+cabecalhoAPP:
+
+.assinatura:      db "HAPP"    ;; Assinatura
+.arquitetura:     db 01h       ;; Arquitetura (i386 = 01h)
+.versaoMinima:    db 1         ;; Versao minima do Hexagon(R)
+.subversaoMinima: db 00        ;; Subversao minima do Hexagon(R)
+.pontoEntrada:    dd inicioAPP ;; Offset do ponto de entrada
+.tipoImagem:      db 01h       ;; Imagem executavel
+.reservado0:      dd 0         ;; Reservado (Dword)
+.reservado1:      db 0         ;; Reservado (Byte)
+.reservado2:      db 0         ;; Reservado (Byte)
+.reservado3:      db 0         ;; Reservado (Byte)
+.reservado4:      dd 0         ;; Reservado (Dword)
+.reservado5:      dd 0         ;; Reservado (Dword)
+.reservado6:      dd 0         ;; Reservado (Dword)
+.reservado7:      db 0         ;; Reservado (Byte)
+.reservado8:      dw 0         ;; Reservado (Word)
+.reservado9:      dw 0         ;; Reservado (Word)
+.reservado10:     dw 0         ;; Reservado (Word)
+
+;;*************************************************************
+
+include "hexagon.s" ;; Incluir as chamadas de sistema
+include "estelar.s" ;; Inclui funcoes de criacao de interfaces
+
+;;*************************************************************
+
+;; Variaveis e constantes
+
+;; Agora vamos criar uma instancia da estrutura de controle de interfaces
+;; Sintaxe: estrutura para o app (instancia), estrutura original
+
+Andromeda.Interface Andromeda.Estelar.Interface
+
+;; Dentro de gapp estarao todos os dados de texto que serao exibidos ao usuario.
+
+VERSAO equ "1.1" ;; Versao do aplicativo
+
+gapp:
+
+.mensagemOla: db 10, 10, "Este e um exemplo de aplicativo HAPP grafico do Hexagonix(R)!", 10, 10
+              db 10, 10, "Pressione qualquer tecla para finalizar este programa...", 10, 10, 0 
+
+.TITULO:      db "Seja bem-vindo!", 0
+.RODAPE:      db "[", VERSAO, "] | Pressione qualquer tecla para continuar...", 0                
+
+.vd0:         db "vd0", 0 ;; Console principal
+
+;;************************************************************************************
+
+inicioAPP:
+
+;; Vamos definir que queremos saida direta para vd0 (similar a tty0 no Linux)
+;; Isso nem sempre e necessario. Se o shell foi utilizado para chamar o app, 
+;; vd0 ja esta aberto. A menos que seja chamado por um app que esteja usando, por
+;; exemplo, vd1. vd0 é o console principal, enquanto vd1-vdn são consoles virtuais.
+
+    mov esi, gapp.vd0
+
+    hx.syscall abrir ;; Abrir dispositivo
+
+;; Pronto, agora vamos continuar. Primeiro, limpar a saida e obter informacoes
+;; de resolucao
+
+    hx.syscall limparTela
+
+    hx.syscall obterInfoTela
+    
+    mov byte[Andromeda.Interface.numColunas], bl
+    mov byte[Andromeda.Interface.numLinhas], bh
+
+;; Vamos salvar o esquema de cores atual do Sistema, para consistencia
+;; Isso e importante para definir se estamos em modo claro ou escuro de
+;; interface
+
+    hx.syscall obterCor
+
+    mov dword[Andromeda.Interface.corFonte], eax
+    mov dword[Andromeda.Interface.corFundo], ebx
+
+;; Vamos criar a estrutura de interface com titulo e rodape
+
+;; Formato de recebimento de parametros da funcao de criar interfaces:
+;; Vale ressaltar que os parametros devem estar na ordem!
+;;
+;; titulo, rodape, cor do titulo, cor do rodape, cor do texto no titulo,
+;; cor do texto no rodape, cor do texto inicial do app, cor de fundo inicial
+;;
+;; Voce pode utilizar '\' para quebrar a linha, caso esteja muito grande, como
+;; abaixo
+
+    Andromeda.Estelar.criarInterface gapp.TITULO, gapp.RODAPE, VERMELHO_TIJOLO,\
+    VERMELHO_TIJOLO, BRANCO_ANDROMEDA, BRANCO_ANDROMEDA,\
+    [Andromeda.Interface.corFonte], [Andromeda.Interface.corFundo]
+
+;; Agora vamos imprimir na interface uma mensagem simples
+
+    mov esi, gapp.mensagemOla
+
+    imprimirString
+
+;; Vamos aguardar interacao do usuario para finalizar o app
+
+    hx.syscall aguardarTeclado
+
+;; Interagiu? Ok, vamos finalizar o app
+
+;; Formato:
+;;
+;; Codigo de erro (neste caso, 0), tipo de saida (neste caso, 0)
+
+    Andromeda.Estelar.finalizarProcessoGrafico 0, 0
+```
 
 </div>

@@ -45,7 +45,7 @@ An example of how to request a system call:
 
 ```
 
-Go to [table of functions](#table-of-functions-provides-by-hexagon) provided by Hexagon for more information about each one of them.
+Go to [table of functions](#table-of-functions-provides-by-hexagon) provided by Hexagon for more information about each one of them. You can also view a [sample code](#sample-code) in `Assembly x86`.
 
 The number and parameters of a function in the system call are always kept within a version of Hexagonix. In this way, any application developed targeting the H2 version should work within all revisions and releases of the version. A change could occur, however, in a future version such as H3. The Hexagonix ABI and API have a lifecycle that is modeled on their FreeBSD lifecycle.
 
@@ -191,4 +191,129 @@ Now, a table with the Hexagonix system call functions. Functions are sorted into
 | 67 | returnDate | Real Time Clock Services | EAX = Day, in ASCII; EBX = Month, in ASCII; ECX = Century, in ASCII; EDX = Year, in ASCII | No output | Hexagonix | Returns real-time clock information in ASCII (String) format. Conversion to number may be required|
 | 68 | returnTime | Real Time Clock Services | EAX = Time, in ASCII; EBX = Minute, in ASCII; ECX = Second, in ASCII | No output | Hexagonix | Returns real-time clock information in ASCII (String) format. Conversion to number may be required|
 
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+
+## Sample code
+
+```assembly
+format binary as "app" ;; Specifies the file format and extension
+
+use32
+
+headerAPP:
+
+.signature: db "HAPP"       ;; Signature
+.architecture: db 01h       ;; Architecture (i386 = 01h)
+.minimalVersion: db 1       ;; Minimal version of Hexagon(R)
+.minimalSubversion: db 00   ;; Minimal subversion of Hexagon(R)
+.entryPoint: dd inicioAPP   ;; Entry point offset
+.imageType: db 01h          ;; Executable image
+.reserved0: dd 0            ;; Reserved (Dword)
+.reserved1: db 0            ;; Reserved (Byte)
+.reserved2: db 0            ;; Reserved (Byte)
+.reserved3: db 0            ;; Reserved (Byte)
+.reserved4: dd 0            ;; Reserved (Dword)
+.reserved5: dd 0            ;; Reserved (Dword)
+.reserved6: dd 0            ;; Reserved (Dword)
+.reserved7: db 0            ;; Reserved (Byte)
+.reserved8: dw 0            ;; Reserved (Word)
+.reserved9: dw 0            ;; Reserved (Word)
+.reserved10: dw 0           ;; Reserved (Word)
+
+;;*************************************************************
+
+include "hexagon.s" ;; Include system calls
+include "stellar.s" ;; Includes interface creation functions
+
+;;*************************************************************
+
+;; Variables and constants
+
+;; Now let's create an instance of the interface control structure
+;; Syntax: structure for the app (instance), original structure
+
+Andromeda.Interface Andromeda.Stellar.Interface
+
+;; Inside gapp will be all the text data that will be displayed to the user.
+
+VERSION equ "1.1" ;; Application version
+
+gapp:
+
+.hellomessage: db 10, 10, "This is a sample Hexagonix(R) graphical HAPP application!", 10, 10
+               db 10, 10, "Press any key to end this program...", 10, 10, 0
+
+.TITLE:  db "Welcome!", 0
+.FOOTER: db "[", VERSION, "] | Press any key to continue...", 0
+
+.vd0: db "vd0", 0 ;; Main console
+
+;;************************************************************************************
+
+
+entryPoint:
+
+;; Let's define that we want direct output to vd0 (similar to tty0 on Linux)
+;; This is not always necessary. If the shell was used to call the app,
+;; vd0 is already open. Unless called by an app you are using, for example,
+;; vd1. vd0 is the main console, while vd1-vdn are virtual consoles.
+
+    mov esi, gapp.vd0
+
+    hx.syscall open ;; o=Open device
+
+;; Okay, now let's continue. First, clear output and get information
+;; of resolution
+
+    hx.syscall clearScreen
+
+    hx.syscall getScreenInfo
+    
+    mov byte[Andromeda.Interface.numColumns], bl
+    mov byte[Andromeda.Interface.numLines], bh
+
+;; Let's save the current system color scheme, for consistency
+;; This is important to define if we are in light or dark mode of
+;; interface
+
+    hx.syscall getColor
+
+    mov dword[Andromeda.Interface.corFonte], eax
+    mov dword[Andromeda.Interface.corFundo], ebx
+
+;; Let's create the interface structure with title and footer
+
+;; Format for receiving parameters from the function to create interfaces:
+;; Note that the parameters must be in order!
+;;
+;; title, footer, title color, footer color, text color in title,
+;; footer text color, initial app text color, initial background color
+;;
+;; You can use '\' to break the line if it is too long, like
+;; below
+
+    Andromeda.Estelar.criarInterface gapp.TITLE, gapp.FOOTER, BRICK_RED,\
+    RED_BRICK, WHITE_ANDROMEDA, WHITE_ANDROMEDA,\
+    [Andromeda.Interface.corFonte], [Andromeda.Interface.corFundo]
+
+;; Now let's print a simple message on the interface
+
+    mov esi, gapp.hellomessage
+
+    printString
+
+;; Let's wait for user interaction to finish the app
+
+    hx.syscall awaitKeyboard
+
+;; Interacted? Ok, let's finish the app
+
+;; Format:
+;;
+;; Error code (in this case 0), output type (in this case 0)
+
+    Andromeda.Estelar.finalizarProcessoGrafico 0, 0
+```
 </div>
