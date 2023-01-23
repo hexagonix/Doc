@@ -271,8 +271,8 @@ entryPoint:
 
     hx.syscall getScreenInfo
     
-    mov byte[Andromeda.Interface.numColumns], bl
-    mov byte[Andromeda.Interface.numLines], bh
+    mov byte[Andromeda.Interface.numColunas], bl
+    mov byte[Andromeda.Interface.numLinhas], bh
 
 ;; Let's save the current system color scheme, for consistency
 ;; This is important to define if we are in light or dark mode of
