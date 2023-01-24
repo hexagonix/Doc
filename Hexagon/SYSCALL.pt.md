@@ -59,7 +59,7 @@ O número e parâmetros de uma função na chamada de sistema são sempre mantid
 
 Agora, uma tabela com as funções da chamada de sistema do Hexagonix. As funções estão classificadas em categorias. As funções também foram classificadas em `Unix-like`, quando existem versões análogas no UNIX ou em sistema semelhantes, e `Hexagonix`, quando a função implementada não tem uma versão semelhante em outros sistemas UNIX ou Unix-like.
 
-> Vale lembrar que uma tabela de funções, padronizada segundo as funções disponíveis no Version 7 UNIX, está sendo desenvolvida. Nesse caso, não existe o objetivo de pareamento de número de função junto ao UNIX, mas conformidade no nome das funções. Por exemplo, `alocarMemoria` se tornaria `free`, e `retornarVersao`, `uname`. No futuro, ambas as nomenclaturas estarão disponíveis para permitir a migração de aplicativos e utilitários. Venha novamente nesse arquivo mais tarde para checar atualizações.
+> Vale lembrar que uma tabela de funções, padronizada segundo as funções disponíveis no Version 7 UNIX, está sendo desenvolvida. Nesse caso, não existe o objetivo de pareamento de número de função junto ao UNIX, mas conformidade no nome das funções. Por exemplo, `alocarMemoria` se tornaria `malloc`, e `retornarVersao`, `uname`. No futuro, ambas as nomenclaturas estarão disponíveis para permitir a migração de aplicativos e utilitários. Venha novamente nesse arquivo mais tarde para checar atualizações.
 
 ### Funções de gerenciamento de memória e processos
 
