@@ -92,6 +92,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 </details>
 
+Hexagonix is ​​not intended to build a production system, but rather a simple, well-documented system with easy-to-understand interfaces that can be used for educational purposes. It also aims at researching and implementing a modern operating system purely in x86 Assembly. For more complex, complete and professional systems, visit projects like [MenuetOS](https://www.menuetos.net/) or [KolibriOS](https://kolibrios.org/en/), also developed in x86 Assembly.
+
 <!-- Vai funcionar como <hr> -->
 
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
@@ -386,6 +388,8 @@ In addition to the projects mentioned above, Hexagonix is ​​only possible th
 
 * [Version 7 UNIX](https://github.com/dspinellis/unix-history-repo/tree/Research-V7-Snapshot-Development)
 * [FreeBSD](https://www.freebsd.org/)
+* [MenuetOS](http://www.menuetos.net/)
+* [KolibriOS](https://kolibrios.org/en/)
 * [Linux 0.1.1](https://kernel.org)
 * [XNU/Darwin](https://github.com/apple/darwin-xnu)
 * MS-DOS, with code available [here](https://github.com/microsoft/MS-DOS)
