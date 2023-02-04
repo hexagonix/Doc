@@ -378,6 +378,8 @@ Neste momento, o sistema está disponível em inglês (com alguns componentes ai
 
 <div align="justify">
 
+<!-- Melhorias necessárias  -->
+
 Vários projetos auxiliaram no desenvolvimento do Hexagonix, seja fornecendo novas ideias de design que fogem da organização tradicional de um sistema operacional, seja fornecendo código bem documentado que permitia entender o funcionamento de certas partes de um sistema operacional, seja contribuindo com exemplos de código que mais tarde vieram a inspirar funções que foram escritas exclusivamente para o Hexagonix (principalmente o código do kernel). O código destes projetos de domínio público, escritos em Assembly x86, possibilitaram que o funcionamento de determinados componentes do computador fossem melhor compreendidos, abrindo portas para que códigos autorais fossem escritos com base no estudo e reimplementação do código destes projetos. Vale ressaltar que os projetos abaixo foram liberados pelos seus desenvolvedores originais em domínio público. São eles:
 
 * [Snowdrop OS](http://www.sebastianmihai.com/snowdrop/), que me inspirou a escrever várias rotinas de controle de hardware e outras funções 16-bit disponíveis no HBoot. O código deste sistema foi liberado em domínio público. Este sistema permanece em desenvolvimento. Acesse o [site](http://www.sebastianmihai.com/snowdrop/) para obter imagens de disco e os arquivos-fonte do sistema.
