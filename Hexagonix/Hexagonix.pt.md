@@ -380,7 +380,7 @@ Neste momento, o sistema está disponível em inglês (com alguns componentes ai
 
 <!-- Melhorias necessárias  -->
 
-Diversos outros projetos foram importantes para perminir o desenvolvimento do Hexagonix. Esses projetos contribuiram com ideias e conceitos de design, com código bem documentado que permite o entendimento de diversas estruturas de um sistema operacional ou ainda contribuiram com códigos que inspiraram o funcionamento de diversas funções hoje disponíveis no Hexagonix (tanto código do kernel como do ambiente de usuário).
+Diversos outros projetos foram importantes para permitir o desenvolvimento do Hexagonix. Esses projetos contribuiram com ideias e conceitos de design, com código bem documentado que permite o entendimento de diversas estruturas de um sistema operacional ou ainda contribuiram com códigos que inspiraram o funcionamento de diversas funções hoje disponíveis no Hexagonix (tanto código do kernel como do ambiente de usuário).
 
 Dentre estes, dois projetos de domínio público, escritos em Assembly x86, possibilitaram que o funcionamento de determinados componentes do computador fossem melhor compreendidos, abrindo portas para que códigos autorais que hoje compõem o Hexagonix fossem escritos com base no estudo e reimplementação do código dos projetos.
 
