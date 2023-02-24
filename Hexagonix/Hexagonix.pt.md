@@ -24,7 +24,7 @@
 
 <div align="center">
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/HexagonixSourceHeader.png" width="500" height="250">
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/HexagonixSourceHeader.png" width="800" height="300">
 
 </div>
 
