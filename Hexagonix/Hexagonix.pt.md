@@ -24,9 +24,9 @@
 
 <table align="center">
 <tr>
-<td>[Componentes](#componentes-do-sistema)</td>
-<td>[Screenshots](#🌙-capturas-de-tela)</td>
-<td>[Download](README.pt.md)</td>
+<td> [Componentes](#componentes-do-sistema) </td>
+<td> [Screenshots](#🌙-capturas-de-tela) </td>
+<td> [Download](README.pt.md) </td>
 </tr>
 </table>
 
