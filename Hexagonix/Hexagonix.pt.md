@@ -24,6 +24,7 @@
 
 <div align="center">
 
+<p>
 88                                                                                88
 88                                                                                ""
 88
@@ -34,6 +35,7 @@
 88       88  `"Pbbd8"' 8P'     `P8 `"8bbdP"P8  `"PbbdP"P8  `"PbbdP"'  88       88 88 8P'     `P8  
                                                aa,    ,88
                                                 "P8bbdP"
+</p>
 
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix1.png" width="500" height="400">
 
