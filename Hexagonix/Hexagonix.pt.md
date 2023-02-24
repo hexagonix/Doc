@@ -24,9 +24,9 @@
 
 <table align="center">
 <tr>
-<td> [Componentes](#componentes-do-sistema) </td>
-<td> [Screenshots](#🌙-capturas-de-tela) </td>
-<td> [Download](README.pt.md) </td>
+<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.pt.md#componentes-do-sistema">Componentes</a></td>
+<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.pt.md#-capturas-de-tela">Screenshots</a></td>
+<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/README.pt.md">Download</a></td>
 </tr>
 </table>
 
