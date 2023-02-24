@@ -20,8 +20,6 @@
 
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
-# O sistema operacional Hexagonix
-
 <table align="center">
 <tr>
 <td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.pt.md#componentes-do-sistema">Componentes</a></td>
@@ -31,6 +29,8 @@
 <td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/README.pt.md">Download</a></td>
 </tr>
 </table>
+
+# O sistema operacional Hexagonix
 
 <div align="center">
 
