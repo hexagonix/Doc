@@ -62,7 +62,7 @@ Algumas características do Hexagonix:
 
 <div align="center">
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/HexagonixSourceHeader.png" width="400" height="200">
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/HexagonixSourceHeader.png">
 
 </div>
 
