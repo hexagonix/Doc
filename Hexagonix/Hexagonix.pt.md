@@ -22,6 +22,14 @@
 
 # O sistema operacional Hexagonix
 
+<table align="center">
+<tr>
+<td>[Componentes](#componentes-do-sistema)</td>
+<td>[Screenshots](#🌙-capturas-de-tela)</td>
+<td>[Download](README.pt.md)</td>
+</tr>
+</table>
+
 <div align="center">
 
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/HexagonixSourceHeader.png">
