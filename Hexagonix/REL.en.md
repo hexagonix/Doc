@@ -323,4 +323,27 @@ Consolidation of development versions, with:
 
 </details>
 
+<details title="Hexagonix H2 Release 2" align='left'>
+<br>
+<summary align='left'>Hexagonix H2 Release 2</summary>
+
+- Hexagon kernel v1.3.2;
+- HBoot v0.7;
+- Improvements in Unix utilities and Hexagonix-Andromeda applications;
+- Improvements in the logind daemon;
+- New first use experience (OOBE - Out of Box Experience);
+- Avatar font renamed to Aurora;
+- Improvements in the messages of the system utilities, especially in error messages;
+- Improved manual pages for all utilities;
+- Improved Hexagon online documentation, including system calls;
+- Version name change from "VitaNova" to "Darwin";
+- Change in the formatting of the init services declaration;
+- Translation of messages from Unix utilities to English completed;
+- Improvements in the settings utility (Config);
+- Assembly development libraries version 0.10.1;
+
+- [x] Release date: 28/02/2023 (dd/mm/yyyy)
+
+</details>
+
 </details>
