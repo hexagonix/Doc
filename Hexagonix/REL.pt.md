@@ -328,7 +328,7 @@ Consolidação das versões de desenvolvimento, com:
 <summary align='left'>Hexagonix H2 Release 2</summary>
 
 - Kernel Hexagon v1.3.2;
-- HBoot v0.7;
+- HBoot v0.7.1;
 - Melhorias em utilitários Unix e Hexagonix-Andromeda;
 - Melhorias no daemon logind;
 - Nova experiência de primeiro uso (OOBE - Out of Box Experience);
