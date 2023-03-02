@@ -274,9 +274,9 @@ Translation of messages from Unix utilities into English.
 
 </details>
 
-<details title="Hexagonix H2-RELEASE" align='left'>
+<details title="Hexagonix H2 Release 1" align='left'>
 <br>
-<summary align='left'>Hexagonix H2-RELEASE</summary>
+<summary align='left'>Hexagonix H2 Release 1</summary>
 
 Consolidation of development versions, with:
 
