@@ -25,8 +25,8 @@
 <td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.en.md#system-components">Components</a></td>
 <td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.en.md#system-development-libraries">Libraries</a></td>
 <td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.en.md#-screenshots">Screenshots</a></td>
-<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.pt.md#contribuir-e-reportar-erros">Contribute</a></td>
-<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.en.md#contribute-and-report-bugs">More information</a></td>
+<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.en.md#contribute-and-report-bugs">Contribute</a></td>
+<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.en.md#other-information">More information</a></td>
 <td><a href="https://github.com/hexagonix/src">Source code</a></td>
 <td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/README.pt.md">Download</a></td>
 </tr>
