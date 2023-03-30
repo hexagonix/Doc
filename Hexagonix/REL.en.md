@@ -348,3 +348,25 @@ Consolidation of development versions, with:
 </details>
 
 </details>
+
+<details title="Development projects" align='left'>
+<br>
+<summary align='left'><strong>Development projects</strong></summary>
+
+<details title="Project Raava" align='left'>
+<br>
+<summary align='left'>Project Raava</summary>
+
+<div align="justify">
+
+Project Raava is a fork of Hexagonix H2 Release 2 (CURRENT branch), which aims to develop the next stable release of the system, version H3 (no release schedule defined - the release may not occur in 2023). For this, the system starts from:
+
+- Hexagon v1.3.6 (version 1.3 revision 6);
+- Base of Hexagonix H2 Release 2 (H2R2): H2-CURRENT+290320231532;
+
+</div>
+
+</details>
+
+</details>
+
