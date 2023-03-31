@@ -349,10 +349,6 @@ Consolidação das versões de desenvolvimento, com:
 
 </details>
 
-<details title="Projetos de desenvolvimento" align='left'>
-<br>
-<summary align='left'><strong>Projetos de desenvolvimento</strong></summary>
-
 <details title="Projeto Raava" align='left'>
 <br>
 <summary align='left'>Projeto Raava</summary>
@@ -365,7 +361,5 @@ O Projeto Raava é um fork do Hexagonix H2 Release 2 (ramo CURRENT), que objetiv
 - Base do Hexagonix H2 Release 2 (H2R2): H2-CURRENT+290320231532;
 
 </div>
-
-</details>
 
 </details>

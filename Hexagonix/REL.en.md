@@ -349,10 +349,6 @@ Consolidation of development versions, with:
 
 </details>
 
-<details title="Development projects" align='left'>
-<br>
-<summary align='left'><strong>Development projects</strong></summary>
-
 <details title="Project Raava" align='left'>
 <br>
 <summary align='left'>Project Raava</summary>
@@ -367,6 +363,3 @@ Project Raava is a fork of Hexagonix H2 Release 2 (CURRENT branch), which aims t
 </div>
 
 </details>
-
-</details>
-
