@@ -42,7 +42,7 @@
 
 <div align="justify">
 
-Você pode obter as versões mais recentes do Hexagonix e do Andromeda acessando a área de [lançamentos](https://github.com/hexagonix/hexagonix/releases).
+Você pode obter as versões estáveis mais recentes do Hexagonix acessando a área de [lançamentos](https://github.com/hexagonix/hexagonix/releases).
 
 </div>
 
