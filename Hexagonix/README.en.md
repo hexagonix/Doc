@@ -250,7 +250,7 @@ Note that system performance may vary depending on the machine being tested. Add
 
 <div align="justify">
 
-When starting the system, you will be asked to enter a username and password. For the first use, use
+When starting the system, you will be asked to enter a username and password. For the first use, use:
 
 ```
 User: root

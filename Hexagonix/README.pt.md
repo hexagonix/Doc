@@ -250,7 +250,7 @@ Vale ressaltar que o desempenho do sistema pode variar de acordo com a máquina 
 
 <div align="justify">
 
-Ao iniciar o sistema, você deverá introduzir um nome de usuário e senha. Para o primeiro uso, utilize
+Ao iniciar o sistema, você deverá introduzir um nome de usuário e senha. Para o primeiro uso, utilize:
 
 ```
 Usuário: root
@@ -264,7 +264,7 @@ Usuário: jack
 Senha: jack
 ```
 
-Você pode adicionar outro usuário alterando o arquivo `USUARIO.UNX` (Hexagonix H1) or `passwd` (Hexagonix H2 e versões posteriores) na raiz do disco. Lembre-se de não remover o usuário raiz (`root`). Isso pode tornar o sistema inoperante de forma permanente.
+Você pode adicionar outro usuário alterando o arquivo `USUARIO.UNX` (Hexagonix H1) ou `passwd` (Hexagonix H2 e versões posteriores) na raiz do disco. Lembre-se de não remover o usuário raiz (`root`). Isso pode tornar o sistema inoperante de forma permanente.
 
 </div>
 
