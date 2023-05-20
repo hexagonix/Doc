@@ -257,14 +257,14 @@ Usuário: root
 Senha: root
 ```
 
-or
+ou
 
 ```
 Usuário: jack
 Senha: jack
 ```
 
-Você pode adicionar outro usuário alterando o arquivo `USUARIO.UNX` (Hexagonix H1) or `passwd`(Hexagonix H2 e versões posteriores) na raiz do disco. Lembre-se de não remover o usuário raiz (`root`). Isso pode tornar o sistema inoperante de forma permanente.
+Você pode adicionar outro usuário alterando o arquivo `USUARIO.UNX` (Hexagonix H1) or `passwd` (Hexagonix H2 e versões posteriores) na raiz do disco. Lembre-se de não remover o usuário raiz (`root`). Isso pode tornar o sistema inoperante de forma permanente.
 
 </div>
 
