@@ -40,7 +40,13 @@ Todos os direitos reservados.
 
 # Starting point
 
-<div align="justify")
+<div align="center">
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/HexagonixSourceHeader.png">
+
+</div>
+
+<div align="justify">
      
 First of all, read the license below regarding the use and redistribution of Hexagonix (binaries and source code).
 
@@ -251,7 +257,14 @@ User: root
 Password: root
 ```
 
-You can add another user by changing the `USUARIO.UNX` file at the root of the disk. Remember not to remove the root user (`root`). This can make the system permanently inoperable.
+or 
+
+```
+User: jack
+Password: jack
+```
+
+You can add another user by changing the `USUARIO.UNX` (Hexagonix H1) or `passwd`(Hexagonix H2 and later versions) file at the root of the disk. Remember not to remove the root user (`root`). This can make the system permanently inoperable.
 
 </div>
 

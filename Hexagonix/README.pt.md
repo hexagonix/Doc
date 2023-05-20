@@ -40,7 +40,13 @@ Todos os direitos reservados.
 
 # Ponto de partida
 
-<div align="justify")
+<div align="center">
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/HexagonixSourceHeader.png">
+
+</div>
+
+<div align="justify">
      
 Antes de mais nada, leia a licença abaixo, relativa ao uso e redistribuição do Hexagonix (binários e código-fonte).
 
@@ -251,7 +257,14 @@ Usuário: root
 Senha: root
 ```
 
-Você pode adicionar outro usuário alterando o arquivo `USUARIO.UNX` na raiz do disco. Lembre-se de não remover o usuário raiz (`root`). Isso pode tornar o sistema inoperante de forma permanente.
+or
+
+```
+Usuário: jack
+Senha: jack
+```
+
+Você pode adicionar outro usuário alterando o arquivo `USUARIO.UNX` (Hexagonix H1) or `passwd`(Hexagonix H2 e versões posteriores) na raiz do disco. Lembre-se de não remover o usuário raiz (`root`). Isso pode tornar o sistema inoperante de forma permanente.
 
 </div>
 
