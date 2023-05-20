@@ -34,6 +34,12 @@
 
 # Lançamentos do Hexagonix
 
+<div align="center">
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/HexagonixSourceHeader.png">
+
+</div>
+
 <div align="justify">
 
 Você pode obter as versões mais recentes do Hexagonix e do Andromeda acessando a área de [lançamentos](https://github.com/hexagonix/hexagonix/releases).
@@ -359,6 +365,7 @@ O Projeto Raava é um fork do Hexagonix H2 Release 2 (ramo CURRENT), que objetiv
 
 - Hexagon v1.3.6 (versão 1.3 revisão 6);
 - Base do Hexagonix H2 Release 2 (H2R2): H2-CURRENT+290320231532;
+- Hexagon v1.3.7 (versão 1.3 revisão 7) - 20/05/2023;
 
 </div>
 
