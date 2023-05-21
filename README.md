@@ -24,8 +24,8 @@
  
 <table align="center">
 <tr>
-<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.pt.md#componentes-do-sistema">:uk: English</a></td>
-<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.pt.md#bibliotecas-de-desenvolvimento-do-sistema">:brazil: Português (Brasil)</a></td>
+<td><a href="https://github.com/hexagonix/Doc#uk-english">:uk: English</a></td>
+<td><a href="https://github.com/hexagonix/Doc#brazil-portugu%C3%AAs-brasil">:brazil: Português (Brasil)</a></td>
 </tr>
 </table>
 
@@ -40,7 +40,7 @@
 |[HBoot](https://github.com/hexagonix/Doc/tree/main/HBoot/README.en.md)|HBoot: The Hexagonix boot loader|
 |[Hexagon](https://github.com/hexagonix/Doc/tree/main/Hexagon/README.en.md)|Hexagon, the Hexagonix kernel|
 |[Unix-Apps](https://github.com/hexagonix/Doc/tree/main/Unix-Apps/README.en.md)|Hexagonix Unix-like utilities|
-|[Andromeda-Apps](https://github.com/hexagonix/Doc/tree/main/Andromeda-Apps/Components of  of E.en.md)|Hexagonix graphic utilities|
+|[Andromeda-Apps](https://github.com/hexagonix/Doc/tree/main/Andromeda-Apps/README.en.md)|Hexagonix graphic utilities|
 |[fnt](https://github.com/hexagonix/Doc/tree/main/fnt/README.en.md)|Hexagonix graphic fonts|
 
 #### Technical description
