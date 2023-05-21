@@ -33,6 +33,8 @@
 
 ## :uk: English
 
+Now select the document relating to system components or technical and development information:
+
 #### Hexagonix components
 
 | Component name | Description |
@@ -59,6 +61,8 @@
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
 ## :brazil: Português (Brasil)
+
+Selecione agora o documento relativo a componentes do sistema ou a informações técnicas e de desenvolvimento:
 
 #### Componentes do Hexagonix
 
