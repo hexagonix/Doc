@@ -35,7 +35,7 @@
 
 #### Hexagonix components
 
-| Component Name | Description |
+| Component name | Description |
 |:------------------:|:----------:|
 |[HBoot](https://github.com/hexagonix/Doc/tree/main/HBoot/README.en.md)|HBoot: The Hexagonix boot loader|
 |[Hexagon](https://github.com/hexagonix/Doc/tree/main/Hexagon/README.en.md)|Hexagon, the Hexagonix kernel|
@@ -45,14 +45,14 @@
 
 #### Technical description
 
-| Component Name | Description |
+| Document name | Description |
 |:------------------:|:----------:|
 |[System Calls](https://github.com/hexagonix/Doc/tree/main/Hexagon/SYSCALL.en.md)|Hexagon System Calls documentation|
 |[Doc-Hexagonix](https://github.com/hexagonix/Doc/tree/main/Hexagonix/Hexagonix.en.md)|Hexagonix documentation|
 
 #### System build
 
-| Component Name | Description |
+| Document name | Description |
 |:------------------:|:----------:|
 |[Build](https://github.com/hexagonix/build/blob/main/README.en.md)|System Build|
 
@@ -71,13 +71,13 @@
 |[fnt](https://github.com/hexagonix/Doc/tree/main/fnt/README.pt.md)|Fontes gráficas do Hexagonix|
 #### Descrição técnica do sistema
 
-| Nome do componente | Descrição |
+| Nome do documento | Descrição |
 |:------------------:|:---------:|
 |[Chamadas de sistema](https://github.com/hexagonix/Doc/tree/main/Hexagon/SYSCALL.pt.md)|Documentação das chamadas de sistema do Hexagon|
 |[Doc-Hexagonix](https://github.com/hexagonix/Doc/tree/main/Hexagonix/Hexagonix.pt.md)|Documentação do Hexagonix|
 
 #### Construção do sistema
 
-| Nome do componente | Descrição |
+| Nome do documento | Descrição |
 |:------------------:|:---------:|
 |[Build](https://github.com/hexagonix/build/blob/main/README.pt.md)|Construção do sistema|
