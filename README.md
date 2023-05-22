@@ -45,19 +45,19 @@ Now select the document relating to system components or technical and developme
 |[Andromeda-Apps](https://github.com/hexagonix/Doc/tree/main/Andromeda-Apps/README.en.md)|Hexagonix graphic utilities|
 |[fnt](https://github.com/hexagonix/Doc/tree/main/fnt/README.en.md)|Hexagonix graphic fonts|
 
+#### Building the system
+
+| Document name | Description |
+|:-------------:|:-----------:|
+|[Build](https://github.com/hexagonix/build/blob/main/README.en.md)|System Build|
+|[HX](https://github.com/hexagonix/Doc/tree/main/HX/HX.en.md)|Documentation of the `hx` tool and its modules|
+
 #### Technical description
 
 | Document name | Description |
 |:-------------:|:-----------:|
 |[System Calls](https://github.com/hexagonix/Doc/tree/main/Hexagon/SYSCALL.en.md)|Hexagon System Calls documentation|
 |[Doc-Hexagonix](https://github.com/hexagonix/Doc/tree/main/Hexagonix/Hexagonix.en.md)|Hexagonix documentation|
-
-#### System build
-
-| Document name | Description |
-|:-------------:|:-----------:|
-|[Build](https://github.com/hexagonix/build/blob/main/README.en.md)|System Build|
-|[HX](https://github.com/hexagonix/Doc/tree/main/HX/HX.en.md)|Documentation of the `hx` tool and its modules|
 
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
@@ -75,16 +75,16 @@ Selecione agora o documento relativo a componentes do sistema ou a informações
 |[Andromeda-Apps](https://github.com/hexagonix/Doc/tree/main/Andromeda-Apps/README.pt.md)|Utilitários gráficos do Hexagonix|
 |[fnt](https://github.com/hexagonix/Doc/tree/main/fnt/README.pt.md)|Fontes gráficas do Hexagonix|
 
-#### Descrição técnica do sistema
-
-| Nome do documento | Descrição |
-|:-----------------:|:---------:|
-|[Chamadas de sistema](https://github.com/hexagonix/Doc/tree/main/Hexagon/SYSCALL.pt.md)|Documentação das chamadas de sistema do Hexagon|
-|[Doc-Hexagonix](https://github.com/hexagonix/Doc/tree/main/Hexagonix/Hexagonix.pt.md)|Documentação do Hexagonix|
-
-#### Construção do sistema
+#### Construindo o sistema
 
 | Nome do documento | Descrição |
 |:-----------------:|:---------:|
 |[Build](https://github.com/hexagonix/build/blob/main/README.pt.md)|Construção do sistema|
 |[HX](https://github.com/hexagonix/Doc/tree/main/HX/HX.pt.md)|Documentação da ferramenta `hx` e de seus módulos|
+
+#### Descrição técnica
+
+| Nome do documento | Descrição |
+|:-----------------:|:---------:|
+|[Chamadas de sistema](https://github.com/hexagonix/Doc/tree/main/Hexagon/SYSCALL.pt.md)|Documentação das chamadas de sistema do Hexagon|
+|[Doc-Hexagonix](https://github.com/hexagonix/Doc/tree/main/Hexagonix/Hexagonix.pt.md)|Documentação do Hexagonix|
