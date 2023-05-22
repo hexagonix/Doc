@@ -233,7 +233,7 @@ Remembering that you must use a version/edition of qemu that can run software wr
 
 You must use Linux/macOS or some tool available for Windows that allows you to burn this image to disk.
 
-On `Linux/BSD/macOS/Unix`, use the line below:
+On `Linux/BSD/macOS/UNIX`, use the line below:
 
 ```
 dd if=hexagonix.img of=/dev/unit
