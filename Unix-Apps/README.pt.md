@@ -28,6 +28,16 @@
 
 </div>
 
+<div align="justify">
+
+Um dos componentes mais importantes do Hexagonix é o Unix-Apps. Esse pacote inclui diversos utilitários comumente encontrados em sistemas Unix-like, como Linux, FreeBSD e macOS. 
+
+A sintaxe dos utilitários do Hexagonix segue a encontrada nas versões do `Version 7 UNIX` e FreeBSD, embora não busque precisão na implementação. Sempre que você tiver dúvidas ao utilizar um dos utilitários Unix, insira `utilitário --help` ou `man utilitário`.
+
+Abaixo, você encontra a licença de uso e distribuição dos utilitários Unix do Hexagonix.
+
+</div>
+
 <details title="Licença dos utilitários Unix-like do Hexagonix" align='left'>
 <br>
 <summary align='left'>Licença dos utilitários Unix-like do Hexagonix</summary>
@@ -54,6 +64,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 </div>
 
 </details>
+
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
 ## Utilitários incluídos
 
