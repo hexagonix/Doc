@@ -32,7 +32,7 @@
 
 Um dos componentes mais importantes do Hexagonix é o Unix-Apps. Esse pacote inclui diversos utilitários comumente encontrados em sistemas Unix-like, como Linux, FreeBSD e macOS. 
 
-A sintaxe dos utilitários do Hexagonix segue a encontrada nas versões do `Version 7 UNIX` e FreeBSD, embora não busque precisão na implementação. Sempre que você tiver dúvidas ao utilizar um dos utilitários Unix, insira `utilitário --help` ou `man utilitário`.
+A sintaxe dos utilitários do Hexagonix segue a encontrada nas versões do `Version 7 UNIX` e FreeBSD, embora não busque precisão na implementação. Sempre que você tiver dúvidas ao utilizar um dos utilitários Unix, insira `utilitário --help`, `utilitário ?` ou `man utilitário`.
 
 Abaixo, você encontra a licença de uso e distribuição dos utilitários Unix do Hexagonix.
 
