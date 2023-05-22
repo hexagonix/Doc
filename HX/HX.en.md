@@ -78,7 +78,7 @@ To build Hexagonix, hx looks for and executes a series of modules scattered thro
 | `Unix.sh`| Individually build all Hexagonix Unix-like utilities | Apps/Unix/|
 | `Apps.sh`| Individually Build All Hexagonix Graphics Utilities | Apps/Andromeda/|
 | `Contrib.sh`| Build all components external to Hexagonix, such as assemblers (fasmX)| Contrib/|
-| `fonts.sh` | Responsible for building Hexagonix graphic fonts | Fontes/|
+| `fontes.sh` | Responsible for building Hexagonix graphic fonts | Fontes/|
 | `indent.sh` | Responsible for indenting system fonts| Scripts/|
 
 > `Only configure.sh can be run directly by the user, other than hx`. No other modules should be run directly.
