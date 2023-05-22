@@ -22,15 +22,14 @@
 
 <table align="center">
 <tr>
-<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.pt.md">Sobre o Hexagonix</a></td>
-<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.pt.md#-capturas-de-tela">Screenshots</a></td>
-<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.pt.md#contribuir-e-reportar-erros">Contribuir</a></td>
-<td><a href="https://github.com/hexagonix/src">Código fonte</a></td>
-<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/README.pt.md">Download</a></td>
+<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.en.md">About Hexagonix</a></td>
+<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.en.md#-screenshots">Screenshots</a></td>
+<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/README.en.md#contribute-and-report-bugs">Contribute</a></td>
+<td><a href="https://github.com/hexagonix/src">Source code</a></td>
 </tr>
 </table>
 
-# Ponto de partida
+# Starting point
 
 <div align="center">
 

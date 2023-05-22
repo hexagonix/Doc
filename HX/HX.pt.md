@@ -22,21 +22,79 @@
 
 <table align="center">
 <tr>
-<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.en.md">About Hexagonix</a></td>
-<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.en.md#-screenshots">Screenshots</a></td>
-<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/README.en.md#contribute-and-report-bugs">Contribute</a></td>
-<td><a href="https://github.com/hexagonix/src">Source code</a></td>
+<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.pt.md">Sobre o Hexagonix</a></td>
+<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.pt.md#-capturas-de-tela">Screenshots</a></td>
+<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.pt.md#contribuir-e-reportar-erros">Contribuir</a></td>
+<td><a href="https://github.com/hexagonix/src">Código fonte</a></td>
+<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/README.pt.md">Download</a></td>
 </tr>
 </table>
 
-# Starting point
+# Ponto de partida
 
 <div align="center">
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/HexagonixSourceHeader.png">
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/HX.png">
 
 </div>
 
-<div align="justify">
+</div align="justify">
+
+Neste documento você poderá obter mais informações sobre o utilitário `hx` e sua participação na construção do Hexagonix.
+
+## HX
+
+O utilitário `hx` tem a função de unificar o processo de construção do Hexagonix em sistemas Linux (o WSL2 também é suportado no Windows 10 e Windows 11). A ferramenta é responsável por construir cada componente individualmente e, em caso de sucesso para todos os componentes críticos, como `HBoot`, `Hexagon` e utilitários Unix-like, criar a imagem inicializável do sistema (utilizada para execução do sistema no `qemu` e para instalação em um disco rígido físico), bem como um disco rígido virtual `.vdi` para utilização fácil em virtualizadores como o VirtualBox. Ele foi escrito para ser facilmente adaptável e extensível. O hx também utiliza módulos, escritos como scripts de shell, para construir os componentes do sistema, utilizando um protocolo de passagem de parâmetros bem estabelecido.
+
+> Embora se trate de um sistema Linux, a execução do hx `não é compatível` com o Chrome OS no ambiente de desenvolvimento Linux. Isso se deve à indisponibilidade de montagem de dispositivos loop (/dev/loop). A mesma limitação impede a execução do hx em sistemas BSD (como FreeBSD, NetBSD e OpenBSD), além do macOS. Para o último caso, uma nova implementação do hx está sendo desenvolvida, para tornar o processo de construção de imagem de disco compatível com sistemas BSD e derivados, como o macOS.
+
+### Funções e parâmetros
+
+O hx aceita uma série de parâmetros para determinar quais ações devem ser executadas. Abaixo, uma lista das ações disponíveis e seus parâmetros.
+
+| Parâmetro | Ação executada | Parâmetros secundários necessários |
+|:---------:|:--------------:|:----------------------------------:|
+| `-h`| Exibe a ajuda com os principais parâmetros normalmente utilizados| Sem parâmetros secundários|
+| `-v`| Inicia uma instância do qemu com a última imagem de disco gerada| `hx`: (padrão, selecionado automaticamente em ausência de parâmetros secundários); `hx.som`: habilita dispositivo de saída de áudio; `hx.serial`: não redireciona saída serial para arquivo; `bsd-hx`: permite a execução em ambientes BSD (sem KVM)|
+| `-i`| Constrói os componentes do sistema e cria uma imagem de disco (raw) e .vdi | `hx`: (padrão, selecionado automaticamente em ausência de parâmetros secundários); `hx.test`: cria uma imagem de teste com tamanho final reduzido|
+| `-u`| Atualiza todos os repositórios locais com o servidor, usando o ramo já definido | Sem parâmetros secundários|
+| `-ui`| Atualiza apenas as imagens de disco com o servidor. O restante dos repositórios não são afetados| Sem parâmetros secundários|
+| `-br`| Exibe o ramo em uso para todos os repositórios| Sem parâmetros secundários|
+| `-un`| Altera o ramo e sincroniza todos os repositórios com o ramo informado| Ramo desejado|
+| `-m`| Clona todos os repositórios localmente e prepara as ferramentas de construção. Útil para gerar um novo diretório de construção| Sem parâmetros secundários| 
+| `-c`| Limpa todos os arquivos temporários criados durante uma construção do sistema| Sem parâmetros secundários|
+| `--ver`| Exibe informações de versão e copyright| Sem parâmetros secundários|
+| `--depend`| Instala as dependências de construção (sistemas Debian, Ubuntu e derivados, apenas)| Sem parâmetros secundários|
+| `--info`| Exibe informações do Hexagonix, como versão, revisão, ramo de desenvolvimento, etc| Sem parâmetros secundários|
+| `--configure`| Executa o módulo `configure.sh` para gerar os arquivos estáticos necessários para a construção| Sem parâmetros secundários|
+| `--stat`| Exibe informações estatísticas sobre o Hexagonx (necessário cloc instalado)| Sem parâmetros secundários|
+
+### Módulos do hx
+
+Para a construção do Hexagonix, o hx procura e executa uma série de módulos espalhados por toda a árvore de código. São eles:
+
+| Módulo | Função | Localização |
+|:------:|:------:|:-----------:|
+| `configure.sh`| Gerar todos os arquivos estáticos e verificar dependências para a construção do Hexagonix| Raiz do projeto|
+| `Unix.sh`| Construir individualmente todos os utilitários Unix-like do Hexagonix | Apps/Unix/|
+| `Apps.sh`| Construir individualmente todos os utilitários gráficos do Hexagonix| Apps/Andromeda/|
+| `Contrib.sh`| Construir todos os componentes externos ao Hexagonix, como montadores (fasmX)| Contrib/|
+| `fontes.sh`| Responsável por construir as fontes gráficas do Hexagonix| Fontes/|
+| `indent.sh`| Responsável por indentar os fontes do sistema| Scripts/|
+
+> `Apenas configure.sh pode ser executado diretamente pelo usuário, além de hx`. Nenhum outro módulo deve ser executado diretamente.
+
+### Etapas de construção
+
+O hx, juntamente aos módulos já citados, constrói os componentes na seguinte ordem:
+
+* MBR e carregador de inicialização HBoot;
+* Hexagon (kernel);
+* Utilitários Unix-like;
+* Utilitários Andromeda;
+* Pacotes externos, de outra autoria (contrib);
+* Fontes gráficas.
+
+Caso os componentes críticos (excetuando-se os pacotes externos) tenham sido construídos com sucesso, o hx inicia a construção das imagens de disco, sendo uma imagem de disco (raw), utilizada para execução do sistema no qemu e instalação em dispositivos físicos, e outra VDI, utilizada para o VirtualBox. Ambas as imagens são movidas para `hexagonix/` caso o processo termine com sucesso. Além disso, o hx gera um arquivo de log, `log.log`, com informações de versão do sistema, revisão, ramo, versão do hx, do sistema operacional utilizado para a construção, data e hora, entre outras, que podem ser utilizadas para identificar erros no processo, bem como servem para identificar a build exata do sistema. O arquivo de log também é movido para `hexagonix/`.
 
 </div>
