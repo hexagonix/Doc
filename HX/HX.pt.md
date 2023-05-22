@@ -55,7 +55,7 @@ O hx aceita uma série de parâmetros para determinar quais ações devem ser ex
 | Parâmetro | Ação executada | Parâmetros secundários necessários |
 |:---------:|:--------------:|:----------------------------------:|
 | `-h`| Exibe a ajuda com os principais parâmetros normalmente utilizados| Sem parâmetros secundários|
-| `-v`| Inicia uma instância do qemu com a última imagem de disco gerada| `hx`: (padrão, selecionado automaticamente em ausência de parâmetros secundários); `hx.som`: habilita dispositivo de saída de áudio; `hx.serial`: não redireciona saída serial para arquivo; `bsd-hx`: permite a execução em ambientes BSD (sem KVM)|
+| `-v`| Inicia uma instância do `qemu` com a última imagem de disco gerada| `hx`: (padrão, selecionado automaticamente em ausência de parâmetros secundários); `hx.som`: habilita dispositivo de saída de áudio; `hx.serial`: não redireciona saída serial para arquivo; `bsd-hx`: permite a execução em ambientes BSD (sem KVM)|
 | `-i`| Constrói os componentes do sistema e cria uma imagem de disco (raw) e .vdi | `hx`: (padrão, selecionado automaticamente em ausência de parâmetros secundários); `hx.test`: cria uma imagem de teste com tamanho final reduzido|
 | `-u`| Atualiza todos os repositórios locais com o servidor, usando o ramo já definido | Sem parâmetros secundários|
 | `-ui`| Atualiza apenas as imagens de disco com o servidor. O restante dos repositórios não são afetados| Sem parâmetros secundários|
