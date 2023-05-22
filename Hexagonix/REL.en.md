@@ -149,6 +149,10 @@ This system update fixes several bugs in the system, including issues encountere
 
 </details>
 
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+
 </details>
 
 <details title="Hexagonix H2" align='left'>
@@ -279,6 +283,10 @@ Translation of messages from Unix utilities into English.
 
 </details>
 
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+
 </details>
 
 <details title="Hexagonix H2 Release 1" align='left'>
@@ -352,6 +360,10 @@ Consolidation of development versions, with:
 - [x] Release date: 28/02/2023 (dd/mm/yyyy)
 
 </details>
+
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
 </details>
 
