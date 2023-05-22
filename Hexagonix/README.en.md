@@ -47,8 +47,10 @@ Todos os direitos reservados.
 </div>
 
 <div align="justify">
-     
-First of all, read the license below regarding the use and redistribution of Hexagonix (binaries and source code).
+
+In this document, you will find a tutorial to run Hexagonix on your computer, both in a virtualized version and natively. Remember that it is necessary to have an x86 architecture computer or an emulator, if you are using a device of another architecture for testing.
+
+Read the license below regarding the use and redistribution of Hexagonix (binaries and source code).
 
 </div>
 
@@ -101,8 +103,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 # Download and run the system right now
 
 <div align="justify">
-
-In this document, you will find a tutorial to run Hexagonix on your computer, both in a virtualized version and natively. Remember that it is necessary to have an x86 architecture computer or an emulator, if you are using a device of another architecture for testing.
 
 You can go to the [`releases`](https://github.com/hexagonix/hexagonix/releases) session for the latest stable system releases. You can access the Hexagonix [release announcement](REL.en.md) file. Whenever possible, get the latest release and download the available .img or .vdi images or the complete package in zip format. The versions available directly in this repository are always development versions (beta and release candidate), which can also be run and are minimally functional. At the end of each development cycle, the final versions will be available in the [releases](https://github.com/hexagonix/hexagonix/releases) session.
 
