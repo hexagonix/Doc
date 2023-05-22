@@ -46,7 +46,11 @@ You can get the latest stable versions of Hexagonix by going to the [releases](h
 
 </div>
 
-## Released versions
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+
+## Stable versions released
 
 <div align="justify">
 

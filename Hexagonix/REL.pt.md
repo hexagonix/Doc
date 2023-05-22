@@ -46,7 +46,11 @@ Você pode obter as versões estáveis mais recentes do Hexagonix acessando a á
 
 </div>
 
-## Versões lançadas
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+
+## Versões estáveis lançadas
 
 <div align="justify">
 
