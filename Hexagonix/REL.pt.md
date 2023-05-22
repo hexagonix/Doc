@@ -363,7 +363,7 @@ As versões de desenvolvimento do Hexagonix são nomeadas como `projetos` e pode
 
 <details title="Projeto Raava" align='left'>
 <br>
-<summary align='left'>Projeto Raava</summary>
+<summary align='left'>Projeto Raava (2023-atualmente)</summary>
 
 <div align="justify">
 
