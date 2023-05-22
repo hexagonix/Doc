@@ -51,8 +51,8 @@ The `hx` utility is intended to unify the Hexagonix build process on Linux syste
 
 hx accepts a series of parameters to determine which actions to perform. Below is a list of available actions and their parameters.
 
-| Parameter | Action performed | Required Minor Parameters |
-|:---------:|:----------------:|:-------------------------:|
+| Parameter | Action performed | Required secondary parameters |
+|:---------:|:----------------:|:-----------------------------:|
 | `-h`| Displays help with commonly used key parameters | No secondary parameters|
 | `-v`| Start an instance of `qemu` with the last generated disk image| `hx`: (default, selected automatically in the absence of secondary parameters); `hx.som`: enable audio output device; `hx.serial`: do not redirect serial output to file; `bsd-hx`: allows execution in BSD environments (no KVM)|
 | `-i`| Builds the system components and creates a disk image (raw) and .vdi | `hx`: (default, selected automatically in the absence of secondary parameters); `hx.test`: creates a test image with reduced final size |
