@@ -30,7 +30,9 @@
 
 </div>
 
-This repository contains Hexagonix graphical applications and utilities.
+In addition to the Unix-like utilities, Hexagonix comes with a number of graphical utilities that are not similar in implementation or usability to Unix utilities. These utilities, called Andromeda-Apps or Hexagonix-Andromeda Utilities, add a new layer of personality over Hexagonix. So far, all utilities implement their own documentation. Therefore, there are no manuals for them (impossible to use the Unix `man` utility to get help).
+
+Below is the license for use and redistribution of Hexagonix-Andromeda utilities.
 
 <details title="Hexagonix graphical applications License" align='left'>
 <br>
@@ -59,35 +61,39 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 </details>
 
-## Andromeda SHell (ASH)
+## Included utilities
+
+Below is a list of the main Hexagonix-Andromeda utilities available. More are to come!
+
+#### Andromeda SHell (ASH)
 
 Andromeda SHell, or simply ASH, was developed as an alternative to Hexagonix's default shell, sh. sh resembles what is expected in appearance and basic functionality of a Unix-like system. ASH has no such claim, and has and will receive functions that expand its capability and usefulness.
 
-## Calc
+#### Calc
 
 The calculator allows the user to perform basic calculations.
 
-## Poweroff
+#### Poweroff
 
 The utility allows the user to easily shut down or restart the computer.
 
-## GFont
+#### GFont
 
 This utility allows you to interactively change the system's default graphic font.
 
-## Lyoko
+#### Lyoko
 
 Lyoko was developed as an IDE that allows the user to develop programs to run on the system. It allows you to edit code and manipulate it, as well as build and test the application. So far, it works together with the flat assembler Hexagonix edition [(fasmX)](https://github.com/hexagonix/fasm) to allow building applications.
 
-## Piano return Piano;
+#### Piano return Piano;
 
 The return Piano; is an electronic keyboard that allows the user to play music by emitting selected notes.
 
-## Quartzo
+#### Quartzo
 
 Quartzo is a general purpose editor for Hexagonix.
 
-## Serial
+#### Serial
 
 This utility allows the user to send data via the serial port, acting as a terminal.
 

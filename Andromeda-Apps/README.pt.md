@@ -30,7 +30,9 @@
 
 </div>
 
-Este repositório contém os aplicativos e utilitários gráficos do Hexagonix.
+Além dos utilitários Unix-like, o Hexagonix vem com uma série de utilitários gráficos que não se assemelham, nem em implementação nem em usuabilidade, a utilitários Unix. Esses utilitários, chamados de Andromeda-Apps ou utiitários Hexagonix-Andromeda, adicionam uma nova camada de personalidade sobre o Hexagonix. Até o momento, todos os utilitários implementam sua pŕopria documentação. Desta forma, não existem manuais para eles (impossível utilizar o utilitário Unix `man` para conseguir ajuda).
+
+Abaixo, a licença para uso e redistribuição dos utilitários Hexagonix-Andromeda.
 
 <details title="Licença dos utilitários gráficos do Hexagonix" align='left'>
 <br>
@@ -59,35 +61,43 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 </details>
 
-## Andromeda SHell (ASH)
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+
+## Utilitários incluídos
+
+Abaixo, uma lista dos principais utilitários Hexagonix-Andromeda disponíveis. Mais estão por vir!
+
+#### Andromeda SHell (ASH)
 
 O Andromeda SHell, ou simplesmente ASH, foi desenvolvido como uma alternativa ao shell padrão do Hexagonix, o sh. O sh se assemelha ao que é esperado em aparência e funcionalidade básica de um sistema Unix-like. O ASH não tem essa pretensão, e tem e receberá funções que expandam sua capacidade e utilidade.
 
-## Calc
+#### Calc
 
 A calculadora permite ao usuário realizar contas básicas.
 
-## Poweroff
+#### Poweroff
 
 O utilitário permite ao usuário desligar ou reiniciar facilmente o computador.
 
-## GFont
+#### GFont
 
 Este utilitário permite alterar, de forma interativa, a fonte gráfica padrão do sistema.
 
-## Lyoko
+#### Lyoko
 
 O Lyoko foi desenvolvido como uma IDE que permite ao usuário desenvolver programas para serem executados sobre o sistema. Ele permite editar código e manipulá-lo, além de construir e testar o aplicativo. Até o momento, ele trabalha em conjunto com o montador flat assembler edição Hexagonix [(fasmX)](https://github.com/hexagonix/fasm) para permitir a construção de aplicativos.
 
-## Piano return Piano;
+#### Piano return Piano;
 
 O return Piano; é um teclado eletrônico que permite ao usuário tocar músicas emitindo as notas selecionadas.
 
-## Quartzo
+#### Quartzo
 
 O Quartzo é um editor de propósito geral para o Hexagonix.
 
-## Serial
+#### Serial
 
 Este utilitário permite ao usuário enviar dados via porta serial, atuando como terminal.
 
