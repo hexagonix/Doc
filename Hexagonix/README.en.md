@@ -165,7 +165,7 @@ Below is a list of minimum and recommended requirements for testing Hexagonix on
 
 </div>
    
-## Get the disk images with the system install
+## Get the disk images with the system
 
 <div align="justify">
 
