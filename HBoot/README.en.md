@@ -29,6 +29,16 @@ Todos os direitos reservados.
 
 # Hexagon Boot process
 
+<div align="center">
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/HexagonixSourceHeader.png">
+
+</div>
+
+The Hexagonix initialization process is done by two components that come into action before the Hexagon (kernel). These are `Saturno` (responsible for loading the second boot stage) and `Hexagon Boot (HBoot)`, which is responsible for loading, configuring and running Hexagon, as well as offering other resources.
+
+Shall we meet each one of them?
+
 ## Saturno
 
 The first component of Hexagonix is Saturno. It is responsible for taking control of the boot process performed by the BIOS/UEFI and searching the volume for the second boot stage. For that, it implements a driver for reading a FAT16 file system. The second boot stage (see below) can implement drivers for other file systems and is responsible for finding Hexagon, loading HBoot modules or loading a DOS compatible system (BETA).

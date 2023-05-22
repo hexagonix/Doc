@@ -29,7 +29,15 @@ Todos os direitos reservados.
 
 # Inicialização do Hexagon
 
-O Hexagon Boot (HBoot) é responsável por carregar, configurar e executar o Hexagon, bem como oferecer outros recursos.
+<div align="center">
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/HexagonixSourceHeader.png">
+
+</div>
+
+O processo de inicialização do Hexagonix se dá por dois componentes que entrem em ação antes do Hexagon (kernel). São eles `Saturno` (responsável por carregar o segundo estágio de inicialização) e o `Hexagon Boot (HBoot)`, que é responsável por carregar, configurar e executar o Hexagon, bem como oferecer outros recursos.
+
+Vamos conhecer cada um deles?
 
 ## Saturno
 
