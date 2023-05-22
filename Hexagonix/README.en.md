@@ -142,14 +142,14 @@ Below is a list of minimum and recommended requirements for testing Hexagonix on
 
 <div align="justify">
    
-* Processor: Pentium III (1999) with SSE and MMX support or newer;
-* RAM memory: 32 MB minimum (a minimum installation with 32 MB is usually sufficient in most cases);
-* Hard disk: IDE or SATA hard disk with a minimum of 50 MB;
+* Processor: `Pentium III` (1999) with `SSE` and `MMX` support or newer;
+* RAM memory: `32 MB` minimum (a minimum installation with 32 MB is usually sufficient in most cases);
+* Hard disk: IDE or SATA hard disk with a minimum of 50 MB (`for installation`);
 * Necessary peripherals:
   * Serial port (1-4);
   * Parallel port (1-4);
   * PS/2 or USB keyboard;
-  * VGA video card with 2 MB of video memory (with color support).
+  * VGA video card with `2 MB` of video memory (with color support).
 
 </div>
    
