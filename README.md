@@ -35,6 +35,14 @@
 
 Now select the document relating to system components or technical and development information:
 
+#### The Hexagonix
+
+| Document name | Description |
+|:-----------------:|:----------:|
+|[Doc-Hexagonix](https://github.com/hexagonix/Doc/tree/main/Hexagonix/Hexagonix.en.md)|Hexagonix information|
+|[Exec-Hexagonix](https://github.com/hexagonix/Doc/tree/main/Hexagonix/README.en.md)| How to run Hexagonix (in a virtualized environment or installing it on a computer)|
+|[REL](https://github.com/hexagonix/Doc/tree/main/Hexagonix/REL.en.md)| Released versions of Hexagonix|
+
 #### Hexagonix components
 
 | Component name | Description |
@@ -57,13 +65,20 @@ Now select the document relating to system components or technical and developme
 | Document name | Description |
 |:-------------:|:-----------:|
 |[System Calls](https://github.com/hexagonix/Doc/tree/main/Hexagon/SYSCALL.en.md)|Hexagon System Calls documentation|
-|[Doc-Hexagonix](https://github.com/hexagonix/Doc/tree/main/Hexagonix/Hexagonix.en.md)|Hexagonix documentation|
 
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
 ## :brazil: Português (Brasil)
 
 Selecione agora o documento relativo a componentes do sistema ou a informações técnicas e de desenvolvimento:
+
+#### O Hexagonix
+
+| Nome do documento | Descrição |
+|:-----------------:|:---------:|
+|[Doc-Hexagonix](https://github.com/hexagonix/Doc/tree/main/Hexagonix/Hexagonix.pt.md)|Informações sobre o Hexagonix|
+|[Exec-Hexagonix](https://github.com/hexagonix/Doc/tree/main/Hexagonix/README.pt.md)| Como executar o Hexagonix (em ambiente virtualizado ou instalando em um computador)|
+|[REL](https://github.com/hexagonix/Doc/tree/main/Hexagonix/REL.pt.md)| Versões já lançadas do Hexagonix|
 
 #### Componentes do Hexagonix
 
@@ -87,4 +102,3 @@ Selecione agora o documento relativo a componentes do sistema ou a informações
 | Nome do documento | Descrição |
 |:-----------------:|:---------:|
 |[Chamadas de sistema](https://github.com/hexagonix/Doc/tree/main/Hexagon/SYSCALL.pt.md)|Documentação das chamadas de sistema do Hexagon|
-|[Doc-Hexagonix](https://github.com/hexagonix/Doc/tree/main/Hexagonix/Hexagonix.pt.md)|Documentação do Hexagonix|
