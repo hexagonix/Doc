@@ -22,6 +22,12 @@
 
 # Utilitários Unix-like do Hexagonix
 
+<div align="center">
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/HexagonixSourceHeader.png">
+
+</div>
+
 <details title="Licença dos utilitários Unix-like do Hexagonix" align='left'>
 <br>
 <summary align='left'>Licença dos utilitários Unix-like do Hexagonix</summary>
@@ -49,7 +55,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 </details>
 
-## Utilitários incluidos
+## Utilitários incluídos
 
 <div align="justify">
 

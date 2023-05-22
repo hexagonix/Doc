@@ -22,6 +22,12 @@
 
 # Fontes gráficas do Hexagonix
 
+<div align="center">
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/HexagonixSourceHeader.png">
+
+</div>
+
 <div align="justify">
 
 A instalação padrão do Hexagonix também fornece uma série de fontes que podem ser carregadas pelo aplicativo de configurações ou utilitário de fontes (fnt). Esses arquivos são utilizados para alterar a fonte de exibição em modo gráfico do Hexagonix.

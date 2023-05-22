@@ -24,6 +24,12 @@
 
 # Aplicativos e utilitários gráficos do Hexagonix
 
+<div align="center">
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/HexagonixSourceHeader.png">
+
+</div>
+
 Este repositório contém os aplicativos e utilitários gráficos do Hexagonix.
 
 <details title="Licença dos utilitários gráficos do Hexagonix" align='left'>

@@ -22,6 +22,12 @@
 
 # Hexagonix graphic fonts
 
+<div align="center">
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/HexagonixSourceHeader.png">
+
+</div>
+
 <div align="justify">
 
 The default installation of Hexagonix also provides a number of fonts that can be loaded by the settings application or the font utility (fnt). These files are used to change the graphical display font for Hexagonix.

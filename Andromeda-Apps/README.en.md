@@ -24,6 +24,12 @@
 
 # Hexagonix graphical applications and utilities
 
+<div align="center">
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/HexagonixSourceHeader.png">
+
+</div>
+
 This repository contains Hexagonix graphical applications and utilities.
 
 <details title="Hexagonix graphical applications License" align='left'>
