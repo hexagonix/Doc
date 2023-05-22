@@ -355,6 +355,12 @@ Consolidação das versões de desenvolvimento, com:
 
 </details>
 
+## Versões de desenvolvimento
+
+As versões de desenvolvimento do Hexagonix são nomeadas como `projetos` e podem dar origem à novas versões de lançamento do sistema. Essas versões apresentam componentes e características que podem estar instáveis ou inacabadas, e são inicialmente versões de pesquisa em design e implementação do Hexagonix. 
+
+> As versões de desenvolvimento, denominadas projetos, podem ou não ser a origem de uma nova versão de lançamento do Hexagonix, embora recursos possam ser implementados integralmente ou não em uma versão de lançamento. `Independente disso, o Hexagonix está sendo desenvolvido continuamente`.
+
 <details title="Projeto Raava" align='left'>
 <br>
 <summary align='left'>Projeto Raava</summary>

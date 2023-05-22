@@ -355,6 +355,12 @@ Consolidation of development versions, with:
 
 </details>
 
+## Development versions
+
+Development versions of Hexagonix are named `projects` and may lead to new release versions of the system. These releases introduce components and features that may be unstable or unfinished, and are initially research on design and implementation of Hexagonix.
+
+> Development versions, called projects, may or may not be the source of a new release version of Hexagonix, although features may or may not be fully implemented in a release version. `Regardless, Hexagonix is ​​continually being developed`.
+
 <details title="Project Raava" align='left'>
 <br>
 <summary align='left'>Project Raava</summary>
