@@ -34,7 +34,7 @@
 
 <div align="center">
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/HX.png">
+<img height="200" src="https://github.com/hexagonix/Doc/blob/main/Img/HX.png">
 
 </div>
 
