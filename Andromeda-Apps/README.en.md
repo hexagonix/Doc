@@ -30,7 +30,7 @@
 
 </div>
 
-In addition to the Unix-like utilities, Hexagonix comes with a number of graphical utilities that are not similar in implementation or usability to Unix utilities. These utilities, called Andromeda-Apps or Hexagonix-Andromeda Utilities, add a new layer of personality over Hexagonix. So far, all utilities implement their own documentation. Therefore, there are no manuals for them (impossible to use the Unix `man` utility to get help).
+In addition to the Unix-like utilities, Hexagonix comes with a number of graphical utilities that are not similar in implementation or usability to Unix utilities. These utilities, called `Andromeda-Apps` or `Hexagonix-Andromeda` utilities, add a new layer of personality over Hexagonix. So far, all utilities implement their own documentation. Therefore, there are no manuals for them (impossible to use the Unix `man` utility to get help).
 
 Below is the license for use and redistribution of Hexagonix-Andromeda utilities.
 
