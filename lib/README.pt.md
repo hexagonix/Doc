@@ -57,7 +57,7 @@ Abaixo, uma lista com cada biblioteca dentro do pacote da libasm:
 |[`macros.s`](https://github.com/hexagonix/lib/blob/main/fasm/macros.s)| Macros avançados para facilitar o desenvolvimento de utilitários|
 |[`verUtils.s`](https://github.com/hexagonix/lib/blob/main/fasm/verUtils.s)| Funções para obter e processar informações de versão do Hexagonix|
 
-Além disso, existe uma biblioteca específica, chamada Estelar. Essa biblioteca é dividida em dois componentes, [`Estelar`](https://github.com/hexagonix/lib/blob/main/fasm/Estelar/estelar.s) e [`Bigbang`](https://github.com/hexagonix/lib/blob/main/fasm/Estelar/bigbang.s). Essa biblioteca tem como objetivo facilitar o desenvolvimento de utilitários gráficos e que utilizem saída de som.
+Além disso, existe uma biblioteca específica, chamada `Estelar`. Essa biblioteca é dividida em dois componentes, [`Estelar`](https://github.com/hexagonix/lib/blob/main/fasm/Estelar/estelar.s) e [`Bigbang`](https://github.com/hexagonix/lib/blob/main/fasm/Estelar/bigbang.s). Essa biblioteca tem como objetivo facilitar o desenvolvimento de utilitários gráficos e que utilizem saída de som.
 
 > As bibliotecas são desenvolvidas com foco no flat assembler (fasm), e vêm sendo portadas para o NASM. Verifique dentro do pacote os diretórios `fasm` e `nasm` para encontrar as bibliotecas disponíveis para cada montador.
 
