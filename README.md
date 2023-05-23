@@ -102,4 +102,4 @@ Selecione agora o documento relativo a componentes do sistema ou a informações
 | Nome do documento | Descrição |
 |:-----------------:|:---------:|
 |[Chamadas de sistema](https://github.com/hexagonix/Doc/tree/main/Hexagon/SYSCALL.pt.md)|Documentação das chamadas de sistema do Hexagon|
-|[libasm](https://github.com/hexagonix/Doc/tree/main/lib/lib.pt.md)| libasm - biblioteca de desenvolvimento|
+|[libasm](https://github.com/hexagonix/Doc/tree/main/lib/README.pt.md)| libasm - biblioteca de desenvolvimento|
