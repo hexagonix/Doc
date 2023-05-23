@@ -57,7 +57,7 @@ Below is a list of each library within the libasm package:
 |[`macros.s`](https://github.com/hexagonix/lib/blob/main/fasm/macros.s)| Advanced macros to ease utility development|
 |[`verUtils.s`](https://github.com/hexagonix/lib/blob/main/fasm/verUtils.s)| Functions to get and process Hexagonix version information |
 
-In addition, there is a specific library called `Estelar`. This library is divided into two components, [`Estelar`](https://github.com/hexagonix/lib/blob/main/fasm/Estelar/estelar.s) and [`Bigbang`](https://github .com/hexagonix/lib/blob/main/fasm/Starfire/bigbang.s). This library aims to facilitate the development of graphical utilities that use sound output.
+In addition, there is a specific library called `Estelar`. This library is divided into two components, [`Estelar`](https://github.com/hexagonix/lib/blob/main/fasm/Estelar/estelar.s) and [`Bigbang`](https://github,com/hexagonix/lib/blob/main/fasm/Estelar/bigbang.s). This library aims to facilitate the development of graphical utilities that use sound output.
 
 > The libraries are developed with a focus on flat assembler (fasm), and have been ported to NASM. Check the `fasm` and `nasm` directories inside the package to find the libraries available for each assembler.
 
