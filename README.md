@@ -65,7 +65,7 @@ Now select the document relating to system components or technical and developme
 | Document name | Description |
 |:-------------:|:-----------:|
 |[System Calls](https://github.com/hexagonix/Doc/tree/main/Hexagon/SYSCALL.en.md)|Hexagon System Calls documentation|
-|[libasm](https://github.com/hexagonix/Doc/tree/main/lib/README.pt.md)| libasm - x86 Assembly development library|
+|[libasm](https://github.com/hexagonix/Doc/tree/main/lib/README.en.md)| libasm - x86 Assembly development library|
 
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
