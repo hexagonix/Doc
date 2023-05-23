@@ -32,7 +32,7 @@
 </tr>
 </table>
 
-# libasm - Biblioteca para desenvolvimento de utilitários em Assembly x86
+# A libasm
 
 <div align="center">
 
@@ -42,13 +42,13 @@
 
 <div align="justify">
 
-A `libasm` é um pacote de bibliotecas que auxiliam no processo de criação de utilitários para o Hexagonix, fornecendo definições, interfaces, constantes e macros úteis no processo de desenvolvimento e teste de um aplicativo.
+A `libasm` (bibliotecas para desenvolvimento de utilitários em Assembly x86) é um pacote de bibliotecas que auxiliam no processo de criação de utilitários para o Hexagonix, fornecendo definições, interfaces, constantes e macros úteis no processo de desenvolvimento e teste de um aplicativo.
 
 Abaixo, uma lista com cada biblioteca dentro do pacote da libasm:
 
 | Biblioteca | Funções |
 |:----------:|:-------:|
-|[`console.s`]()https://github.com/hexagonix/lib/blob/main/fasm/console.s| Funções para manipulação do console (físico e virtual)|
+|[`console.s`](https://github.com/hexagonix/lib/blob/main/fasm/console.s)| Funções para manipulação do console (físico e virtual)|
 |[`dispositivos.s`](https://github.com/hexagonix/lib/blob/main/fasm/dispositivos.s)| Constantes para acessar os dispositivos reconhecidos pelo Hexagon|
 |[`erros.s`](https://github.com/hexagonix/lib/blob/main/fasm/erros.s)| Definição de erros em resposta a chamadas de sistema do Hexagon|
 |[`HAPP.s`](https://github.com/hexagonix/lib/blob/main/fasm/HAPP.s)| Macro para a criação de um cabaçalho HAPP para imagens executáveis|
