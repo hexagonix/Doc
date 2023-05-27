@@ -56,6 +56,7 @@ hx accepts a series of parameters to determine which actions to perform. Below i
 | `-h`| Displays help with commonly used key parameters | No secondary parameters|
 | `-v`| Start an instance of `qemu` with the last generated disk image| `hx`: (default, selected automatically in the absence of secondary parameters); `hx.som`: enable audio output device; `hx.serial`: do not redirect serial output to file; `bsd-hx`: allows execution in BSD environments (no KVM)|
 | `-i`| Builds the system components and creates a disk image (raw) and .vdi | `hx`: (default, selected automatically in the absence of secondary parameters); `hx.test`: creates a test image with reduced final size |
+| `-b` | Build individual Hexagonix components| `hexagon`: builds the Hexagon; `HBoot`: builds HBoot; `saturno`: builds Saturno; `unixland`: build Unix-like utilities; `andromedaland`: builds the Hexagonix-Andromeda utilities; `hx`: builds all components but does not generate a disk image|
 | `-u`| Updates all local repositories with the server, using the already defined branch | No secondary parameters|
 | `-ui`| It only updates disk images with the server. The rest of the repositories are unaffected | No secondary parameters|
 | `-br`| Display branch in use for all repositories | No secondary parameters|

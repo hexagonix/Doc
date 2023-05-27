@@ -57,6 +57,7 @@ O hx aceita uma série de parâmetros para determinar quais ações devem ser ex
 | `-h`| Exibe a ajuda com os principais parâmetros normalmente utilizados| Sem parâmetros secundários|
 | `-v`| Inicia uma instância do `qemu` com a última imagem de disco gerada| `hx`: (padrão, selecionado automaticamente em ausência de parâmetros secundários); `hx.som`: habilita dispositivo de saída de áudio; `hx.serial`: não redireciona saída serial para arquivo; `bsd-hx`: permite a execução em ambientes BSD (sem KVM)|
 | `-i`| Constrói os componentes do sistema e cria uma imagem de disco (raw) e .vdi | `hx`: (padrão, selecionado automaticamente em ausência de parâmetros secundários); `hx.test`: cria uma imagem de teste com tamanho final reduzido|
+| `-b`| Constrói componentes individuais do Hexagonix| `hexagon`: constrói o Hexagon; `HBoot`: constrói o HBoot; `saturno`: constrói o Saturno; `unixland`: constrói os utilitários Unix-like; `andromedaland`: constrói os utilitários Hexagonix-Andromeda; `hx`: constrói todos os componentes, mas não gera uma imagem de disco| 
 | `-u`| Atualiza todos os repositórios locais com o servidor, usando o ramo já definido | Sem parâmetros secundários|
 | `-ui`| Atualiza apenas as imagens de disco com o servidor. O restante dos repositórios não são afetados| Sem parâmetros secundários|
 | `-br`| Exibe o ramo em uso para todos os repositórios| Sem parâmetros secundários|
