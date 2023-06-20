@@ -55,7 +55,7 @@ Some features of Hexagonix:
 - [x] Compatible with devices with 32 MB of RAM or more;
 - [x] Full kernel with less than 30 kbytes;
 - [x] User environment support;
-- [x] System call with 68 sophisticated functions accessed by the user environment;
+- [x] System call with 68 functions accessed by the user environment;
 - [x] Low minimum requirements, compatible with a wide range of devices;
 - [x] Own executable binary format (HAPP);
 - [x] Self-hosting ([the assembler used to build Hexagonix](https://github.com/hexagonix/fasmX) can run on top of it);
@@ -70,12 +70,13 @@ Some features of Hexagonix:
 - [x] Supports own boot loader (Hexagon Boot - HBoot);
 - [x] Support for users and permissions.
 - [x] Easily extensible;
+- [x] Well documented in Portuguese and English;
 - [x] Fully licensed under `BSD-3-Clause`[^2].
 
 [^1]: The architecture of Hexagonix (structure and utilities) was inspired by the elegance and simplicity of [Version 7 UNIX](https://github.com/dspinellis/unix-history-repo/tree/Research-V7-Snapshot-Development), although it does not aim for any compatibility or share any code with it. Hexagonix does not use any code derived from Version 7 UNIX or other projects. Hexagonix utilities were written to resemble the function and appearance of their counterparts in Version 7 UNIX.
-[^2]: You can get more information about the license [in this article](https://docs.freebsd.org/en/articles/bsdl-gpl/) of the FreeBSD project, [in the article](https://opensource.org/licenses/BSD-3-Clause) from the Open Source Initiative or the license page on [Wikipedia](https://en.wikipedia.org/wiki/BSD_licenses).
+[^2]: You can get more information about the license [in this article](https://docs.freebsd.org/en/articles/bsdl-gpl/) of the FreeBSD project, [in the article](https://opensource.org/licenses/BSD-3-Clause) from the Open Source Initiative or the BSD license page on [Wikipedia](https://en.wikipedia.org/wiki/BSD_licenses).
 
-Hexagonix is ​​not intended to build a production system, but rather a simple, well-documented system with easy-to-understand interfaces that can be used for educational purposes. It also aims at researching and implementing a modern operating system purely in x86 Assembly. For more complex, complete and professional systems, visit projects like [MenuetOS](https://www.menuetos.net/) or [KolibriOS](https://kolibrios.org/en/), also developed in x86 Assembly.
+`Hexagonix is ​​not intended to build a production system, but rather a simple, well-documented system with easy-to-understand interfaces that can be used for educational purposes`. Hexagonix aims to research and implement a modern operating system developed purely in x86 Assembly using a current assembler. For more complex, complete and professional systems developed in x86 Assembly, visit projects like [MenuetOS](https://www.menuetos.net/) or [KolibriOS](https://kolibrios.org/en/).
 
 </div>
 
