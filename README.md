@@ -57,7 +57,7 @@ Now select the document relating to system components or technical and developme
 
 | Document name | Description |
 |:-------------:|:-----------:|
-|[Build](https://github.com/hexagonix/build/blob/main/README.en.md)|How to build the system|
+|[Build process](https://github.com/hexagonix/build/blob/main/README.en.md)|How to build the system|
 |[HX](https://github.com/hexagonix/Doc/tree/main/HX/HX.en.md)|Documentation of the `hx` tool and its modules|
 
 #### Technical description
@@ -95,7 +95,7 @@ Selecione agora o documento relativo a componentes do sistema ou a informações
 
 | Nome do documento | Descrição |
 |:-----------------:|:---------:|
-|[Build](https://github.com/hexagonix/build/blob/main/README.pt.md)|Como construir o sistema|
+|[Processo de construção (Build)](https://github.com/hexagonix/build/blob/main/README.pt.md)|Como construir o sistema|
 |[HX](https://github.com/hexagonix/Doc/tree/main/HX/HX.pt.md)|Documentação da ferramenta `hx` e de seus módulos|
 
 #### Descrição técnica
