@@ -83,9 +83,10 @@ Now, a table with the Hexagonix system call functions. Functions are sorted into
 | 11 | close | File and Device Management | No input | No output | Unix-like | Closes the last device opened by the current process|
 | 13 | saveFile | File and Device Management | ESI = Pointer to file name; EDI = Pointer to the content; EAX = File Size | CF defined in case of error or file already present | Unix-like | Save a file on the mounted volume|
 | 14 | deleteFile | File and Device Management | ESI = Pointer to filename | CF defined in case of error or non-existing file | Unix-like | Remove a file on the mounted volume |
-| 15 | listFiles | File and Device Management | No input | ESI = Pointer to list of files; EAX = Total Files | Unix-like | Get list of files present on volume |
-| 16 | fileExists | File and Device Management | ESI = File name to check | EAX = File Size; CF set if file does not exist | Hexagonix | Check if a file exists on the volume |
-| 17 | getDisk | File and Device Management | No input | ESI = Device name; EDI = Used volume label | Hexagonix | Get information from the mounted disk at `/`|
+| 15 | renameFile | File and Device management | ESI = Pointer to the original filename; EDI = Pointer to new filename | CF defined in case of error or error in name update | Unix-like | Updates the name of a file on the mounted volume |
+| 16 | listFiles | File and Device Management | No input | ESI = Pointer to list of files; EAX = Total Files | Unix-like | Get list of files present on volume |
+| 17 | fileExists | File and Device Management | ESI = File name to check | EAX = File Size; CF set if file does not exist | Hexagonix | Check if a file exists on the volume |
+| 18 | getDisk | File and Device Management | No input | ESI = Device name; EDI = Used volume label | Hexagonix | Get information from the mounted disk at `/`|
 
 </details>
 
@@ -93,27 +94,27 @@ Now, a table with the Hexagonix system call functions. Functions are sorted into
 
 | Function number | Name | Group | Input | Output | Function family| Description |
 |:---------------:|:----:|:-----:|:-----:|:------:|:--------------:|:-----------:|
-| 18 | lock | User Management and Permissions | No input | No output | Unix-like | Block foreground process termination signal by special key|
-| 19 | unlock | User Management and Permissions | No input | No output | Unix-like | Enable foreground process termination signal by special key use|
-| 20 | setUser | User Management and Permissions | EAX = Group ID; ESI = Username | No output | Hexagonix | Define a user for the current session|
-| 21 | getUser | User Management and Permissions | No input | EAX = Group ID; ESI = Username| Hexagonix | Get logged in user data for current session |
+| 19 | lock | User Management and Permissions | No input | No output | Unix-like | Block foreground process termination signal by special key|
+| 20 | unlock | User Management and Permissions | No input | No output | Unix-like | Enable foreground process termination signal by special key use|
+| 21 | setUser | User Management and Permissions | EAX = Group ID; ESI = Username | No output | Hexagonix | Define a user for the current session|
+| 22 | getUser | User Management and Permissions | No input | EAX = Group ID; ESI = Username| Hexagonix | Get logged in user data for current session |
 
 ### Hexagon Services
 
 | Function number | Name | Group | Input | Output | Function family| Description |
 |:---------------:|:----:|:-----:|:-----:|:------:|:--------------:|:-----------:|
-| 22 | returnVersion | Hexagon Services | No input | EAX = Version number; EBX = Subversion number; CH = Review character; EDX = Architecture; ESI = Kernel Name; EDI = Kernel Build| Unix-like | Returns Hexagon version for applications|
-| 23 | getRandom | Hexagon Services | EAX = Maximum | EAX = Number | Hexagonix | Get a random number|
-| 24 | feedRandom | Hexagon Services | EAX - Number to create entropy | No output | Hexagonix | Feed Entropy to Kernel Random Number Generator|
-| 25 | causeDelay | Hexagon Services | ECX = Time in count units to cause delay | No output | Hexagonix | Causes a delay in operations |
-| 26 | installISR | Hexagon Services | EAX = Interrupt number; ESI = Pointer to handler | No output | Hexagonix | Install interrupt service routine|
+| 23 | returnVersion | Hexagon Services | No input | EAX = Version number; EBX = Subversion number; CH = Review character; EDX = Architecture; ESI = Kernel Name; EDI = Kernel Build| Unix-like | Returns Hexagon version for applications|
+| 24 | getRandom | Hexagon Services | EAX = Maximum | EAX = Number | Hexagonix | Get a random number|
+| 25 | feedRandom | Hexagon Services | EAX - Number to create entropy | No output | Hexagonix | Feed Entropy to Kernel Random Number Generator|
+| 26 | causeDelay | Hexagon Services | ECX = Time in count units to cause delay | No output | Hexagonix | Causes a delay in operations |
+| 27 | installISR | Hexagon Services | EAX = Interrupt number; ESI = Pointer to handler | No output | Hexagonix | Install interrupt service routine|
 
 ### Power Management Services
 
 | Function number | Name | Group | Input | Output | Function family| Description |
 |:---------------:|:----:|:-----:|:-----:|:------:|:--------------:|:-----------:|
-| 27 | restartPC | Power Management | No input | No output | Unix-like | Request device restart|
-| 28 | shutdownPC | Power Management | No input | No output | Unix-like | Prompts for device shutdown|
+| 28 | restartPC | Power Management | No input | No output | Unix-like | Request device restart|
+| 29 | shutdownPC | Power Management | No input | No output | Unix-like | Prompts for device shutdown|
 
 </details>
 
@@ -121,9 +122,9 @@ Now, a table with the Hexagonix system call functions. Functions are sorted into
 
 | Function number | Name | Group | Input | Output | Function family| Description |
 |:---------------:|:----:|:-----:|:-----:|:------:|:--------------:|:-----------:|
-| 29 | print | Video and Graphics Services | EAX = Numerical content, if this is the case, respecting the designated formats. The formats must be informed; ESI = Pointer to the string to be printed, if this is the case; EBX = Input type (01h - decimal integer; 02h - hexadecimal integer; 03h - binary integer; 04h - string)| No output | Hexagonix | Sends a defined content to an output device
-| 30 | clearScreen | Video and Graphics Services | No input | No output | Hexagonix | Clear current console|
-| 31 | clearLine | Video and Graphics Services | AL = Line number | No output | Hexagonix | Clears a specific line in the console|
+| 30 | print | Video and Graphics Services | EAX = Numerical content, if this is the case, respecting the designated formats. The formats must be informed; ESI = Pointer to the string to be printed, if this is the case; EBX = Input type (01h - decimal integer; 02h - hexadecimal integer; 03h - binary integer; 04h - string)| No output | Hexagonix | Sends a defined content to an output device
+| 31 | clearScreen | Video and Graphics Services | No input | No output | Hexagonix | Clear current console|
+| 32 | clearLine | Video and Graphics Services | AL = Line number | No output | Hexagonix | Clears a specific line in the console|
 | 33 | scrollScreen | Video and Graphics Services | No input | No output | Hexagonix | Scrolls the console down one line|
 | 34 | setCursor | Video and Graphics Services | DL = position on the X axis; DH = position on the Y axis | No output | Hexagonix | Sets the cursor at a specific position |
 | 35 | drawCharacter | Video and Graphics Services | EAX = position on the X axis; EBX = position on the Y axis; EDX = Color in hexadecimal | No output | Hexagonix | Puts a pixel on the console|

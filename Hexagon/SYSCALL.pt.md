@@ -83,43 +83,44 @@ Agora, uma tabela com as funções da chamada de sistema do Hexagonix. As funç�
 | 11 | fechar | Gerenciamento de arquivos e dispositivos | Sem entrada | Sem saída | Unix-like | Fecha o último dispositivo aberto pelo processo atual|
 | 13 | salvarArquivo | Gerenciamento de arquivos e dispositivos |  ESI = Ponteiro para o nome do arquivo; EDI = Ponteiro para o conteúdo; EAX = Tamanho do arquivo | CF definido em caso de erro ou arquivo já presente | Unix-like | Salva um arquivo no volume montado|
 | 14 | deletarArquivo | Gerenciamento de arquivos e dispositivos | ESI = Ponteiro para o nome do arquivo | CF definido em caso de erro ou arquivo não existente | Unix-like | Remove um arquivo no volume montado |
-| 15 | listarArquivos | Gerenciamento de arquivos e dispositivos | Sem entrada | ESI = Ponteiro para a lista de arquivos; EAX = Total de arquivos | Unix-like | Obtêm lista de arquivos presentes no volume |
-| 16 | arquivoExiste | Gerenciamento de arquivos e dispositivos | ESI = Nome do arquivo para checar |  EAX = Tamanho do arquivo; CF definido se o arquivo não existir | Hexagonix | Checar se um arquivo existe no volume |
-| 17 | obterDisco | Gerenciamento de arquivos e dispositivos | Sem entrada | ESI = Nome do dispositivo; EDI = Rótulo do volume utilizado | Hexagonix | Obtêm informações do disco montado em `/`|
+| 15 | renomearArquivo | Gerenciamento de arquivos e dispositivos | ESI = Ponteiro para o nome do arquivo original; EDI = Ponteiro para o novo nome de arquivo | CF definido em caso de erro ou erro na atualização de nome | Unix-like | Atualiza o nome de um arquivo no volume montado |
+| 16 | listarArquivos | Gerenciamento de arquivos e dispositivos | Sem entrada | ESI = Ponteiro para a lista de arquivos; EAX = Total de arquivos | Unix-like | Obtêm lista de arquivos presentes no volume |
+| 17 | arquivoExiste | Gerenciamento de arquivos e dispositivos | ESI = Nome do arquivo para checar |  EAX = Tamanho do arquivo; CF definido se o arquivo não existir | Hexagonix | Checar se um arquivo existe no volume |
+| 18 | obterDisco | Gerenciamento de arquivos e dispositivos | Sem entrada | ESI = Nome do dispositivo; EDI = Rótulo do volume utilizado | Hexagonix | Obtêm informações do disco montado em `/`|
 
 ### Funções de gerenciamento de usuário e permissões
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
-| 18 | travar | Gerenciamento de usuário e permissões | Sem entrada | Sem saída | Unix-like | Bloqueia o sinal de término de processo em primeiro plano por tecla especial|
-| 19 | destravar | Gerenciamento de usuário e permissões | Sem entrada | Sem saída | Unix-like | Habilita o sinal de término de processos em primeiro plano por uso de tecla especial|
-| 20 | definirUsuario | Gerenciamento de usuário e permissões | EAX = ID do grupo; ESI = Nome do usuário | Sem saída | Hexagonix | Define um usuário para a sessão atual|
-| 21 | obterUsuario | Gerenciamento de usuário e permissões | Sem entrada | EAX = ID do grupo; ESI = Nome do usuário| Hexagonix | Obtêm dados do usuário logado para a sessão atual|
+| 19 | travar | Gerenciamento de usuário e permissões | Sem entrada | Sem saída | Unix-like | Bloqueia o sinal de término de processo em primeiro plano por tecla especial|
+| 20 | destravar | Gerenciamento de usuário e permissões | Sem entrada | Sem saída | Unix-like | Habilita o sinal de término de processos em primeiro plano por uso de tecla especial|
+| 21 | definirUsuario | Gerenciamento de usuário e permissões | EAX = ID do grupo; ESI = Nome do usuário | Sem saída | Hexagonix | Define um usuário para a sessão atual|
+| 22 | obterUsuario | Gerenciamento de usuário e permissões | Sem entrada | EAX = ID do grupo; ESI = Nome do usuário| Hexagonix | Obtêm dados do usuário logado para a sessão atual|
 
 ### Serviços do Hexagon
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
-| 22 | retornarVersao | Serviços do Hexagon | Sem entrada | EAX = Número da versão; EBX = Número da subversão; CH = Caractere de revisão; EDX = Arquitetura; ESI = Nome do Kernel; EDI = Build do Kernel| Unix-like | Retorna a versão do Hexagon para os aplicativos|
-| 23 | obterAleatorio | Serviços do Hexagon | EAX = Máximo | EAX = Número | Hexagonix | Obtêm um número aleatório|
-| 24 | alimentarAleatorio | Serviços do Hexagon | EAX - Número para criar entropia | Sem saída | Hexagonix | Alimenta com entropia o gerador de números aleatórios do kernel|
-| 25 | causarAtraso | Serviços do Hexagon | ECX = Tempo em unidades de contagem para causar atraso | Sem saída | Hexagonix | Causa um atraso (delay) em operações |
-| 26 | instalarISR | Serviços do Hexagon | EAX = Número da interrupção; ESI = Ponteiro para o manipulador | Sem saída | Hexagonix | Instala rotina de serviço de interrupção|
+| 23 | retornarVersao | Serviços do Hexagon | Sem entrada | EAX = Número da versão; EBX = Número da subversão; CH = Caractere de revisão; EDX = Arquitetura; ESI = Nome do Kernel; EDI = Build do Kernel| Unix-like | Retorna a versão do Hexagon para os aplicativos|
+| 24 | obterAleatorio | Serviços do Hexagon | EAX = Máximo | EAX = Número | Hexagonix | Obtêm um número aleatório|
+| 25 | alimentarAleatorio | Serviços do Hexagon | EAX - Número para criar entropia | Sem saída | Hexagonix | Alimenta com entropia o gerador de números aleatórios do kernel|
+| 26 | causarAtraso | Serviços do Hexagon | ECX = Tempo em unidades de contagem para causar atraso | Sem saída | Hexagonix | Causa um atraso (delay) em operações |
+| 27 | instalarISR | Serviços do Hexagon | EAX = Número da interrupção; ESI = Ponteiro para o manipulador | Sem saída | Hexagonix | Instala rotina de serviço de interrupção|
 
 ### Serviços de gerenciamento de energia
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
-| 27 | reiniciarPC | Gerenciamento de energia | Sem entrada | Sem saída | Unix-like | Solicita o reinicio do dispositivo|
-| 28 | desligarPC | Gerenciamento de energia | Sem entrada | Sem saída | Unix-like | Solicita o desligamento do dispositivo|
+| 28 | reiniciarPC | Gerenciamento de energia | Sem entrada | Sem saída | Unix-like | Solicita o reinicio do dispositivo|
+| 29 | desligarPC | Gerenciamento de energia | Sem entrada | Sem saída | Unix-like | Solicita o desligamento do dispositivo|
 
 ### Serviços de vídeos e gráficos
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
-| 29 | imprimir | Serviços de vídeos e gráficos | EAX = Conteúdo numérico, se este for o caso, respeitando os formatos designados. Os formatos devem ser informados; ESI = Ponteiro para a string à ser impressa, se este for o caso; EBX = Tipo de entrada (01h - inteiro decimal; 02h - inteiro hexadecimal; 03h - inteiro binário; 04h - string)| Sem saída | Hexagonix | Envia um conteúdo definido para um dispositivo de saída
-| 30 | limparTela | Serviços de vídeos e gráficos | Sem entrada | Sem saída | Hexagonix | Limpa o console atual|
-| 31 | limparLinha | Serviços de vídeos e gráficos | AL = Número da linha  | Sem saída | Hexagonix | Limpa uma linha específica no console|
+| 30 | imprimir | Serviços de vídeos e gráficos | EAX = Conteúdo numérico, se este for o caso, respeitando os formatos designados. Os formatos devem ser informados; ESI = Ponteiro para a string à ser impressa, se este for o caso; EBX = Tipo de entrada (01h - inteiro decimal; 02h - inteiro hexadecimal; 03h - inteiro binário; 04h - string)| Sem saída | Hexagonix | Envia um conteúdo definido para um dispositivo de saída
+| 31 | limparTela | Serviços de vídeos e gráficos | Sem entrada | Sem saída | Hexagonix | Limpa o console atual|
+| 32 | limparLinha | Serviços de vídeos e gráficos | AL = Número da linha  | Sem saída | Hexagonix | Limpa uma linha específica no console|
 | 33 | rolarTela | Serviços de vídeos e gráficos | Sem entrada | Sem saída | Hexagonix | Rola o console para baixo uma linha|
 | 34 | definirCursor | Serviços de vídeo e gráficos | DL = posição no eixo X; DH = posição no eixo Y | Sem saída | Hexagonix | Define o cursor em uma posição específica|
 | 35 | desenharCaractere | Serviços de vídeo e gráficos |  EAX = posição no eixo X; EBX = posição no eixo Y; EDX = Cor em hexadecimal | Sem saída | Hexagonix | Coloca um pixel no console| 
