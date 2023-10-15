@@ -88,6 +88,7 @@ Diversos utilitários no padrão Unix estão incluidos até o momento. São eles
 * ls
 * man
 * mount
+* mv
 * ps
 * rm
 * sh
