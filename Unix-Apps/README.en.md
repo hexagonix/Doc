@@ -88,6 +88,7 @@ Several Unix-standard utilities are included so far. Are they:
 * ls
 * man
 * mount
+* mv
 * ps
 * rm
 * sh
