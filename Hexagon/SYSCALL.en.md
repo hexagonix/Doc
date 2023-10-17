@@ -103,9 +103,9 @@ Now, a table with the Hexagonix system call functions. Functions are sorted into
 
 | Function number | Name | Group | Input | Output | Function family| Description |
 |:---------------:|:----:|:-----:|:-----:|:------:|:--------------:|:-----------:|
-| 23 | returnVersion | Hexagon Services | No input | EAX = Version number; EBX = Subversion number; CH = Review character; EDX = Architecture; ESI = Kernel Name; EDI = Kernel Build| Unix-like | Returns Hexagon version for applications|
+| 23 | returnVersion | Hexagon Services | No input | EAX = Version number; EBX = Subversion number; ECX = Revision number; EDX = Architecture; ESI = Kernel name; EDI = Kernel build date/time| Unix-like | Returns Hexagon version for applications|
 | 24 | getRandom | Hexagon Services | EAX = Maximum | EAX = Number | Hexagonix | Get a random number|
-| 25 | feedRandom | Hexagon Services | EAX - Number to create entropy | No output | Hexagonix | Feed Entropy to Kernel Random Number Generator|
+| 25 | feedRandom | Hexagon Services | EAX - Number to create entropy | No output | Hexagonix | Feed Entropy to kernel random number generator|
 | 26 | causeDelay | Hexagon Services | ECX = Time in count units to cause delay | No output | Hexagonix | Causes a delay in operations |
 | 27 | installISR | Hexagon Services | EAX = Interrupt number; ESI = Pointer to handler | No output | Hexagonix | Install interrupt service routine|
 
