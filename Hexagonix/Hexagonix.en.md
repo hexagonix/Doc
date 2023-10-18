@@ -382,12 +382,12 @@ You can report bugs and help develop the system. To do so, open an error notific
 
 Several other projects were important to enable the development of Hexagonix. These projects contributed with ideas and design concepts and with well-documented code that allows the understanding of different structures of an operating system, inspiring several functions and features currently available in Hexagonix.
 
-* [MenuetOS](http://www.menuetos.net/), an open source operating system written in x86 Assembly;
-* [KolibriOS](https://kolibrios.org/en/), an open source operating system written in x86 Assembly;
+* [MenuetOS](http://www.menuetos.net/), an open source operating system written in x86 Assembly (32 and 64-bit);
+* [KolibriOS](https://kolibrios.org/en/), an open source operating system written in x86 Assembly (32-bit);
 * [MikeOS](http://mikeos.sourceforge.net/), an open source operating system written in x86 Assembly (16-bit);
 * [Snowdrop OS](http://www.sebastianmihai.com/snowdrop/), public domain operating system written in x86 Assembly (16-bit);
-* [Alotware](https://github.com/0x5CE/alotware), public domain operating system written in x86 Assembly;
-* [MS-DOS](https://github.com/microsoft/MS-DOS), open source operating system written in x86 Assembly;
+* [Alotware](https://github.com/0x5CE/alotware), public domain operating system written in x86 Assembly (32-bit);
+* [MS-DOS](https://github.com/microsoft/MS-DOS), open source operating system written in x86 Assembly (16-bit);
 * [Version 7 UNIX](https://github.com/dspinellis/unix-history-repo/tree/Research-V7-Snapshot-Development), historical operating system written in C;
 * [FreeBSD](https://www.freebsd.org/), operating system written in C;
 * [Linux 0.1.1](https://kernel.org), kernel written in C;
