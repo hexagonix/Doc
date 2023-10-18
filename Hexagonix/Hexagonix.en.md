@@ -350,7 +350,7 @@ Below you can learn more about how to contribute and report bugs found in Hexago
 
 <div align="justify">
 
-If you have knowledge of creating x86 assembly code and would like to help with system development, feel free to send me an email! See [here](https://github.com/hexagonix/Doc/blob/main/Hexagonix/README.en.md#author) how to contact me!
+If you have knowledge of creating x86 assembly code and would like to help with system development, feel free to send an [email](mailto:hexagonixdev@gmail.com)!
 
 </div>
 

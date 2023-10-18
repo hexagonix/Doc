@@ -349,7 +349,7 @@ Abaixo você poderá saber mais sobre como contribuir e reportar erros encontrad
 
 <div align="justify">
 
-Se você tem conhecimento em criar código em Assembly x86 e gostaria de ajudar no desenvolvimento do sistema, sinta-se a vontade em me enviar um email! Veja [aqui](https://github.com/hexagonix/Doc/blob/main/Hexagonix/README.pt.md#autor) como entrar em contato comigo!
+Se você tem conhecimento em criar código em Assembly x86 e gostaria de ajudar no desenvolvimento do sistema, sinta-se a vontade em enviar um [email](mailto:hexagonixdev@gmail.com)!
 
 </div>
 
