@@ -207,19 +207,20 @@ Hexagonix implements, together with Hexagon, a series of Unix-like utilities, wi
 
 Hexagonix includes many of the Unix utilities you may already be familiar with, such as:
 
+- [x] cat
+- [x] clear
+- [x] cp
 - [x] init
 - [x] login
 - [x] ls
-- [x] cat
-- [x] cp
-- [x] rm
-- [x] clear
-- [x] top
-- [x] ps
 - [x] man
+- [x] mv
+- [x] ps
+- [x] rm
 - [x] sh (default shell)
 - [x] shutdown
 - [x] su
+- [x] top
 - [x] uname
 - [x] whoami, among others.
 
@@ -350,7 +351,7 @@ Below you can learn more about how to contribute and report bugs found in Hexago
 
 <div align="justify">
 
-If you have knowledge of creating x86 assembly code and would like to help with system development, feel free to send me an email! See [here](https://github.com/hexagonix/Doc/blob/main/Hexagonix/README.en.md#author) how to contact me!
+If you have knowledge of creating x86 assembly code and would like to help with system development, feel free to send an [email](mailto:hexagonixdev@gmail.com)!
 
 </div>
 
@@ -374,43 +375,26 @@ You can report bugs and help develop the system. To do so, open an error notific
 
 ## Other information
 
-<details title="Languages" align='left'>
-<br>
-<summary align='left'>🎲 Languages</summary>
-
-<div align="justify">
-
-At the moment, the system is available in English (with some components still in Portuguese) and the documentation is available in both Portuguese and English. The comments and function names in the files that make up the source code of the system are in Portuguese.
-
-</div>
-
-</details>
-
 <details title="Inspirations" align='left'>
 <br>
 <summary align='left'>🖼 Inspirations</summary>
 
 <div align="justify">
 
-Several other projects were important to enable the development of Hexagonix. These projects contributed with ideas and design concepts, with well-documented code that allows the understanding of several structures of an operating system or even contributed with codes that inspired the operation of several functions available today in Hexagonix (both kernel code and the user).
+Several other projects were important to enable the development of Hexagonix. These projects contributed with ideas and design concepts and with well-documented code that allows the understanding of different structures of an operating system, inspiring several functions and features currently available in Hexagonix.
 
-Among these, two projects in the public domain, written in Assembly x86, made it possible for the operation of certain computer components to be better understood, opening doors for authorial codes that today make up Hexagonix to be written based on the study and reimplementation of their code.
-
-* [Snowdrop OS](http://www.sebastianmihai.com/snowdrop/), public domain operating system that inspired me to write several 16-bit hardware access routines and other 16-bit functions available in HBoot. This system remains under development. Go to [website](http://www.sebastianmihai.com/snowdrop/) to get disk images and system source files.
-* [Alotware](https://github.com/0x5CE/alotware), operating system in the public domain that helped create process management functions and other kernel functions in early versions of Hexagon (now rewritten numerous times to expand the kernel). The code for this system was released into the public domain and has not been updated since then.
-
-Along with the projects mentioned above, Hexagonix is ​​only possible thanks to a series of projects, developers and people who came before. Several projects contributed with consolidated documentation, solid design ideas and demonstrations of how to develop an operating system, even a simple one. They are (in addition to the two already mentioned):
-
-* [Version 7 UNIX](https://github.com/dspinellis/unix-history-repo/tree/Research-V7-Snapshot-Development)
-* [FreeBSD](https://www.freebsd.org/)
-* [MenuetOS](http://www.menuetos.net/)
-* [KolibriOS](https://kolibrios.org/en/)
-* [Linux 0.1.1](https://kernel.org)
-* [XNU/Darwin](https://github.com/apple/darwin-xnu)
-* MS-DOS, with code available [here](https://github.com/microsoft/MS-DOS)
-* [MikeOS](http://mikeos.sourceforge.net/)
-* [LittleKernel](https://github.com/littlekernel/lk)
-* [Google Fuchsia](https://fuchsia.googlesource.com/fuchsia/)
+* [MenuetOS](http://www.menuetos.net/), an open source operating system written in x86 Assembly (32 and 64-bit);
+* [KolibriOS](https://kolibrios.org/en/), an open source operating system written in x86 Assembly (32-bit);
+* [MikeOS](http://mikeos.sourceforge.net/), an open source operating system written in x86 Assembly (16-bit);
+* [Snowdrop OS](http://www.sebastianmihai.com/snowdrop/), public domain operating system written in x86 Assembly (16-bit);
+* [Alotware](https://github.com/0x5CE/alotware), public domain operating system written in x86 Assembly (32-bit);
+* [MS-DOS](https://github.com/microsoft/MS-DOS), open source operating system written in x86 Assembly (16-bit);
+* [Version 7 UNIX](https://github.com/dspinellis/unix-history-repo/tree/Research-V7-Snapshot-Development), historical operating system written in C;
+* [FreeBSD](https://www.freebsd.org/), operating system written in C;
+* [Linux 0.1.1](https://kernel.org), kernel written in C;
+* [XNU/Darwin](https://github.com/apple/darwin-xnu), kernel written in C;
+* [LittleKernel](https://github.com/littlekernel/lk), operating system written in C and C++;
+* [Google Fuchsia](https://fuchsia.googlesource.com/fuchsia/), operating system written in C, C++ and other languages;
 
 To all these projects and developers, a huge thank you :heart:.
 
@@ -418,23 +402,11 @@ To all these projects and developers, a huge thank you :heart:.
 
 </details>
 
-<details title="Author, contributors and contacts" align='left'>
-<summary align='left'>👥️️ Author, contributors and contacts</summary>
+<details title="Contributors and contacts" align='left'>
+<br>
+<summary align='left'>👥️️ Contributors and contacts</summary>
 
-## Author
-
-* [Felipe Miguel Nery Lunkes](https://github.com/felipenlunkes)
-## Contributors
-
-* [Felipe Miguel Nery Lunkes](https://github.com/felipenlunkes)
-
-## Email
-
-* hexagonixdev@gmail.com (PT/EN)
-
-## Social networks
-
-* [Felipe Miguel Nery Lunkes](https://twitter.com/felipeldev) (Twitter)
+See the **AUTHORS** and **CREDITS** files available in each repository for more information about authorship, contributions and contact.
 
 </details>
 
