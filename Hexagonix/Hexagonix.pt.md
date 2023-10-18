@@ -383,16 +383,16 @@ Diversos outros projetos foram importantes para permitir o desenvolvimento do He
 
 * [MenuetOS](http://www.menuetos.net/), sistema operacional de código livre escrito em Assembly x86;
 * [KolibriOS](https://kolibrios.org/en/), sistema operacional de código livre escrito em Assembly x86;
-* [Snowdrop OS](http://www.sebastianmihai.com/snowdrop/), sistema operacional em domínio público escrito em Assembly x86;
+* [MikeOS](http://mikeos.sourceforge.net/), sistema operacional de código livre escrito em Assembly x86 (16-bit);
+* [Snowdrop OS](http://www.sebastianmihai.com/snowdrop/), sistema operacional em domínio público escrito em Assembly x86 (16-bit);
 * [Alotware](https://github.com/0x5CE/alotware), sistema operacional em domínio público escrito em Assembly x86;
 * [MS-DOS](https://github.com/microsoft/MS-DOS), sistema operacional de código livre escrito em Assembly x86;
-* [Version 7 UNIX](https://github.com/dspinellis/unix-history-repo/tree/Research-V7-Snapshot-Development)
-* [FreeBSD](https://www.freebsd.org/)
-* [Linux 0.1.1](https://kernel.org)
-* [XNU/Darwin](https://github.com/apple/darwin-xnu)
-* [MikeOS](http://mikeos.sourceforge.net/)
-* [LittleKernel](https://github.com/littlekernel/lk)
-* [Google Fuchsia](https://fuchsia.googlesource.com/fuchsia/)
+* [Version 7 UNIX](https://github.com/dspinellis/unix-history-repo/tree/Research-V7-Snapshot-Development), sistema operacional histórico escrito em C;
+* [FreeBSD](https://www.freebsd.org/), sistema operacional escrito em C;
+* [Linux 0.1.1](https://kernel.org), kernel escrito em C;
+* [XNU/Darwin](https://github.com/apple/darwin-xnu), kernel escrito em C;
+* [LittleKernel](https://github.com/littlekernel/lk), sistema operacional escrito em C e C++;
+* [Google Fuchsia](https://fuchsia.googlesource.com/fuchsia/), sistema operacional escrito em C, C++ e outras linguagens;
 
 A todos esses projetos e desenvolvedores, um enorme agradecimento :heart:.
 

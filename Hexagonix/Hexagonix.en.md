@@ -384,16 +384,16 @@ Several other projects were important to enable the development of Hexagonix. Th
 
 * [MenuetOS](http://www.menuetos.net/), an open source operating system written in x86 Assembly;
 * [KolibriOS](https://kolibrios.org/en/), an open source operating system written in x86 Assembly;
-* [Snowdrop OS](http://www.sebastianmihai.com/snowdrop/), public domain operating system written in x86 Assembly;
+* [MikeOS](http://mikeos.sourceforge.net/), an open source operating system written in x86 Assembly (16-bit);
+* [Snowdrop OS](http://www.sebastianmihai.com/snowdrop/), public domain operating system written in x86 Assembly (16-bit);
 * [Alotware](https://github.com/0x5CE/alotware), public domain operating system written in x86 Assembly;
 * [MS-DOS](https://github.com/microsoft/MS-DOS), open source operating system written in x86 Assembly;
-* [Version 7 UNIX](https://github.com/dspinellis/unix-history-repo/tree/Research-V7-Snapshot-Development)
-* [FreeBSD](https://www.freebsd.org/)
-* [Linux 0.1.1](https://kernel.org)
-* [XNU/Darwin](https://github.com/apple/darwin-xnu)
-* [MikeOS](http://mikeos.sourceforge.net/)
-* [LittleKernel](https://github.com/littlekernel/lk)
-* [Google Fuchsia](https://fuchsia.googlesource.com/fuchsia/)
+* [Version 7 UNIX](https://github.com/dspinellis/unix-history-repo/tree/Research-V7-Snapshot-Development), historical operating system written in C;
+* [FreeBSD](https://www.freebsd.org/), operating system written in C;
+* [Linux 0.1.1](https://kernel.org), kernel written in C;
+* [XNU/Darwin](https://github.com/apple/darwin-xnu), kernel written in C;
+* [LittleKernel](https://github.com/littlekernel/lk), operating system written in C and C++;
+* [Google Fuchsia](https://fuchsia.googlesource.com/fuchsia/), operating system written in C, C++ and other languages;
 
 To all these projects and developers, a huge thank you :heart:.
 
