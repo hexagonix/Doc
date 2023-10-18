@@ -207,19 +207,20 @@ Hexagonix implements, together with Hexagon, a series of Unix-like utilities, wi
 
 Hexagonix includes many of the Unix utilities you may already be familiar with, such as:
 
+- [x] cat
+- [x] clear
+- [x] cp
 - [x] init
 - [x] login
 - [x] ls
-- [x] cat
-- [x] cp
-- [x] rm
-- [x] clear
-- [x] top
-- [x] ps
 - [x] man
+- [x] mv
+- [x] ps
+- [x] rm
 - [x] sh (default shell)
 - [x] shutdown
 - [x] su
+- [x] top
 - [x] uname
 - [x] whoami, among others.
 
