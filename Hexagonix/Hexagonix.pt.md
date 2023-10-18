@@ -402,6 +402,7 @@ A todos esses projetos e desenvolvedores, um enorme agradecimento :heart:.
 </details>
 
 <details title="Contribuidores e contatos" align='left'>
+<br>
 <summary align='left'>👥️️ Contribuidores e contatos</summary>
 
 Veja os arquivos **AUTHORS** e **CREDITS** disponíveis em cada repositório para mais informações sobre autoria, contribuições e contato. 

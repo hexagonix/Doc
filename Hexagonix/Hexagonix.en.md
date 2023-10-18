@@ -403,6 +403,7 @@ To all these projects and developers, a huge thank you :heart:.
 </details>
 
 <details title="Contributors and contacts" align='left'>
+<br>
 <summary align='left'>👥️️ Contributors and contacts</summary>
 
 See the **AUTHORS** and **CREDITS** files available in each repository for more information about authorship, contributions and contact.
