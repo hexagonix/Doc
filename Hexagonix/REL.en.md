@@ -58,6 +58,8 @@ Here you can get more information about all versions of Hexagonix ever released.
 
 Below you can have direct access to some versions that have become milestones in the distribution of the system and have access to summary information about them.
 
+> :construction: Warning! On 10/19/2023, the Hexagon version was downgraded to v1.0.0. This is due to several system stability improvements and corrections, in addition to the correction of several bugs during the system's execution. Furthermore, new features added showed that the kernel is now approaching maturity and stability. Therefore, just like the H1 version, the next edition of the system will be released with a kernel version 1.0.0.
+
 </div>
 
 <details title="Hexagonix H1" align='left'>
@@ -376,8 +378,6 @@ Consolidation of development versions, with:
 ## Development versions
 
 Development versions of Hexagonix are named `projects` and may lead to new release versions of the system. These releases introduce components and features that may be unstable or unfinished, and are initially research on design and implementation of Hexagonix. Development versions, called projects, may or may not be the source of a new release version of Hexagonix, although features may or may not be fully implemented in a release version. `Regardless, Hexagonix is ​​continually being developed`.
-
-> :construction: Warning! On 10/19/2023, the Hexagon version was downgraded to v1.0.0. This is due to several system stability improvements and corrections, in addition to the correction of several bugs during the system's execution. Furthermore, new features added showed that the kernel is now approaching maturity and stability. Therefore, just like the H1 version, the next edition of the system will be released with a kernel version 1.0.0.
 
 <details title="Project Raava" align='left'>
 <br>
