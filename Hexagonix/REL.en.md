@@ -375,9 +375,9 @@ Consolidation of development versions, with:
 
 ## Development versions
 
-Development versions of Hexagonix are named `projects` and may lead to new release versions of the system. These releases introduce components and features that may be unstable or unfinished, and are initially research on design and implementation of Hexagonix.
+Development versions of Hexagonix are named `projects` and may lead to new release versions of the system. These releases introduce components and features that may be unstable or unfinished, and are initially research on design and implementation of Hexagonix. Development versions, called projects, may or may not be the source of a new release version of Hexagonix, although features may or may not be fully implemented in a release version. `Regardless, Hexagonix is ​​continually being developed`.
 
-> Development versions, called projects, may or may not be the source of a new release version of Hexagonix, although features may or may not be fully implemented in a release version. `Regardless, Hexagonix is ​​continually being developed`.
+> :construction: Warning! On 10/19/2023, the Hexagon version was downgraded to v1.0.0. This is due to several system stability improvements and corrections, in addition to the correction of several bugs during the system's execution. Furthermore, new features added showed that the kernel is now approaching maturity and stability. Therefore, just like the H1 version, the next edition of the system will be released with a kernel version 1.0.0.
 
 <details title="Project Raava" align='left'>
 <br>
@@ -387,7 +387,7 @@ Development versions of Hexagonix are named `projects` and may lead to new relea
 
 Project Raava is a fork of Hexagonix H2 Release 2 (CURRENT branch), which aims to develop the next stable release of the system, version H3 (no release schedule defined - the release may not occur in 2023). For this, the system starts from:
 
-- Hexagon v1.3.6 (version 1.3 revision 6);
+- Hexagon based in early v1.3.6 (version 1.3 revision 6);
 - Base of Hexagonix H2 Release 2 (H2R2): H2-CURRENT+290320231532;
 - Hexagon v1.3.7 (version 1.3 revision 7) - 05/20/2023;
 
