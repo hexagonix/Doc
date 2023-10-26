@@ -225,8 +225,7 @@ Hexagonix includes many of the Unix utilities you may already be familiar with, 
 - [x] whoami, among others.
 
 Some applications and utilities were developed exclusively for Hexagonix, such as:
-   
-* htop (alternate version of top)
+
 * fnt (Hexagonix graphic font change utility)
 * hash (alternate shell)
 * lshapp (gets and displays information from HAPP images)

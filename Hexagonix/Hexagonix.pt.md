@@ -226,7 +226,6 @@ O Hexagonix inclui muitos dos utilitários Unix que você pode já estar familia
 
 Alguns aplicativos e utilitários foram desenvolvidos exclusivamente para o Hexagonix, como:
 
-* htop (versão alternativa de top)
 * fnt (utilitário de alteração de fonte gráfica do Hexagonix)
 * hash (shell alternativo)
 * lshapp (obtém e exibe informações de imagens HAPP)
