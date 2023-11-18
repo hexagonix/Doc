@@ -69,7 +69,7 @@ O hx aceita uma série de parâmetros para determinar quais ações devem ser ex
 | `--info`| Exibe informações do Hexagonix, como versão, revisão, ramo de desenvolvimento, etc| Sem parâmetros secundários|
 | `--indent`| Inicializa um utilitário hx que formata e otimiza os códigos-fonte, manuais e arquivos de definição do Hexagonix | Sem parâmetros necessários|
 | `--configure`| Executa o módulo `configure.sh` para gerar os arquivos estáticos necessários para a construção| Sem parâmetros secundários|
-| `--stat`| Exibe informações estatísticas sobre o Hexagonx (necessário cloc instalado)| Sem parâmetros secundários|
+| `--stat`| Exibe informações estatísticas sobre o Hexagonix (necessário cloc instalado)| Sem parâmetros secundários|
 
 ### Módulos do hx
 
