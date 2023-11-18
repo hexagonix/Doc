@@ -68,7 +68,7 @@ hx accepts a series of parameters to determine which actions to perform. Below i
 | `--info`| Displays Hexagonix information such as version, revision, development branch, etc| No secondary parameters|
 | `--indent`| Starts an hx utility that formats and optimizes Hexagonix source code, manuals, and definition files | No secondary parameters|
 | `--configure`| Runs the `configure.sh` module to generate the static files needed for the build| No secondary parameters|
-| `--stat`| Displays statistical information about Hexagonx (cloc installed required)| No secondary parameters|
+| `--stat`| Displays statistical information about Hexagonix (cloc installed required)| No secondary parameters|
 
 ### hx modules
 
