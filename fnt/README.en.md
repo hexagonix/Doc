@@ -46,7 +46,7 @@ Feel free to download the font [modelo](https://github.com/hexagonix/xfnt/blob/m
 * You can freely divide the placeholders for accents and other graphic features of each character, such as cedilla or portions that fall below the character line, such as y, comma, etc.
 * Fonts are drawn in bitmap format. Therefore, each character is a pixel map composed of 0s and 1s. The 0s symbolize undisplayed areas of the character, while the 1s represent the pixels of the character that will be displayed to the user. You must change each character array in the template font by adding the 1s where you want the pixels to appear to form the character. Below you will see an example of a blank character and the same representation of this character ready for the font.
 
-The code below shows the bitmap representation of the hash sign (#) in the font [model](https://github.com/hexagonix/xfnt/blob/main/modelo.asm) and the implementation in the font [hint](https: //github.com/hexagonix/xfnt/blob/main/hint.asm).
+The code below shows the bitmap representation of the hash sign (#) in the font [model](https://github.com/hexagonix/xfnt/blob/main/modelo.txt) and the implementation in the font [aurora](https: //github.com/hexagonix/xfnt/blob/main/aurora.asm).
 
 ```assembly
 
@@ -71,7 +71,7 @@ db 00000000b
 db 00000000b
 db 00000000b
 
-;; Blank representation of the hash character (#), in hint font
+;; Blank representation of the hash character (#), in aurora font
 
 .quill:
 
