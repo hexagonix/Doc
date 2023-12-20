@@ -58,7 +58,7 @@ Aqui você pode obter mais informações sobre todas as versões do Hexagonix j�
 
 Abaixo você pode ter acesso direto a algumas versões que se tornaram marcos na distribuição do sistema e ter acesso a informações resumidas sobre elas.
 
-> :construction: Aviso! Em 19/10/2023, a versão do Hexagon foi rebaixada para v1.0.0. Isso se deve à diversas melhorias e correções de estabilidade do sistema, além da correçã ode diversos bugs durante a execução do sistema. Além disso, novas funcionalidades adicionadas mostraram que agora o kernel se aproxima de uma maturidade e estabilidade. Desta forma, assim como a versão H1, a próxima edição do sistema será lançado com um kernel v1.0.0.
+> :construction: Aviso! Em 19/10/2023, a versão do Hexagon foi alterada para v1.0.0. Isso se deve à diversas melhorias e correções de estabilidade do sistema, além da correção de diversos bugs durante a execução do sistema. Além disso, novas funcionalidades adicionadas mostraram que agora o kernel se aproxima de uma maturidade e estabilidade. Desta forma, assim como a versão H1, a próxima edição do sistema será lançado com um kernel v1.0.0.
 
 </div>
 

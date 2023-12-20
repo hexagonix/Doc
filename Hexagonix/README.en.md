@@ -177,7 +177,7 @@ To test Hexagonix, get the file [`hexagonix.img`](https://github.com/hexagonix/h
 
 </div>
 
-## Test Hexagonix on a virtualized system
+## Test Hexagonix on a virtualized environment
 
 <div align="justify">
 
