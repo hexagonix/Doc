@@ -68,8 +68,8 @@ db 10, 10, "Press any key to end this program...", 10, 10, 0
 ;; be started below the name, facilitating readability and organization
 ;; in codes with many variables.
 
-.vd0: ;; Another example of content with a string.
-db "vd0", 0 ;; Contents of gapp.vd0
+.tty0: ;; Another example of content with a string.
+db "tty0", 0 ;; Contents of gapp.tty0
 
 ;; Numeric variables and constants must be declared on the same line, as below:
 
@@ -79,7 +79,7 @@ db "vd0", 0 ;; Contents of gapp.vd0
 In the header of the file, it must contain the author's name, with copyright, as below:
 
 ```
-Copyright (c) 2023 Author
+Copyright (c) 2024 Author
 All rights reserved.
 ```
 
@@ -136,8 +136,8 @@ db 10, 10, "Pressione qualquer tecla para finalizar este programa...", 10, 10, 0
 ;; ser iniciados abaixo do nome, facilitando a legibilidade e organização
 ;; em códigos com muitas variáveis.
 
-.vd0: ;; Outro exemplo de conteúdo com uma string.
-db "vd0", 0 ;; Conteúdo de gapp.vd0
+.tty0: ;; Outro exemplo de conteúdo com uma string.
+db "tty0", 0 ;; Conteúdo de gapp.tty0
 
 ;; Variáveis e contantes numéricas devem ser declaradas na mesma linha, como abaixo:
 
@@ -147,7 +147,7 @@ db "vd0", 0 ;; Conteúdo de gapp.vd0
 No cabeçalho do arquivo, deve conter o nome do autor, com copyright, como abaixo:
 
 ```
-Copyright (c) 2023 Autor
+Copyright (c) 2024 Autor
 Todos os direitos reservados.
 ```
 
