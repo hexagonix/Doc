@@ -70,7 +70,7 @@ Now, a table with the Hexagonix system call functions. Functions are sorted into
 | 3 | hx.exec | Memory and Process Management | ESI = Program name; EDI = Arguments; EAX = 0 if no arguments are passed | CF set on error or image not found | Unix-like | Loads and executes image present in the volume|
 | 4 | hx.exit | Memory and Process Management | EAX = Error code, if any; EBX = 0 if just terminate execution; EBX = 0x1234 to keep resident | No output | Unix-like | Finalizes the execution of a process |
 | 5 | hx.pid | Memory and Process Management | No input | EAX = PID of current process | Unix-like | Get the PID of the running process |
-| 6 | hx.memoryUsage | Memory and Process Management | No input | EAX = Used memory, in bytes; EBX = Total memory available for use, in bytes; ECX = Total memory available for use, in Mbytes (less accurate); EDX = Memory reserved for the Hexagon®, in bytes; ESI = Total allocated memory (reserved+processes), in Kbytes| Unix-like | Get Detailed System Memory Usage|
+| 6 | hx.memoryUsage | Memory and Process Management | No input | EAX = Used memory, in bytes; EBX = Total memory available for use, in bytes; ECX = Total memory available for use, in Mbytes (less accurate); EDX = Memory reserved for the Hexagon, in bytes; ESI = Total allocated memory (reserved+processes), in Kbytes| Unix-like | Get Detailed System Memory Usage|
 | 7 | hx.getProcesses | Memory and Process Management | No input | ESI = List of processes; EAX = Number of running processes | Unix-like | Get running processes |
 | 8 | hx.getErrorCode | Memory and Process Management | No input | EAX = Error code (0 for no error)| Hexagonix | Get the code returned by the last running process |
 

@@ -1,6 +1,6 @@
 <!--
 
-Copyright © 2021-2024 Felipe Miguel Nery Lunkes
+Copyright (c) 2015-2024 Felipe Miguel Nery Lunkes
 Todos os direitos reservados.
 
 -->
@@ -128,7 +128,7 @@ Below you can find an example of HBoot module implementation:
 ;;
 ;; HBoot Module
 ;;
-;; Hexagon® Boot - HBoot
+;; Hexagon Boot - HBoot
 ;;
 ;; Copyright © 2020-2021 Felipe Miguel Nery Lunkes
 ;; All rights reserved
