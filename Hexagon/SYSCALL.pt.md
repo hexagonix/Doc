@@ -104,7 +104,7 @@ Agora, uma tabela com as funções da chamada de sistema do Hexagonix. As funç�
 | 23 | hx.uname | Serviços do Hexagon | Sem entrada | EAX = Número da versão; EBX = Número da subversão; ECX = Número de revisão; EDX = Arquitetura; ESI = Nome do kernel; EDI = Data/hora de build do kernel| Unix-like | Retorna a versão do Hexagon para os aplicativos|
 | 24 | hx.getRandom | Serviços do Hexagon | EAX = Máximo | EAX = Número | Hexagonix | Obtêm um número aleatório|
 | 25 | hx.feedRandom | Serviços do Hexagon | EAX - Número para criar entropia | Sem saída | Hexagonix | Alimenta com entropia o gerador de números aleatórios do kernel|
-| 26 | hx.sleep | Serviços do Hexagon | ECX = Tempo em unidades de contagem para causar atraso | Sem saída | Hexagonix | Causa um atraso (delay) em operações |
+| 26 | hx.sleep | Serviços do Hexagon | ECX = Tempo em unidades de contagem para causar atraso | Sem saída | Unix-like | Causa um atraso (delay) em operações |
 | 27 | hx.installISR | Serviços do Hexagon | EAX = Número da interrupção; ESI = Ponteiro para o manipulador | Sem saída | Hexagonix | Instala rotina de serviço de interrupção|
 
 ### Serviços de gerenciamento de energia
