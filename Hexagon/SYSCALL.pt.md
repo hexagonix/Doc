@@ -65,128 +65,128 @@ Agora, uma tabela com as funções da chamada de sistema do Hexagonix. As funç�
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
-| 1 | alocarMemoria | Gerenciamento de memória e processos | EAX = Tamanho da memória solicitada, em bytes | EBX = Ponteiro para a memória alocada | Unix-like| Aloca memória para o processo|
-| 2 | liberarMemoria | Gerenciamento de memória e processos | EBX = Ponteiro para a memória alocada; ECX = Tamanho da memória alocada | Sem saída | Unix-like | Libera a memória alocada previamente|
-| 3 | iniciarProcesso | Gerenciamento de memória e processos | ESI = Nome do programa; EDI = Argumentos; EAX = 0 se não forem passados argumentos| CF definido em caso de erro ou imagem não encontrada | Unix-like | Carrega e executa imagem presente no volume|  
-| 4 | encerrarProcesso | Gerenciamento de memória e processos | EAX = Código de erro, caso exista; EBX = 0 se apenas terminar a execução; EBX = 0x1234 para manter residente | Sem saída | Unix-like | FInaliza a execução de um processo |
-| 5 | obterPID | Gerenciamento de memória e processos | Sem entrada | EAX = PID do processo atual | Unix-like | Obtêm o PID do processo em execução |
-| 6 | usoMemoria | Gerenciamento de memória e processos | Sem entrada | EAX = Memória utilizada, em bytes; EBX = Memória total disponível para uso, em bytes; ECX = Memória total disponível para uso, em Mbytes (menos preciso); EDX = Memória reservada para o Hexagon®, em bytes; ESI = Memória total alocada (resevada+processos), em kbytes| Unix-like | Obter o uso detalhado de memória pelo sistema|
-| 7 | obterProcessos | Gerenciamento de memória e processos | Sem entrada | ESI = Lista de processos; EAX = Número de processos em execução | Unix-like | Obtêm os processos em execução|
-| 8 | obterCodigoErro | Gerenciamento de memória e processos | Sem entrada | EAX = Código de erro (0 para sem erro)| Hexagonix | Obtêm o código retornado pelo último processo em execução|
+| 1 | hx.malloc | Gerenciamento de memória e processos | EAX = Tamanho da memória solicitada, em bytes | EBX = Ponteiro para a memória alocada | Unix-like| Aloca memória para o processo|
+| 2 | hx.free | Gerenciamento de memória e processos | EBX = Ponteiro para a memória alocada; ECX = Tamanho da memória alocada | Sem saída | Unix-like | Libera a memória alocada previamente|
+| 3 | hx.exec | Gerenciamento de memória e processos | ESI = Nome do programa; EDI = Argumentos; EAX = 0 se não forem passados argumentos| CF definido em caso de erro ou imagem não encontrada | Unix-like | Carrega e executa imagem presente no volume|  
+| 4 | hx.exit | Gerenciamento de memória e processos | EAX = Código de erro, caso exista; EBX = 0 se apenas terminar a execução; EBX = 0x1234 para manter residente | Sem saída | Unix-like | FInaliza a execução de um processo |
+| 5 | hx.pid | Gerenciamento de memória e processos | Sem entrada | EAX = PID do processo atual | Unix-like | Obtêm o PID do processo em execução |
+| 6 | hx.memoryUsage | Gerenciamento de memória e processos | Sem entrada | EAX = Memória utilizada, em bytes; EBX = Memória total disponível para uso, em bytes; ECX = Memória total disponível para uso, em Mbytes (menos preciso); EDX = Memória reservada para o Hexagon®, em bytes; ESI = Memória total alocada (resevada+processos), em kbytes| Unix-like | Obter o uso detalhado de memória pelo sistema|
+| 7 | hx.getProcesses | Gerenciamento de memória e processos | Sem entrada | ESI = Lista de processos; EAX = Número de processos em execução | Unix-like | Obtêm os processos em execução|
+| 8 | hx.getErrorCode | Gerenciamento de memória e processos | Sem entrada | EAX = Código de erro (0 para sem erro)| Hexagonix | Obtêm o código retornado pelo último processo em execução|
 
 ### Gerenciamento de arquivos e dispositivos
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
-| 9 | abrir | Gerenciamento de arquivos e dispositivos | ESI = Ponteiro para o buffer que contêm o nome convencionado; EDI = Endereço de carregamento, em caso de arquivo| CF definido quando o nome do dispositivo for inválido ou arquivo não existir | Unix-like | Abre um canal de leitura/escrita em um dispositivo solicitado ou arquivo comum presente no disco (dispositivos e discos são tratados como arquivos). Em caso de arquivo no disco, um endereço de carregamento deve ser fornecido|
-| 10 | escrever | Gerenciamento de arquivos e dispositivos |  ESI = Ponteiro com o buffer contendo os dados | CF definido em caso de erro ou nenhum dispositivo aberto | Unix-like | Envia dados para o dispositivo aberto|
-| 11 | fechar | Gerenciamento de arquivos e dispositivos | Sem entrada | Sem saída | Unix-like | Fecha o último dispositivo aberto pelo processo atual|
-| 13 | salvarArquivo | Gerenciamento de arquivos e dispositivos |  ESI = Ponteiro para o nome do arquivo; EDI = Ponteiro para o conteúdo; EAX = Tamanho do arquivo | CF definido em caso de erro ou arquivo já presente | Unix-like | Salva um arquivo no volume montado|
-| 14 | deletarArquivo | Gerenciamento de arquivos e dispositivos | ESI = Ponteiro para o nome do arquivo | CF definido em caso de erro ou arquivo não existente | Unix-like | Remove um arquivo no volume montado |
-| 15 | renomearArquivo | Gerenciamento de arquivos e dispositivos | ESI = Ponteiro para o nome do arquivo original; EDI = Ponteiro para o novo nome de arquivo | CF definido em caso de erro ou erro na atualização de nome | Unix-like | Atualiza o nome de um arquivo no volume montado |
-| 16 | listarArquivos | Gerenciamento de arquivos e dispositivos | Sem entrada | ESI = Ponteiro para a lista de arquivos; EAX = Total de arquivos | Unix-like | Obtêm lista de arquivos presentes no volume |
-| 17 | arquivoExiste | Gerenciamento de arquivos e dispositivos | ESI = Nome do arquivo para checar |  EAX = Tamanho do arquivo; CF definido se o arquivo não existir | Hexagonix | Checar se um arquivo existe no volume |
-| 18 | obterDisco | Gerenciamento de arquivos e dispositivos | Sem entrada | ESI = Nome do dispositivo; EDI = Rótulo do volume utilizado | Hexagonix | Obtêm informações do disco montado em `/`|
+| 9 | hx.open | Gerenciamento de arquivos e dispositivos | ESI = Ponteiro para o buffer que contêm o nome convencionado; EDI = Endereço de carregamento, em caso de arquivo| CF definido quando o nome do dispositivo for inválido ou arquivo não existir | Unix-like | Abre um canal de leitura/escrita em um dispositivo solicitado ou arquivo comum presente no disco (dispositivos e discos são tratados como arquivos). Em caso de arquivo no disco, um endereço de carregamento deve ser fornecido|
+| 10 | hx.write | Gerenciamento de arquivos e dispositivos |  ESI = Ponteiro com o buffer contendo os dados | CF definido em caso de erro ou nenhum dispositivo aberto | Unix-like | Envia dados para o dispositivo aberto|
+| 11 | hx.close | Gerenciamento de arquivos e dispositivos | Sem entrada | Sem saída | Unix-like | Fecha o último dispositivo aberto pelo processo atual|
+| 13 | hx.create | Gerenciamento de arquivos e dispositivos |  ESI = Ponteiro para o nome do arquivo; EDI = Ponteiro para o conteúdo; EAX = Tamanho do arquivo | CF definido em caso de erro ou arquivo já presente | Unix-like | Salva um arquivo no volume montado|
+| 14 | hx.unlink | Gerenciamento de arquivos e dispositivos | ESI = Ponteiro para o nome do arquivo | CF definido em caso de erro ou arquivo não existente | Unix-like | Remove um arquivo no volume montado |
+| 15 | hx.rename | Gerenciamento de arquivos e dispositivos | ESI = Ponteiro para o nome do arquivo original; EDI = Ponteiro para o novo nome de arquivo | CF definido em caso de erro ou erro na atualização de nome | Unix-like | Atualiza o nome de um arquivo no volume montado |
+| 16 | hx.listFiles | Gerenciamento de arquivos e dispositivos | Sem entrada | ESI = Ponteiro para a lista de arquivos; EAX = Total de arquivos | Unix-like | Obtêm lista de arquivos presentes no volume |
+| 17 | hx.fileExists | Gerenciamento de arquivos e dispositivos | ESI = Nome do arquivo para checar |  EAX = Tamanho do arquivo; CF definido se o arquivo não existir | Hexagonix | Checar se um arquivo existe no volume |
+| 18 | hx.getVolume | Gerenciamento de arquivos e dispositivos | Sem entrada | ESI = Nome do dispositivo; EDI = Rótulo do volume utilizado | Hexagonix | Obtêm informações do disco montado em `/`|
 
 ### Funções de gerenciamento de usuário e permissões
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
-| 19 | travar | Gerenciamento de usuário e permissões | Sem entrada | Sem saída | Unix-like | Bloqueia o sinal de término de processo em primeiro plano por tecla especial|
-| 20 | destravar | Gerenciamento de usuário e permissões | Sem entrada | Sem saída | Unix-like | Habilita o sinal de término de processos em primeiro plano por uso de tecla especial|
-| 21 | definirUsuario | Gerenciamento de usuário e permissões | EAX = ID do grupo; ESI = Nome do usuário | Sem saída | Hexagonix | Define um usuário para a sessão atual|
-| 22 | obterUsuario | Gerenciamento de usuário e permissões | Sem entrada | EAX = ID do grupo; ESI = Nome do usuário| Hexagonix | Obtêm dados do usuário logado para a sessão atual|
+| 19 | hx.lock | Gerenciamento de usuário e permissões | Sem entrada | Sem saída | Unix-like | Bloqueia o sinal de término de processo em primeiro plano por tecla especial|
+| 20 | hx.unlock | Gerenciamento de usuário e permissões | Sem entrada | Sem saída | Unix-like | Habilita o sinal de término de processos em primeiro plano por uso de tecla especial|
+| 21 | hx.setUser | Gerenciamento de usuário e permissões | EAX = ID do grupo; ESI = Nome do usuário | Sem saída | Hexagonix | Define um usuário para a sessão atual|
+| 22 | hx.getUser | Gerenciamento de usuário e permissões | Sem entrada | EAX = ID do grupo; ESI = Nome do usuário| Hexagonix | Obtêm dados do usuário logado para a sessão atual|
 
 ### Serviços do Hexagon
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
-| 23 | retornarVersao | Serviços do Hexagon | Sem entrada | EAX = Número da versão; EBX = Número da subversão; ECX = Número de revisão; EDX = Arquitetura; ESI = Nome do kernel; EDI = Data/hora de build do kernel| Unix-like | Retorna a versão do Hexagon para os aplicativos|
-| 24 | obterAleatorio | Serviços do Hexagon | EAX = Máximo | EAX = Número | Hexagonix | Obtêm um número aleatório|
-| 25 | alimentarAleatorio | Serviços do Hexagon | EAX - Número para criar entropia | Sem saída | Hexagonix | Alimenta com entropia o gerador de números aleatórios do kernel|
-| 26 | causarAtraso | Serviços do Hexagon | ECX = Tempo em unidades de contagem para causar atraso | Sem saída | Hexagonix | Causa um atraso (delay) em operações |
-| 27 | instalarISR | Serviços do Hexagon | EAX = Número da interrupção; ESI = Ponteiro para o manipulador | Sem saída | Hexagonix | Instala rotina de serviço de interrupção|
+| 23 | hx.uname | Serviços do Hexagon | Sem entrada | EAX = Número da versão; EBX = Número da subversão; ECX = Número de revisão; EDX = Arquitetura; ESI = Nome do kernel; EDI = Data/hora de build do kernel| Unix-like | Retorna a versão do Hexagon para os aplicativos|
+| 24 | hx.getRandom | Serviços do Hexagon | EAX = Máximo | EAX = Número | Hexagonix | Obtêm um número aleatório|
+| 25 | hx.feedRandom | Serviços do Hexagon | EAX - Número para criar entropia | Sem saída | Hexagonix | Alimenta com entropia o gerador de números aleatórios do kernel|
+| 26 | hx.sleep | Serviços do Hexagon | ECX = Tempo em unidades de contagem para causar atraso | Sem saída | Hexagonix | Causa um atraso (delay) em operações |
+| 27 | hx.installISR | Serviços do Hexagon | EAX = Número da interrupção; ESI = Ponteiro para o manipulador | Sem saída | Hexagonix | Instala rotina de serviço de interrupção|
 
 ### Serviços de gerenciamento de energia
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
-| 28 | reiniciarPC | Gerenciamento de energia | Sem entrada | Sem saída | Unix-like | Solicita o reinicio do dispositivo|
-| 29 | desligarPC | Gerenciamento de energia | Sem entrada | Sem saída | Unix-like | Solicita o desligamento do dispositivo|
+| 28 | hx.restart | Gerenciamento de energia | Sem entrada | Sem saída | Unix-like | Solicita o reinicio do dispositivo|
+| 29 | hx.shutdown | Gerenciamento de energia | Sem entrada | Sem saída | Unix-like | Solicita o desligamento do dispositivo|
 
 ### Serviços de vídeos e gráficos
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
-| 30 | imprimir | Serviços de vídeos e gráficos | EAX = Conteúdo numérico, se este for o caso, respeitando os formatos designados. Os formatos devem ser informados; ESI = Ponteiro para a string à ser impressa, se este for o caso; EBX = Tipo de entrada (01h - inteiro decimal; 02h - inteiro hexadecimal; 03h - inteiro binário; 04h - string)| Sem saída | Hexagonix | Envia um conteúdo definido para um dispositivo de saída
-| 31 | limparTela | Serviços de vídeos e gráficos | Sem entrada | Sem saída | Hexagonix | Limpa o console atual|
-| 32 | limparLinha | Serviços de vídeos e gráficos | AL = Número da linha  | Sem saída | Hexagonix | Limpa uma linha específica no console|
-| 33 | rolarTela | Serviços de vídeos e gráficos | Sem entrada | Sem saída | Hexagonix | Rola o console para baixo uma linha|
-| 34 | definirCursor | Serviços de vídeo e gráficos | DL = posição no eixo X; DH = posição no eixo Y | Sem saída | Hexagonix | Define o cursor em uma posição específica|
-| 35 | desenharCaractere | Serviços de vídeo e gráficos |  EAX = posição no eixo X; EBX = posição no eixo Y; EDX = Cor em hexadecimal | Sem saída | Hexagonix | Coloca um pixel no console| 
-| 36 | desenharBloco | Serviços de vídeo e gráficos | EAX = posição no eixo X; EBX = posição no eixo Y; ESI = Comprimento; EDI = Altura; EDX = Cor em hexadecimal | Sem saída | Hexagonix | Desenha um bloco de cor específica|
-| 37 | imprimirCaractere | Serviços de vídeo e gráficos | AL = Caractere; EBX = 01h para reposicionar cursor | Sem saída | Hexagonix | Imprimir caractere no console na posição do cursor| 
-| 38 | definirCor | Serviços de vídeo e gráficos | EAX = Cor da fonte (RGB em hexadecimal); EBX = Cor do plano de fundo (RGB em hexadecimal); ECX = 1234h para alterar o tema padrão para os valores solicitados; Em modo texto, apenas preto e branco são permitidos | Sem saída | Hexagonix | Define cor de fundo e primeiro plano|
-| 39 | obterCor | Serviços de vídeo e gráficos | Sem entrada | EAX = Cor da fonte (RGB em hexadecimal); EBX = Cor do plano de fundo (RGB em hexadecimal); ECX = 1234h para alterar o tema padrão para os valores solicitados; Em modo texto, apenas preto e branco são permitidos | Hexagonix | Obtêm cor de fundo e primeiro plano|
-| 40 | obterInfoTela | Serviços de vídeo e gráficos | Sem entrada | EAX = Resolução X (bits 0..15), Y (bits 16..31); EBX = Colunas (bit 0..7), Linhas (8..15), Bits por pixel (16..23); EDX = Endereço do início do frame de vídeo; CF definido em caso de modo texto | Hexagonix | Obtêm informações do console atual|
-| 41 | atualizarTela | Serviços de vídeo e gráficos | Sem entrada | Sem saída | Hexagonix | Atualiza o console primário com conteúdo do primeiro console virtual|
-| 42 | definirResolucao | Serviços de vídeo e gráficos | EAX = Número relativo a resolução à ser utilizada (1 = Resolução de 800x600 pixels; 2 - Resolução de 1024x768 pixels; 3 - Alterar para modo texto)| Sem saída | Hexagonix | Define a resolução do console principal|
-| 43 | obterResolucao | Serviços de vídeo e gráficos | Sem entrada | EAX = Número relativo a resolução à ser utilizada (1 = Resolução de 800x600 pixels; 2 - Resolução de 1024x768 pixels) | Hexagonix | Ontêm a resolução utilizadapelo console principal|
-| 44 | obterCursor | Serviços de vídeo e gráficos | Sem entrada | DL = Eixo X; DH = Eixo Y | Hexagonix | Obtêm a posição do cursor|
+| 30 | hx.print | Serviços de vídeos e gráficos | EAX = Conteúdo numérico, se este for o caso, respeitando os formatos designados. Os formatos devem ser informados; ESI = Ponteiro para a string à ser impressa, se este for o caso; EBX = Tipo de entrada (01h - inteiro decimal; 02h - inteiro hexadecimal; 03h - inteiro binário; 04h - string)| Sem saída | Hexagonix | Envia um conteúdo definido para um dispositivo de saída
+| 31 | hx.clearConsole | Serviços de vídeos e gráficos | Sem entrada | Sem saída | Hexagonix | Limpa o console atual|
+| 32 | hx.clearLine | Serviços de vídeos e gráficos | AL = Número da linha  | Sem saída | Hexagonix | Limpa uma linha específica no console|
+| 33 | hx.scrollConsole | Serviços de vídeos e gráficos | Sem entrada | Sem saída | Hexagonix | Rola o console para baixo uma linha|
+| 34 | hx.setCursor | Serviços de vídeo e gráficos | DL = posição no eixo X; DH = posição no eixo Y | Sem saída | Hexagonix | Define o cursor em uma posição específica|
+| 35 | hx.drawCharacter | Serviços de vídeo e gráficos |  EAX = posição no eixo X; EBX = posição no eixo Y; EDX = Cor em hexadecimal | Sem saída | Hexagonix | Coloca um pixel no console| 
+| 36 | hx.drawBlock | Serviços de vídeo e gráficos | EAX = posição no eixo X; EBX = posição no eixo Y; ESI = Comprimento; EDI = Altura; EDX = Cor em hexadecimal | Sem saída | Hexagonix | Desenha um bloco de cor específica|
+| 37 | hx.printCharacter | Serviços de vídeo e gráficos | AL = Caractere; EBX = 01h para reposicionar cursor | Sem saída | Hexagonix | Imprimir caractere no console na posição do cursor| 
+| 38 | hx.setColor | Serviços de vídeo e gráficos | EAX = Cor da fonte (RGB em hexadecimal); EBX = Cor do plano de fundo (RGB em hexadecimal); ECX = 1234h para alterar o tema padrão para os valores solicitados; Em modo texto, apenas preto e branco são permitidos | Sem saída | Hexagonix | Define cor de fundo e primeiro plano|
+| 39 | hx.getColor | Serviços de vídeo e gráficos | Sem entrada | EAX = Cor da fonte (RGB em hexadecimal); EBX = Cor do plano de fundo (RGB em hexadecimal); ECX = 1234h para alterar o tema padrão para os valores solicitados; Em modo texto, apenas preto e branco são permitidos | Hexagonix | Obtêm cor de fundo e primeiro plano|
+| 40 | hx.getConsoleInfo | Serviços de vídeo e gráficos | Sem entrada | EAX = Resolução X (bits 0..15), Y (bits 16..31); EBX = Colunas (bit 0..7), Linhas (8..15), Bits por pixel (16..23); EDX = Endereço do início do frame de vídeo; CF definido em caso de modo texto | Hexagonix | Obtêm informações do console atual|
+| 41 | hx.updateScreen | Serviços de vídeo e gráficos | Sem entrada | Sem saída | Hexagonix | Atualiza o console primário com conteúdo do primeiro console virtual|
+| 42 | hx.setResolution | Serviços de vídeo e gráficos | EAX = Número relativo a resolução à ser utilizada (1 = Resolução de 800x600 pixels; 2 - Resolução de 1024x768 pixels; 3 - Alterar para modo texto)| Sem saída | Hexagonix | Define a resolução do console principal|
+| 43 | hx.getResolution | Serviços de vídeo e gráficos | Sem entrada | EAX = Número relativo a resolução à ser utilizada (1 = Resolução de 800x600 pixels; 2 - Resolução de 1024x768 pixels) | Hexagonix | Ontêm a resolução utilizadapelo console principal|
+| 44 | hx.getCursor | Serviços de vídeo e gráficos | Sem entrada | DL = Eixo X; DH = Eixo Y | Hexagonix | Obtêm a posição do cursor|
 
 ### Serviços de manipulação de teclado PS/2
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
-| 45 | aguardarTeclado | Serviços de manipulação de teclado PS/2 | Sem entrada | AL = Caractere; AH - Scancode | Hexagonix | Espera o pressionamento de uma tecla no teclado|
-| 46 | obterString | Serviços de manipulação de teclado PS/2 | AL = Máximo de caracteres para obter | EBX = Presença ou não de eco durante a digitação (1234h para sem eco e qualquer valor para ativar); ESI = String | Hexagonix | Obtêm uma string do teclado|
-| 47 | obterEstadoTeclas | Serviços de manipulação de teclado PS/2 | Sem entrada | EAX = Status das teclas especiais (bit 0: Tecla Control; bit 1: Tecla Shift; bit 2-31: Reservado) | Hexagonix | Obtêm o estado das teclas especiais, como Control e Shift|
-| 48 | alterarFonte | Serviços de manipulação de teclado PS/2 | ESI = Ponteiro para o buffer contendo o nome do arquivo que contêm a fonte compatível com o Hexagonix | CF definido em caso de arquivo não encontrado ou incompatível | Hexagonix | Altera a fonte padrão de exibição do sistema|
-| 49 | alterarLeiaute | Serviços de manipulação de teclado PS/2 | ESI = Arquivo contendo um leiaute de teclado válido | CF definido em caso de arquivo não encontrado ou incompatível | Hexagonix | Altera o leiaute do teclado|
+| 45 | hx.waitKeyboard | Serviços de manipulação de teclado PS/2 | Sem entrada | AL = Caractere; AH - Scancode | Hexagonix | Espera o pressionamento de uma tecla no teclado|
+| 46 | hx.getString | Serviços de manipulação de teclado PS/2 | AL = Máximo de caracteres para obter | EBX = Presença ou não de eco durante a digitação (1234h para sem eco e qualquer valor para ativar); ESI = String | Hexagonix | Obtêm uma string do teclado|
+| 47 | hx.getKeyState | Serviços de manipulação de teclado PS/2 | Sem entrada | EAX = Status das teclas especiais (bit 0: Tecla Control; bit 1: Tecla Shift; bit 2-31: Reservado) | Hexagonix | Obtêm o estado das teclas especiais, como Control e Shift|
+| 48 | hx.changeConsoleFont | Serviços de manipulação de teclado PS/2 | ESI = Ponteiro para o buffer contendo o nome do arquivo que contêm a fonte compatível com o Hexagonix | CF definido em caso de arquivo não encontrado ou incompatível | Hexagonix | Altera a fonte padrão de exibição do sistema|
+| 49 | hx.changeLayout | Serviços de manipulação de teclado PS/2 | ESI = Arquivo contendo um leiaute de teclado válido | CF definido em caso de arquivo não encontrado ou incompatível | Hexagonix | Altera o leiaute do teclado|
 
 ### Serviços de manipulação de mouse PS/2
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
-| 50 | aguardarMouse | Serviços de manipulação de mouse PS/2 | Sem entrada |  EAX = Posição no eixo X; EBX = Posição no eixo Y; EDX = Botões | Hexagonix | Aguarda por evento do mouse|
-| 51 | obterMouse | Serviços de manipulação de mouse PS/2 | Sem entrada | EAX = Posição no eixo X; EBX = Posição no eixo Y; EDX = Botões | Hexagonix | Obtêm posição atual do mouse e estado dos botões|
-| 52 | definirMouse | Serviços de manipulação de mouse PS/2 | EAX = Posição no eixo X; EBX = Posição no eixo Y | Sem saída | Hexagonix | Define nova posição do mouse|
+| 50 | hx.waitMouse | Serviços de manipulação de mouse PS/2 | Sem entrada |  EAX = Posição no eixo X; EBX = Posição no eixo Y; EDX = Botões | Hexagonix | Aguarda por evento do mouse|
+| 51 | hx.getMouse | Serviços de manipulação de mouse PS/2 | Sem entrada | EAX = Posição no eixo X; EBX = Posição no eixo Y; EDX = Botões | Hexagonix | Obtêm posição atual do mouse e estado dos botões|
+| 52 | hx.setMouse | Serviços de manipulação de mouse PS/2 | EAX = Posição no eixo X; EBX = Posição no eixo Y | Sem saída | Hexagonix | Define nova posição do mouse|
 
 ## Serviços de manipulação e conversão de dados
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
-| 53 | compararPalavrasString | Serviços de manipulação e conversão de dados | ESI = Primeira string; EDI = Segunda string | CF definido se iguais | Hexagonix | Compara primeiras words de duas strings|
-| 54 | removerCaractereString | Serviços de manipulação e conversão de dados | ESI = String; EAX = Posição do caractere | Sem saída | Hexagonix | Remove um caractere em uma posição específica de uma string|
-| 55 | inserirCaractere | Serviços de manipulação e conversão de dados |  ESI = String; EDX = Posição; AL = Caractere para inserir | Sem saída | Hexagonix |  Insere um caractere em posição específica da string|
-| 56 | tamanhoString | Serviços de manipulação e conversão de dados | ESI = String | EAX = Tamanho da string | Hexagonix | Obtêm o tamanho de uma string|
-| 57 | compararString | Serviços de manipulação e conversão de dados | ESI = Primeira string; EDI = Segunda string | CF definido se as duas forem iguais | Hexagonix | Compara de todos os caracteres de uma string são iguais|
-| 58 | stringParaMaiusculo | Serviços de manipulação e conversão de dados | ESI = String | String convertida | Hexagonix | Converte uma string para caracteres maiúsculos|
-| 59 | stringParaMinusculo | Serviços de manipulação e conversão de dados | ESI = String | String convertida | Hexagonix | Converte uma string para caracteres minúsculos|
-| 60 | cortarString | Serviços de manipulação e conversão de dados | ESI = String | String cortada | Hexagonix |  Remove espaços em branco da string|
-| 61 | encontrarCaractere | Serviços de manipulação e conversão de dados | ESI = String, AL = Caractere para encontrar | EAX = Número de ocorrências do caractere; CF definido se caractere não encontrado | Hexagonix | Encontra caractere específico na string|
-| 62 | stringParaInt | Serviços de manipulação e conversão de dados | ESI = String | EAX = Inteiro; CF definido em caso de número inválido | Hexagonix | Converte um número string para número inteiro|
-| 63 | paraString | Serviços de manipulação e conversão de dados | EAX = Inteiro à ser convertido | ESI = Ponteiro para o buffer contendo a string | Hexagonix | Converte um número inteiro em uma string|
+| 53 | hx.compareWordsString | Serviços de manipulação e conversão de dados | ESI = Primeira string; EDI = Segunda string | CF definido se iguais | Hexagonix | Compara primeiras words de duas strings|
+| 54 | hx.removeCharacterString | Serviços de manipulação e conversão de dados | ESI = String; EAX = Posição do caractere | Sem saída | Hexagonix | Remove um caractere em uma posição específica de uma string|
+| 55 | hx.insertCharacter | Serviços de manipulação e conversão de dados |  ESI = String; EDX = Posição; AL = Caractere para inserir | Sem saída | Hexagonix |  Insere um caractere em posição específica da string|
+| 56 | hx.stringSize | Serviços de manipulação e conversão de dados | ESI = String | EAX = Tamanho da string | Hexagonix | Obtêm o tamanho de uma string|
+| 57 | hx.compareString | Serviços de manipulação e conversão de dados | ESI = Primeira string; EDI = Segunda string | CF definido se as duas forem iguais | Hexagonix | Compara de todos os caracteres de uma string são iguais|
+| 58 | hx.stringToUppercase | Serviços de manipulação e conversão de dados | ESI = String | String convertida | Hexagonix | Converte uma string para caracteres maiúsculos|
+| 59 | hx.stringToLowercase | Serviços de manipulação e conversão de dados | ESI = String | String convertida | Hexagonix | Converte uma string para caracteres minúsculos|
+| 60 | hx.trimString | Serviços de manipulação e conversão de dados | ESI = String | String cortada | Hexagonix |  Remove espaços em branco da string|
+| 61 | hx.findCharacter | Serviços de manipulação e conversão de dados | ESI = String, AL = Caractere para encontrar | EAX = Número de ocorrências do caractere; CF definido se caractere não encontrado | Hexagonix | Encontra caractere específico na string|
+| 62 | hx.stringToInt | Serviços de manipulação e conversão de dados | ESI = String | EAX = Inteiro; CF definido em caso de número inválido | Hexagonix | Converte um número string para número inteiro|
+| 63 | hx.toString | Serviços de manipulação e conversão de dados | EAX = Inteiro à ser convertido | ESI = Ponteiro para o buffer contendo a string | Hexagonix | Converte um número inteiro em uma string|
 
 ### Serviços de saída de som
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
-| 64 | emitirSom | Serviços de saída de som | AX = Frequência a ser reproduzida | Sem saída | Hexagonix | Toca um tom no alto-falante interno do computador|
-| 65 | desligarSom | Serviços de saída de som| Sem entrada | Sem saída | Hexagonix |  Desliga o alto-falante interno do computador, interrompendo qualquer emissão de som em progresso|
+| 64 | hx.emitSound | Serviços de saída de som | AX = Frequência a ser reproduzida | Sem saída | Hexagonix | Toca um tom no alto-falante interno do computador|
+| 65 | hx.turnOffSound | Serviços de saída de som| Sem entrada | Sem saída | Hexagonix |  Desliga o alto-falante interno do computador, interrompendo qualquer emissão de som em progresso|
 
 ### Serviço de mensagens
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
-| 66 | enviarMensagemHexagon | Serviço de mensagens | ESI = Mensagem; EAX = Código de erro, se houver; EBX = Prioridade | Sem saída | Hexagonix | Envia uma mensagem de alta prioridade do Hexagon|
+| 66 | hx.sendMessageHexagon | Serviço de mensagens | ESI = Mensagem; EAX = Código de erro, se houver; EBX = Prioridade | Sem saída | Hexagonix | Envia uma mensagem de alta prioridade do Hexagon|
 
 ### Serviços de relógio em tempo real
 
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
-| 67 | retornarData | Serviços de relógio em tempo real | EAX = Dia, em ASCII;  EBX = Mês, em ASCII; ECX = Século, em ASCII; EDX = Ano, em ASCII  | Sem saída | Hexagonix | Retorna informações de relógio em tempo real em formato ASCII (String). Conversão para número pode ser necessária|
-| 68 | retornarHora | Serviços de relógio em tempo real | EAX = Hora, em ASCII; EBX = Minuto, em ASCII; ECX = Segundo, em ASCII | Sem saída | Hexagonix | Retorna informações de relógio em tempo real em formato ASCII (String). Conversão para número pode ser necessária|
+| 67 | hx.date | Serviços de relógio em tempo real | EAX = Dia, em ASCII;  EBX = Mês, em ASCII; ECX = Século, em ASCII; EDX = Ano, em ASCII  | Sem saída | Hexagonix | Retorna informações de relógio em tempo real em formato ASCII (String). Conversão para número pode ser necessária|
+| 68 | hx.time | Serviços de relógio em tempo real | EAX = Hora, em ASCII; EBX = Minuto, em ASCII; ECX = Segundo, em ASCII | Sem saída | Hexagonix | Retorna informações de relógio em tempo real em formato ASCII (String). Conversão para número pode ser necessária|
 
 <!-- Vai funcionar como <hr> -->
 
