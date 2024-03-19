@@ -186,7 +186,7 @@ Agora, uma tabela com as funções da chamada de sistema do Hexagonix. As funç�
 | Número da função | Nome | Grupo | Entrada | Saída | Família da função| Descrição |
 |:----------------:|:----:|:-------:|:------:|:----:|:----------------:|:---------:|
 | 67 | hx.date | Serviços de relógio em tempo real | EAX = Dia, em ASCII;  EBX = Mês, em ASCII; ECX = Século, em ASCII; EDX = Ano, em ASCII  | Sem saída | Hexagonix | Retorna informações de relógio em tempo real em formato ASCII (String). Conversão para número pode ser necessária|
-| 68 | hx.tim | Serviços de relógio em tempo real | EAX = Hora, em ASCII; EBX = Minuto, em ASCII; ECX = Segundo, em ASCII | Sem saída | Hexagonix | Retorna informações de relógio em tempo real em formato ASCII (String). Conversão para número pode ser necessária|
+| 68 | hx.time | Serviços de relógio em tempo real | EAX = Hora, em ASCII; EBX = Minuto, em ASCII; ECX = Segundo, em ASCII | Sem saída | Hexagonix | Retorna informações de relógio em tempo real em formato ASCII (String). Conversão para número pode ser necessária|
 
 <!-- Vai funcionar como <hr> -->
 
