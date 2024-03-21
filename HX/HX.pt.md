@@ -64,7 +64,7 @@ O hx aceita uma série de parâmetros para determinar quais ações devem ser ex
 | `-un`| Altera o ramo e sincroniza todos os repositórios com o ramo informado| Ramo desejado|
 | `-m`| Clona todos os repositórios localmente e prepara as ferramentas de construção. Útil para gerar um novo diretório de construção| Sem parâmetros secundários| 
 | `-c`| Limpa todos os arquivos temporários criados durante uma construção do sistema| Sem parâmetros secundários|
-| `--ver`| Exibe informações de versão e copyright| Sem parâmetros secundários|
+| `--version`| Exibe informações de versão e copyright| Sem parâmetros secundários|
 | `--depend`| Instala as dependências de construção (sistemas Debian, Ubuntu e derivados, apenas)| Sem parâmetros secundários|
 | `--info`| Exibe informações do Hexagonix, como versão, revisão, ramo de desenvolvimento, etc| Sem parâmetros secundários|
 | `--indent`| Inicializa um utilitário hx que formata e otimiza os códigos-fonte, manuais e arquivos de definição do Hexagonix | Sem parâmetros necessários|

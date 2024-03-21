@@ -63,7 +63,7 @@ hx accepts a series of parameters to determine which actions to perform. Below i
 | `-un`| Change the branch and synchronize all repositories with the given branch| Desired branch|
 | `-m`| Clones all repositories locally and prepares the build tools. Useful for generating a new build directory| No secondary parameters|
 | `-c`| Clears all temp files created during a system build| No secondary parameters|
-| `--ver`| Displays version and copyright information| No secondary parameters|
+| `--version`| Displays version and copyright information| No secondary parameters|
 | `--depend`| Install build dependencies (Debian, Ubuntu and derivative systems only)| No secondary parameters|
 | `--info`| Displays Hexagonix information such as version, revision, development branch, etc| No secondary parameters|
 | `--indent`| Starts an hx utility that formats and optimizes Hexagonix source code, manuals, and definition files | No secondary parameters|
