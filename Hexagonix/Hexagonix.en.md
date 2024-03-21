@@ -80,6 +80,8 @@ Some features of Hexagonix:
 <br>
 <summary align='left'>Languages</summary>
 
+<div align="justify">
+
 At this time, the system is available in **English** and the documentation is available in both **Portuguese (Brazil)** and **English**.
 
 > The comments and code in the files that make up the system's source code are only available in English (**from the System I version onwards**. In previous versions, the system and source code were only available in Brazilian Portuguese).
