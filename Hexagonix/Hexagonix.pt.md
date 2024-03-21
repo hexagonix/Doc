@@ -78,6 +78,16 @@ Algumas características do Hexagonix:
 
 `O Hexagonix não tem como objetivo a construção de um sistema de produção, mas sim de um sistema simples, bem documentado e com interfaces fáceis de compreender, podendo ser utilizado para fins educacionais`. O Hexagonix objetiva a pesquisa e implementação de um sistema operacional moderno desenvolvido puramente em Assembly x86 utilizando um montador atual. Para sistemas mais complexos, completos e profissionais desenvolvidos em Assembly x86, visite projetos como o [MenuetOS](https://www.menuetos.net/) ou [KolibriOS](https://kolibrios.org/en/).
 
+### 🎲 Idiomas
+
+Neste momento, o sistema está disponível em **inglês** e a documentação está disponível tanto em **português (Brasil)** quanto em **inglês**. 
+
+> Os comentários e código nos arquivos que compõem o código-fonte do sistema estão disponíveis apenas em inglês (**a partir da versão System I**. Em versões anteriores, o sistema e o código-fonte estavam disponíveis apenas em português do Brasil).
+
+Para permitir colaboração e atrair desenvolvedores que não falam português, todo o sistema foi traduzido para o inglês e seu desenvolvimento será integralmente realizado neste idioma.
+
+> Sinta-se livre e incentivado a reportar erros de tradução, seja criando uma `issue` no repositório que contém o arquivo, enviando um email ou criando um `Pull Request` com a correção.
+
 </div>
 
 <details title="Licença" align='left'>
@@ -401,24 +411,22 @@ A todos esses projetos e desenvolvedores, um enorme agradecimento :heart:.
 
 </details>
 
-<div align="justify">
-
-## 🎲 Idiomas
-
-Neste momento, o sistema está disponível em **inglês** e a documentação está disponível tanto em **português (Brasil)** quanto em **inglês**. 
-
-> Os comentários e código nos arquivos que compõem o código-fonte do sistema estão disponíveis apenas em inglês (**a partir da versão System I**. Em versões anteriores, o sistema e o código-fonte estavam disponíveis apenas em português do Brasil).
-
-Para permitir colaboração e atrair desenvolvedores que não falam português, todo o sistema foi traduzido para o inglês e seu desenvolvimento será integralmente realizado neste idioma.
-
-> Sinta-se livre e incentivado a reportar erros de tradução, seja criando uma `issue` no repositório que contém o arquivo, enviando um email ou criando um `Pull Request` com a correção.
-
-## 👥️️ Contribuidores e contatos
+<details title="Contribuidores e contatos" align='left'>
+<br>
+<summary align='left'>👥️️ Contribuidores e contatos</summary>
 
 Veja os arquivos **AUTHORS** e **CREDITS** disponíveis em cada repositório para mais informações sobre autoria, contribuições e contato. 
 
-## 📝 Notas de direitos autorais
+</details>
+
+<details title="Notas de direitos autorais" align='left'>
+<br>
+<summary align='left'>📝 Notas de direitos autorais</summary>
+
+<div align="justify">
 
 Leia a licença para mais informações sobre direitos autorais, propriedade de código e redistribuição que se aplicam apenas aos arquivos disponíveis neste repositório (não se aplicam ao conjunto de arquivos de dados e de código-fonte que compõem o Hexagonix). Sempre fique atento ao arquivo `LICENSE` disponível em cada repositório para estar ciente dos direitos e obrigações legais.
 
 </div>
+
+</details>
