@@ -318,7 +318,11 @@ You can report bugs and help develop the system. To do so, open an error notific
 
 At this time, the system is available in **English** and the documentation is available in both **Portuguese (Brazil)** and **English**.
 
-> The comments and code in the files that make up the system's source code are only available in English (**from the System I version onwards**. Before that, the entire system was only available in Brazilian Portuguese).
+> The comments and code in the files that make up the system's source code are only available in English (**from the System I version onwards**. In previous versions, the system and source code were only available in Brazilian Portuguese).
+
+To allow collaboration and attract developers who don't speak Portuguese, the entire system was translated into English and its development will be entirely carried out in this language.
+
+> Feel free and encouraged to report translation errors, either by creating an `issue` in the repository that contains the file, sending an email or creating a `Pull Request` with the correction.
 
 </div>
 

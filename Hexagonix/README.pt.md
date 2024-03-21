@@ -318,7 +318,11 @@ Você pode reportar erros e ajudar a desenvolver o sistema. Para isso, abra uma 
 
 Neste momento, o sistema está disponível em **inglês** e a documentação está disponível tanto em **português (Brasil)** quanto em **inglês**. 
 
-> Os comentários e código nos arquivos que compõem o código-fonte do sistema estão disponíveis apenas em inglês (**a partir da versão System I**. Antes disso, todo o sistema estava disponível apenas em português do Brasil).
+> Os comentários e código nos arquivos que compõem o código-fonte do sistema estão disponíveis apenas em inglês (**a partir da versão System I**. Em versões anteriores, o sistema e o código-fonte estavam disponíveis apenas em português do Brasil).
+
+Para permitir colaboração e atrair desenvolvedores que não falam português, todo o sistema foi traduzido para o inglês e seu desenvolvimento será integralmente realizado neste idioma.
+
+> Sinta-se livre e incentivado a reportar erros de tradução, seja criando uma `issue` no repositório que contém o arquivo, enviando um email ou criando um `Pull Request` com a correção.
 
 </div>
 
