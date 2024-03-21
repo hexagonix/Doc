@@ -80,6 +80,22 @@ Some features of Hexagonix:
 
 </div>
 
+<details title="Languages" align='left'>
+<br>
+<summary align='left'>Languages</summary>
+
+At this time, the system is available in **English** and the documentation is available in both **Portuguese (Brazil)** and **English**.
+
+> The comments and code in the files that make up the system's source code are only available in English (**from the System I version onwards**. In previous versions, the system and source code were only available in Brazilian Portuguese).
+
+To allow collaboration and attract developers who don't speak Portuguese, the entire system was translated into English and its development will be entirely carried out in this language.
+
+> Feel free and encouraged to report translation errors, either by creating an `issue` in the repository that contains the file, sending an email or creating a `Pull Request` with the correction.
+
+</div>
+
+</details>
+
 <details title="License" align='left'>
 <br>
 <summary align='left'>Hexagonix License</summary>
@@ -375,28 +391,6 @@ You can report bugs and help develop the system. To do so, open an error notific
 
 ## Other information
 
-<div align="justify">
-
-## 🎲 Languages
-
-At this time, the system is available in **English** and the documentation is available in both **Portuguese (Brazil)** and **English**.
-
-> The comments and code in the files that make up the system's source code are only available in English (**from the System I version onwards**. In previous versions, the system and source code were only available in Brazilian Portuguese).
-
-To allow collaboration and attract developers who don't speak Portuguese, the entire system was translated into English and its development will be entirely carried out in this language.
-
-> Feel free and encouraged to report translation errors, either by creating an `issue` in the repository that contains the file, sending an email or creating a `Pull Request` with the correction.
-
-## 👥️️ Contributors and contacts
-
-See the **AUTHORS** and **CREDITS** files available in each repository for more information about authorship, contributions and contact.
-
-## 📝 Copyright notice
-
-Read the license for more information about copyright, code ownership, and redistribution that apply only to files available in this repository (does not apply to the set of data and source code files that make up Hexagonix). Always keep an eye on the `LICENSE` file available in each repository to be aware of legal rights and obligations.
-
-</div>
-
 <details title="Inspirations" align='left'>
 <br>
 <summary align='left'>🖼 Inspirations</summary>
@@ -422,3 +416,25 @@ Several other projects were important to enable the development of Hexagonix. Th
 To all these projects and developers, a huge thank you :heart:.
 
 </div>
+
+</details>
+
+<details title="Contributors and contacts" align='left'>
+<br>
+<summary align='left'>👥️️ Contributors and contacts</summary>
+
+See the **AUTHORS** and **CREDITS** files available in each repository for more information about authorship, contributions and contact.
+
+</details>
+
+<details title="Copyright Notes" align='left'>
+<br>
+<summary align='left'>📝 Copyright notice</summary>
+
+<div align="justify">
+
+Read the license for more information about copyright, code ownership, and redistribution that apply only to files available in this repository (does not apply to the set of data and source code files that make up Hexagonix). Always keep an eye on the `LICENSE` file available in each repository to be aware of legal rights and obligations.
+
+</div>
+
+</details>

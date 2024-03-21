@@ -80,7 +80,7 @@ Algumas características do Hexagonix:
 
 <details title="Idiomas" align='left'>
 <br>
-<summary align='left'>🎲 Idiomas</summary>
+<summary align='left'>Idiomas</summary>
 
 <div align="justify">
 
