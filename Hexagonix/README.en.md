@@ -50,13 +50,11 @@ Todos os direitos reservados.
 
 In this document, you will find a tutorial to run Hexagonix on your computer, both in a virtualized version and natively. Remember that it is necessary to have an x86 architecture computer or an emulator, if you are using a device of another architecture for testing.
 
-Read the license below regarding the use and redistribution of Hexagonix (binaries and source code).
-
 </div>
 
 <details title="License" align='left'>
 <br>
-<summary align='left'>Hexagonix License (BSD-3-Clause)</summary>
+<summary align='left'>Hexagonix License</summary>
 
 <div align="justify">
 
@@ -312,7 +310,7 @@ You can report bugs and help develop the system. To do so, open an error notific
 
 <div align="justify">
 
-## 🎲 Languages
+### 🎲 Languages
 
 At this time, the system is available in **English** and the documentation is available in both **Portuguese (Brazil)** and **English**.
 
@@ -322,11 +320,11 @@ To allow collaboration and attract developers who don't speak Portuguese, the en
 
 > Feel free and encouraged to report translation errors, either by creating an `issue` in the repository that contains the file, sending an email or creating a `Pull Request` with the correction.
 
-## 👥️️ Contributors and contacts
+### 👥️️ Contributors and contacts
 
 See the **AUTHORS** and **CREDITS** files available in each repository for more information about authorship, contributions and contact.
 
-## 📝 Copyright notice
+### 📝 Copyright notice
 
 Read the license for more information about copyright, code ownership, and redistribution that apply only to files available in this repository (does not apply to the set of data and source code files that make up Hexagonix). Always keep an eye on the `LICENSE` file available in each repository to be aware of legal rights and obligations.
 

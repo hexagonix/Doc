@@ -50,13 +50,11 @@ Todos os direitos reservados.
 
 Neste documento, você encontra um tutorial para executar o Hexagonix em seu computador, tanto em uma versão virtualizada como de forma nativa. Lembre-se que é necessário possuir um computador de arquitetura x86 ou um emulador, caso esteja utilizando um dispositivo de outra arquitetura para testes.
 
-Leia a licença abaixo, relativa ao uso e redistribuição do Hexagonix (binários e código-fonte).
-
 </div>
 
 <details title="Licença" align='left'>
 <br>
-<summary align='left'>Licença de uso e redistribuição do Hexagonix (BSD-3-Clause)</summary>
+<summary align='left'>Licença do Hexagonix</summary>
 
 <div align="justify">
 
@@ -310,11 +308,9 @@ Você pode reportar erros e ajudar a desenvolver o sistema. Para isso, abra uma 
 
 # Outras informações
 
-<details title="Idiomas" align='left'>
-<br>
-<summary align='left'>🎲 Idiomas</summary>
-
 <div align="justify">
+
+### 🎲 Idiomas
 
 Neste momento, o sistema está disponível em **inglês** e a documentação está disponível tanto em **português (Brasil)** quanto em **inglês**. 
 
@@ -324,26 +320,12 @@ Para permitir colaboração e atrair desenvolvedores que não falam português, 
 
 > Sinta-se livre e incentivado a reportar erros de tradução, seja criando uma `issue` no repositório que contém o arquivo, enviando um email ou criando um `Pull Request` com a correção.
 
-</div>
-
-</details>
-
-<details title="Contribuidores e contatos" align='left'>
-<br>
-<summary align='left'>👥️️ Contribuidores e contatos</summary>
+### 👥️️ Contribuidores e contatos
 
 Veja os arquivos **AUTHORS** e **CREDITS** disponíveis em cada repositório para mais informações sobre autoria, contribuições e contato. 
 
-</details>
-
-<details title="Notas de direitos autorais" align='left'>
-<br>
-<summary align='left'>📝 Notas de direitos autorais</summary>
-
-<div align="justify">
+### 📝 Notas de direitos autorais
 
 Leia a licença para mais informações sobre direitos autorais, propriedade de código e redistribuição que se aplicam apenas aos arquivos disponíveis neste repositório (não se aplicam ao conjunto de arquivos de dados e de código-fonte que compõem o Hexagonix). Sempre fique atento ao arquivo `LICENSE` disponível em cada repositório para estar ciente dos direitos e obrigações legais.
 
 </div>
-
-</details>
