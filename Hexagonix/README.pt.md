@@ -316,29 +316,19 @@ Você pode reportar erros e ajudar a desenvolver o sistema. Para isso, abra uma 
 
 <div align="justify">
 
-Neste momento, o sistema está disponível em inglês (com alguns componentes ainda em português) e a documentação está disponível tanto em português quanto em inglês. Os comentários e nomes de função nos arquivos que compõem o código-fonte do sistema estão em português.
+Neste momento, o sistema está disponível em **inglês** e a documentação está disponível tanto em **português (Brasil)** quanto em **inglês**. 
+
+> Os comentários e código nos arquivos que compõem o código-fonte do sistema estão disponíveis apenas em inglês (**a partir da versão System I**. Antes disso, todo o sistema estava disponível apenas em português do Brasil).
 
 </div>
 
 </details>
 
-<details title="Autor, contribuidores e contatos" align='left'>
-<summary align='left'>👥️️ Autor, contribuidores e contatos</summary>
+<details title="Contribuidores e contatos" align='left'>
+<br>
+<summary align='left'>👥️️ Contribuidores e contatos</summary>
 
-## Autor
-
-* [Felipe Miguel Nery Lunkes](https://github.com/felipenlunkes)
-## Contribuidores
-
-* [Felipe Miguel Nery Lunkes](https://github.com/felipenlunkes)
-
-## E-mail
-
-* hexagonixdev@gmail.com (PT/EN)
-
-## Redes sociais
-
-* [Felipe Miguel Nery Lunkes](https://twitter.com/felipeldev) (Twitter)
+Veja os arquivos **AUTHORS** e **CREDITS** disponíveis em cada repositório para mais informações sobre autoria, contribuições e contato. 
 
 </details>
 
@@ -348,9 +338,7 @@ Neste momento, o sistema está disponível em inglês (com alguns componentes ai
 
 <div align="justify">
 
-O Hexagonix foi desenvolvido por [Felipe Lunkes](https://github.com/felipenlunkes).
-
-Leia a licença para mais informações sobre direitos autorais, propriedade de código e redistribuição que se aplicam apenas aos arquivos disponíveis neste repositório (não se aplicam ao conjunto de arquivos de dados e de código fonte que compõem o Hexagonix). Vale ressaltar que o código dos componentes do sistema estão sendo liberados aos poucos e que cada pacote pode ser liberado com uma licença diferente. Sempre fique atento ao arquivo `LICENSE` disponível em cada repositório para estar ciente dos direitos e obrigações legais.
+Leia a licença para mais informações sobre direitos autorais, propriedade de código e redistribuição que se aplicam apenas aos arquivos disponíveis neste repositório (não se aplicam ao conjunto de arquivos de dados e de código-fonte que compõem o Hexagonix). Sempre fique atento ao arquivo `LICENSE` disponível em cada repositório para estar ciente dos direitos e obrigações legais.
 
 </div>
 

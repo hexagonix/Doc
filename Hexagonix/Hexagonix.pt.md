@@ -55,7 +55,7 @@ Algumas características do Hexagonix:
 - [x] Compatível com dispositivos com 32 MB de memória RAM ou mais;
 - [x] Kernel completo com menos de 30 kbytes;
 - [x] Suporte a ambiente de usuário;
-- [x] Chamada de sistema com 68 funções acessadas pelo ambiente de usuário;
+- [x] Chamada de sistema com funções acessadas pelo ambiente de usuário;
 - [x] Requisitos mínimos baixos, compatível com uma ampla gama de dispositivos;
 - [x] Formato binário executável próprio (HAPP);
 - [x] Self-hosting (o [montador usado para construir o Hexagonix](https://github.com/hexagonix/fasmX) pode ser executado sobre ele);
@@ -135,7 +135,7 @@ O primeiro componente do Hexagonix é o Saturno. Ele é responsável por receber
 
 <div align="justify">
 
-O Hexagon Boot (HBoot) é um componente desenvolvido para permitir a inicialização do kernel Hexagon. Até então, a inicialização era realizada por apenas um estágio, que definia um ambiente bem básico, carregava o Hexagon na memória e imediatamente o executava, fornecendo um conjunto bem limitado de parâmetros. Isso se deve ao fato de que o código desse estágio fica restrito a 512 bytes, o que limita a realização de diversos testes e processamento de dados. Como o HBoot, foi possível expandir o número de tarefas realizadas antes da execução do Hexagon, além da possibilidade de fornecer mais informações a respeito do ambiente do dispositivo e de inicialização. Isso é particularmente importante para permitir a criação de uma árvore de dispositivos que pode ser utilizada pelo Hexagon para decidir como manipular cada dispositivo identificado. O HBoot é capaz de verificar quais unidades de disco estão disponíveis na máquina, emitir um tom de inicialização, obter a quantidade de memória RAM disponível instalada e permitir ou não o prosseguimento do processo de boot de acordo com essa informação. Caso nenhuma interação do usuário seja detectada (em um tempo de 3 segundos após a inicialização do HBoot e exibição de mensagens ao usuário), o HBoot irá realizar testes adicionais para verificar a capacidade do dispositivo em executar o sistema e irá carregar e executar o Hexagon (presente em um arquivo no volume nomeado de `HEXAGON.SIS` no Hexagonix H1 e `HEXAGON` no Hexagonix H2). Após o carregamento, o HBoot transfere o controle para o Hexagon, que é inicializado e armazena no ambiente do kernel os dados fornecidos pelo HBoot.
+O Hexagon Boot (HBoot) é um componente desenvolvido para permitir a inicialização do kernel Hexagon. Até então, a inicialização era realizada por apenas um estágio, que definia um ambiente bem básico, carregava o Hexagon na memória e imediatamente o executava, fornecendo um conjunto bem limitado de parâmetros. Isso se deve ao fato de que o código desse estágio fica restrito a 512 bytes, o que limita a realização de diversos testes e processamento de dados. Como o HBoot, foi possível expandir o número de tarefas realizadas antes da execução do Hexagon, além da possibilidade de fornecer mais informações a respeito do ambiente do dispositivo e de inicialização. Isso é particularmente importante para permitir a criação de uma árvore de dispositivos que pode ser utilizada pelo Hexagon para decidir como manipular cada dispositivo identificado. O HBoot é capaz de verificar quais unidades de disco estão disponíveis na máquina, emitir um tom de inicialização, obter a quantidade de memória RAM disponível instalada e permitir ou não o prosseguimento do processo de boot de acordo com essa informação. Caso nenhuma interação do usuário seja detectada (em um tempo de 3 segundos após a inicialização do HBoot e exibição de mensagens ao usuário), o HBoot irá realizar testes adicionais para verificar a capacidade do dispositivo em executar o sistema e irá carregar e executar o Hexagon (presente em um arquivo no volume nomeado de `HEXAGON.SIS` no Hexagonix H1 e `HEXAGON` no Hexagonix H2 e versões posteriores). Após o carregamento, o HBoot transfere o controle para o Hexagon, que é inicializado e armazena no ambiente do kernel os dados fornecidos pelo HBoot.
 
 </div>
 
@@ -386,7 +386,8 @@ Diversos outros projetos foram importantes para permitir o desenvolvimento do He
 * [MikeOS](http://mikeos.sourceforge.net/), sistema operacional de código livre escrito em Assembly x86 (16-bit);
 * [Snowdrop OS](http://www.sebastianmihai.com/snowdrop/), sistema operacional em domínio público escrito em Assembly x86 (16-bit);
 * [Alotware](https://github.com/0x5CE/alotware), sistema operacional em domínio público escrito em Assembly x86 (32-bit);
-* [MS-DOS](https://github.com/microsoft/MS-DOS), sistema operacional de código livre escrito em Assembly x86 (16-bit);
+* [MS-DOS](https://github.com/microsoft/MS-DOS), sistema operacional histórico, agora parcialmente em código livre, escrito em Assembly x86 (16-bit);
+* [Public Domain Operating System (PDOS)](https://www.pdos.org/), sistema operacional em domínio público escrito em C (16 e 32-bit);
 * [Version 7 UNIX](https://github.com/dspinellis/unix-history-repo/tree/Research-V7-Snapshot-Development), sistema operacional histórico escrito em C;
 * [FreeBSD](https://www.freebsd.org/), sistema operacional escrito em C;
 * [Linux 0.1.1](https://kernel.org), kernel escrito em C;

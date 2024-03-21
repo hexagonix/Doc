@@ -13,7 +13,7 @@
 ![](https://img.shields.io/github/downloads/hexagonix/hexagonix/total.svg)
 ![](https://img.shields.io/github/release/hexagonix/hexagonix.svg)
 [![](https://img.shields.io/twitter/follow/hexagonixOS.svg?style=social&label=Follow%20%40HexagonixOS)](https://twitter.com/hexagonixOS)
-
+com 68 funções 
 </div>
 
 <!-- Vai funcionar como <hr> -->
@@ -55,7 +55,7 @@ Some features of Hexagonix:
 - [x] Compatible with devices with 32 MB of RAM or more;
 - [x] Full kernel with less than 30 kbytes;
 - [x] User environment support;
-- [x] System call with 68 functions accessed by the user environment;
+- [x] System call with functions accessed by the user environment;
 - [x] Low minimum requirements, compatible with a wide range of devices;
 - [x] Own executable binary format (HAPP);
 - [x] Self-hosting ([the assembler used to build Hexagonix](https://github.com/hexagonix/fasmX) can run on top of it);
@@ -135,7 +135,8 @@ The first component of Hexagonix is the Saturno. It is responsible for taking co
 
 <div align="justify">
 
-Hexagon Boot (HBoot) is a component designed to allow the Hexagon kernel to boot. Until then, initialization was performed by just one stage, which defined a very basic environment, loaded Hexagon into memory and immediately executed it, providing a very limited set of parameters. This is due to the fact that the code of this stage is restricted to 512 bytes, which limits the performance of several tests and data processing. With HBoot, it was possible to expand the number of tasks performed before running Hexagon, as well as the possibility to provide more information about the device and boot environment. This is particularly important to allow the creation of a device tree that Hexagon can use to decide how to handle each identified device. HBoot is able to check which disk drives are available on the machine, emit a boot tone, obtain the amount of available RAM memory installed and allow or not to proceed with the boot process according to this information. If no user interaction is detected (within 3 seconds after booting HBoot and displaying messages to the user), HBoot will perform additional tests to verify the device's ability to run the system and will load and run Hexagon (present in a file on the volume named `HEXAGON.SIS` on Hexagonix H1 and `HEXAGON` on Hexagonix H2). After loading, HBoot transfers control to Hexagon, which is initialized and stores the data provided by HBoot in the kernel environment.
+Hexagon Boot (HBoot) is a component designed to allow the Hexagon kernel to boot. Until then, initialization was performed by just one stage, which defined a very basic environment, loaded Hexagon into memory and immediately executed it, providing a very limited set of parameters. This is due to the fact that the code of this stage is restricted to 512 bytes, which limits the performance of several tests and data processing. With HBoot, it was possible to expand the number of tasks performed before running Hexagon, as well as the possibility to provide more information about the device and boot environment. This is particularly important to allow the creation of a device tree that Hexagon can use to decide how to handle each identified device. HBoot is able to check which disk drives are available on the machine, emit a boot tone, obtain the amount of available RAM memory installed and allow or not to proceed with the boot process according to this information. If no user interaction is detected (within 3 seconds after booting HBoot and displaying messages to the user), HBoot will perform additional tests to verify the device's ability to run the system and will load and run Hexagon (present in a file on the volume named `HEXAGON.SIS` on Hexagonix H1 and `HEXAGON` on Hexagonix H2 
+and later versions). After loading, HBoot transfers control to Hexagon, which is initialized and stores the data provided by HBoot in the kernel environment.
 
 </div>
 
@@ -387,7 +388,8 @@ Several other projects were important to enable the development of Hexagonix. Th
 * [MikeOS](http://mikeos.sourceforge.net/), an open source operating system written in x86 Assembly (16-bit);
 * [Snowdrop OS](http://www.sebastianmihai.com/snowdrop/), public domain operating system written in x86 Assembly (16-bit);
 * [Alotware](https://github.com/0x5CE/alotware), public domain operating system written in x86 Assembly (32-bit);
-* [MS-DOS](https://github.com/microsoft/MS-DOS), open source operating system written in x86 Assembly (16-bit);
+* [MS-DOS](https://github.com/microsoft/MS-DOS), historic operating system, now partially in open source, written in Assembly x86 (16-bit);
+* [Public Domain Operating System (PDOS)](https://www.pdos.org/), public domain operating system written in C (16 and 32-bit);
 * [Version 7 UNIX](https://github.com/dspinellis/unix-history-repo/tree/Research-V7-Snapshot-Development), historical operating system written in C;
 * [FreeBSD](https://www.freebsd.org/), operating system written in C;
 * [Linux 0.1.1](https://kernel.org), kernel written in C;
