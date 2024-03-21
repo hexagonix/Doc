@@ -94,7 +94,7 @@ Para permitir colaboração e atrair desenvolvedores que não falam português, 
 
 </div>
 
-</summary>
+</details>
 
 <details title="Licença" align='left'>
 <br>
