@@ -373,6 +373,28 @@ Você pode reportar erros e ajudar a desenvolver o sistema. Para isso, abra uma 
 
 ## Outras informações
 
+<div align="justify">
+
+## 🎲 Idiomas
+
+Neste momento, o sistema está disponível em **inglês** e a documentação está disponível tanto em **português (Brasil)** quanto em **inglês**. 
+
+> Os comentários e código nos arquivos que compõem o código-fonte do sistema estão disponíveis apenas em inglês (**a partir da versão System I**. Em versões anteriores, o sistema e o código-fonte estavam disponíveis apenas em português do Brasil).
+
+Para permitir colaboração e atrair desenvolvedores que não falam português, todo o sistema foi traduzido para o inglês e seu desenvolvimento será integralmente realizado neste idioma.
+
+> Sinta-se livre e incentivado a reportar erros de tradução, seja criando uma `issue` no repositório que contém o arquivo, enviando um email ou criando um `Pull Request` com a correção.
+
+## 👥️️ Contribuidores e contatos
+
+Veja os arquivos **AUTHORS** e **CREDITS** disponíveis em cada repositório para mais informações sobre autoria, contribuições e contato. 
+
+## 📝 Notas de direitos autorais
+
+Leia a licença para mais informações sobre direitos autorais, propriedade de código e redistribuição que se aplicam apenas aos arquivos disponíveis neste repositório (não se aplicam ao conjunto de arquivos de dados e de código-fonte que compõem o Hexagonix). Sempre fique atento ao arquivo `LICENSE` disponível em cada repositório para estar ciente dos direitos e obrigações legais.
+
+</div>
+
 <details title="Inspirações" align='left'>
 <br>
 <summary align='left'>🖼 Inspirações</summary>
@@ -396,26 +418,6 @@ Diversos outros projetos foram importantes para permitir o desenvolvimento do He
 * [Google Fuchsia](https://fuchsia.googlesource.com/fuchsia/), sistema operacional escrito em C, C++ e outras linguagens;
 
 A todos esses projetos e desenvolvedores, um enorme agradecimento :heart:.
-
-</div>
-
-</details>
-
-<details title="Contribuidores e contatos" align='left'>
-<br>
-<summary align='left'>👥️️ Contribuidores e contatos</summary>
-
-Veja os arquivos **AUTHORS** e **CREDITS** disponíveis em cada repositório para mais informações sobre autoria, contribuições e contato. 
-
-</details>
-
-<details title="Notas de direitos autorais" align='left'>
-<br>
-<summary align='left'>📝 Notas de direitos autorais</summary>
-
-<div align="justify">
-
-Leia a licença para mais informações sobre direitos autorais, propriedade de código e redistribuição que se aplicam apenas aos arquivos disponíveis neste repositório (não se aplicam ao conjunto de arquivos de dados e de código-fonte que compõem o Hexagonix). Sempre fique atento ao arquivo `LICENSE` disponível em cada repositório para estar ciente dos direitos e obrigações legais.
 
 </div>
 
