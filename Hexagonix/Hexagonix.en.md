@@ -90,6 +90,8 @@ To allow collaboration and attract developers who don't speak Portuguese, the en
 
 </div>
 
+<hr>
+
 </details>
 
 <details title="License" align='left'>
