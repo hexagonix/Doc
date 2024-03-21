@@ -121,6 +121,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 </div>
 
+<hr>
+
 </details>
 
 > `O Hexagonix não tem como objetivo a construção de um sistema de produção, mas sim de um sistema simples, bem documentado e com interfaces fáceis de compreender, podendo ser utilizado para fins educacionais`. O Hexagonix objetiva a pesquisa e implementação de um sistema operacional moderno desenvolvido puramente em Assembly x86 utilizando um montador atual. Para sistemas mais complexos, completos e profissionais desenvolvidos em Assembly x86, visite projetos como o [MenuetOS](https://www.menuetos.net/) ou [KolibriOS](https://kolibrios.org/en/).
