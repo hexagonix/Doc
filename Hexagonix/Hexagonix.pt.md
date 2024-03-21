@@ -76,8 +76,6 @@ Algumas características do Hexagonix:
 [^1]: A arquitetura do Hexagonix (estrutura e utilitários) foi inspirada na elegância e simplicidade do [Version 7 UNIX](https://github.com/dspinellis/unix-history-repo/tree/Research-V7-Snapshot-Development), embora não vise qualquer compatibilidade ou compartilhe qualquer estrutura de código com este. O Hexagonix não utiliza qualquer código derivado do Version 7 UNIX ou de outros projetos. Os utilitários do Hexagonix foram escritos para se assemelharem à função e aparência dos correspondentes no Version 7 UNIX.
 [^2]: Você pode obter mais informações sobre a licença [neste artigo](https://docs.freebsd.org/en/articles/bsdl-gpl/) do projeto FreeBSD, [no artigo](https://opensource.org/licenses/BSD-3-Clause) da Open Source Initiative ou na página sobre a licença BSD na [Wikipedia](https://pt.wikipedia.org/wiki/Licen%C3%A7a_BSD).
 
-`O Hexagonix não tem como objetivo a construção de um sistema de produção, mas sim de um sistema simples, bem documentado e com interfaces fáceis de compreender, podendo ser utilizado para fins educacionais`. O Hexagonix objetiva a pesquisa e implementação de um sistema operacional moderno desenvolvido puramente em Assembly x86 utilizando um montador atual. Para sistemas mais complexos, completos e profissionais desenvolvidos em Assembly x86, visite projetos como o [MenuetOS](https://www.menuetos.net/) ou [KolibriOS](https://kolibrios.org/en/).
-
 <details title="Idiomas" align='left'>
 <br>
 <summary align='left'>Idiomas</summary>
@@ -122,6 +120,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 </div>
 
 </details>
+
+> `O Hexagonix não tem como objetivo a construção de um sistema de produção, mas sim de um sistema simples, bem documentado e com interfaces fáceis de compreender, podendo ser utilizado para fins educacionais`. O Hexagonix objetiva a pesquisa e implementação de um sistema operacional moderno desenvolvido puramente em Assembly x86 utilizando um montador atual. Para sistemas mais complexos, completos e profissionais desenvolvidos em Assembly x86, visite projetos como o [MenuetOS](https://www.menuetos.net/) ou [KolibriOS](https://kolibrios.org/en/).
+
+</div>
 
 <!-- Vai funcionar como <hr> -->
 

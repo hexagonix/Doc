@@ -76,10 +76,6 @@ Some features of Hexagonix:
 [^1]: The architecture of Hexagonix (structure and utilities) was inspired by the elegance and simplicity of [Version 7 UNIX](https://github.com/dspinellis/unix-history-repo/tree/Research-V7-Snapshot-Development), although it does not aim for any compatibility or share any code with it. Hexagonix does not use any code derived from Version 7 UNIX or other projects. Hexagonix utilities were written to resemble the function and appearance of their counterparts in Version 7 UNIX.
 [^2]: You can get more information about the license [in this article](https://docs.freebsd.org/en/articles/bsdl-gpl/) of the FreeBSD project, [in the article](https://opensource.org/licenses/BSD-3-Clause) from the Open Source Initiative or the BSD license page on [Wikipedia](https://en.wikipedia.org/wiki/BSD_licenses).
 
-`Hexagonix is ​​not intended to build a production system, but rather a simple, well-documented system with easy-to-understand interfaces that can be used for educational purposes`. Hexagonix aims to research and implement a modern operating system developed purely in x86 Assembly using a current assembler. For more complex, complete and professional systems developed in x86 Assembly, visit projects like [MenuetOS](https://www.menuetos.net/) or [KolibriOS](https://kolibrios.org/en/).
-
-</div>
-
 <details title="Languages" align='left'>
 <br>
 <summary align='left'>Languages</summary>
@@ -122,6 +118,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 </div>
 
 </details>
+
+> `Hexagonix is ​​not intended to build a production system, but rather a simple, well-documented system with easy-to-understand interfaces that can be used for educational purposes`. Hexagonix aims to research and implement a modern operating system developed purely in x86 Assembly using a current assembler. For more complex, complete and professional systems developed in x86 Assembly, visit projects like [MenuetOS](https://www.menuetos.net/) or [KolibriOS](https://kolibrios.org/en/).
+
+</div>
 
 <!-- Vai funcionar como <hr> -->
 
