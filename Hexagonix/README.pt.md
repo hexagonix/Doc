@@ -310,7 +310,7 @@ Você pode reportar erros e ajudar a desenvolver o sistema. Para isso, abra uma 
 
 <div align="justify">
 
-### 🎲 Idiomas
+## 🎲 Idiomas
 
 Neste momento, o sistema está disponível em **inglês** e a documentação está disponível tanto em **português (Brasil)** quanto em **inglês**. 
 
@@ -320,11 +320,11 @@ Para permitir colaboração e atrair desenvolvedores que não falam português, 
 
 > Sinta-se livre e incentivado a reportar erros de tradução, seja criando uma `issue` no repositório que contém o arquivo, enviando um email ou criando um `Pull Request` com a correção.
 
-### 👥️️ Contribuidores e contatos
+## 👥️️ Contribuidores e contatos
 
 Veja os arquivos **AUTHORS** e **CREDITS** disponíveis em cada repositório para mais informações sobre autoria, contribuições e contato. 
 
-### 📝 Notas de direitos autorais
+## 📝 Notas de direitos autorais
 
 Leia a licença para mais informações sobre direitos autorais, propriedade de código e redistribuição que se aplicam apenas aos arquivos disponíveis neste repositório (não se aplicam ao conjunto de arquivos de dados e de código-fonte que compõem o Hexagonix). Sempre fique atento ao arquivo `LICENSE` disponível em cada repositório para estar ciente dos direitos e obrigações legais.
 
