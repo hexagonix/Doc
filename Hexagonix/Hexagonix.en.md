@@ -336,31 +336,15 @@ To learn more and check each function available in the system development librar
 
 Below you can learn more about how to contribute and report bugs found in Hexagonix.
 
-</div>
-
-<details title="Contribute to the development of Hexagonix" align='left'>
-<br>
-<summary align='left'>Contribute to the development of Hexagonix</summary>
-
-<div align="justify">
+### Contribute to the development of Hexagonix
 
 If you have knowledge of creating x86 assembly code and would like to help with system development, feel free to send an [email](mailto:hexagonixdev@gmail.com)!
 
-</div>
-
-</details>
-
-<details title="Report Errors" align='left'>
-<br>
-<summary align='left'>Report Errors</summary>
-
-<div align="justify">
+### Report Errors
 
 You can report bugs and help develop the system. To do so, open an error notification [here](https://github.com/hexagonix/Distro/issues), informing the error as detailed as possible (such as device brand, processor, amount of RAM, video and connected peripherals, as well as the device used to install the system, such as an internal disk drive or USB removable media). Remember to inform which application the error occurred in, if the error occurs while the system is already in operation. If the problem occurs in the boot process, please report what was displayed/observed behavior of the machine.
 
 </div>
-
-</details>
 
 <!-- Will work like <hr> -->
 
