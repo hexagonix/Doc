@@ -58,7 +58,7 @@ Neste documento, você encontra um tutorial para executar o Hexagonix em seu com
 
 <div align="justify">
 
-Leia a [licença](https://github.com/hexagonix/Doc/blob/main/LICENSES/BSD-3) para mais informações sobre direitos autorais, propriedade de código e redistribuição que se aplicam aos arquivos disponíveis neste repositório. O Hexagonix é totalmente licenciado sob [BSD-3-Clause](https://opensource.org/licenses/BSD-3-Clause). Sempre fique atento ao arquivo `LICENSE` disponível em cada repositório para estar ciente dos direitos e obrigações legais, bem como à lista de contribuidores do projeto. 
+Leia a [licença](https://github.com/hexagonix/Doc/blob/main/LICENSES/BSD-3) para mais informações sobre direitos autorais, propriedade de código e redistribuição que se aplicam aos arquivos disponíveis neste repositório. O Hexagonix é totalmente licenciado sob [BSD-3-Clause](https://opensource.org/licenses/BSD-3-Clause). Sempre fique atento ao arquivo `LICENSE` disponível em cada repositório para estar ciente dos direitos e obrigações legais, bem como à lista de contribuidores do projeto.
 
 </div>
 
