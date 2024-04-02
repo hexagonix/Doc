@@ -71,7 +71,7 @@ Algumas características do Hexagonix:
 - [x] Suporte a usuários e permissões.
 - [x] Facilmente extensível;
 - [x] Bem documentado em português e inglês;
-- [x] Totalmente licenciado sob `BSD-3-Clause`[^2].
+- [x] Totalmente licenciado sob `BSD-3-Clause`[^2], disponível [aqui](LICENSE/BSD-3).
 
 [^1]: A arquitetura do Hexagonix (estrutura e utilitários) foi inspirada na elegância e simplicidade do [Version 7 UNIX](https://github.com/dspinellis/unix-history-repo/tree/Research-V7-Snapshot-Development), embora não vise qualquer compatibilidade ou compartilhe qualquer estrutura de código com este. O Hexagonix não utiliza qualquer código derivado do Version 7 UNIX ou de outros projetos. Os utilitários do Hexagonix foram escritos para se assemelharem à função e aparência dos correspondentes no Version 7 UNIX.
 [^2]: Você pode obter mais informações sobre a licença [neste artigo](https://docs.freebsd.org/en/articles/bsdl-gpl/) do projeto FreeBSD, [no artigo](https://opensource.org/licenses/BSD-3-Clause) da Open Source Initiative ou na página sobre a licença BSD na [Wikipedia](https://pt.wikipedia.org/wiki/Licen%C3%A7a_BSD).
@@ -89,35 +89,6 @@ Neste momento, o sistema está disponível em **inglês** e a documentação est
 Para permitir colaboração e atrair desenvolvedores que não falam português, todo o sistema foi traduzido para o inglês e seu desenvolvimento será integralmente realizado neste idioma.
 
 > Sinta-se livre e incentivado a reportar erros de tradução, seja criando uma `issue` no repositório que contém o arquivo, enviando um email ou criando um `Pull Request` com a correção.
-
-</div>
-
-<hr>
-
-</details>
-
-<details title="Licença" align='left'>
-<br>
-<summary align='left'>Licença do Hexagonix</summary>
-
-<div align="justify">
-
-Hexagonix Operating System
-
-BSD 3-Clause License
-
-Copyright (c) 2015-2024, Felipe Miguel Nery Lunkes<br>
-All rights reserved.
-
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
-
-Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
-
-Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
-
-Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 </div>
 
