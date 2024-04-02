@@ -62,6 +62,8 @@ Please read the [license](https://github.com/hexagonix/Doc/blob/main/LICENSES/BS
 
 </div>
 
+</details>
+
 <!-- Vai funcionar como <hr> -->
 
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
