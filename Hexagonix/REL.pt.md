@@ -54,11 +54,35 @@ Aqui você pode obter mais informações sobre todas as versões do Hexagonix j�
 
 ## Versões estáveis lançadas
 
+Aguarde, uma nova versão estável do Hexagonix será lançada em breve!
+
+## Versões de desenvolvimento
+
+As versões de desenvolvimento do Hexagonix são nomeadas como `projetos` e podem dar origem à novas versões de lançamento do sistema. Essas versões apresentam componentes e características que podem estar instáveis ou inacabadas, e são inicialmente versões de pesquisa em design e implementação do Hexagonix. As versões de desenvolvimento, denominadas projetos, podem ou não ser a origem de uma nova versão de lançamento do Hexagonix, embora recursos possam ser implementados integralmente ou não em uma versão de lançamento. `Independente disso, o Hexagonix está sendo desenvolvido continuamente`.
+
+<details title="Projeto Raava" align='left'>
+<br>
+<summary align='left'>Projeto Raava (2023-atualmente)</summary>
+
 <div align="justify">
 
-Abaixo você pode ter acesso direto a algumas versões que se tornaram marcos na distribuição do sistema e ter acesso a informações resumidas sobre elas.
+O Projeto Raava é um fork do Hexagonix H2 Release 2 (ramo CURRENT), que objetiva desenvolver o próximo lançamento estável do sistema, a versão H3 (sem cronograma de lançamento definido - o lançamento pode não ocorrer em 2023). Para isso, o sistema parte de:
 
-> :construction: Aviso! Em 19/10/2023, a versão do Hexagon foi alterada para v1.0.0. Isso se deve à diversas melhorias e correções de estabilidade do sistema, além da correção de diversos bugs durante a execução do sistema. Além disso, novas funcionalidades adicionadas mostraram que agora o kernel se aproxima de uma maturidade e estabilidade. Desta forma, assim como a versão H1, a próxima edição do sistema será lançado com um kernel v1.0.0.
+- Hexagon baseado na antiga v1.3.6 (versão 1.3 revisão 6);
+- Base do Hexagonix H2 Release 2 (H2R2): H2-CURRENT+290320231532;
+- Hexagon v1.3.7 (versão 1.3 revisão 7) - 20/05/2023;
+
+</div>
+
+</details>
+
+## Versões descontinuadas do Hexagonix
+
+<div align="justify">
+
+Abaixo você pode ter acesso direto a algumas versões que se tornaram marcos na distribuição do sistema e ter acesso a informações resumidas sobre elas. Essas versões foram descontinuadas e não recebem mais atualizações e correções.
+
+> :construction: Aviso! Em 19/10/2023, a versão do Hexagon foi alterada para v1.0.0. Isso se deve à diversas melhorias e correções de estabilidade do sistema, além da correção de diversos bugs durante a execução do sistema. Além disso, novas funcionalidades adicionadas mostraram que agora o kernel se aproxima de uma maturidade e estabilidade. Desta forma, assim como a versão H1, a próxima edição do sistema será lançado com um kernel v1.0.0. Sendo assim, todas as versões do kernel reportadas abaixo dizem respeito a uma numeração anterior à remarcação de versão, e não dizem respeito às versões atuais do Hexagon.
 
 </div>
 
@@ -378,25 +402,5 @@ Consolidação das versões de desenvolvimento, com:
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
 </details>
-
-</details>
-
-## Versões de desenvolvimento
-
-As versões de desenvolvimento do Hexagonix são nomeadas como `projetos` e podem dar origem à novas versões de lançamento do sistema. Essas versões apresentam componentes e características que podem estar instáveis ou inacabadas, e são inicialmente versões de pesquisa em design e implementação do Hexagonix. As versões de desenvolvimento, denominadas projetos, podem ou não ser a origem de uma nova versão de lançamento do Hexagonix, embora recursos possam ser implementados integralmente ou não em uma versão de lançamento. `Independente disso, o Hexagonix está sendo desenvolvido continuamente`.
-
-<details title="Projeto Raava" align='left'>
-<br>
-<summary align='left'>Projeto Raava (2023-atualmente)</summary>
-
-<div align="justify">
-
-O Projeto Raava é um fork do Hexagonix H2 Release 2 (ramo CURRENT), que objetiva desenvolver o próximo lançamento estável do sistema, a versão H3 (sem cronograma de lançamento definido - o lançamento pode não ocorrer em 2023). Para isso, o sistema parte de:
-
-- Hexagon baseado na antiga v1.3.6 (versão 1.3 revisão 6);
-- Base do Hexagonix H2 Release 2 (H2R2): H2-CURRENT+290320231532;
-- Hexagon v1.3.7 (versão 1.3 revisão 7) - 20/05/2023;
-
-</div>
 
 </details>

@@ -54,13 +54,43 @@ Here you can get more information about all versions of Hexagonix ever released.
 
 ## Stable versions released
 
+Please wait, a new stable version of Hexagonix will be released soon!
+
+## Development versions
+
+Development versions of Hexagonix are named `projects` and may lead to new release versions of the system. These releases introduce components and features that may be unstable or unfinished, and are initially research on design and implementation of Hexagonix. Development versions, called projects, may or may not be the source of a new release version of Hexagonix, although features may or may not be fully implemented in a release version. `Regardless, Hexagonix is ​​continually being developed`.
+
+<details title="Project Raava" align='left'>
+<br>
+<summary align='left'>Project Raava (2023-present)</summary>
+
 <div align="justify">
 
-Below you can have direct access to some versions that have become milestones in the distribution of the system and have access to summary information about them.
+Project Raava is a fork of Hexagonix H2 Release 2 (CURRENT branch), which aims to develop the next stable release of the system, version H3 (no release schedule defined - the release may not occur in 2023). For this, the system starts from:
 
-> :construction: Warning! On 10/19/2023, the Hexagon version was downgraded to v1.0.0. This is due to several system stability improvements and corrections, in addition to the correction of several bugs during the system's execution. Furthermore, new features added showed that the kernel is now approaching maturity and stability. Therefore, just like the H1 version, the next edition of the system will be released with a v1.0.0 kernel.
+- Hexagon based in early v1.3.6 (version 1.3 revision 6);
+- Base of Hexagonix H2 Release 2 (H2R2): H2-CURRENT+290320231532;
+- Hexagon v1.3.7 (version 1.3 revision 7) - 05/20/2023;
 
 </div>
+
+</details>
+
+## Discontinued versions of Hexagonix
+
+<div align="justify">
+
+Below you can have direct access to some versions that have become milestones in the distribution of the system and have access to summary information about them. These versions have been discontinued and no longer receive updates and fixes.
+
+> :construction: Warning! On 10/19/2023, the Hexagon version was downgraded to v1.0.0. This is due to several system stability improvements and corrections, in addition to the correction of several bugs during the system's execution. Furthermore, new features added showed that the kernel is now approaching maturity and stability. Therefore, just like the H1 version, the next edition of the system will be released with a v1.0.0 kernel. Therefore, all kernel versions reported below refer to a numbering prior to the version rescheduling, and do not relate to current versions of Hexagon.
+
+</div>
+
+<details title="Discontinued versions of Hexagonix" align='left'>
+<br>
+<summary align='left'><strong>Discontinued versions of Hexagonix</strong></summary>
+
+<div align="justify">
 
 <details title="Hexagonix H1" align='left'>
 <br>
@@ -374,23 +404,5 @@ Consolidation of development versions, with:
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
 </details>
-
-## Development versions
-
-Development versions of Hexagonix are named `projects` and may lead to new release versions of the system. These releases introduce components and features that may be unstable or unfinished, and are initially research on design and implementation of Hexagonix. Development versions, called projects, may or may not be the source of a new release version of Hexagonix, although features may or may not be fully implemented in a release version. `Regardless, Hexagonix is ​​continually being developed`.
-
-<details title="Project Raava" align='left'>
-<br>
-<summary align='left'>Project Raava (2023-present)</summary>
-
-<div align="justify">
-
-Project Raava is a fork of Hexagonix H2 Release 2 (CURRENT branch), which aims to develop the next stable release of the system, version H3 (no release schedule defined - the release may not occur in 2023). For this, the system starts from:
-
-- Hexagon based in early v1.3.6 (version 1.3 revision 6);
-- Base of Hexagonix H2 Release 2 (H2R2): H2-CURRENT+290320231532;
-- Hexagon v1.3.7 (version 1.3 revision 7) - 05/20/2023;
-
-</div>
 
 </details>
