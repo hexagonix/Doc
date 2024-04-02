@@ -71,7 +71,7 @@ Some features of Hexagonix:
 - [x] Support for users and permissions.
 - [x] Easily extensible;
 - [x] Well documented in Portuguese and English;
-- [x] Fully licensed under `BSD-3-Clause`[^2], available [here](LICENSES/BSD-3).
+- [x] Fully licensed under `BSD-3-Clause`[^2], available [here](https://github.com/hexagonix/Doc/blob/main/LICENSES/BSD-3).
 
 [^1]: The architecture of Hexagonix (structure and utilities) was inspired by the elegance and simplicity of [Version 7 UNIX](https://github.com/dspinellis/unix-history-repo/tree/Research-V7-Snapshot-Development), although it does not aim for any compatibility or share any code with it. Hexagonix does not use any code derived from Version 7 UNIX or other projects. Hexagonix utilities were written to resemble the function and appearance of their counterparts in Version 7 UNIX.
 [^2]: You can get more information about the license [in this article](https://docs.freebsd.org/en/articles/bsdl-gpl/) of the FreeBSD project, [in the article](https://opensource.org/licenses/BSD-3-Clause) from the Open Source Initiative or the BSD license page on [Wikipedia](https://en.wikipedia.org/wiki/BSD_licenses).
