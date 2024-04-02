@@ -334,31 +334,15 @@ Para saber mais e verificar cada função disponível nas bibliotecas de desenvo
    
 Abaixo você poderá saber mais sobre como contribuir e reportar erros encontrados no Hexagonix.
 
-</div>
-
-<details title="Contribua no desenvolvimento do Hexagonix" align='left'>
-<br>
-<summary align='left'>Contribua no desenvolvimento do Hexagonix</summary>
-
-<div align="justify">
+### Contribua no desenvolvimento do Hexagonix
 
 Se você tem conhecimento em criar código em Assembly x86 e gostaria de ajudar no desenvolvimento do sistema, sinta-se a vontade em enviar um [email](mailto:hexagonixdev@gmail.com)!
 
-</div>
-
-</details>
-
-<details title="Reportar erros" align='left'>
-<br>
-<summary align='left'>Reportar erros</summary>
-
-<div align="justify">
+### Reportar erros
 
 Você pode reportar erros e ajudar a desenvolver o sistema. Para isso, abra uma notificação de erro [aqui](https://github.com/hexagonix/Distro/issues), informando o erro da forma mais detalhada possível (como marca do dispositivo, processador, quantidade de memória RAM, placa de vídeo e periféricos conectados, bem como o dispositivo utilizado para instalar o sistema, como unidade de disco interna ou mídia removível USB). Lembre-se de informar em qual aplicativo ocorreu o erro, caso o erro ocorra já com o sistema em operação. Caso o problema se dê no processo de inicialização, informe o que foi exibido/o comportamento observado da máquina.
 
 </div>
-
-</details>
 
 <!-- Vai funcionar como <hr> -->
 
