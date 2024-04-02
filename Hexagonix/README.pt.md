@@ -273,34 +273,18 @@ Você pode adicionar outro usuário alterando o arquivo `USUARIO.UNX` (Hexagonix
 # Contribuir e reportar erros
 
 <div align="justify">
-     
-Abaixo você poderá saber mais sobre como contribuir e reportar erros encontrados no Hexagonix.
-     
-</div>
-
-<details title="Contribua no desenvolvimento do Hexagonix" align='left'>
-<br>
-<summary align='left'>Contribua no desenvolvimento do Hexagonix</summary>
-
-<div align="justify">
-
-Se você tem conhecimento em criar código em Assembly x86 e gostaria de ajudar no desenvolvimento do sistema, sinta-se a vontade em me enviar um email! Veja [aqui](https://github.com/hexagonix/Doc/blob/main/Hexagonix/README.pt.md#autor) como entrar em contato comigo!
-
-</div>
-
-</details>
-
-<details title="Reporte erros no sistema" align='left'>
-<br>
-<summary align='left'>Reporte erros no sistema</summary>
-
-<div align="justify">
    
+Abaixo você poderá saber mais sobre como contribuir e reportar erros encontrados no Hexagonix.
+
+### Contribua no desenvolvimento do Hexagonix
+
+Se você tem conhecimento em criar código em Assembly x86 e gostaria de ajudar no desenvolvimento do sistema, sinta-se a vontade em enviar um [email](mailto:hexagonixdev@gmail.com)!
+
+### Reportar erros
+
 Você pode reportar erros e ajudar a desenvolver o sistema. Para isso, abra uma notificação de erro [aqui](https://github.com/hexagonix/Distro/issues), informando o erro da forma mais detalhada possível (como marca do dispositivo, processador, quantidade de memória RAM, placa de vídeo e periféricos conectados, bem como o dispositivo utilizado para instalar o sistema, como unidade de disco interna ou mídia removível USB). Lembre-se de informar em qual aplicativo ocorreu o erro, caso o erro ocorra já com o sistema em operação. Caso o problema se dê no processo de inicialização, informe o que foi exibido/o comportamento observado da máquina.
 
 </div>
-   
-</details>
 
 <!-- Vai funcionar como <hr> -->
 

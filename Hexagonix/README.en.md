@@ -273,34 +273,18 @@ You can add another user by changing the `USUARIO.UNX` (Hexagonix H1) or `passwd
 # Contribute and report bugs
 
 <div align="justify">
-     
+
 Below you can learn more about how to contribute and report bugs found in Hexagonix.
-     
-</div>
 
-<details title="Contribute to the development of Hexagonix" align='left'>
-<br>
-<summary align='left'>Contribute to the development of Hexagonix</summary>
+### Contribute to the development of Hexagonix
 
-<div align="justify">
+If you have knowledge of creating x86 assembly code and would like to help with system development, feel free to send an [email](mailto:hexagonixdev@gmail.com)!
 
-If you have knowledge of creating x86 assembly code and would like to help with system development, feel free to send me an email! See [here](https://github.com/hexagonix/Doc/blob/main/Hexagonix/README.en.md#author) how to contact me!
+### Report Errors
 
-</div>
-
-</details>
-
-<details title="Report system errors" align='left'>
-<br>
-<summary align='left'>Report system errors</summary>
-
-<div align="justify">
-   
 You can report bugs and help develop the system. To do so, open an error notification [here](https://github.com/hexagonix/Distro/issues), informing the error as detailed as possible (such as device brand, processor, amount of RAM, video and connected peripherals, as well as the device used to install the system, such as an internal disk drive or USB removable media). Remember to inform which application the error occurred in, if the error occurs while the system is already in operation. If the problem occurs in the boot process, please report what was displayed/observed behavior of the machine.
 
 </div>
-   
-</details>
 
 <!-- Vai funcionar como <hr> -->
 
