@@ -62,6 +62,10 @@ Abaixo você pode ter acesso direto a algumas versões que se tornaram marcos na
 
 </div>
 
+<details title="Versões descontinuadas do Hexagonix" align='left'>
+<br>
+<summary align='left'>Versões descontinuadas do Hexagonix</summary>
+
 <details title="Hexagonix H1" align='left'>
 <br>
 <summary align='left'><strong>Hexagonix H1</strong></summary>
@@ -372,6 +376,8 @@ Consolidação das versões de desenvolvimento, com:
 <!-- Vai funcionar como <hr> -->
 
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+
+</details>
 
 </details>
 
