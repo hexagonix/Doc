@@ -78,9 +78,9 @@ Some features of Hexagonix:
 
 > `Hexagonix is ​​not intended to build a production system, but rather a simple, well-documented system with easy-to-understand interfaces that can be used for educational purposes`. Hexagonix aims to research and implement a modern operating system developed purely in x86 Assembly using a current assembler. For more complex, complete and professional systems developed in x86 Assembly, visit projects like [MenuetOS](https://www.menuetos.net/) or [KolibriOS](https://kolibrios.org/en/).
 
-<details title="Languages" align='left'>
+<details title="Languages available" align='left'>
 <br>
-<summary align='left'>Languages</summary>
+<summary align='left'>Languages available</summary>
 
 <div align="justify">
 
