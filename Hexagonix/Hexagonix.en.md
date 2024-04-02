@@ -297,7 +297,7 @@ Graphics mode fonts for Hexagon are developed as a bitmap in Assembly which, whe
 
 Hexagonix also provides functions that must be used to interact with the system environment itself. Libraries are used to access functions implemented by Hexagon or by the libraries themselves, allowing easy development of applications and utilities for both the Hexagonix and Hexagonix-Andromeda environments. The libraries implement functions for displaying text, mathematical calculations, sending messages, opening files and devices, and much more. The core library (hexagon.s) provides functions accessible to both possible distribution environments, while other libraries may be unique to the Hexagonix-Andromeda environment. These libraries include graphical functions to build interfaces in graphical mode (Hexagonix-Andromeda), as well as functions to check the currently running system version. The base Hexagonix utilities perform the Hexagon version check to see if they can be run, using the Unix utility uname or directly via a Hexagon system call.
 
-To learn more and check each function available in the system development libraries, see the [libasm] repository (https://github.com/hexagonix/lib).
+To learn more and check each function available in the system development libraries, see the [libasm](https://github.com/hexagonix/lib) repository.
 
 </div>
 
