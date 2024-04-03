@@ -241,7 +241,7 @@ Hexagonix received a port of the [`fasm`](https://flatassembler.net/index.php) a
 
 <div align="justify">
 
-The Hexagonix Andromeda environment (Hexagonix-Andromeda) is built on the solid foundation provided by Hexagonix, including applications and utilities that do not implement the Unix philosophy or have a very different syntax and usage than you would expect from a Unix environment. Here are the system settings app, calculator, font manager, text editors and the IDE developed for Hexagonix. These utilities may or may not have a graphical interface. Together with them, the Hexagonix-Andromeda environment comprises libraries developed to allow the development of applications, such as the `Estelar` library.
+The Andromeda environment (Hexagonix-Andromeda) is built on the solid foundation provided by Hexagonix, including applications and utilities that do not implement the Unix philosophy or have a very different syntax and usage than you would expect from a Unix environment. Here are the system settings app, calculator, font manager, text editors and the IDE developed for Hexagonix. These utilities may or may not have a graphical interface. Together with them, the Hexagonix-Andromeda environment comprises libraries developed to allow the development of applications, such as the `Estelar` library.
 
 </div>
 
