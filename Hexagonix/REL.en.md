@@ -54,7 +54,15 @@ Here you can get more information about all versions of Hexagonix ever released.
 
 ## Stable versions released
 
-Please wait, a new stable version of Hexagonix will be released soon!
+<details title="Hexagonix System I" align='left'>
+<br>
+<summary align='left'>Hexagonix System I</summary>
+
+<div align="justify">
+
+</div>
+
+</details>
 
 ## Development versions
 

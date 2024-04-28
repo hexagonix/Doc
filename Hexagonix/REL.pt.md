@@ -54,7 +54,15 @@ Aqui você pode obter mais informações sobre todas as versões do Hexagonix j�
 
 ## Versões estáveis lançadas
 
-Aguarde, uma nova versão estável do Hexagonix será lançada em breve!
+<details title="Hexagonix System I" align='left'>
+<br>
+<summary align='left'>Hexagonix System I</summary>
+
+<div align="justify">
+
+</div>
+
+</details>
 
 ## Versões de desenvolvimento
 
