@@ -58,7 +58,75 @@ Aqui você pode obter mais informações sobre todas as versões do Hexagonix j�
 <br>
 <summary align='left'>Hexagonix System I</summary>
 
-<div align="justify">
+<div align="justify">                                                                                                                                   
+
+O Hexaognix System I é a versão mais estável e com mais recursos lançada até o momento. Diversas melhorias foram realizadas para garantir estabilidade, segurança e menor uso de recursos. Abaixo, mais informações técnicas sobre essa versão do sistema.
+
+> :construction: Aviso! Em 19/10/2023, a versão do Hexagon foi alterada para v1.0.0. Isso se deve à diversas melhorias e correções de estabilidade do sistema, além da correção de diversos bugs durante a execução do sistema. Desta forma, assim como versões antigas descontinuadas, o Hexagonix System I foi lançado com um kernel v1.0.0.
+
+Informações técnicas relevantes desta versão:
+
+- Saturno v1.9.0:
+  - MBR v1.2.0:
+    - Correções de erros diversos;
+    - Comentários e código-fonte completamente em inglês, facilitando a colaboração.
+  - Comentários e código-fonte completamente em inglês, facilitando a colaboração.
+- HBoot v0.11.0:
+  - Correções de erros diversos;
+  - Melhorias na detecção de hardware;
+  - Mensagens, logs, comentários e código-fonte completamente em inglês, facilitando a colaboração.
+- Kernel Hexagon v1.0.0:
+  - Diversos refinamentos de estabilidade e performance;
+  - Menor consumo de recursos;
+  - Gerenciamento aprimorado de erros;
+  - Correções gerais de bugs;
+  - Novas chamadas de sistema;
+  - Padronização das chamadas de sistema, utilizando como referência o UNIX Version 7;
+  - Mensagens, logs, comentários e código-fonte completamente em inglês, facilitando a colaboração.
+- UnixUtils e CoreUtils v9.0:
+  - Novo utilitário mv, utilizado para renomear arquivos no volume;
+  - Tratamento aprimorado de erros;
+  - Menor consumo de recursos;
+  - Correção de diversos bugs;
+  - Melhorias nas mensagens para o usuário, incluindo correções ortográficas e de formatação;
+  - Mensagens, logs, comentários e código-fonte completamente em inglês, facilitando a colaboração.
+- Andromeda Apps (ambiente Hexagonix-Andromeda):
+  - Atualização das bibliotecas de desenvolvimento;
+  - Correções de erros diversos;
+  - Melhorias no consumo de recursos;
+  - Mensagens, logs, comentários e código-fonte completamente em inglês, facilitando a colaboração.
+- libasm v2.2.1:
+  - Padronização de todas as bibliotecas de desenvolvimento;
+  - Padronização das chamadas de sistema, utilizando como referência o UNIX Version 7 e o Hexagon v1.0.0;
+  - Melhorias nos comentários, tornando melhor a compreensão do código;
+  - Melhorias nos utilitários de exemplo da libasm (tapp.asm e gapp.asm);
+  - Comentários e código-fonte completamente em inglês, facilitando a colaboração.
+- fasm (flat assembler) v1.73.32:
+  - Padronização do código responsável pela compatibilidade com o Hexagonix;
+  - Atualização do código responsável pela compatibilidade com o Hexagonix para uso das bibliotecas mais recentes;
+  - Melhorias da versão base do fasm v1.73.32;
+  - Comentários e código-fonte do código dependente do Hexagonix traduzidos para o inglês, facilitanto a colaboração.
+- Scripts (ferramentas de construção do Hexagonix):
+  - Correção de diversos erros;
+  - Melhorias nas mensagens para o usuário, incluindo correções ortográficas e de formatação;
+  - Novas opções de execução virtualizada do sistema;
+  - Compatibilidade do utilitário `hx` com as versões mais recentes do `qemu`;
+  - Início de compatibilidade de construção em sistemas BSD;
+  - Compatibilidade com sistemas BSD para execução do Hexagonix em ambiente virtualizado (qemu);
+  - Melhorias no módulo de formatação de código;
+  - Melhorias nos módulos de construção de utilitários Unix e Andromeda (Hexagonix-Andromeda);
+  - Melhorias no log de construção do sistema;
+  - Melhorias no módulo de configuração de construção (`configure.sh`);
+  - Refatoração do utilitário hx para reusar código e remover código duplicado;
+  - Novos parâmetros e funções disponíveis no utilitário hx:
+    - "--flags": exibe informações dos parâmetros de construção enviados ao montador.
+  - Comentários e código-fonte do código dependente do Hexagonix traduzidos para o inglês, facilitanto a colaboração.
+- Documentação:
+  - Atualização da documentação do sistema no repositório disponível no GitHub;
+  - Refinamentos nos textos em português e nas traduções para o inglês;
+  - Atualização das tabelas de chamadas de sistema.
+
+## Versões de desenvolvimento
 
 </div>
 
