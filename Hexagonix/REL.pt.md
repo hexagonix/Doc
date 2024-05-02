@@ -67,7 +67,9 @@ Aqui você irá encontrar mais informações sobre as versões estáveis do Hexa
 
 O Hexagonix System I é a versão mais estável e com mais recursos lançada até o momento. Diversas melhorias foram realizadas para garantir estabilidade, segurança e menor uso de recursos. Abaixo, mais informações técnicas sobre essa versão do sistema.
 
-Informações técnicas relevantes desta versão:
+Changelog e informações técnicas desta versão:
+
+Data de lançamento: 02/05/2024
 
 - **Saturno** v1.9.0:
   - Saturno MBR v1.2.0:
@@ -132,6 +134,8 @@ Informações técnicas relevantes desta versão:
   - Atualização dos utilitários Unix e Andromeda.
 
 </div>
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
 </details>
 
