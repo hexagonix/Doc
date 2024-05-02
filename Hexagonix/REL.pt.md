@@ -52,9 +52,9 @@ Aqui você pode obter mais informações sobre todas as versões do Hexagonix j�
 
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
-## Versões estáveis lançadas
+## Versões estáveis
 
-Aqui você irá encontrar mais informações sobre as versões estáveis do Hexagonix, bem como mais informações sobre elas e o changelog oficial.
+Aqui você irá encontrar mais informações sobre as versões estáveis do Hexagonix lançadas, bem como mais informações sobre elas e o changelog oficial.
 
 <details title="Hexagonix System I" align='left'>
 <br>
@@ -161,7 +161,7 @@ O Projeto Raava é um fork do Hexagonix H2 Release 2 (ramo CURRENT), que objetiv
 
 </details>
 
-## Versões descontinuadas do Hexagonix
+## Versões descontinuadas (sem suporte)
 
 <div align="justify">
 
