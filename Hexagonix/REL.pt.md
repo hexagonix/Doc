@@ -126,8 +126,6 @@ Informações técnicas relevantes desta versão:
   - Refinamentos nos textos em português e nas traduções para o inglês;
   - Atualização das tabelas de chamadas de sistema.
 
-## Versões de desenvolvimento
-
 </div>
 
 </details>
@@ -138,7 +136,7 @@ As versões de desenvolvimento do Hexagonix são nomeadas como `projetos` e pode
 
 <details title="Projeto Raava" align='left'>
 <br>
-<summary align='left'>Projeto Raava (2023-atualmente)</summary>
+<summary align='left'>Projeto Raava (2023-2024) - projeto concluído</summary>
 
 <div align="justify">
 
