@@ -70,7 +70,9 @@ O Hexagonix System I é a versão mais estável e com mais recursos lançada at�
 Changelog e informações técnicas desta versão:
 
 Data de lançamento: 02/05/2024
+
 BuildId da versão: acaa7995-b732-4a46-9293-f05d20a8432a
+
 Commit: [d64daba](https://github.com/hexagonix/hexagonix/commit/d64dabab105a43bb464bc509c9976c4ac91c0fbe)
 
 - **Saturno** v1.9.0:
