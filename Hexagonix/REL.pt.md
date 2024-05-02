@@ -58,7 +58,7 @@ Aqui você irá encontrar mais informações sobre as versões estáveis do Hexa
 
 <details title="Hexagonix System I" align='left'>
 <br>
-<summary align='left'>Hexagonix System I</summary>
+<summary align='left'><strong>Hexagonix System I</strong></summary>
 
 <div align="justify">                                                                                                                          
 
@@ -147,7 +147,7 @@ As versões de desenvolvimento do Hexagonix são nomeadas como `projetos` e pode
 
 <details title="Projeto Raava" align='left'>
 <br>
-<summary align='left'>Projeto Raava (2023-2024) - projeto concluído</summary>
+<summary align='left'><strong>Projeto Raava (2023-2024) - projeto concluído</strong></summary>
 
 <div align="justify">
 
