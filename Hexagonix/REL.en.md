@@ -148,6 +148,8 @@ Development versions of Hexagonix are named `projects` and may lead to new relea
 
 <div align="justify">
 
+> The Project Raava was completed, giving rise to the Hexagonix System I.
+
 Project Raava is a fork of Hexagonix H2 Release 2 (CURRENT branch), which aims to develop the next stable release of the system, version H3 (no release schedule defined - the release may not occur in 2023). For this, the system starts from:
 
 - Hexagon based in early v1.3.6 (version 1.3 revision 6);
