@@ -52,15 +52,89 @@ Here you can get more information about all versions of Hexagonix ever released.
 
 <img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
-## Stable versions released
+## Stable versions
 
 <details title="Hexagonix System I" align='left'>
 <br>
-<summary align='left'>Hexagonix System I</summary>
+<summary align='left'><strong>Hexagonix System I</strong></summary>
 
 <div align="justify">
 
+> :construction: Warning! On 10/19/2023, the Hexagon version was changed to v1.0.0. This is due to several system stability improvements and fixes, in addition to the correction of several bugs during the system's execution. Thus, like older discontinued versions, Hexagonix System I was released with a v1.0.0 kernel.
+
+Hexagonix System I is the most stable and feature-rich version released to date. Several improvements were made to ensure stability, security and lower resource usage. Below, more technical information about this version of the system.
+
+Changelog and technical information for this version:
+
+Release date: 05/02/2024<br>
+Version BuildId: acaa7995-b732-4a46-9293-f05d20a8432a<br>
+Commit: [d64daba](https://github.com/hexagonix/hexagonix/commit/d64dabab105a43bb464bc509c9976c4ac91c0fbe)
+
+- **Saturno** v1.9.0:
+  - Saturno MBR v1.2.0:
+    - Corrections of various errors;
+    - Comments and source code completely in English, facilitating collaboration.
+  - Comments and source code completely in English, facilitating collaboration.
+- **HBoot** v0.11.0:
+  - Corrections of various errors;
+  - Improvements in hardware detection;
+  - Messages, logs, comments and source code completely in English, facilitating collaboration.
+- **Hexagon Kernel** v1.0.0:
+  - Various stability and performance refinements;
+  - Lower resource consumption;
+  - Improved error management;
+  - General bug fixes;
+  - New system calls;
+  - Standardization of system calls, using UNIX Version 7 as a reference;
+  - Messages, logs, comments and source code completely in English, facilitating collaboration.
+- **UnixUtils** and **CoreUtils** v9.0:
+  - New `mv` utility, used to rename files on the volume;
+  - Improved error handling;
+  - Lower resource consumption;
+  - Correction of several bugs;
+  - Improvements in user messages, including spelling and formatting corrections;
+  - Messages, logs, comments and source code completely in English, facilitating collaboration.
+- **Andromeda Apps (Hexagonix-Andromeda environment)**:
+  - Update of development libraries;
+  - Corrections of various errors;
+  - Improvements in resource consumption;
+  - Messages, logs, comments and source code completely in English, facilitating collaboration.
+- **libasm** v2.2.1:
+  - Standardization of all development libraries;
+  - Standardization of system calls, using UNIX Version 7 and Hexagon v1.0.0 as references;
+  - Improvements in comments, making the code better understood;
+  - Improvements to the libasm example utilities (tapp.asm and gapp.asm);
+  - Comments and source code completely in English, facilitating collaboration.
+- **fasm (flat assembler)** v1.73.32:
+  - Standardization of the code responsible for compatibility with Hexagonix;
+  - Update of the code responsible for compatibility with Hexagonix to use the latest libraries;
+  - Improvements to the base version of fasm v1.73.32;
+  - Comments and source code of Hexagonix-dependent code translated into English, facilitating collaboration.
+- **Scripts** (Hexagonix build tools):
+  - Correction of several errors;
+  - Improvements in user messages, including spelling and formatting corrections;
+  - New virtualized system execution options;
+  - Compatibility of the `hx` utility with the latest versions of `qemu`;
+  - Start of build compatibility on BSD systems;
+  - Compatibility with BSD systems to run Hexagonix in a virtualized environment (qemu);
+  - Improvements in the code formatting module;
+  - Improvements in Unix and Andromeda utility construction modules (Hexagonix-Andromeda);
+  - Improvements in the system construction log;
+  - Improvements to the build configuration module (`configure.sh`);
+  - Refactoring of the hx utility to reuse code and remove duplicate code;
+  - New parameters and functions available in the hx utility:
+    - "--flags": displays information about the build parameters sent to the assembler.
+  - Comments and source code of Hexagonix-dependent code translated into English, facilitating collaboration.
+- **Documentation**:
+  - Update of system documentation in the repository available on GitHub;
+  - Refinements in Portuguese texts and English translations;
+  - Copyright corrections and contact and development information;
+  - Update of system call tables;
+  - Update of Unix and Andromeda utilities.
+
 </div>
+
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
 
 </details>
 
@@ -70,7 +144,7 @@ Development versions of Hexagonix are named `projects` and may lead to new relea
 
 <details title="Project Raava" align='left'>
 <br>
-<summary align='left'>Project Raava (2023-present)</summary>
+<summary align='left'><strong>Project Raava (2023-2024) - project completed</strong></summary>
 
 <div align="justify">
 
@@ -84,7 +158,7 @@ Project Raava is a fork of Hexagonix H2 Release 2 (CURRENT branch), which aims t
 
 </details>
 
-## Discontinued versions of Hexagonix
+## Discontinued (unsupported) versions
 
 <div align="justify">
 

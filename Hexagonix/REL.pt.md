@@ -62,7 +62,6 @@ Aqui você irá encontrar mais informações sobre as versões estáveis do Hexa
 
 <div align="justify">                                                                                                                          
 
-
 > :construction: Aviso! Em 19/10/2023, a versão do Hexagon foi alterada para v1.0.0. Isso se deve à diversas melhorias e correções de estabilidade do sistema, além da correção de diversos bugs durante a execução do sistema. Desta forma, assim como versões antigas descontinuadas, o Hexagonix System I foi lançado com um kernel v1.0.0.
 
 O Hexagonix System I é a versão mais estável e com mais recursos lançada até o momento. Diversas melhorias foram realizadas para garantir estabilidade, segurança e menor uso de recursos. Abaixo, mais informações técnicas sobre essa versão do sistema.
