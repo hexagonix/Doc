@@ -62,7 +62,7 @@ O Andromeda SHell, ou simplesmente ASH, foi desenvolvido como uma alternativa ao
 
 A calculadora permite ao usuário realizar contas básicas.
 
-#### Poweroff
+#### Power
 
 O utilitário permite ao usuário desligar ou reiniciar facilmente o computador.
 

@@ -58,7 +58,7 @@ Andromeda SHell, or simply ASH, was developed as an alternative to Hexagonix's d
 
 The calculator allows the user to perform basic calculations.
 
-#### Poweroff
+#### Power
 
 The utility allows the user to easily shut down or restart the computer.
 
