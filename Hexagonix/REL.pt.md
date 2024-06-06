@@ -68,9 +68,9 @@ O Hexagonix System I é a versão mais estável e com mais recursos lançada at�
 
 Changelog e informações técnicas desta versão:
 
-Data de lançamento: 02/05/2024<br>
-BuildId da versão: acaa7995-b732-4a46-9293-f05d20a8432a<br>
-Commit: [d64daba](https://github.com/hexagonix/hexagonix/commit/d64dabab105a43bb464bc509c9976c4ac91c0fbe)
+**Data de lançamento**: 05/06/2024<br>
+**BuildId da versão**: 36a232aa-d2d2-4e78-99d8-f8df3c96b0d6<br>
+**Commit**: [6809c99](https://github.com/hexagonix/hexagonix/commit/6809c99865610087f6f786641cbfa5e663cd4f02)
 
 - **Saturno** v1.9.0:
   - Saturno MBR v1.2.0:
@@ -100,6 +100,7 @@ Commit: [d64daba](https://github.com/hexagonix/hexagonix/commit/d64dabab105a43bb
   - Atualização das bibliotecas de desenvolvimento;
   - Correções de erros diversos;
   - Melhorias no consumo de recursos;
+  - Utilitário `poweroff` renomeado para `power`;
   - Mensagens, logs, comentários e código-fonte completamente em inglês, facilitando a colaboração.
 - **libasm** v2.2.1:
   - Padronização de todas as bibliotecas de desenvolvimento;
