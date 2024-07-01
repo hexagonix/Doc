@@ -55,7 +55,7 @@ O hx aceita uma série de parâmetros para determinar quais ações devem ser ex
 | Parâmetro | Ação executada | Parâmetros secundários necessários |
 |:---------:|:--------------:|:----------------------------------:|
 | `-h`| Exibe a ajuda com os principais parâmetros normalmente utilizados| `-v`: informações sobre virtualização; `-i`: informações sobre a construção de imagens|
-| `-v`| Inicia uma instância do `qemu` com a última imagem de disco gerada| Utilize `hx -h -v` para obter todos os parâmetros possíveis.|
+| `-v`| Inicia uma instância do `qemu` com a última imagem de disco gerada| Utilize `hx -h -i` para obter todos os parâmetros possíveis.|
 | `-i`| Constrói os componentes do sistema e cria uma imagem de disco (raw) e .vdi | Utilize `hx -h -v` para obter todos os parâmetros possíveis.|
 | `-b`| Constrói componentes individuais do Hexagonix| `hexagon`: constrói o Hexagon; `HBoot`: constrói o HBoot; `saturno`: constrói o Saturno; `unixland`: constrói os utilitários Unix-like; `andromedaland`: constrói os utilitários Hexagonix-Andromeda; `hx`: constrói todos os componentes, mas não gera uma imagem de disco| 
 | `-u`| Atualiza todos os repositórios locais com o servidor, usando o ramo já definido | Sem parâmetros secundários|
