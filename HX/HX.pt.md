@@ -54,9 +54,9 @@ O hx aceita uma série de parâmetros para determinar quais ações devem ser ex
 
 | Parâmetro | Ação executada | Parâmetros secundários necessários |
 |:---------:|:--------------:|:----------------------------------:|
-| `-h`| Exibe a ajuda com os principais parâmetros normalmente utilizados| Sem parâmetros secundários|
-| `-v`| Inicia uma instância do `qemu` com a última imagem de disco gerada| `hx`: (padrão, selecionado automaticamente em ausência de parâmetros secundários); `hx.som`: habilita dispositivo de saída de áudio; `hx.serial`: não redireciona saída serial para arquivo; `bsd-hx`: permite a execução em ambientes BSD (sem KVM)|
-| `-i`| Constrói os componentes do sistema e cria uma imagem de disco (raw) e .vdi | `hx`: (padrão, selecionado automaticamente em ausência de parâmetros secundários); `hx.test`: cria uma imagem de teste com tamanho final reduzido|
+| `-h`| Exibe a ajuda com os principais parâmetros normalmente utilizados| `-v`: informações sobre virtualização; `-i`: informações sobre a construção de imagens|
+| `-v`| Inicia uma instância do `qemu` com a última imagem de disco gerada| Utilize `hx -h -v` para obter todos os parâmetros possíveis.|
+| `-i`| Constrói os componentes do sistema e cria uma imagem de disco (raw) e .vdi | Utilize `hx -h -v` para obter todos os parâmetros possíveis.|
 | `-b`| Constrói componentes individuais do Hexagonix| `hexagon`: constrói o Hexagon; `HBoot`: constrói o HBoot; `saturno`: constrói o Saturno; `unixland`: constrói os utilitários Unix-like; `andromedaland`: constrói os utilitários Hexagonix-Andromeda; `hx`: constrói todos os componentes, mas não gera uma imagem de disco| 
 | `-u`| Atualiza todos os repositórios locais com o servidor, usando o ramo já definido | Sem parâmetros secundários|
 | `-ui`| Atualiza apenas as imagens de disco com o servidor. O restante dos repositórios não são afetados| Sem parâmetros secundários|
@@ -77,12 +77,28 @@ Para a construção do Hexagonix, o hx procura e executa uma série de módulos 
 
 | Módulo | Função | Localização |
 |:------:|:------:|:-----------:|
-| `configure.sh`| Gerar todos os arquivos estáticos e verificar dependências para a construção do Hexagonix| Raiz do projeto|
-| `Unix.sh`| Construir individualmente todos os utilitários Unix-like do Hexagonix | Apps/Unix/|
-| `Apps.sh`| Construir individualmente todos os utilitários gráficos do Hexagonix| Apps/Andromeda/|
-| `Contrib.sh`| Construir todos os componentes externos ao Hexagonix, como montadores (fasmX)| Contrib/|
-| `fontes.sh`| Responsável por construir as fontes gráficas do Hexagonix| Fontes/|
-| `indent.sh`| Responsável por indentar os fontes do sistema| Scripts/|
+|`configure.sh`| Gerar todos os arquivos estáticos e verificar dependências para a construção do Hexagonix| Raiz do projeto|
+|`andromeda.hx`| Responsável por construir todos os utilitários Hexagonix-Andromeda (utilitários gráficos)| Scripts/modules|
+|`buildInfo.hx`| Obtêm e exibe informações sobre versão do Hexagonix, canal de desenvolvimento e build| Scripts/modules|
+|`buildOnBSD.hx`| Responsável por constuir uma imagem de disco para a instalação do Hexagonix a partir de um sistema BSD| Scripts/modules|
+|`buildOnLinux.hx`| Responsável por constuir uma imagem de disco para a instalação do Hexagonix a partir de uma distribuição Linux| Scripts/modules|
+|`buildOnUNIX.hx`| Responsável por constuir uma imagem de disco para a instalação do Hexagonix a partir de um sistema UNIX (OpenIndiana)| Scripts/modules|
+|`common.hx`| Funções comuns utilizadas por todos os módulos| Scripts/modules|
+|`contribBuilder.hx`| Responsável por executar o script de construção dos pacotes externos (como fasm)| Scripts/modules|
+|`contribChecker.hx`| Responsável por verificar se existem pacotes externos construídos para instalação na imagem do sistema| Scripts/modules|
+|`diskBuilder.hx`| Responsável por instalar os componentes do Hexagonix na imagem de disco do sistema gerada anteriormente| Scripts/modules|
+|`fonts.hx`| Responsável por identificar e construir fontes gráficas compatíveis com o sistema| Scripts/modules|
+|`git.hx`| Responsável por atualizar os repositórios do sistema com o servidor remoto| Scripts/modules|
+|`hboot.hx`| Responsável por executar a construção do componente `HBoot`| Scripts/modules|
+|`hexagon.hx`| Responsável por executar a construção do componente `Hexagon` (kernel)| Scripts/modules|
+|`logUtils.hx`| Funções úteis para a criação de logs de construção do sistema| Scripts/modules|
+|`macros.hx`| Funções úteis para executar módulos a partir do utilitário `hx` ou de outros módulos| Scripts/modules|
+|`saturno.hx`| Responsável por executar a construção do componente `Saturno`| Scripts/modules|
+|`systemBuilder.hx`| Executa todos os módulos de construção dos componentes do sistema e os instala em um diretório temporário[^1]| Scripts/modules|
+|`unix.hx`| Responsável por construir todos os utilitários Unix| Scripts/modules|
+|`vm.hx`| Permite a configuração e execução de máquinas virtuais utilizando uma imagem de disco gerada| Scripts/modules|
+
+[^1]: Para saber quais módulos são executados, veja o conteúdo do módulo.
 
 > `Apenas configure.sh pode ser executado diretamente pelo usuário, além de hx`. Nenhum outro módulo deve ser executado diretamente.
 
