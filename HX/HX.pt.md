@@ -50,13 +50,15 @@ O utilitário `hx` tem a função de unificar o processo de construção do Hexa
 
 ### Funções e parâmetros
 
-O hx aceita uma série de parâmetros para determinar quais ações devem ser executadas. Abaixo, uma lista das ações disponíveis e seus parâmetros.
+O `hx` aceita uma série de parâmetros para determinar quais ações devem ser executadas. Abaixo, uma lista das ações disponíveis e seus parâmetros.
+
+> **Aviso! Compatível com a versão 14.0 ou posteriores.**
 
 | Parâmetro | Ação executada | Parâmetros secundários necessários |
 |:---------:|:--------------:|:----------------------------------:|
-| `-h`| Exibe a ajuda com os principais parâmetros normalmente utilizados| `-v`: informações sobre virtualização; `-i`: informações sobre a construção de imagens|
-| `-v`| Inicia uma instância do `qemu` com a última imagem de disco gerada| Utilize `hx -h -i` para obter todos os parâmetros possíveis.|
-| `-i`| Constrói os componentes do sistema e cria uma imagem de disco (raw) e .vdi | Utilize `hx -h -v` para obter todos os parâmetros possíveis.|
+| `-h`| Exibe a ajuda com os principais parâmetros normalmente utilizados| Use `-v` para informações sobre virtualização e `-i`: informações sobre a construção de imagens|
+| `-v`| Inicia uma instância do `qemu` com a última imagem de disco gerada| Utilize `hx -h -v` para obter todos os parâmetros possíveis.|
+| `-i`| Constrói os componentes do sistema e cria uma imagem de disco (raw) e .vdi | Utilize `hx -h -i` para obter todos os parâmetros possíveis.|
 | `-b`| Constrói componentes individuais do Hexagonix| `hexagon`: constrói o Hexagon; `HBoot`: constrói o HBoot; `saturno`: constrói o Saturno; `unixland`: constrói os utilitários Unix-like; `andromedaland`: constrói os utilitários Hexagonix-Andromeda; `hx`: constrói todos os componentes, mas não gera uma imagem de disco| 
 | `-u`| Atualiza todos os repositórios locais com o servidor, usando o ramo já definido | Sem parâmetros secundários|
 | `-ui`| Atualiza apenas as imagens de disco com o servidor. O restante dos repositórios não são afetados| Sem parâmetros secundários|
@@ -73,7 +75,9 @@ O hx aceita uma série de parâmetros para determinar quais ações devem ser ex
 
 ### Módulos do hx
 
-Para a construção do Hexagonix, o hx procura e executa uma série de módulos espalhados por toda a árvore de código. São eles:
+Para a construção do Hexagonix, o `hx` procura e executa uma série de **módulos**. São eles:
+
+> **Aviso! Compatível com a versão 14.0 ou posteriores.**
 
 | Módulo | Função | Localização |
 |:------:|:------:|:-----------:|
@@ -89,14 +93,15 @@ Para a construção do Hexagonix, o hx procura e executa uma série de módulos 
 |`diskBuilder.hx`| Responsável por instalar os componentes do Hexagonix na imagem de disco do sistema gerada anteriormente| Scripts/modules|
 |`fonts.hx`| Responsável por identificar e construir fontes gráficas compatíveis com o sistema| Scripts/modules|
 |`git.hx`| Responsável por atualizar os repositórios do sistema com o servidor remoto| Scripts/modules|
-|`hboot.hx`| Responsável por executar a construção do componente `HBoot`| Scripts/modules|
+|`hboot.hx`| Responsável por executar a construção do componente `HBoot` (boot)| Scripts/modules|
 |`hexagon.hx`| Responsável por executar a construção do componente `Hexagon` (kernel)| Scripts/modules|
 |`logUtils.hx`| Funções úteis para a criação de logs de construção do sistema| Scripts/modules|
 |`macros.hx`| Funções úteis para executar módulos a partir do utilitário `hx` ou de outros módulos| Scripts/modules|
-|`saturno.hx`| Responsável por executar a construção do componente `Saturno`| Scripts/modules|
+|`saturno.hx`| Responsável por executar a construção do componente `Saturno` (boot)| Scripts/modules|
 |`systemBuilder.hx`| Executa todos os módulos de construção dos componentes do sistema e os instala em um diretório temporário[^1]| Scripts/modules|
 |`unix.hx`| Responsável por construir todos os utilitários Unix| Scripts/modules|
 |`vm.hx`| Permite a configuração e execução de máquinas virtuais utilizando uma imagem de disco gerada| Scripts/modules|
+|`indent.sh`| Responsável por indentar os arquivos do sistema (fontes)| Scripts/|
 
 [^1]: Para saber quais módulos são executados, veja o conteúdo do módulo.
 
@@ -104,9 +109,9 @@ Para a construção do Hexagonix, o hx procura e executa uma série de módulos 
 
 ### Etapas de construção
 
-O hx, juntamente aos módulos já citados, constrói os componentes na seguinte ordem:
+O `hx`, **juntamente aos módulos já citados**, constrói os componentes na seguinte ordem:
 
-* MBR e carregador de inicialização HBoot;
+* MBR, Saturno (primeiro estágio de inicialização) e carregador de inicialização HBoot;
 * Hexagon (kernel);
 * Utilitários Unix-like;
 * Utilitários Andromeda;

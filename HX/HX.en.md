@@ -49,13 +49,15 @@ The `hx` utility is intended to unify the Hexagonix build process on Linux syste
 
 ### Functions and parameters
 
-hx accepts a series of parameters to determine which actions to perform. Below is a list of available actions and their parameters.
+`hx` accepts a series of parameters to determine which actions to perform. Below is a list of available actions and their parameters.
+
+> **Warning! Compatible with version 14.0 or later.**
 
 | Parameter | Action performed | Required secondary parameters |
 |:---------:|:----------------:|:-----------------------------:|
-| `-h`| Displays help with commonly used key parameters | No secondary parameters|
-| `-v`| Start an instance of `qemu` with the last generated disk image| `hx`: (default, selected automatically in the absence of secondary parameters); `hx.som`: enable audio output device; `hx.serial`: do not redirect serial output to file; `bsd-hx`: allows execution in BSD environments (no KVM)|
-| `-i`| Builds the system components and creates a disk image (raw) and .vdi | `hx`: (default, selected automatically in the absence of secondary parameters); `hx.test`: creates a test image with reduced final size |
+| `-h`| Displays help with commonly used key parameters | Use `-v` for virtualization information and `-i`: image building information|
+| `-v`| Start an instance of `qemu` with the last generated disk image| Use `hx -h -v` to get all possible parameters.|
+| `-i`| Builds the system components and creates a disk image (raw) and .vdi | Use `hx -h -i` to get all possible parameters.|
 | `-b` | Build individual Hexagonix components| `hexagon`: builds the Hexagon; `HBoot`: builds HBoot; `saturno`: builds Saturno; `unixland`: build Unix-like utilities; `andromedaland`: builds the Hexagonix-Andromeda utilities; `hx`: builds all components but does not generate a disk image|
 | `-u`| Updates all local repositories with the server, using the already defined branch | No secondary parameters|
 | `-ui`| It only updates disk images with the server. The rest of the repositories are unaffected | No secondary parameters|
@@ -74,22 +76,41 @@ hx accepts a series of parameters to determine which actions to perform. Below i
 
 To build Hexagonix, hx looks for and executes a series of modules scattered throughout the source tree. Are they:
 
+> **Warning! Compatible with version 14.0 or later.**
+
 | Module | Function | Location |
 |:------:|:--------:|:--------:|
-| `configure.sh` | Generate all static files and check dependencies for building Hexagonix| Root dir|
-| `Unix.sh`| Individually build all Hexagonix Unix-like utilities | Apps/Unix/|
-| `Apps.sh`| Individually Build All Hexagonix Graphics Utilities | Apps/Andromeda/|
-| `Contrib.sh`| Build all components external to Hexagonix, such as assemblers (fasmX)| Contrib/|
-| `fontes.sh` | Responsible for building Hexagonix graphic fonts | Fontes/|
-| `indent.sh` | Responsible for indenting system fonts| Scripts/|
+|`configure.sh`| Generate all static files and check dependencies for building Hexagonix| Root dir|
+|`andromeda.hx`| Responsible for building all Hexagonix-Andromeda utilities (graphics utilities) | Scripts/modules|
+|`buildInfo.hx`| Get and display information about Hexagonix version, development channel and build| Scripts/modules|
+|`buildOnBSD.hx`| Responsible for creating a disk image for installing Hexagonix from a BSD system| Scripts/modules|
+|`buildOnLinux.hx`| Responsible for creating a disk image for installing Hexagonix from a Linux distribution| Scripts/modules|
+|`buildOnUNIX.hx`| Responsible for creating a disk image for installing Hexagonix from a UNIX system (OpenIndiana)| Scripts/modules|
+|`common.hx`| Common functions used by all modules| Scripts/modules|
+|`contribBuilder.hx`| Responsible for executing the construction script for external packages (such as fasm)| Scripts/modules|
+|`contribChecker.hx`| Responsible for checking whether there are external packages built for installation in the system image| Scripts/modules|
+|`diskBuilder.hx`| Responsible for installing Hexagonix components on the previously generated system disk image| Scripts/modules|
+|`fonts.hx`| Responsible for identifying and building graphic fonts compatible with the system| Scripts/modules|
+|`git.hx`| Responsible for updating system repositories with the remote server| Scripts/modules|
+|`hboot.hx`| Responsible for executing the construction of the `HBoot` component (boot)| Scripts/modules|
+|`hexagon.hx`| Responsible for executing the construction of the `Hexagon` component (kernel)| Scripts/modules|
+|`logUtils.hx`| Useful functions for creating system build logs| Scripts/modules|
+|`macros.hx`| Useful functions for running modules from the `hx` utility or other modules| Scripts/modules|
+|`saturno.hx`| Responsible for executing the construction of the `Saturno` component (boot)| Scripts/modules|
+|`systemBuilder.hx`| Runs all system component build modules and installs them in a temporary directory[^1]| Scripts/modules|
+|`unix.hx`| Responsible for building all Unix utilities| Scripts/modules|
+|`vm.hx`| Allows the configuration and execution of virtual machines using a generated disk image| Scripts/modules|
+|`indent.sh`| Responsible for indenting system fonts| Scripts/|
+
+[^1]: To find out which modules are executed, see the module contents.
 
 > `Only configure.sh can be run directly by the user, other than hx`. No other modules should be run directly.
 
 ### Build steps
 
-hx, together with the modules already mentioned, builds the components in the following order:
+`hx`, **together with the modules already mentioned**, builds the components in the following order:
 
-* MBR and HBoot boot loader;
+* MBR, Saturno (first stage) and HBoot boot loader;
 * Hexagon (kernel);
 * Unix-like utilities;
 * Andromeda utilities;
