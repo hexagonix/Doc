@@ -145,15 +145,29 @@ Changelog e informações técnicas desta versão:
 
 As versões de desenvolvimento do Hexagonix são nomeadas como `projetos` e podem dar origem à novas versões de lançamento do sistema. Essas versões apresentam componentes e características que podem estar instáveis ou inacabadas, e são inicialmente versões de pesquisa em design e implementação do Hexagonix. As versões de desenvolvimento, denominadas projetos, podem ou não ser a origem de uma nova versão de lançamento do Hexagonix, embora recursos possam ser implementados integralmente ou não em uma versão de lançamento. `Independente disso, o Hexagonix está sendo desenvolvido continuamente`.
 
+<details title="Projeto Zonai" align='left'>
+<br>
+<summary align='left'><strong>Projeto Zonai (2024-atualmente) - em progresso</strong></summary>
+
+<div align="justify">
+
+> O projeto `Zonai` se inicia com a base de código da versão **System I** do Hexagonix, após o lançamento oficial da versão.
+
+O projeto Zonai é um fork do Hexagonix System I (ramo CURRENT), que objetiva desenvolver o próximo lançamento estável do sistema, a versão System II (sem cronograma de lançamento definido - o lançamento pode não ocorrer em 2024). Mais informações sobre o projeto em breve.
+
+</div>
+
+</details>
+
 <details title="Projeto Raava" align='left'>
 <br>
 <summary align='left'><strong>Projeto Raava (2023-2024) - projeto concluído</strong></summary>
 
 <div align="justify">
 
-> O Projeto Raava foi concluído, dando origem ao **Hexagonix System I**.
+> O projeto Raava foi concluído, dando origem ao **Hexagonix System I**.
 
-O Projeto Raava é um fork do Hexagonix H2 Release 2 (ramo CURRENT), que objetiva desenvolver o próximo lançamento estável do sistema, a versão H3 (sem cronograma de lançamento definido - o lançamento pode não ocorrer em 2023). Para isso, o sistema parte de:
+O projeto Raava é um fork do Hexagonix H2 Release 2 (ramo CURRENT), que objetiva desenvolver o próximo lançamento estável do sistema, a versão H3 (sem cronograma de lançamento definido - o lançamento pode não ocorrer em 2023). Para isso, o sistema parte de:
 
 - Hexagon baseado na antiga v1.3.6 (versão 1.3 revisão 6);
 - Base do Hexagonix H2 Release 2 (H2R2): H2-CURRENT+290320231532;

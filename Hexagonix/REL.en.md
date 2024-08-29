@@ -143,6 +143,20 @@ Changelog and technical information for this version:
 
 Development versions of Hexagonix are named `projects` and may lead to new release versions of the system. These releases introduce components and features that may be unstable or unfinished, and are initially research on design and implementation of Hexagonix. Development versions, called projects, may or may not be the source of a new release version of Hexagonix, although features may or may not be fully implemented in a release version. `Regardless, Hexagonix is ​​continually being developed`.
 
+<details title="Zonai Project" align='left'>
+<br>
+<summary align='left'><strong>Project Zonai (2024-present) - in progress</strong></summary>
+
+<div align="justify">
+
+> The `Zonai` project starts with the code base of the **System I** version of Hexagonix, after the official release of the version.
+
+The Zonai project is a fork of Hexagonix System I (CURRENT branch), which aims to develop the next stable release of the system, the System II version (no defined release schedule - the release may not occur in 2024). More information about the project soon.
+
+</div>
+
+</details>
+
 <details title="Project Raava" align='left'>
 <br>
 <summary align='left'><strong>Project Raava (2023-2024) - project completed</strong></summary>
