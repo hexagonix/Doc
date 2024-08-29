@@ -42,7 +42,7 @@
 
 <div align="justify">
 
-Here you can get more information about all versions of Hexagonix ever released. Information is available for both stable system versions and development versions, called `projects`, in the context of Hexagonix.
+Here you can get more information about all versions of Hexagonix ever released. Information is available for both stable system versions and development versions, called `projects`.
 
 > You can get the latest `stable` versions of Hexagonix by going to the [releases](https://github.com/hexagonix/hexagonix/releases) area.
 

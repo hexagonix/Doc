@@ -42,7 +42,7 @@
 
 <div align="justify">
 
-Aqui você pode obter mais informações sobre todas as versões do Hexagonix já lançadas. As informações estão disponíveis tanto para as versões estáveis do sistema, quanto para as versões de desenvolvimento, chamadas de `projetos`, no contexto do Hexagonix.
+Aqui você pode obter mais informações sobre todas as versões do Hexagonix já lançadas. As informações estão disponíveis tanto para as versões estáveis do sistema, quanto para as versões de desenvolvimento, chamadas de `projetos`.
 
 > Você pode obter as versões `estáveis` mais recentes do Hexagonix acessando a área de [lançamentos](https://github.com/hexagonix/hexagonix/releases).
 
