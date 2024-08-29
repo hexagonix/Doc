@@ -372,7 +372,7 @@ Several other projects were important to enable the development of Hexagonix. Th
 * [Linux 0.1.1](https://kernel.org), kernel written in C;
 * [XNU/Darwin](https://github.com/apple/darwin-xnu), kernel written in C;
 * [LittleKernel](https://github.com/littlekernel/lk), operating system written in C and C++;
-* [Google Fuchsia](https://fuchsia.googlesource.com/fuchsia/), operating system written in C, C++ and other languages;
+* [Google Fuchsia](https://fuchsia.dev/), operating system written in C, C++, Rust and other languages;
 
 To all these projects and developers, a huge thank you :heart:.
 

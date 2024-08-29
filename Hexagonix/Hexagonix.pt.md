@@ -370,7 +370,7 @@ Diversos outros projetos foram importantes para permitir o desenvolvimento do He
 * [Linux 0.1.1](https://kernel.org), kernel escrito em C;
 * [XNU/Darwin](https://github.com/apple/darwin-xnu), kernel escrito em C;
 * [LittleKernel](https://github.com/littlekernel/lk), sistema operacional escrito em C e C++;
-* [Google Fuchsia](https://fuchsia.googlesource.com/fuchsia/), sistema operacional escrito em C, C++ e outras linguagens;
+* [Google Fuchsia](https://fuchsia.dev/), sistema operacional escrito em C, C++, Rust e outras linguagens;
 
 A todos esses projetos e desenvolvedores, um enorme agradecimento :heart:.
 
