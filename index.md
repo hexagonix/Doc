@@ -37,11 +37,11 @@ geometry: "left=2cm,right=2cm,top=1cm,bottom=2cm"
   
 <table align="center">
 <tr>
-<td><a href="Hexagonix/Hexagonix.en#system-components">Components</a></td>
-<td><a href="Hexagonix/Hexagonix.en#system-development-libraries">Libraries</a></td>
-<td><a href="Hexagonix/Hexagonix.en#-screenshots">Screenshots</a></td>
-<td><a href="Hexagonix/Hexagonix/Hexagonix.en#contribute-and-report-bugs">Contribute</a></td>
-<td><a href="Hexagonix/Hexagonix/Hexagonix.en#other-information">More information</a></td>
+<td><a href="#system-components">Components</a></td>
+<td><a href="#system-development-libraries">Libraries</a></td>
+<td><a href="#screenshots">Screenshots</a></td>
+<td><a href="#contribute-and-report-bugs">Contribute</a></td>
+<td><a href="#other-information">More information</a></td>
 <td><a href="https://github.com/hexagonix/src">Source code</a></td>
 <td><a href="Hexagonix/Hexagonix/README.en">Download</a></td>
 </tr>
