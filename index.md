@@ -418,6 +418,10 @@ Read the license for more information about copyright, code ownership, and redis
 
 </details>
 
+<!-- Will work like <hr> -->
+
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/HexagonixSourceHeader.png" width="100%" height="2px" />
+
 <!-- Versão do arquivo: 1.0
 
 Copyright © 2022 Felipe Miguel Nery Lunkes
