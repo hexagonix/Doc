@@ -27,8 +27,8 @@
 <br>
 <summary align='left'>:heart: Sobre o Hexagonix/About Hexagonix</summary>
 
-* :brazil: [Português (Brasil)](https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.pt.md)
-* :uk: [English](https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.en.md) 
+* :brazil: [Português (Brasil)](Hexagonix/Hexagonix.pt.md)
+* :uk: [English](Hexagonix/Hexagonix.en.md) 
 
 </details>
 
@@ -36,8 +36,8 @@
 <br>
 <summary align='left'>:dvd: Obter e executar o Hexagonix/Get and run Hexagonix</summary>
 
-* :brazil: [Português (Brasil)](https://github.com/hexagonix/Doc/blob/main/Hexagonix/README.pt.md)
-* :uk: [English](https://github.com/hexagonix/Doc/blob/main/Hexagonix/README.en.md) 
+* :brazil: [Português (Brasil)](Hexagonix/README.pt.md)
+* :uk: [English](Hexagonix/README.en.md) 
 
 </details>
 
@@ -63,8 +63,8 @@
 <br>
 <summary align='left'>:rocket: Lançamentos/releases</summary>
 
-* :brazil: [Português (Brasil)](https://github.com/hexagonix/Doc/blob/main/Hexagonix/REL.pt.md)
-* :uk: [English](https://github.com/hexagonix/Doc/blob/main/Hexagonix/REL.en.md) 
+* :brazil: [Português (Brasil)](Hexagonix/REL.pt.md)
+* :uk: [English](Hexagonix/REL.en.md) 
 
 </details>
 
