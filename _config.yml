@@ -4,5 +4,9 @@ markdown: GFM
 relative_links:
   enabled: true
   collections: true
+include:
+  - index.md
+  - "*.md"
+  - LICENSE
 name: ""
 title: null
