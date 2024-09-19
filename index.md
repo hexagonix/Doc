@@ -37,13 +37,13 @@ geometry: "left=2cm,right=2cm,top=1cm,bottom=2cm"
   
 <table align="center">
 <tr>
-<td><a href="Hexagonix/Hexagonix.en.md#system-components">Components</a></td>
-<td><a href="Hexagonix.en.md#system-development-libraries">Libraries</a></td>
-<td><a href="Hexagonix.en.md#-screenshots">Screenshots</a></td>
-<td><a href="Hexagonix/Hexagonix.en.md#contribute-and-report-bugs">Contribute</a></td>
-<td><a href="Hexagonix/Hexagonix.en.md#other-information">More information</a></td>
+<td><a href="Hexagonix/Hexagonix.en#system-components">Components</a></td>
+<td><a href="Hexagonix.en#system-development-libraries">Libraries</a></td>
+<td><a href="Hexagonix.en#-screenshots">Screenshots</a></td>
+<td><a href="Hexagonix/Hexagonix.en#contribute-and-report-bugs">Contribute</a></td>
+<td><a href="Hexagonix/Hexagonix.en#other-information">More information</a></td>
 <td><a href="https://github.com/hexagonix/src">Source code</a></td>
-<td><a href="Hexagonix/README.pt.md">Download</a></td>
+<td><a href="Hexagonix/README.pt">Download</a></td>
 </tr>
 </table>
 
@@ -61,7 +61,7 @@ geometry: "left=2cm,right=2cm,top=1cm,bottom=2cm"
 
 `Hexagonix` is a new Unix-like operating system developed from scratch, written in Assembly language for the PC architecture (x86). It is built on `Hexagon`, a simple and lightweight monolithic kernel designed to be fast and compatible with newer and older hardware (Pentium III and newer with 32 MB of RAM or more).
 
-Hexagonix consists of the [Hexagon boot loader](https:\\github.com/hexagonix/HBoot) (`Hexagon Boot` or `HBoot`), the [Hexagon](https://github.com/hexagonix/Hexagon) (kernel), compatible shells, utilities and libraries. All these components were released under the BSD-3-Clause license.
+Hexagonix consists of the [Hexagon boot loader](https://github.com/hexagonix/HBoot) (`Hexagon Boot` or `HBoot`), the [Hexagon](https://github.com/hexagonix/Hexagon) (kernel), compatible shells, utilities and libraries. All these components were released under the BSD-3-Clause license.
 
 Some features of Hexagonix:
 
