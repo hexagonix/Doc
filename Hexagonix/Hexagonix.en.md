@@ -44,7 +44,7 @@
 
 `Hexagonix` is a new Unix-like operating system developed from scratch, written in Assembly language for the PC architecture (x86). It is built on `Hexagon`, a simple and lightweight monolithic kernel designed to be fast and compatible with newer and older hardware (Pentium III and newer with 32 MB of RAM or more).
 
-Hexagonix consists of the [Hexagon boot loader](https:\\github.com/hexagonix/HBoot) (`Hexagon Boot` or `HBoot`), the [Hexagon](https://github.com/hexagonix/Hexagon) (kernel), compatible shells, utilities and libraries. All these components were released under the BSD-3-Clause license.
+Hexagonix consists of the [Hexagon boot loader](https://github.com/hexagonix/HBoot) (`Hexagon Boot` or `HBoot`), the [Hexagon](https://github.com/hexagonix/Hexagon) (kernel), compatible shells, utilities and libraries. All these components were released under the BSD-3-Clause license.
 
 Some features of Hexagonix:
 
