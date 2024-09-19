@@ -13,7 +13,7 @@
 ![](https://img.shields.io/github/downloads/hexagonix/hexagonix/total.svg)
 ![](https://img.shields.io/github/release/hexagonix/hexagonix.svg)
 [![](https://img.shields.io/twitter/follow/hexagonixOS.svg?style=social&label=Follow%20%40HexagonixOS)](https://twitter.com/hexagonixOS)
-com 68 funções 
+
 </div>
 
 <!-- Vai funcionar como <hr> -->
