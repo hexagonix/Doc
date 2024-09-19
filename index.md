@@ -34,6 +34,8 @@ geometry: "left=2cm,right=2cm,top=1cm,bottom=2cm"
 
 <img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/HexagonixSourceHeader.png" width="100%" height="2px" />
 
+<div align="center">
+  
 <table align="center">
 <tr>
 <td><a href="Hexagonix/Hexagonix.en.md#system-components">Components</a></td>
@@ -45,6 +47,8 @@ geometry: "left=2cm,right=2cm,top=1cm,bottom=2cm"
 <td><a href="Hexagonix/README.pt.md">Download</a></td>
 </tr>
 </table>
+
+</div>
 
 # The Hexagonix Operating System
 
