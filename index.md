@@ -21,7 +21,7 @@
 
 <!-- Vai funcionar como <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/HexagonixSourceHeader.png" width="100%" height="2px" />
 
 <table align="center">
 <tr>
@@ -39,7 +39,7 @@
 
 <div align="center">
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/HexagonixSourceHeader.png">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/HexagonixSourceHeader.png">
 
 </div>
 
@@ -105,7 +105,7 @@ To allow collaboration and attract developers who don't speak Portuguese, the en
 
 <!-- Vai funcionar como <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/HexagonixSourceHeader.png" width="100%" height="2px" />
 
 ## System components
 
@@ -151,7 +151,7 @@ The interaction with HBoot is done by pressing the `F8` key after booting and di
 </div>
 
 <p align="center">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/HBoot.png" width="600" height="500">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/HBoot.png" width="600" height="500">
 </p>
 
 ##### Report bugs
@@ -167,7 +167,7 @@ HBoot has gained a lot of complexity since the beginning of its development in 2
 ### Hexagon kernel
 
 <p align="center">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/LogoHexagon.png" width="180" height="180">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/LogoHexagon.png" width="180" height="180">
 </p>
 
 <div align="justify">
@@ -312,26 +312,26 @@ To learn more and check each function available in the system development librar
 
 <!-- Will work like <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/HexagonixSourceHeader.png" width="100%" height="2px" />
 
 ## 🌙 Screenshots
 
 <p align="center">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix1.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix2.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix3.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix4.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix5.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix6.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix7.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix8.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix9.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix10.png" width="500" height="400">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/Hexagonix1.png" width="500" height="400">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/Hexagonix2.png" width="500" height="400">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/Hexagonix3.png" width="500" height="400">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/Hexagonix4.png" width="500" height="400">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/Hexagonix5.png" width="500" height="400">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/Hexagonix6.png" width="500" height="400">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/Hexagonix7.png" width="500" height="400">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/Hexagonix8.png" width="500" height="400">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/Hexagonix9.png" width="500" height="400">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/Hexagonix10.png" width="500" height="400">
 </p>
 
 <!-- Vai funcionar como <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/HexagonixSourceHeader.png" width="100%" height="2px" />
 
 ## Contribute and report bugs
 
@@ -351,7 +351,7 @@ You can report bugs and help develop the system. To do so, open an error notific
 
 <!-- Will work like <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/HexagonixSourceHeader.png" width="100%" height="2px" />
 
 ## Other information
 
@@ -402,6 +402,7 @@ Read the license for more information about copyright, code ownership, and redis
 </div>
 
 </details>
+
 <!-- Versão do arquivo: 1.0
 
 Copyright © 2022 Felipe Miguel Nery Lunkes
