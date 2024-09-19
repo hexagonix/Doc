@@ -355,7 +355,7 @@ Below you can learn more about how to contribute and report bugs found in Hexago
 
 ### Contribute to the development of Hexagonix
 
-If you have knowledge of creating x86 assembly code and would like to help with system development, feel free to send an [email](mailto:hexagonixdev@gmail.com)!
+If you have knowledge of creating x86 Assembly code and would like to help with system development, feel free to send an [email](mailto:hexagonixdev@gmail.com)!
 
 ### Report Errors
 
