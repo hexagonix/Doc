@@ -1,3 +1,14 @@
+---
+title: "Hexagonix Operating System"
+output: 
+  html_document:
+    toc: FALSE
+mainfont: DejaVuSerif.ttf
+sansfont: DejaVuSans.ttf
+monofont: DejaVuSansMono.ttf 
+mathfont: texgyredejavu-math.otf 
+geometry: "left=2cm,right=2cm,top=1cm,bottom=2cm"
+---
 
 <!-- Vamos adicionar o logotipo do sistema -->
 
