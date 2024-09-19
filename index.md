@@ -43,7 +43,7 @@ geometry: "left=2cm,right=2cm,top=1cm,bottom=2cm"
 <td><a href="Hexagonix/Hexagonix/Hexagonix.en#contribute-and-report-bugs">Contribute</a></td>
 <td><a href="Hexagonix/Hexagonix/Hexagonix.en#other-information">More information</a></td>
 <td><a href="https://github.com/hexagonix/src">Source code</a></td>
-<td><a href="Hexagonix/Hexagonix/README.pt">Download</a></td>
+<td><a href="Hexagonix/Hexagonix/README.en">Download</a></td>
 </tr>
 </table>
 
