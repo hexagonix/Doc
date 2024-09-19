@@ -65,30 +65,30 @@ Hexagonix consists of the [Hexagon boot loader](https:\\github.com/hexagonix/HBo
 
 Some features of Hexagonix:
 
-:white_check_mark: 32-bit operating system;
-:white_check_mark: Completely written in x86 Assembly, being fast and light;
-:white_check_mark: Inspired by the design of Version 7 UNIX[^1], but completely written from scratch;
-:white_check_mark: Compatible with Intel Pentium III (1999) or newer processors;
-:white_check_mark: Compatible with devices with 32 MB of RAM or more;
-:white_check_mark: Full kernel with less than 30 kbytes;
-:white_check_mark: User environment support;
-:white_check_mark: System call with functions accessed by the user environment;
-:white_check_mark: Low minimum requirements, compatible with a wide range of devices;
-:white_check_mark: Own executable binary format (HAPP);
-:white_check_mark: Self-hosting ([the assembler used to build Hexagonix](https://github.com/hexagonix/fasmX) can run on top of it);
-:white_check_mark: Device abstraction;
-:white_check_mark: VESA VBE graphics support in various resolutions;
-:white_check_mark: Text mode support;
-:white_check_mark: Support for serial and parallel ports (serial communication, debug and printing);
-:white_check_mark: Virtual File System (VFS);
-:white_check_mark: Support for reading and writing on FAT16 (FAT16B) file systems;
-:white_check_mark: Graphic font rendering engine, which can be changed by the user;
-:white_check_mark: Real-time clock support;
-:white_check_mark: Supports own boot loader (Hexagon Boot - HBoot);
-:white_check_mark: Support for users and permissions.
-:white_check_mark: Easily extensible;
-:white_check_mark: Well documented in Portuguese and English;
-:white_check_mark: Fully licensed under `BSD-3-Clause`[^2], available [here](LICENSES/BSD-3).
+- :white_check_mark: 32-bit operating system;
+- :white_check_mark: Completely written in x86 Assembly, being fast and light;
+- :white_check_mark: Inspired by the design of Version 7 UNIX[^1], but completely written from scratch;
+- :white_check_mark: Compatible with Intel Pentium III (1999) or newer processors;
+- :white_check_mark: Compatible with devices with 32 MB of RAM or more;
+- :white_check_mark: Full kernel with less than 30 kbytes;
+- :white_check_mark: User environment support;
+- :white_check_mark: System call with functions accessed by the user environment;
+- :white_check_mark: Low minimum requirements, compatible with a wide range of devices;
+- :white_check_mark: Own executable binary format (HAPP);
+- :white_check_mark: Self-hosting ([the assembler used to build Hexagonix](https://github.com/hexagonix/fasmX) can run on top of it);
+- :white_check_mark: Device abstraction;
+- :white_check_mark: VESA VBE graphics support in various resolutions;
+- :white_check_mark: Text mode support;
+- :white_check_mark: Support for serial and parallel ports (serial communication, debug and printing);
+- :white_check_mark: Virtual File System (VFS);
+- :white_check_mark: Support for reading and writing on FAT16 (FAT16B) file systems;
+- :white_check_mark: Graphic font rendering engine, which can be changed by the user;
+- :white_check_mark: Real-time clock support;
+- :white_check_mark: Supports own boot loader (Hexagon Boot - HBoot);
+- :white_check_mark: Support for users and permissions.
+- :white_check_mark: Easily extensible;
+- :white_check_mark: Well documented in Portuguese and English;
+- :white_check_mark: Fully licensed under `BSD-3-Clause`[^2], available [here](LICENSES/BSD-3).
 
 [^1]: The architecture of Hexagonix (structure and utilities) was inspired by the elegance and simplicity of [Version 7 UNIX](https://github.com/dspinellis/unix-history-repo/tree/Research-V7-Snapshot-Development), although it does not aim for any compatibility or share any code with it. Hexagonix does not use any code derived from Version 7 UNIX or other projects. Hexagonix utilities were written to resemble the function and appearance of their counterparts in Version 7 UNIX.
 [^2]: You can get more information about the license [in this article](https://docs.freebsd.org/en/articles/bsdl-gpl/) of the FreeBSD project, [in the article](https://opensource.org/licenses/BSD-3-Clause) from the Open Source Initiative or the BSD license page on [Wikipedia](https://en.wikipedia.org/wiki/BSD_licenses).
@@ -218,22 +218,22 @@ Hexagonix implements, together with Hexagon, a series of Unix-like utilities, wi
 
 Hexagonix includes many of the Unix utilities you may already be familiar with, such as:
 
-- [x] cat
-- [x] clear
-- [x] cp
-- [x] init
-- [x] login
-- [x] ls
-- [x] man
-- [x] mv
-- [x] ps
-- [x] rm
-- [x] sh (default shell)
-- [x] shutdown
-- [x] su
-- [x] top
-- [x] uname
-- [x] whoami, among others.
+- :white_check_mark: cat
+- :white_check_mark: clear
+- :white_check_mark: cp
+- :white_check_mark: init
+- :white_check_mark: login
+- :white_check_mark: ls
+- :white_check_mark: man
+- :white_check_mark: mv
+- :white_check_mark: ps
+- :white_check_mark: rm
+- :white_check_mark: sh (default shell)
+- :white_check_mark: shutdown
+- :white_check_mark: su
+- :white_check_mark: top
+- :white_check_mark: uname
+- :white_check_mark: whoami, among others.
 
 Some applications and utilities were developed exclusively for Hexagonix, such as:
 
@@ -272,15 +272,15 @@ The Andromeda environment (Hexagonix-Andromeda) is built on the solid foundation
 
 <div align="justify">
 
-- [x] System Settings (config)
-- [x] Quartzo text editor
-- [x] Lyoko IDE for application development
-- [x] Electronic piano return Piano;
-- [x] Serial communication utility
-- [x] Andromeda Shell (ASH) - A new shell for Hexagonix
-- [x] Hexagonix calculator
-- [x] Font change utility
-- [x] Hexagonix shutdown utility
+- :white_check_mark: System Settings (config)
+- :white_check_mark: Quartzo text editor
+- :white_check_mark: Lyoko IDE for application development
+- :white_check_mark: Electronic piano return Piano;
+- :white_check_mark: Serial communication utility
+- :white_check_mark: Andromeda Shell (ASH) - A new shell for Hexagonix
+- :white_check_mark: Hexagonix calculator
+- :white_check_mark: Font change utility
+- :white_check_mark: Hexagonix shutdown utility
 
 ### Third party applications available for Hexagonix-Andromeda
 
