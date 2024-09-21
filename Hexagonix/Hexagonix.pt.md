@@ -32,7 +32,13 @@
 </tr>
 </table>
 
+{% if site.github %}
+  [Leia o tutorial](docs/tutorial.md)
+{% else %}
 [Hexagonix](/Hexagonix/README.pt.md)
+{% endif %}
+
+
 
 # O sistema operacional Hexagonix
 
