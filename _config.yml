@@ -4,10 +4,18 @@ plugins:
 markdown: GFM
 relative_links:
   enabled: true
-  collections: false
+  collections: true
 include:
   - index.md
   - "*.md"
+  - "Andromeda-Apps/*.d"
+  - "fnt/*.md"
+  - "HBoot/*.md"
+  - "Hexagon/*.md"
+  - "Hexagonix/*.md"
+  - "HX/*.md"
+  - "lib/*.md"
+  - "Unix-Apps/*.md"
   - LICENSE
   - "LICENSES/"
 name: ""
