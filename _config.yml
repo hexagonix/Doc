@@ -6,7 +6,7 @@ markdown: GFM
 permalink: pretty
 relative_links:
   enabled: true
-  collections: true
+  collections: false
 name: ""
 title: null
 gems:
