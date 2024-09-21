@@ -22,13 +22,13 @@
 
 <table align="center">
 <tr>
-<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.en.md#system-components">Components</a></td>
-<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.en.md#system-development-libraries">Libraries</a></td>
-<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.en.md#screenshots">Screenshots</a></td>
-<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.en.md#contribute-and-report-bugs">Contribute</a></td>
-<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.en.md#other-information">More information</a></td>
+<td><a href="#system-components">Components</a></td>
+<td><a href="#system-development-libraries">Libraries</a></td>
+<td><a href="#screenshots">Screenshots</a></td>
+<td><a href="#contribute-and-report-bugs">Contribute</a></td>
+<td><a href="#other-information">More information</a></td>
 <td><a href="https://github.com/hexagonix/src">Source code</a></td>
-<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/README.en.md">Download</a></td>
+<td><a href="Hexagonix/README.en.md">Download</a></td>
 </tr>
 </table>
 
