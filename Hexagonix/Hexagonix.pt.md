@@ -32,7 +32,7 @@
 </tr>
 </table>
 
-[Hexagonix](Hexagonix/README.pt.md)
+[Hexagonix](/Hexagonix/README.pt.md)
 
 # O sistema operacional Hexagonix
 
