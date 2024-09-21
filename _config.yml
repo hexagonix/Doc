@@ -2,10 +2,9 @@ plugins:
   - jemoji
   - jekyll-relative-links
 markdown: GFM
+permalink: pretty
 relative_links:
   enabled: true
   collections: true
-
 name: ""
 title: null
-permalink: pretty

@@ -32,6 +32,8 @@
 </tr>
 </table>
 
+[Hexagonix](/Hexagonix/README.pt.md)
+
 # O sistema operacional Hexagonix
 
 <div align="center">
