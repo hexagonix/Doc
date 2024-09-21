@@ -28,7 +28,7 @@
 <td><a href="#contribuir-e-reportar-erros">Contribuir</a></td>
 <td><a href="#outras-informa%C3%A7%C3%B5es">Outras informações</a></td>
 <td><a href="https://github.com/hexagonix/src">Código-fonte</a></td>
-<td><a href="Hexagonix/README.pt.md">Download</a></td>
+<td><a href="README.pt.md">Download</a></td>
 </tr>
 </table>
 
