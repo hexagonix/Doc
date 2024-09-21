@@ -5,6 +5,7 @@ markdown: GFM
 relative_links:
   enabled: true
   collections: true
+
 name: ""
 title: null
 permalink: pretty
