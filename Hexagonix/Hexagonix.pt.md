@@ -20,20 +20,7 @@
 
 <img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
-{% if site.github %}
-    <table align="center">
-    <tr>
-    <td><a href="#componentes-do-sistema">Componentes</a></td>
-    <td><a href="#bibliotecas-de-desenvolvimento-do-sistema">Bibliotecas</a></td>
-    <td><a href="#capturas-de-tela">Screenshots</a></td>
-    <td><a href="#contribuir-e-reportar-erros">Contribuir</a></td>
-    <td><a href="#outras-informa%C3%A7%C3%B5es">Outras informações</a></td>
-    <td><a href="https://github.com/hexagonix/src">Código-fonte</a></td>
-    <td><a href="/Hexagonix/README.pt.md">Download</a></td>
-    </tr>
-    </table>
-{% else %}
-  <table align="center">
+<table align="center">
 <tr>
 <td><a href="#componentes-do-sistema">Componentes</a></td>
 <td><a href="#bibliotecas-de-desenvolvimento-do-sistema">Bibliotecas</a></td>
@@ -41,10 +28,9 @@
 <td><a href="#contribuir-e-reportar-erros">Contribuir</a></td>
 <td><a href="#outras-informa%C3%A7%C3%B5es">Outras informações</a></td>
 <td><a href="https://github.com/hexagonix/src">Código-fonte</a></td>
-<td><a href="/Hexagonix/README.pt">Download</a></td>
+<td><a href="/Hexagonix/README.pt.md">Download</a></td>
 </tr>
 </table>
-{% endif %}
 
 # O sistema operacional Hexagonix
 
