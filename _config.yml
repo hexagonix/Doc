@@ -8,3 +8,5 @@ relative_links:
   collections: true
 name: ""
 title: null
+gems:
+  - jekyll-relative-links
