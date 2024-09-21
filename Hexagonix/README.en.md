@@ -32,7 +32,7 @@ Todos os direitos reservados.
 <table align="center">
 <tr>
 <td><a href="/Hexagonix/Hexagonix.en.md">About Hexagonix</a></td>
-<td><a href="Hexagonix.en.md#-screenshots">Screenshots</a></td>
+<td><a href="/Hexagonix/Hexagonix.en.md#-screenshots">Screenshots</a></td>
 <td><a href="#contribute-and-report-bugs">Contribute</a></td>
 <td><a href="https://github.com/hexagonix/src">Source code</a></td>
 </tr>
