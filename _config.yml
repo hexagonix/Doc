@@ -4,7 +4,7 @@ plugins:
 markdown: GFM
 relative_links:
   enabled: true
-  collections: true
+  collections: false
 include:
   - index.md
   - "*.md"
