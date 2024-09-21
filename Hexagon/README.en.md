@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/banner.png">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/banner.png">
 </p>
 
 <div align="center">
@@ -16,14 +16,14 @@
 
 </div>
 
-<!-- Vai funcionar como <hr> -->
+<!-- Will work like <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 # Hexagon kernel
 
 <p align="center">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/LogoHexagon.png" width="200" height="200">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/HexagonixSourceHeader.png">
 </p>
 
 <div align="justify">
@@ -32,24 +32,24 @@ Hexagon is a monolithic `kernel` running in 32-bit `protected mode`, developed p
 
 Some features of Hexagon:
 
-- [x] Support for x86 processors (Pentium III or higher);
-- [x] Support for devices with 32 MB of RAM or more;
-- [x] User environment support;
-- [x] [System call](SYSCALL.en.md) with 68 sophisticated functions accessed by the user environment;
-- [x] Own executable binary format (HAPP);
-- [x] Unix-like;
-- [x] Completely written in x86 Assembly;
-- [x] Self-hosting (the assembler used to build the Hexagon can run on top of it);
-- [x] Virtual file system;
-- [x] Device abstraction;
-- [x] Full support for reading and writing on FAT16 file systems;
-- [x] VESA VBE and multi-resolution graphics support;
-- [x] Text mode support;
-- [x] Graphic font rendering engine, which can be changed by the user;
-- [x] Real-time clock support;
-- [x] Support for serial and parallel ports (serial communication, debug and printing);
-- [x] Supports own boot loader (Hexagon Boot - HBoot);
-- [x] Support for users and permissions.
+- :white_check_mark: Support for x86 processors (Pentium III or higher);
+- :white_check_mark: Support for devices with 32 MB of RAM or more;
+- :white_check_mark: User environment support;
+- :white_check_mark: [System call](SYSCALL.en.md) with 68 sophisticated functions accessed by the user environment;
+- :white_check_mark: Own executable binary format (HAPP);
+- :white_check_mark: Unix-like;
+- :white_check_mark: Completely written in x86 Assembly;
+- :white_check_mark: Self-hosting (the assembler used to build the Hexagon can run on top of it);
+- :white_check_mark: Virtual file system;
+- :white_check_mark: Device abstraction;
+- :white_check_mark: Full support for reading and writing on FAT16 file systems;
+- :white_check_mark: VESA VBE and multi-resolution graphics support;
+- :white_check_mark: Text mode support;
+- :white_check_mark: Graphic font rendering engine, which can be changed by the user;
+- :white_check_mark: Real-time clock support;
+- :white_check_mark: Support for serial and parallel ports (serial communication, debug and printing);
+- :white_check_mark: Supports own boot loader (Hexagon Boot - HBoot);
+- :white_check_mark: Support for users and permissions.
 
 Other features being developed:
 
@@ -74,7 +74,7 @@ Please read the [license](https://github.com/hexagonix/Doc/blob/main/LICENSES/BS
 
 <!-- Will work like <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 ### History of development
 
@@ -86,7 +86,7 @@ The kernel was initially designed and written aiming at a structure and operatio
 
 <!-- Will work like <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 ### Hexagon Documentation Sessions
 
@@ -244,7 +244,7 @@ startAPP:
 
 <!-- Will work like <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 ### Looking for collaborators
 

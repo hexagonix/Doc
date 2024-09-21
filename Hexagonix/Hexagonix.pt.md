@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/banner.png">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/banner.png">
 </p>
 
 <div align="center">
@@ -18,7 +18,7 @@
 
 <!-- Vai funcionar como <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 <table align="center">
 <tr>
@@ -48,30 +48,30 @@ O Hexagonix é composto pelo [carregador de inicialização do Hexagon](https://
    
 Algumas características do Hexagonix:
 
-- [x] Sistema operacional de 32 bits;
-- [x] Completamente escrito em Assembly x86, sendo rápido e leve;
-- [x] Inspirado no design do Version 7 UNIX[^1], mas totalmente escrito do zero;
-- [x] Compatível com processadores Intel Pentium III (1999) ou mais recentes;
-- [x] Compatível com dispositivos com 32 MB de memória RAM ou mais;
-- [x] Kernel completo com menos de 30 kbytes;
-- [x] Suporte a ambiente de usuário;
-- [x] Chamada de sistema com funções acessadas pelo ambiente de usuário;
-- [x] Requisitos mínimos baixos, compatível com uma ampla gama de dispositivos;
-- [x] Formato binário executável próprio (HAPP);
-- [x] Self-hosting (o [montador usado para construir o Hexagonix](https://github.com/hexagonix/fasmX) pode ser executado sobre ele);
-- [x] Abstração de dispositivos;
-- [x] Suporte a gráficos VESA VBE em várias resoluções;
-- [x] Suporte a modo texto;
-- [x] Suporte a portas seriais e paralelas (comunicação serial, debug e impressão);
-- [x] Sistema de arquivos virtual (VFS);
-- [x] Suporte de leitura e escrita em sistemas de arquivos FAT16 (FAT16B);
-- [x] Motor de renderização de fontes gráficas, que podem ser alteradas pelo usuário;
-- [x] Suporte a relógio em tempo real;
-- [x] Compatível com carregador de inicialização próprio (Hexagon Boot - HBoot);
-- [x] Suporte a usuários e permissões.
-- [x] Facilmente extensível;
-- [x] Bem documentado em português e inglês;
-- [x] Totalmente licenciado sob `BSD-3-Clause`[^2], disponível [aqui](https://github.com/hexagonix/Doc/blob/main/LICENSES/BSD-3).
+- :white_check_mark: Sistema operacional de 32 bits;
+- :white_check_mark: Completamente escrito em Assembly x86, sendo rápido e leve;
+- :white_check_mark: Inspirado no design do Version 7 UNIX[^1], mas totalmente escrito do zero;
+- :white_check_mark: Compatível com processadores Intel Pentium III (1999) ou mais recentes;
+- :white_check_mark: Compatível com dispositivos com 32 MB de memória RAM ou mais;
+- :white_check_mark: Kernel completo com menos de 30 kbytes;
+- :white_check_mark: Suporte a ambiente de usuário;
+- :white_check_mark: Chamada de sistema com funções acessadas pelo ambiente de usuário;
+- :white_check_mark: Requisitos mínimos baixos, compatível com uma ampla gama de dispositivos;
+- :white_check_mark: Formato binário executável próprio (HAPP);
+- :white_check_mark: Self-hosting (o [montador usado para construir o Hexagonix](https://github.com/hexagonix/fasmX) pode ser executado sobre ele);
+- :white_check_mark: Abstração de dispositivos;
+- :white_check_mark: Suporte a gráficos VESA VBE em várias resoluções;
+- :white_check_mark: Suporte a modo texto;
+- :white_check_mark: Suporte a portas seriais e paralelas (comunicação serial, debug e impressão);
+- :white_check_mark: Sistema de arquivos virtual (VFS);
+- :white_check_mark: Suporte de leitura e escrita em sistemas de arquivos FAT16 (FAT16B);
+- :white_check_mark: Motor de renderização de fontes gráficas, que podem ser alteradas pelo usuário;
+- :white_check_mark: Suporte a relógio em tempo real;
+- :white_check_mark: Compatível com carregador de inicialização próprio (Hexagon Boot - HBoot);
+- :white_check_mark: Suporte a usuários e permissões.
+- :white_check_mark: Facilmente extensível;
+- :white_check_mark: Bem documentado em português e inglês;
+- :white_check_mark: Totalmente licenciado sob `BSD-3-Clause`[^2], disponível [aqui](https://github.com/hexagonix/Doc/blob/main/LICENSES/BSD-3).
 
 [^1]: A arquitetura do Hexagonix (estrutura e utilitários) foi inspirada na elegância e simplicidade do [Version 7 UNIX](https://github.com/dspinellis/unix-history-repo/tree/Research-V7-Snapshot-Development), embora não vise qualquer compatibilidade ou compartilhe qualquer estrutura de código com este. O Hexagonix não utiliza qualquer código derivado do Version 7 UNIX ou de outros projetos. Os utilitários do Hexagonix foram escritos para se assemelharem à função e aparência dos correspondentes no Version 7 UNIX.
 [^2]: Você pode obter mais informações sobre a licença [neste artigo](https://docs.freebsd.org/en/articles/bsdl-gpl/) do projeto FreeBSD, [no artigo](https://opensource.org/licenses/BSD-3-Clause) da Open Source Initiative ou na página sobre a licença BSD na [Wikipedia](https://pt.wikipedia.org/wiki/Licen%C3%A7a_BSD).
@@ -102,7 +102,7 @@ Para permitir colaboração e atrair desenvolvedores que não falam português, 
 
 <!-- Vai funcionar como <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 ## Componentes do sistema
 
@@ -200,22 +200,22 @@ O Hexagonix implementa, junto ao Hexagon, uma série de utilitários Unix-like, 
 
 O Hexagonix inclui muitos dos utilitários Unix que você pode já estar familiarizado, como por exemplo:
 
-- [x] cat
-- [x] clear
-- [x] cp
-- [x] init
-- [x] login
-- [x] ls
-- [x] man
-- [x] mv
-- [x] ps
-- [x] rm
-- [x] sh (shell padrão)
-- [x] shutdown
-- [x] su
-- [x] top
-- [x] uname
-- [x] whoami, entre outros.
+- :white_check_mark: cat
+- :white_check_mark: clear
+- :white_check_mark: cp
+- :white_check_mark: init
+- :white_check_mark: login
+- :white_check_mark: ls
+- :white_check_mark: man
+- :white_check_mark: mv
+- :white_check_mark: ps
+- :white_check_mark: rm
+- :white_check_mark: sh (shell padrão)
+- :white_check_mark: shutdown
+- :white_check_mark: su
+- :white_check_mark: top
+- :white_check_mark: uname
+- :white_check_mark: whoami, entre outros.
 
 Alguns aplicativos e utilitários foram desenvolvidos exclusivamente para o Hexagonix, como:
 
@@ -253,15 +253,15 @@ O ambiente Andromeda do Hexagonix (Hexagonix-Andromeda) é construído sobre a b
 
 <div align="justify">
 
-- [x] Configurações do sistema (config)
-- [x] Editor de texto Quartzo
-- [x] IDE Lyoko para desenvolvimento de aplicativos
-- [x] Piano eletrônico return Piano;
-- [x] Utilitário de comunicação serial
-- [x] Andromeda Shell (ASH) - Um novo shell para o Hexagonix
-- [x] Calculadora do Hexagonix
-- [x] Utilitário de alteração de fonte
-- [x] Utilitário de desligamento do Hexagonix
+- :white_check_mark: Configurações do sistema (config)
+- :white_check_mark: Editor de texto Quartzo
+- :white_check_mark: IDE Lyoko para desenvolvimento de aplicativos
+- :white_check_mark: Piano eletrônico return Piano;
+- :white_check_mark: Utilitário de comunicação serial
+- :white_check_mark: Andromeda Shell (ASH) - Um novo shell para o Hexagonix
+- :white_check_mark: Calculadora do Hexagonix
+- :white_check_mark: Utilitário de alteração de fonte
+- :white_check_mark: Utilitário de desligamento do Hexagonix
 
 ### Aplicativos de terceiros disponíveis para o Hexagonix-Andromeda
 
@@ -307,26 +307,26 @@ Para saber mais e verificar cada função disponível nas bibliotecas de desenvo
 
 <!-- Vai funcionar como <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 ## 🌙 Capturas de tela
 
 <p align="center">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix1.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix2.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix3.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix4.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix5.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix6.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix7.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix8.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix9.png" width="500" height="400">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/Hexagonix10.png" width="500" height="400">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/Hexagonix1.png" width="400" height="300">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/Hexagonix2.png" width="400" height="300">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/Hexagonix3.png" width="400" height="300">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/Hexagonix4.png" width="400" height="300">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/Hexagonix5.png" width="400" height="300">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/Hexagonix6.png" width="400" height="300">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/Hexagonix7.png" width="400" height="300">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/Hexagonix8.png" width="400" height="300">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/Hexagonix9.png" width="400" height="300">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/Hexagonix10.png" width="400" height="300">
 </p>
 
 <!-- Vai funcionar como <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 ## Contribuir e reportar erros
 
@@ -346,7 +346,7 @@ Você pode reportar erros e ajudar a desenvolver o sistema. Para isso, abra uma 
 
 <!-- Vai funcionar como <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 ## Outras informações
 

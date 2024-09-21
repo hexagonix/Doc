@@ -29,21 +29,22 @@ geometry: "left=2cm,right=2cm,top=1cm,bottom=2cm"
 
 </div>
 
-<!-- Vai funcionar como <hr> -->
+<!-- Will work like <hr> -->
 
-<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/HexagonixSourceHeader.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 <div align="center">
   
 <table align="center">
 <tr>
+<td><a href="Hexagonix/Hexagonix.pt"> Português :brazil:</a></td>
 <td><a href="#system-components">Components</a></td>
 <td><a href="#system-development-libraries">Libraries</a></td>
 <td><a href="#screenshots">Screenshots</a></td>
 <td><a href="#contribute-and-report-bugs">Contribute</a></td>
 <td><a href="#other-information">More information</a></td>
 <td><a href="https://github.com/hexagonix/src">Source code</a></td>
-<td><a href="Hexagonix/Hexagonix/README.en">Download</a></td>
+<td><a href="Hexagonix/README.en">Download</a></td>
 </tr>
 </table>
 
@@ -117,9 +118,9 @@ To allow collaboration and attract developers who don't speak Portuguese, the en
 
 </div>
 
-<!-- Vai funcionar como <hr> -->
+<!-- Will work like <hr> -->
 
-<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/HexagonixSourceHeader.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 ## System components
 
@@ -326,7 +327,7 @@ To learn more and check each function available in the system development librar
 
 <!-- Will work like <hr> -->
 
-<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/HexagonixSourceHeader.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 ## 🌙 Screenshots
 
@@ -343,9 +344,9 @@ To learn more and check each function available in the system development librar
 <img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/Hexagonix10.png" width="400" height="300">
 </p>
 
-<!-- Vai funcionar como <hr> -->
+<!-- Will work like <hr> -->
 
-<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/HexagonixSourceHeader.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 ## Contribute and report bugs
 
@@ -365,7 +366,7 @@ You can report bugs and help develop the system. To do so, open an error notific
 
 <!-- Will work like <hr> -->
 
-<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/HexagonixSourceHeader.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 ## Other information
 
@@ -419,10 +420,10 @@ Read the license for more information about copyright, code ownership, and redis
 
 <!-- Will work like <hr> -->
 
-<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/HexagonixSourceHeader.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 <!-- Versão do arquivo: 1.0
 
-Copyright © 2022 Felipe Miguel Nery Lunkes
+Copyright © 2022-2024 Felipe Miguel Nery Lunkes
 
 -->

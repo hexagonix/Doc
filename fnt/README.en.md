@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/banner.png">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/banner.png">
 </p>
 
 <div align="center">
@@ -18,7 +18,7 @@
 
 <!-- Vai funcionar como <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 # Hexagonix graphic fonts
 

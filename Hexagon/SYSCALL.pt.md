@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/banner.png">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/banner.png">
 </p>
 
 <div align="center">
@@ -18,7 +18,7 @@
 
 <!-- Vai funcionar como <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 <div align="justify">
 
@@ -51,7 +51,7 @@ O número e parâmetros de uma função na chamada de sistema são sempre mantid
 
 <!-- Vai funcionar como <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 <div align="justify">
 
@@ -190,7 +190,7 @@ Agora, uma tabela com as funções da chamada de sistema do Hexagonix. As funç�
 
 <!-- Vai funcionar como <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 ## Exemplo de código
 

@@ -8,5 +8,6 @@ include:
   - index.md
   - "*.md"
   - LICENSE
+  - "LICENSES/"
 name: ""
 title: null

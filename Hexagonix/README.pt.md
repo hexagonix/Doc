@@ -8,7 +8,7 @@ Todos os direitos reservados.
 -->
 
 <p align="center">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/banner.png">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/banner.png">
 </p>
 
 <div align="center">
@@ -27,7 +27,7 @@ Todos os direitos reservados.
 
 <!-- Vai funcionar como <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 <table align="center">
 <tr>
@@ -66,7 +66,7 @@ Leia a [licença](https://github.com/hexagonix/Doc/blob/main/LICENSES/BSD-3) par
 
 <!-- Vai funcionar como <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 # Fazer download e executar o sistema agora mesmo
 
@@ -94,7 +94,7 @@ Você pode ir até a sessão de [`lançamentos`](https://github.com/hexagonix/he
 
 <!-- Vai funcionar como <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 # Como executar o Hexagonix
 
@@ -238,7 +238,7 @@ Você pode adicionar outro usuário alterando o arquivo `USUARIO.UNX` (Hexagonix
 
 <!-- Vai funcionar como <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 # Contribuir e reportar erros
 
@@ -258,7 +258,7 @@ Você pode reportar erros e ajudar a desenvolver o sistema. Para isso, abra uma 
 
 <!-- Vai funcionar como <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 # Outras informações
 

@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/banner.png">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/banner.png">
 </p>
 
 <div align="center">
@@ -18,7 +18,7 @@
 
 <!-- Vai funcionar como <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 # Escolha o idioma/choose language
  
@@ -29,7 +29,7 @@
 </tr>
 </table>
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 ## :uk: English
 
@@ -67,7 +67,7 @@ Now select the document relating to system components or technical and developme
 |[System Calls](https://github.com/hexagonix/Doc/tree/main/Hexagon/SYSCALL.en.md)|Hexagon System Calls documentation|
 |[libasm](https://github.com/hexagonix/Doc/tree/main/lib/README.en.md)| libasm - x86 Assembly development library|
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 ## :brazil: Português (Brasil)
 

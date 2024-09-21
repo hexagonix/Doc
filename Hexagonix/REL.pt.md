@@ -1,7 +1,7 @@
 <!-- Vamos adicionar o logotipo do sistema -->
 
 <p align="center">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/banner.png">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/banner.png">
 </p>
 
 <div align="center">
@@ -20,7 +20,7 @@
 
 <!-- Vai funcionar como <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 <table align="center">
 <tr>
@@ -50,7 +50,7 @@ Aqui você pode obter mais informações sobre todas as versões do Hexagonix j�
 
 <!-- Vai funcionar como <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 ## Versões estáveis
 
@@ -137,7 +137,7 @@ Changelog e informações técnicas desta versão:
 
 </div>
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 </details>
 
@@ -288,7 +288,7 @@ Essa atualização do sistema conserta vários bugs no sistema, incluindo proble
 
 <!-- Vai funcionar como <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 </details>
 
@@ -346,13 +346,13 @@ A versão em desenvolvimento, H2 (codenome Vita Nova), é a próxima versão do 
 - Utilitário init v2.0, com suporte a execução de múltiplos serviços em lista.
 - Desativação do modo de login "moderno" em logind. A interface de login padrão segue o observado em sistemas Unix-like (FreeBSD como maior inspiração);
 - Melhorias gerais nos seguintes utilitários Unix:
-  - [x] login;
-  - [x] energia;
-  - [x] htop;
-  - [x] man;
-  - [x] su;
-  - [x] top;
-  - [x] uname;
+  - :white_check_mark: login;
+  - :white_check_mark: energia;
+  - :white_check_mark: htop;
+  - :white_check_mark: man;
+  - :white_check_mark: su;
+  - :white_check_mark: top;
+  - :white_check_mark: uname;
 - Testes executados para verificar o funcionamento correto do sistema (nenhum novo problema encontrado).
 
 </div>
@@ -369,10 +369,10 @@ A versão H2-dev.beta6 veio padronizar uma série de serviços do Hexagonix, bem
 
 * Melhorias nas mensagens dos utilitários do sistema, sobretudo em mensagens de erro;
 * Correções nos seguintes utilitários do sistema:
-  - [x] DOSsh;
-  - [x] init;
-  - [x] su;
-  - [x] login;
+  - :white_check_mark: DOSsh;
+  - :white_check_mark: init;
+  - :white_check_mark: su;
+  - :white_check_mark: login;
 * Um erro de definição em su poderia levar ao travamento ou não funcionamento do utilitário, uma vez que tentaria carregar o shell padrão (sh) com o nome sh.app;
 * Remoção total de referências ao Andromeda, uma vez que a distribuição foi fundida ao Hexagonix (ver Hexagonix H2-dev.beta1). A remoção se deu em:
   - Nome de funções;
@@ -383,7 +383,7 @@ A versão H2-dev.beta6 veio padronizar uma série de serviços do Hexagonix, bem
 * Alteração no nome de versão de "Vita Nova" para "VitaNova", impedindo problemas ao verificar o nome de host gerado durante a construção do sistema;
 * Alteração na formatação da declaração de serviços de init.
 
-- [x] Data de lançamento: 28/11/2022
+- :white_check_mark: Data de lançamento: 28/11/2022
 
 </div>
 
@@ -397,7 +397,7 @@ A versão H2-dev.beta6 veio padronizar uma série de serviços do Hexagonix, bem
 
 Tradução das mensagens dos utilitários Unix para o inglês.
 
-- [x] Data de lançamento: 30/11/2022
+- :white_check_mark: Data de lançamento: 30/11/2022
 
 </div>
 
@@ -414,7 +414,7 @@ Tradução das mensagens dos utilitários Unix para o inglês.
 
 > Vale ressaltar que os nomes de funções, bem como os comentários em arquivos que compõem o sistema, permanecerão em português nesse momento.
 
-- [x] Data de lançamento: 04/12/2022
+- :white_check_mark: Data de lançamento: 04/12/2022
 
 </div>
 
@@ -422,7 +422,7 @@ Tradução das mensagens dos utilitários Unix para o inglês.
 
 <!-- Vai funcionar como <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 </details>
 
@@ -445,19 +445,19 @@ Consolidação das versões de desenvolvimento, com:
 - Utilitário init v2.0, com suporte a execução de múltiplos serviços em lista.
 - Desativação do modo de login "moderno" em logind. A interface de login padrão segue o observado em sistemas Unix-like (FreeBSD como maior inspiração);
 - Melhorias gerais nos seguintes utilitários Unix:
-  - [x] login;
-  - [x] energia;
-  - [x] htop;
-  - [x] man;
-  - [x] su;
-  - [x] top;
-  - [x] uname;
+  - :white_check_mark: login;
+  - :white_check_mark: energia;
+  - :white_check_mark: htop;
+  - :white_check_mark: man;
+  - :white_check_mark: su;
+  - :white_check_mark: top;
+  - :white_check_mark: uname;
 - Melhorias nas mensagens dos utilitários do sistema, sobretudo em mensagens de erro;
 - Correções nos seguintes utilitários do sistema:
-  - [x] DOSsh;
-  - [x] init;
-  - [x] su;
-  - [x] login;
+  - :white_check_mark: DOSsh;
+  - :white_check_mark: init;
+  - :white_check_mark: su;
+  - :white_check_mark: login;
 - Um erro de definição em su poderia levar ao travamento ou não funcionamento do utilitário, uma vez que tentaria carregar o shell padrão (sh) com o nome sh.app;
 - Remoção total de referências ao Andromeda, uma vez que a distribuição foi fundida ao Hexagonix (ver Hexagonix H2-dev.beta1). A remoção se deu em:
   - Nome de funções;
@@ -471,7 +471,7 @@ Consolidação das versões de desenvolvimento, com:
 - Mensagens dos utilitários Andromeda-Hexagonix e do HBoot traduzidas para o inglês;
 - Mensagens do Hexagon traduzidas para o inglês.
 
-- [x] Data de lançamento: 12/12/2022
+- :white_check_mark: Data de lançamento: 12/12/2022
 
 </details>
 
@@ -494,13 +494,13 @@ Consolidação das versões de desenvolvimento, com:
 - Melhorias no utilitário de configurações (Config);
 - Bibliotecas de desenvolvimento Assembly versão 0.10.1;
 
-- [x] Data de lançamento: 28/02/2023
+- :white_check_mark: Data de lançamento: 28/02/2023
 
 </details>
 
 <!-- Vai funcionar como <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 </details>
 

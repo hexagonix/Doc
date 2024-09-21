@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/banner.png">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/banner.png">
 </p>
 
 <div align="center">
@@ -18,12 +18,12 @@
 
 <!-- Vai funcionar como <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 # Kernel Hexagon
 
 <p align="center">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/LogoHexagon.png" width="200" height="200">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/HexagonixSourceHeader.png">
 </p>
 
 <div align="justify">
@@ -32,24 +32,24 @@ O Hexagon é um `núcleo` (kernel) monolítico executado em `modo protegido` 32-
 
 Algumas características do Hexagon:
 
-- [x] Suporte a processadores x86 (Pentium III ou superiores);
-- [x] Suporte a dispositivos com 32 MB de memória RAM ou mais;
-- [x] Suporte a ambiente de usuário;
-- [x] [Chamada de sistema](SYSCALL.pt.md) com 68 funções sofisticadas acessadas pelo ambiente de usuário;
-- [x] Formato binário executável próprio (HAPP);
-- [x] Unix-like;
-- [x] Completamente escrito em Assembly x86;
-- [x] Self-hosting (o montador usado para construir o Hexagon pode ser executado sobre ele);
-- [x] Sistema de arquivos virtual;
-- [x] Abstração de dispositivos;
-- [x] Suporte total a leitura e escrita em sistemas de arquivos FAT16;
-- [x] Suporte a gráficos VESA VBE e em múltiplas resoluções;
-- [x] Suporte a modo texto;
-- [x] Motor de renderização de fontes gráficas, que podem ser alteradas pelo usuário;
-- [x] Suporte a relógio em tempo real;
-- [x] Suporte a portas seriais e paralelas (comunicação serial, debug e impressão);
-- [x] Compatível com carregador de inicialização próprio (Hexagon Boot - HBoot);
-- [x] Suporte a usuários e permissões.
+- :white_check_mark: Suporte a processadores x86 (Pentium III ou superiores);
+- :white_check_mark: Suporte a dispositivos com 32 MB de memória RAM ou mais;
+- :white_check_mark: Suporte a ambiente de usuário;
+- :white_check_mark: [Chamada de sistema](SYSCALL.pt.md) com 68 funções sofisticadas acessadas pelo ambiente de usuário;
+- :white_check_mark: Formato binário executável próprio (HAPP);
+- :white_check_mark: Unix-like;
+- :white_check_mark: Completamente escrito em Assembly x86;
+- :white_check_mark: Self-hosting (o montador usado para construir o Hexagon pode ser executado sobre ele);
+- :white_check_mark: Sistema de arquivos virtual;
+- :white_check_mark: Abstração de dispositivos;
+- :white_check_mark: Suporte total a leitura e escrita em sistemas de arquivos FAT16;
+- :white_check_mark: Suporte a gráficos VESA VBE e em múltiplas resoluções;
+- :white_check_mark: Suporte a modo texto;
+- :white_check_mark: Motor de renderização de fontes gráficas, que podem ser alteradas pelo usuário;
+- :white_check_mark: Suporte a relógio em tempo real;
+- :white_check_mark: Suporte a portas seriais e paralelas (comunicação serial, debug e impressão);
+- :white_check_mark: Compatível com carregador de inicialização próprio (Hexagon Boot - HBoot);
+- :white_check_mark: Suporte a usuários e permissões.
 
 Outras características que estão sendo desenvolvidas:
 
@@ -74,7 +74,7 @@ Leia a [licença](https://github.com/hexagonix/Doc/blob/main/LICENSES/BSD-3) par
 
 <!-- Vai funcionar como <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 ### História do desenvolvimento
 
@@ -86,7 +86,7 @@ O kernel foi inicialmente desenhado e escrito visando uma estrutura e funcioname
 
 <!-- Vai funcionar como <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 ### Sessões da documentação sobre o Hexagon
 
@@ -244,7 +244,7 @@ inicioAPP:
 
 <!-- Vai funcionar como <hr> -->
 
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/hr.png" width="100%" height="2px" />
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 ### Em busca de colaboradores
 
