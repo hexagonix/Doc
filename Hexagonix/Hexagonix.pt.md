@@ -22,13 +22,13 @@
 
 <table align="center">
 <tr>
-<td><a href="Hexagonix/Hexagonix.pt#componentes-do-sistema">Componentes</a></td>
-<td><a href="Hexagonix/Hexagonix.pt#bibliotecas-de-desenvolvimento-do-sistema">Bibliotecas</a></td>
-<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.pt.md#capturas-de-tela">Screenshots</a></td>
-<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.pt.md#contribuir-e-reportar-erros">Contribuir</a></td>
-<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/Hexagonix.pt.md#outras-informa%C3%A7%C3%B5es">Outras informações</a></td>
+<td><a href="#componentes-do-sistema">Componentes</a></td>
+<td><a href="#bibliotecas-de-desenvolvimento-do-sistema">Bibliotecas</a></td>
+<td><a href="#capturas-de-tela">Screenshots</a></td>
+<td><a href="#contribuir-e-reportar-erros">Contribuir</a></td>
+<td><a href="#outras-informa%C3%A7%C3%B5es">Outras informações</a></td>
 <td><a href="https://github.com/hexagonix/src">Código-fonte</a></td>
-<td><a href="https://github.com/hexagonix/Doc/blob/main/Hexagonix/README.pt.md">Download</a></td>
+<td><a href="Hexagonix/README.pt">Download</a></td>
 </tr>
 </table>
 
