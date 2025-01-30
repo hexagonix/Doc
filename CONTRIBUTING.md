@@ -79,7 +79,7 @@ db "tty0", 0 ;; Contents of gapp.tty0
 In the header of the file, it must contain the author's name, with copyright, as below:
 
 ```
-Copyright (c) 2024 Author
+Copyright (c) 2025 Author
 All rights reserved.
 ```
 
@@ -147,7 +147,7 @@ db "tty0", 0 ;; Conteúdo de gapp.tty0
 No cabeçalho do arquivo, deve conter o nome do autor, com copyright, como abaixo:
 
 ```
-Copyright (c) 2024 Autor
+Copyright (c) 2025 Autor
 Todos os direitos reservados.
 ```
 

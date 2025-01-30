@@ -1,6 +1,6 @@
 <!--
 
-Copyright (c) 2015-2024 Felipe Miguel Nery Lunkes
+Copyright (c) 2015-2025 Felipe Miguel Nery Lunkes
 Todos os direitos reservados.
 
 -->
