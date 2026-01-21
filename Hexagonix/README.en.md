@@ -53,8 +53,8 @@ In this document, you will find a tutorial to run Hexagonix on your computer, bo
 </div>
 
 <details title="License" align='left'>
-<br>
 <summary align='left'>Hexagonix License</summary>
+<br>
 
 <div align="justify">
 
@@ -81,8 +81,8 @@ You can go to the [`releases`](https://github.com/hexagonix/hexagonix/releases) 
 </div>
 
 <details title="System Documentation" align='left'>
-<br>
 <summary align='left'>System documentation</summary>
+<br>
 
 <div align="center">
 
