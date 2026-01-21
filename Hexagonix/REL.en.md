@@ -55,8 +55,8 @@ Here you can get more information about all versions of Hexagonix ever released.
 ## Stable versions
 
 <details title="Hexagonix System I" align='left'>
-<br>
 <summary align='left'><strong>Hexagonix System I</strong></summary>
+<br>
 
 <div align="justify">
 
@@ -144,8 +144,8 @@ Changelog and technical information for this version:
 Development versions of Hexagonix are named `projects` and may lead to new release versions of the system. These releases introduce components and features that may be unstable or unfinished, and are initially research on design and implementation of Hexagonix. Development versions, called projects, may or may not be the source of a new release version of Hexagonix, although features may or may not be fully implemented in a release version. `Regardless, Hexagonix is ​​continually being developed`.
 
 <details title="Zonai Project" align='left'>
-<br>
 <summary align='left'><strong>Project Zonai (2024-present) - in progress</strong></summary>
+<br>
 
 <div align="justify">
 
@@ -158,8 +158,8 @@ The Zonai project is a fork of Hexagonix System I (CURRENT branch), which aims t
 </details>
 
 <details title="Project Raava" align='left'>
-<br>
 <summary align='left'><strong>Project Raava (2023-2024) - project completed</strong></summary>
+<br>
 
 <div align="justify">
 
@@ -186,8 +186,8 @@ Below you can have direct access to some versions that have become milestones in
 </div>
 
 <details title="Discontinued versions of Hexagonix" align='left'>
-<br>
 <summary align='left'><strong>Discontinued versions of Hexagonix</strong></summary>
+<br>
 
 <div align="justify">
 
@@ -202,8 +202,8 @@ This is the first extensively tested and marked stable version of the system. He
 </div>
 
 <details title="Hexagonix H1 R1 (Caladan)" align='left'>
-<br>
 <summary align='left'>Hexagonix H1 R1 (Caladan)</summary>
+<br>
 
 <div align="justify">
 
@@ -214,8 +214,8 @@ Hexagonix H1 R1 (codenamed Caladan) is the first patch pack for the H1 version o
 </details>
 
 <details title="Hexagonix H1 R2 (Caladan)" align='left'>
-<br>
 <summary align='left'>Hexagonix H1 R2 (Caladan)</summary>
+<br>
 
 <div align="justify">
 
@@ -232,8 +232,8 @@ Several runtime failures have been identified in various Andromeda utilities tha
 </details>
 
 <details title="Hexagonix H1 R3 (Duna)" align='left'>
-<br>
 <summary align='left'>Hexagonix H1 R3 (Duna)</summary>
+<br>
 
 <div align="justify">
 
@@ -252,8 +252,8 @@ Go to the [releases](https://github.com/hexagonix/hexagonix/releases) area and l
 </details>
 
 <details title="Hexagonix H1 R4 (Vega)" align='left'>
-<br>
 <summary align='left'>Hexagonix H1 R4 (Vega)</summary>
+<br>
 
 <div align="justify">
 
@@ -269,8 +269,8 @@ System-wide bug fixes and improvements.
 </details>
 
 <details title="Hexagonix H1 R5 (Orion)" align='left'>
-<br>
 <summary align='left'>Hexagonix H1 R5 (Orion)</summary>
+<br>
 
 <div align="justify">
 
@@ -293,16 +293,16 @@ This system update fixes several bugs in the system, including issues encountere
 </details>
 
 <details title="Hexagonix H2" align='left'>
-<br>
 <summary align='left'><strong>Hexagonix H2</strong></summary>
+<br>
 
 <details title="Hexagonix H2 (development versions)" align='left'>
-<br>
 <summary align='left'>Hexagonix H2 (development versions)</summary>
+<br>
 
 <details title="Hexagonix H2-dev.beta1" align='left'>
-<br>
 <summary align='left'>Hexagonix H2-dev.beta1</summary>
+<br>
 
 <div align="justify">
 
@@ -320,8 +320,8 @@ The development version, H2 (codenamed Vita Nova), is the next version of Hexago
 </details>
 
 <details title="Hexagonix H2-dev.beta4" align='left'>
-<br>
 <summary align='left'>Hexagonix H2-dev.beta4</summary>
+<br>
 
 <div align="justify">
 
@@ -337,8 +337,8 @@ The development version, H2 (codenamed Vita Nova), is the next version of Hexago
 </details>
 
 <details title="Hexagonix H2-dev.beta5" align='left'>
-<br>
 <summary align='left'>Hexagonix H2-dev.beta5</summary>
+<br>
 
 <div align="justify">
 
@@ -360,8 +360,8 @@ The development version, H2 (codenamed Vita Nova), is the next version of Hexago
 </details>
 
 <details title="Hexagonix H2-dev.beta6" align='left'>
-<br>
 <summary align='left'>Hexagonix H2-dev.beta6</summary>
+<br>
 
 <div align="justify">
 
@@ -390,8 +390,8 @@ The H2-dev.beta6 version came to standardize a number of Hexagonix services, as 
 </details>
 
 <details title="Hexagonix H2-dev.beta7" align='left'>
-<br>
 <summary align='left'>Hexagonix H2-dev.beta7</summary>
+<br>
 
 <div align="justify">
 
@@ -404,8 +404,8 @@ Translation of messages from Unix utilities into English.
 </details>
 
 <details title="Hexagonix H2-dev.beta8" align='left'>
-<br>
 <summary align='left'>Hexagonix H2-dev.beta8</summary>
+<br>
 
 <div align="justify">
 
@@ -427,8 +427,8 @@ Translation of messages from Unix utilities into English.
 </details>
 
 <details title="Hexagonix H2 Release 1" align='left'>
-<br>
 <summary align='left'>Hexagonix H2 Release 1</summary>
+<br>
 
 Consolidation of development versions, with:
 
@@ -476,8 +476,8 @@ Consolidation of development versions, with:
 </details>
 
 <details title="Hexagonix H2 Release 2" align='left'>
-<br>
 <summary align='left'>Hexagonix H2 Release 2</summary>
+<br>
 
 - Hexagon kernel v1.3.2;
 - HBoot v0.7.1;
