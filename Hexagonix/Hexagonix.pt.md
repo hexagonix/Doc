@@ -79,8 +79,8 @@ Algumas características do Hexagonix:
 > `O Hexagonix não tem como objetivo a construção de um sistema de produção, mas sim de um sistema simples, bem documentado e com interfaces fáceis de compreender, podendo ser utilizado para fins educacionais`. O Hexagonix objetiva a pesquisa e implementação de um sistema operacional moderno desenvolvido puramente em Assembly x86 utilizando um montador atual. Para sistemas mais complexos, completos e profissionais desenvolvidos em Assembly x86, visite projetos como o [MenuetOS](https://www.menuetos.net/) ou [KolibriOS](https://kolibrios.org/en/).
 
 <details title="Idiomas disponíveis" align='left'>
-<br>
 <summary align='left'>Idiomas disponíveis</summary>
+<br>
 
 <div align="justify">
 
@@ -351,8 +351,8 @@ Você pode reportar erros e ajudar a desenvolver o sistema. Para isso, abra uma 
 ## Outras informações
 
 <details title="Inspirações" align='left'>
-<br>
 <summary align='left'>🖼 Inspirações</summary>
+<br>
 
 <div align="justify">
 
@@ -379,16 +379,16 @@ A todos esses projetos e desenvolvedores, um enorme agradecimento :heart:.
 </details>
 
 <details title="Contribuidores e contatos" align='left'>
-<br>
 <summary align='left'>👥️️ Contribuidores e contatos</summary>
+<br>
 
 Veja os arquivos **AUTHORS** e **CREDITS** disponíveis em cada repositório para mais informações sobre autoria, contribuições e contato. 
 
 </details>
 
 <details title="Notas de direitos autorais" align='left'>
-<br>
 <summary align='left'>📝 Notas de direitos autorais</summary>
+<br>
 
 <div align="justify">
 
