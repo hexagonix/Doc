@@ -53,8 +53,8 @@ Neste documento, você encontra um tutorial para executar o Hexagonix em seu com
 </div>
 
 <details title="Licença" align='left'>
-<br>
 <summary align='left'>Licença do Hexagonix</summary>
+<br>
 
 <div align="justify">
 
@@ -81,8 +81,8 @@ Você pode ir até a sessão de [`lançamentos`](https://github.com/hexagonix/he
 </div>
 
 <details title="Documentação do sistema" align='left'>
-<br>
 <summary align='left'>Documentação do sistema</summary>
+<br>
 
 <div align="center">
 
