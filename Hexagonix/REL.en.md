@@ -192,8 +192,8 @@ Below you can have direct access to some versions that have become milestones in
 <div align="justify">
 
 <details title="Hexagonix H1" align='left'>
-<br>
 <summary align='left'><strong>Hexagonix H1</strong></summary>
+<br>
 
 <div align="justify">
 
