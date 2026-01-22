@@ -35,8 +35,8 @@ Além dos utilitários Unix-like, o Hexagonix vem com uma série de utilitários
 Abaixo, a licença para uso e redistribuição dos utilitários Hexagonix-Andromeda.
 
 <details title="Licença dos utilitários gráficos do Hexagonix" align='left'>
-<br>
 <summary align='left'>Licença dos utilitários gráficos do Hexagonix</summary>
+<br>
 
 <div align="justify">
 
