@@ -59,8 +59,8 @@ Outras características que estão sendo desenvolvidas:
 > Você pode ajudar a implementar as funções em desenvolvimento acima!
 
 <details title="Licença" align='left'>
-<br>
 <summary align='left'>Licença do Hexagon</summary>
+<br>
 
 <div align="justify">
 
@@ -97,8 +97,8 @@ Agora, você encontrará mais informações relevantes sobre particularidades do
 </div>
 
 <details title="Desenvolvendo para o Hexagon" align='left'>
-<br>
 <summary align='left'><strong>Desenvolvendo para o Hexagon</strong></summary>
+<br>
 
 <div align="justify">
 
@@ -107,8 +107,8 @@ Nessa sessão, você encontrará a documentação relevante sobre como desenvolv
 </div>
 
 <details title="Chamadas de sistema do Hexagon" align='left'>
-<br>
 <summary align='left'>Chamadas de sistema do Hexagon</summary>
+<br>
 
 <div align="justify">
 
@@ -144,8 +144,8 @@ Na próxima sessão você poderá obter mais informações sobre como desenvolve
 </details>
 
 <details title="O formato executável HAPP" align='left'>
-<br>
 <summary align='left'>O formato executável HAPP</summary>
+<br>
 
 <div align="justify">
 
