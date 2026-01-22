@@ -35,8 +35,8 @@ In addition to the Unix-like utilities, Hexagonix comes with a number of graphic
 Below is the license for use and redistribution of Hexagonix-Andromeda utilities.
 
 <details title="Hexagonix graphical applications License" align='left'>
-<br>
 <summary align='left'>Hexagonix graphical applications License</summary>
+<br>
 
 <div align="justify">
 
