@@ -48,8 +48,8 @@ Shall we meet each one of them?
 The first component of Hexagonix is Saturno. It is responsible for taking control of the boot process performed by the BIOS/UEFI and searching the volume for the second boot stage. For that, it implements a driver for reading a FAT16 file system. The second boot stage (see below) can implement drivers for other file systems and is responsible for finding Hexagon, loading HBoot modules or loading a DOS compatible system (BETA).
 
 <details title="Saturno license" align='left'>
-<br>
 <summary align='left'>Saturno License</summary>
+<br>
 
 <div align="justify">
 
@@ -68,8 +68,8 @@ Please read the [license](https://github.com/hexagonix/Doc/blob/main/LICENSES/BS
 Hexagon Boot (HBoot) is a component designed to allow booting of the Hexagon kernel. Until then, initialization was performed by just one stage, which defined a very basic environment, loaded the Hexagon into memory, and immediately passed control to it, providing a very small and limited set of parameters, since the code for that stage stays restricted to 512 bytes, which limits the performance of several tests and data processing. With HBoot, it was possible to expand the number of tasks performed before the Hexagon runs, as well as the possibility to provide more information regarding the machine and boot environment. This is particularly important to allow the creation of a device tree that Hexagon can use to decide how to handle each identified device. HBoot is able to check which disk drives are available on the machine, emit a boot tone, obtain the amount of available RAM memory installed and allow or disallow the boot process to proceed according to this information. If no user interaction is detected 3 seconds after all essential tests and activities to create a boot environment for Hexagon, the system will load and run Hexagon (present in a file in the volume named **HEXAGON.SIS** in Hexagonix H1 and **HEXAGON** in Hexagonix H2) being unloaded from memory. The interaction with HBoot is done by pressing the F8 key after the respective message appears on the screen.
 
 <details title="HBoot license" align='left'>
-<br>
 <summary align='left'>HBoot License</summary>
+<br>
 
 <div align="justify">
 
