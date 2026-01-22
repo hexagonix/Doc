@@ -39,8 +39,8 @@ Abaixo, você encontra a licença de uso e distribuição dos utilitários Unix 
 </div>
 
 <details title="Licença dos utilitários Unix-like do Hexagonix" align='left'>
-<br>
 <summary align='left'>Licença dos utilitários Unix-like do Hexagonix</summary>
+<br>
 
 <div align="justify">
 
