@@ -59,8 +59,8 @@ Other features being developed:
 > You can help implement the above development functions!
 
 <details title="License" align='left'>
-<br>
 <summary align='left'>Hexagon License</summary>
+<br>
 
 <div align="justify">
 
@@ -97,8 +97,8 @@ Now, you'll find more relevant information about Hexagon's particulars, how to d
 </div>
 
 <details title="Developing for Hexagon" align='left'>
-<br>
 <summary align='left'><strong>Developing for Hexagon</strong></summary>
+<br>
 
 <div align="justify">
 
@@ -107,8 +107,8 @@ In this session, you will find relevant documentation on how to develop Hexagon 
 </div>
 
 <details title="Hexagon System Calls" align='left'>
-<br>
 <summary align='left'>Hexagon System Calls</summary>
+<br>
 
 <div align="justify">
 
@@ -143,8 +143,8 @@ In the next section you can get more information on how to develop a simple appl
 </details>
 
 <details title="The HAPP executable format" align='left'>
-<br>
 <summary align='left'>The HAPP executable format</summary>
+<br>
 
 <div align="justify">
 
