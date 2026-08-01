@@ -2,7 +2,7 @@
 
 Versão deste arquivo: 5.0
 
-Copyright (c) 2015-2025 Felipe Miguel Nery Lunkes
+Copyright (c) 2015-2026 Felipe Miguel Nery Lunkes
 Todos os direitos reservados.
 
 -->
