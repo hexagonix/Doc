@@ -232,7 +232,7 @@ User: jack
 Password: jack
 ```
 
-You can add another user by changing the `USUARIO.UNX` (Hexagonix H1) or `passwd` (Hexagonix H2 and later versions) file at the root of the disk. Remember not to remove the root user (`root`). This can make the system permanently inoperable.
+You can add other users with the `adduser` utility (restricted to the root user), which interactively asks for the new user's name, password, shell and theme, and writes the corresponding record to the `/shadow` file, at the root of the disk. Remember not to remove the root user (`root`). This can make the system permanently inoperable.
 
 </div>
 

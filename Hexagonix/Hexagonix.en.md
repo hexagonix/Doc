@@ -48,32 +48,32 @@ Hexagonix consists of the [Hexagon boot loader](https://github.com/hexagonix/HBo
 
 Some features of Hexagonix:
 
-- :white_check_mark: 32-bit operating system;
-- :white_check_mark: Completely written in x86 Assembly, being fast and light;
-- :white_check_mark: Inspired by the design of Version 7 UNIX[^1], but completely written from scratch;
-- :white_check_mark: Compatible with Intel Pentium III (1999) or newer processors;
-- :white_check_mark: Compatible with devices with 32 MB of RAM or more;
-- :white_check_mark: Full kernel with less than 30 kbytes;
-- :white_check_mark: User environment support;
-- :white_check_mark: System call with functions accessed by the user environment;
-- :white_check_mark: Low minimum requirements, compatible with a wide range of devices;
-- :white_check_mark: Own executable binary format (HAPP);
-- :white_check_mark: Self-hosting ([the assembler used to build Hexagonix](https://github.com/hexagonix/fasmX) can run on top of it);
-- :white_check_mark: Device abstraction;
-- :white_check_mark: VESA VBE graphics support in various resolutions;
-- :white_check_mark: Text mode support;
-- :white_check_mark: Support for serial and parallel ports (serial communication, debug and printing);
-- :white_check_mark: Virtual File System (VFS);
-- :white_check_mark: Support for reading and writing on FAT16 (FAT16B) file systems;
-- :white_check_mark: Graphic font rendering engine, which can be changed by the user;
-- :white_check_mark: Real-time clock support;
-- :white_check_mark: Supports own boot loader (Hexagon Boot - HBoot);
-- :white_check_mark: Support for users and permissions.
-- :white_check_mark: Easily extensible;
-- :white_check_mark: Well documented in Portuguese and English;
-- :white_check_mark: Fully licensed under `BSD-3-Clause`[^2], available [here](https://github.com/hexagonix/Doc/blob/main/LICENSES/BSD-3).
+- [x] 32-bit operating system;
+- [x] Completely written in x86 Assembly, being fast and light;
+- [x] Inspired by the design of Version 7 UNIX[^1], but completely written from scratch;
+- [x] Compatible with Intel Pentium III (1999) or newer processors;
+- [x] Compatible with devices with 32 MB of RAM or more;
+- [x] Full kernel with less than 30 kbytes;
+- [x] Preemptive multitasking, with a round-robin scheduler;
+- [x] System call with functions accessed by the user environment;
+- [x] Low minimum requirements, compatible with a wide range of devices;
+- [x] Own executable binary format (HAPP);
+- [x] Self-hosting ([the assembler used to build Hexagonix](https://github.com/hexagonix/fasmX) can run on top of it);
+- [x] Device abstraction;
+- [x] VESA VBE graphics support in various resolutions;
+- [x] Text mode support;
+- [x] Support for serial and parallel ports (serial communication, debug and printing);
+- [x] Virtual File System (VFS);
+- [x] Support for reading and writing on FAT16 (FAT16B) file systems;
+- [x] Graphic font rendering engine, which can be changed by the user;
+- [x] Real-time clock support;
+- [x] Supports own boot loader (HBoot);
+- [x] Support for users and permissions.
+- [x] Easily extensible;
+- [x] Well documented in Portuguese and English;
+- [x] Fully licensed under `BSD-3-Clause`[^2], available [here](https://github.com/hexagonix/Doc/blob/main/LICENSES/BSD-3).
 
-[^1]: The architecture of Hexagonix (structure and utilities) was inspired by the elegance and simplicity of [Version 7 UNIX](https://github.com/dspinellis/unix-history-repo/tree/Research-V7-Snapshot-Development), although it does not aim for any compatibility or share any code with it. Hexagonix does not use any code derived from Version 7 UNIX or other projects. Hexagonix utilities were written to resemble the function and appearance of their counterparts in Version 7 UNIX.
+[^1]: The architecture of Hexagonix (structure and utilities) was inspired by the elegance and simplicity of [Version 7 UNIX](https://github.com/dspinellis/unix-history-repo/tree/Research-V7-Snapshot-Development), without pursuing binary or interface compatibility with it. Hexagonix does not use any code derived from Version 7 UNIX or other projects. Hexagonix utilities were written to resemble the function and appearance of their counterparts in Version 7 UNIX.
 [^2]: You can get more information about the license [in this article](https://docs.freebsd.org/en/articles/bsdl-gpl/) of the FreeBSD project, [in the article](https://opensource.org/licenses/BSD-3-Clause) from the Open Source Initiative or the BSD license page on [Wikipedia](https://en.wikipedia.org/wiki/BSD_licenses).
 
 > `Hexagonix is ​​not intended to build a production system, but rather a simple, well-documented system with easy-to-understand interfaces that can be used for educational purposes`. Hexagonix aims to research and implement a modern operating system developed purely in x86 Assembly using a current assembler. For more complex, complete and professional systems developed in x86 Assembly, visit projects like [MenuetOS](https://www.menuetos.net/) or [KolibriOS](https://kolibrios.org/en/).
@@ -124,11 +124,11 @@ The first component of Hexagonix is the Saturno. It is responsible for taking co
 
 <hr>
 
-### Hexagon Boot (HBoot)
+### HBoot
 
 <div align="justify">
 
-Hexagon Boot (HBoot) is a component designed to allow the Hexagon kernel to boot. Until then, initialization was performed by just one stage, which defined a very basic environment, loaded Hexagon into memory and immediately executed it, providing a very limited set of parameters. This is due to the fact that the code of this stage is restricted to 512 bytes, which limits the performance of several tests and data processing. With HBoot, it was possible to expand the number of tasks performed before running Hexagon, as well as the possibility to provide more information about the device and boot environment. This is particularly important to allow the creation of a device tree that Hexagon can use to decide how to handle each identified device. HBoot is able to check which disk drives are available on the machine, emit a boot tone, obtain the amount of available RAM memory installed and allow or not to proceed with the boot process according to this information. If no user interaction is detected (within 3 seconds after booting HBoot and displaying messages to the user), HBoot will perform additional tests to verify the device's ability to run the system and will load and run Hexagon (present in a file on the volume named `HEXAGON.SIS` on Hexagonix H1 and `HEXAGON` on Hexagonix H2 
+HBoot is a component designed to allow the Hexagon kernel to boot. Until then, initialization was performed by just one stage, which defined a very basic environment, loaded Hexagon into memory and immediately executed it, providing a very limited set of parameters. This is due to the fact that the code of this stage is restricted to 512 bytes, which limits the performance of several tests and data processing. With HBoot, it was possible to expand the number of tasks performed before running Hexagon, as well as the possibility to provide more information about the device and boot environment. This is particularly important to allow the creation of a device tree that Hexagon can use to decide how to handle each identified device. HBoot is able to check which disk drives are available on the machine, emit a boot tone, obtain the amount of available RAM memory installed and allow or not to proceed with the boot process according to this information. If no user interaction is detected (within 3 seconds after booting HBoot and displaying messages to the user), HBoot will perform additional tests to verify the device's ability to run the system and will load and run Hexagon (present in a file on the volume named `HEXAGON.SIS` on Hexagonix H1 and `HEXAGON` on Hexagonix H2 
 and later versions). After loading, HBoot transfers control to Hexagon, which is initialized and stores the data provided by HBoot in the kernel environment.
 
 </div>
@@ -169,7 +169,7 @@ HBoot has gained a lot of complexity since the beginning of its development in 2
 
 <div align="justify">
 
-Hexagon is a monolithic kernel running in 32-bit protected mode, designed with the PC architecture in mind (x86). It's a kernel written from scratch, aiming for the speed and compatibility of modern hardware but also being able to run on older hardware (like a Pentium III). At the moment, it guarantees a single-user environment, despite the use of virtual terminals, and single-tasking, despite the ability to load, keep in memory and control more than one process, in an execution stack. In the future, the kernel may support running multiple processes in preemptive multitasking. Hexagon is a Unix-like kernel and tries to implement POSIX compatibility, although far from it, and forms the basis of the Hexagonix Operating System, although independent of it. It runs executable images in the HAPP format, developed exclusively for Hexagon. Hexagon also implements a very sophisticated API accessible through a system call.
+Hexagon is a monolithic kernel running in 32-bit protected mode, designed with the PC architecture in mind (x86). It's a kernel written from scratch, aiming for the speed and compatibility of modern hardware but also being able to run on older hardware (like a Pentium III). At the moment, it guarantees a single-user environment, despite the use of virtual terminals, and preemptive multitasking, implementing a round-robin scheduler. Hexagon is a Unix-like kernel, inspired by the design of `Version 7 UNIX` without pursuing binary or interface compatibility with it, and forms the basis of the Hexagonix Operating System, although independent of it. It runs executable images in the HAPP format, developed exclusively for Hexagon. Hexagon also implements a very sophisticated API accessible through a system call.
 
 </div>
 
@@ -201,29 +201,29 @@ Hexagonix implements, together with Hexagon, a series of Unix-like utilities, wi
 
 Hexagonix includes many of the Unix utilities you may already be familiar with, such as:
 
-- :white_check_mark: cat
-- :white_check_mark: clear
-- :white_check_mark: cp
-- :white_check_mark: init
-- :white_check_mark: login
-- :white_check_mark: ls
-- :white_check_mark: man
-- :white_check_mark: mv
-- :white_check_mark: ps
-- :white_check_mark: rm
-- :white_check_mark: sh (default shell)
-- :white_check_mark: shutdown
-- :white_check_mark: su
-- :white_check_mark: top
-- :white_check_mark: uname
-- :white_check_mark: whoami, among others.
+- [x] cat;
+- [x] clear;
+- [x] cp;
+- [x] init;
+- [x] login;
+- [x] ls;
+- [x] man;
+- [x] mv;
+- [x] ps;
+- [x] rm;
+- [x] sh (default shell);
+- [x] shutdown;
+- [x] su;
+- [x] top;
+- [x] uname;
+- [x] whoami, among others.
 
 Some applications and utilities were developed exclusively for Hexagonix, such as:
 
-* fnt (Hexagonix graphic font change utility)
-* hash (alternate shell)
-* lshapp (gets and displays information from HAPP images)
-* lshmod (gets and displays information from HBoot modules and HBoot itself)
+* fnt (Hexagonix graphic font change utility);
+* hash (alternate shell);
+* lshapp (gets and displays information from HAPP images);
+* lshmod (gets and displays information from HBoot modules and HBoot itself).
 
 It is worth remembering that Hexagonix utilities try to implement a POSIX interface as far as possible, similar in syntax to Unix utilities (FreeBSD and Linux used as a model).
 
@@ -255,15 +255,15 @@ The Andromeda environment (Hexagonix-Andromeda) is built on the solid foundation
 
 <div align="justify">
 
-- :white_check_mark: System Settings (config)
-- :white_check_mark: Quartzo text editor
-- :white_check_mark: Lyoko IDE for application development
-- :white_check_mark: Electronic piano return Piano;
-- :white_check_mark: Serial communication utility
-- :white_check_mark: Andromeda Shell (ASH) - A new shell for Hexagonix
-- :white_check_mark: Hexagonix calculator
-- :white_check_mark: Font change utility
-- :white_check_mark: Hexagonix shutdown utility
+- [x] System Settings (config);
+- [x] Quartzo text editor;
+- [x] Lyoko IDE for application development;
+- [x] Piano;
+- [x] Serial communication utility;
+- [x] Andromeda Shell (ASH) - A new shell for Hexagonix;
+- [x] Hexagonix calculator;
+- [x] Font change utility;
+- [x] Hexagonix shutdown utility.
 
 ### Third party applications available for Hexagonix-Andromeda
 
