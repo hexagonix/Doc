@@ -32,26 +32,26 @@ Hexagon is a monolithic `kernel` running in 32-bit `protected mode`, developed p
 
 Some features of Hexagon:
 
-- :white_check_mark: Support for x86 processors (Pentium III or higher);
-- :white_check_mark: Support for devices with 32 MB of RAM or more;
-- :white_check_mark: Preemptive multitasking, with a round-robin scheduler and a dedicated idle process;
-- :white_check_mark: Seven process states (free, ready, running, blocked, sleeping, zombie and idle);
-- :white_check_mark: Non-blocking process creation (spawn) and process termination by PID (kill);
-- :white_check_mark: [System call](SYSCALL.en.md) with 71 functions accessed by the user environment;
-- :white_check_mark: Own executable binary format (HAPP);
-- :white_check_mark: Unix-like;
-- :white_check_mark: Completely written in x86 Assembly;
-- :white_check_mark: Self-hosting (the assembler used to build the Hexagon can run on top of it);
-- :white_check_mark: Virtual file system;
-- :white_check_mark: Device abstraction;
-- :white_check_mark: Full support for reading and writing on FAT16 file systems;
-- :white_check_mark: VESA VBE and multi-resolution graphics support;
-- :white_check_mark: Text mode support;
-- :white_check_mark: Graphic font rendering engine, which can be changed by the user;
-- :white_check_mark: Real-time clock support;
-- :white_check_mark: Support for serial and parallel ports (serial communication, debug and printing);
-- :white_check_mark: Supports own boot loader (Hexagon Boot - HBoot);
-- :white_check_mark: Support for users and permissions.
+- [x] Support for x86 processors (Pentium III or higher);
+- [x] Support for devices with 32 MB of RAM or more;
+- [x] Preemptive multitasking, with a round-robin scheduler and a dedicated idle process;
+- [x] Seven process states (free, ready, running, blocked, sleeping, zombie and idle);
+- [x] Non-blocking process creation (spawn) and process termination by PID (kill);
+- [x] [System call](SYSCALL.en.md) with 71 functions accessed by the user environment;
+- [x] Own executable binary format (HAPP);
+- [x] Unix-like;
+- [x] Completely written in x86 Assembly;
+- [x] Self-hosting (the assembler used to build the Hexagon can run on top of it);
+- [x] Virtual file system;
+- [x] Device abstraction;
+- [x] Full support for reading and writing on FAT16 file systems;
+- [x] VESA VBE and multi-resolution graphics support;
+- [x] Text mode support;
+- [x] Graphic font rendering engine, which can be changed by the user;
+- [x] Real-time clock support;
+- [x] Support for serial and parallel ports (serial communication, debug and printing);
+- [x] Supports own boot loader (Hexagon Boot - HBoot);
+- [x] Support for users and permissions.
 
 Other features being developed:
 

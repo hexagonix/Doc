@@ -54,7 +54,7 @@ Some features of Hexagonix:
 - [x] Compatible with Intel Pentium III (1999) or newer processors;
 - [x] Compatible with devices with 32 MB of RAM or more;
 - [x] Full kernel with less than 30 kbytes;
-- [x] Preemptive multitasking, with a round-robin scheduler;
+- [x] Preemptive multitasking, with a round-robin scheduler and idle process;
 - [x] System call with functions accessed by the user environment;
 - [x] Low minimum requirements, compatible with a wide range of devices;
 - [x] Own executable binary format (HAPP);
