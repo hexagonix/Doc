@@ -28,14 +28,16 @@
 
 <div align="justify">
 
-Hexagon is a monolithic `kernel` running in 32-bit `protected mode`, developed purely in Assembly for the PC (x86) architecture. It is a kernel written from scratch, aiming for the speed and compatibility of modern hardware, but also being able to run on older hardware (Pentium III or higher, with 32 MB of RAM or more). At the moment, it guarantees a single-user environment, despite the use of virtual terminals, and single-tasking, despite the ability to load, keep in memory and control more than one process at a time, in a chronological order execution stack. In the future, the kernel may support the execution of multiple processes in preemptive multitasking. Hexagon was designed to be a Unix-like kernel and forms the basis of `Hexagonix`, albeit independently of it. It runs executable images in the `HAPP` format, developed exclusively for Hexagon. It also implements a very sophisticated API accessible through a standardized and documented system call, as you can see below.
+Hexagon is a monolithic `kernel` running in 32-bit `protected mode`, developed purely in Assembly for the PC (x86) architecture. It is a kernel written from scratch, aiming for the speed and compatibility of modern hardware, but also being able to run on older hardware (Pentium III or higher, with 32 MB of RAM or more). At the moment, it guarantees a single-user environment, despite the use of virtual terminals, and preemptive multitasking, implementing a round-robin scheduler. Hexagon was designed to be a Unix-like kernel and forms the basis of `Hexagonix`, albeit independently of it. It runs executable images in the `HAPP` format, developed exclusively for Hexagon. It also implements a very sophisticated API accessible through a standardized and documented system call, as you can see below.
 
 Some features of Hexagon:
 
 - :white_check_mark: Support for x86 processors (Pentium III or higher);
 - :white_check_mark: Support for devices with 32 MB of RAM or more;
-- :white_check_mark: User environment support;
-- :white_check_mark: [System call](SYSCALL.en.md) with 68 sophisticated functions accessed by the user environment;
+- :white_check_mark: Preemptive multitasking, with a round-robin scheduler and a dedicated idle process;
+- :white_check_mark: Seven process states (free, ready, running, blocked, sleeping, zombie and idle);
+- :white_check_mark: Non-blocking process creation (spawn) and process termination by PID (kill);
+- :white_check_mark: [System call](SYSCALL.en.md) with 71 sophisticated functions accessed by the user environment;
 - :white_check_mark: Own executable binary format (HAPP);
 - :white_check_mark: Unix-like;
 - :white_check_mark: Completely written in x86 Assembly;
@@ -54,7 +56,6 @@ Some features of Hexagon:
 Other features being developed:
 
 - [ ] Search and enumeration of all PCI devices;
-- [ ] Preemptive multitasking.
 
 > You can help implement the above development functions!
 
@@ -116,7 +117,7 @@ Hexagon implements a series of functions that are exposed to the user environmen
 
 The number of system calls may vary with new Hexagon releases, as the tendency is for most non-critical functions to be moved to libraries, not staying in the core. However, with the natural evolution of the kernel, other functions and calls can be implemented.
 
-At this time, there are [68 system calls](SYSCALL.en.md) that are exposed to the user environment by Hexagon. To do so, it implements an interrupt system that is accessible by any application via interrupt 69h (`int 69h`).
+At this time, there are [71 system calls](SYSCALL.en.md) that are exposed to the user environment by Hexagon. To do so, it implements an interrupt system that is accessible by any application via interrupt 80h (`int 80h`), the same vector traditionally used by Unix-like systems.
 
 The format for passing parameters to the Hexagon interrupt handler is a mix of what is observed for what is implemented in MS-DOS and BSD systems. Some of the parameters are passed on the stack (as in BSD systems), while other parameters are passed through registers (as in MS-DOS), as follows:
 
@@ -131,7 +132,7 @@ An example of a system call, to terminate the currently running process, can be 
     
     mov eax, 0 ;; Report error code 0
     
-    int 69h    ;; call the hexagon
+    int 80h    ;; call the hexagon
 ```
     
 The `hexagon.s` file, present in the Hexagonix library by [libasm](https://github.com/hexagonix/lib) specifies all system calls currently supported by the current version of Hexagon, as well as lists the outputs and inputs for each requested function. You can also access the system call documentation [here](SYSCALL.en.md).
@@ -155,23 +156,23 @@ In Assembly language, the system development language, the header, in its 2.0 sp
 ```assembly
 headerAPP:
 
-.signature: db "HAPP"      ;; Signature
-.architecture: db 01h      ;; Architecture (i386 = 01h)
-.MinimumVersion: db 1      ;; Minimal version of Hexagon
-.Minimum subversion: db 00 ;; Minimal Hexagon Subversion
-.inputpoint: dd           ;; Input point offset (reference to main function here)
-.ImageType: db 01h        ;; Executable image type (executable = 01h)
-.reserved0: dd 0  ;; Reserved (Dword)
-.reserved1: db 0  ;; Reserved (Byte)
-.reserved2: db 0  ;; Reserved (Byte)
-.reserved3: db 0  ;; Reserved (Byte)
-.reserved4: dd 0  ;; Reserved (Dword)
-.reserved5: dd 0  ;; Reserved (Dword)
-.reserved6: dd 0  ;; Reserved (Dword)
-.reserved7: db 0  ;; Reserved (Byte)
-.reserved8: dw 0  ;; Reserved (Word)
-.reserved9: dw 0  ;; Reserved (Word)
-.reserved10: dw 0 ;; Reserved (Word)
+.signature:          db "HAPP" ;; Signature
+.architecture:       db 01h    ;; Architecture (i386 = 01h)
+.MinimumVersion:     db 1      ;; Minimal version of Hexagon
+.Minimum subversion: db 00     ;; Minimal Hexagon Subversion
+.inputpoint:         dd        ;; Input point offset (reference to main function here)
+.ImageType:          db 01h    ;; Executable image type (executable = 01h)
+.reserved0:          dd 0      ;; Reserved (Dword)
+.reserved1:          db 0      ;; Reserved (Byte)
+.reserved2:          db 0      ;; Reserved (Byte)
+.reserved3:          db 0      ;; Reserved (Byte)
+.reserved4:          dd 0      ;; Reserved (Dword)
+.reserved5:          dd 0      ;; Reserved (Dword)
+.reserved6:          dd 0      ;; Reserved (Dword)
+.reserved7:          db 0      ;; Reserved (Byte)
+.reserved8:          dw 0      ;; Reserved (Word)
+.reserved9:          dw 0      ;; Reserved (Word)
+.reserved10:         dw 0      ;; Reserved (Word)
 ```
 
 Below is an implementation of a small application written as an example, which uses the Hexagon header and system calls, written in x86 assembly language in Intel syntax and assembled with the help of the flat assembler (FASM). This application sends a message to the terminal and then exits.
@@ -179,8 +180,6 @@ Below is an implementation of a small application written as an example, which u
 ```assembly
 ;; This is a template for building a text mode app for
 ;; the Hexagonix!
-;;
-;; Written by Felipe Miguel Nery Lunkes on 12/04/2020
 ;;
 ;; You can generate an executable HAPP image using the assembler
 ;; FASM. To do this, use the command line below:
@@ -191,49 +190,32 @@ Below is an implementation of a small application written as an example, which u
 
 use32
 
-headerAPP:
+include "HAPP.s" ;; Struc that assembles the HAPP header
 
-.signature: db "HAPP"      ;; Signature
-.architecture: db 01h      ;; Architecture (i386 = 01h)
-.MinimumVersion: db 1      ;; Minimal version of Hexagon
-.Minimum subversion: db 00 ;; Minimal Hexagon Subversion
-.EntryPoint: dd startAPP   ;; Entry point offset
-.ImageType: db 01h         ;; Executable image
-.reserved0: dd 0  ;; Reserved (Dword)
-.reserved1: db 0  ;; Reserved (Byte)
-.reserved2: db 0  ;; Reserved (Byte)
-.reserved3: db 0  ;; Reserved (Byte)
-.reserved4: dd 0  ;; Reserved (Dword)
-.reserved5: dd 0  ;; Reserved (Dword)
-.reserved6: dd 0  ;; Reserved (Dword)
-.reserved7: db 0  ;; Reserved (Byte)
-.reserved8: dw 0  ;; Reserved (Word)
-.reserved9: dw 0  ;; Reserved (Word)
-.reserved10: dw 0 ;; Reserved (Word)
+;; Instance | Structure | Architecture | Version | Subversion | Entry point | Image type
+appHeader headerHAPP HAPP.Architectures.i386, 1, 6, applicationStart, 01h
 
-;;************************************************ *************
+;;*************************************************************
 
 include "hexagon.s" ;; Include system calls
-include "macros.s"  ;; Includes macros
+include "console.s" ;; Console output macros (fputs, puts...)
+include "macros.s"  ;; finishProcess and other general purpose macros
 
-;;************************************************ *************
+;;*************************************************************
 
 ;; Variables and constants
 
 msg: db 10, 10, "This is a template with a simple HAPP application example!", 10, 0
 
-;;************************************************ *************
+;;*************************************************************
 
 ;; entry point
 
-startAPP:
+applicationStart:
 
-    mov esi, msg
+    puts msg ;; Macro that prints the string, followed by a newline
 
-    imprimirString ;; Here we have a macro that configures and calls an API function
-
-    Hexagonix terminarProcesso ;; Another macro that asks which call to make
-    
+    finishProcess 0, 0 ;; Error code 0, do not stay resident
 ```
     
 </div>

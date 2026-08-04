@@ -28,33 +28,34 @@
 
 <div align="justify">
 
-O Hexagon é um `núcleo` (kernel) monolítico executado em `modo protegido` 32-bit, desenvolvido puramente em Assembly para a arquitetura PC (x86). É um kernel escrito do zero, visando a velocidade e a compatibilidade de harware moderno, mas também sendo capaz de ser executado em hardware mais antigo (Pentium III ou superiores, com 32 MB de memória RAM ou mais). No momento, garante um ambiente monoutilizador, apesar do uso de terminais virtuais, e monotarefa, apesar da capacidade de carregar, manter em memória e controlar mais de um processo por vez, em uma pilha de execução de ordem cronológica. Futuramente o kernel poderá receber suporte a execução de múltiplos processos em multitarefa preemptiva. O Hexagon foi projetado para ser um kernel Unix-like e compõe a base do `Hexagonix`, embora independente deste. Ele executa imagens executáveis no formato `HAPP`, desenvolvido exclusivamente para o Hexagon. Ele também implementa uma API bastante sofisticada acessível através de uma chamada de sistema padronizada e documentada, como você pode ver abaixo.
+O Hexagon é um `núcleo` (kernel) monolítico executado em `modo protegido` 32-bit, desenvolvido puramente em Assembly para a arquitetura PC (x86). É um kernel escrito do zero, visando a velocidade e a compatibilidade de harware moderno, mas também sendo capaz de ser executado em hardware mais antigo (Pentium III ou superiores, com 32 MB de memória RAM ou mais). No momento, garante um ambiente monoutilizador, apesar do uso de terminais virtuais, e multitarefa preemptiva, implementando um escalonador round-robin. O Hexagon foi projetado para ser um kernel Unix-like e compõe a base do `Hexagonix`, embora independente deste. Ele executa imagens executáveis no formato `HAPP`, desenvolvido exclusivamente para o Hexagon. Ele também implementa uma API bastante sofisticada acessível através de uma chamada de sistema padronizada e documentada, como você pode ver abaixo.
 
 Algumas características do Hexagon:
 
-- :white_check_mark: Suporte a processadores x86 (Pentium III ou superiores);
-- :white_check_mark: Suporte a dispositivos com 32 MB de memória RAM ou mais;
-- :white_check_mark: Suporte a ambiente de usuário;
-- :white_check_mark: [Chamada de sistema](SYSCALL.pt.md) com 68 funções sofisticadas acessadas pelo ambiente de usuário;
-- :white_check_mark: Formato binário executável próprio (HAPP);
-- :white_check_mark: Unix-like;
-- :white_check_mark: Completamente escrito em Assembly x86;
-- :white_check_mark: Self-hosting (o montador usado para construir o Hexagon pode ser executado sobre ele);
-- :white_check_mark: Sistema de arquivos virtual;
-- :white_check_mark: Abstração de dispositivos;
-- :white_check_mark: Suporte total a leitura e escrita em sistemas de arquivos FAT16;
-- :white_check_mark: Suporte a gráficos VESA VBE e em múltiplas resoluções;
-- :white_check_mark: Suporte a modo texto;
-- :white_check_mark: Motor de renderização de fontes gráficas, que podem ser alteradas pelo usuário;
-- :white_check_mark: Suporte a relógio em tempo real;
-- :white_check_mark: Suporte a portas seriais e paralelas (comunicação serial, debug e impressão);
-- :white_check_mark: Compatível com carregador de inicialização próprio (Hexagon Boot - HBoot);
-- :white_check_mark: Suporte a usuários e permissões.
+- [x] Suporte a processadores x86 (Pentium III ou superiores);
+- [x] Suporte a dispositivos com 32 MB de memória RAM ou mais;
+- [x] Multitarefa preemptiva, com escalonador round-robin e processo idle dedicado;
+- [x] Sete estados de processo (livre, pronto, em execução, bloqueado, dormindo, zumbi e idle);
+- [x] Criação de processos não bloqueante (spawn) e encerramento de processos por PID (kill);
+- [x] [Chamada de sistema](SYSCALL.pt.md) com 71 funções sofisticadas acessadas pelo ambiente de usuário;
+- [x] Formato binário executável próprio (HAPP);
+- [x] Unix-like;
+- [x] Completamente escrito em Assembly x86;
+- [x] Self-hosting (o montador usado para construir o Hexagon pode ser executado sobre ele);
+- [x] Sistema de arquivos virtual;
+- [x] Abstração de dispositivos;
+- [x] Suporte total a leitura e escrita em sistemas de arquivos FAT16;
+- [x] Suporte a gráficos VESA VBE e em múltiplas resoluções;
+- [x] Suporte a modo texto;
+- [x] Motor de renderização de fontes gráficas, que podem ser alteradas pelo usuário;
+- [x] Suporte a relógio em tempo real;
+- [x] Suporte a portas seriais e paralelas (comunicação serial, debug e impressão);
+- [x] Compatível com carregador de inicialização próprio (HBoot);
+- [x] Suporte a usuários e permissões.
 
 Outras características que estão sendo desenvolvidas:
 
 - [ ] Procura e enumeração de todos os dispositivos PCI;
-- [ ] Multitarefa preemptiva.
 
 > Você pode ajudar a implementar as funções em desenvolvimento acima!
 
@@ -80,7 +81,7 @@ Leia a [licença](https://github.com/hexagonix/Doc/blob/main/LICENSES/BSD-3) par
 
 <div align="justify">
 
-O kernel foi inicialmente desenhado e escrito visando uma estrutura e funcionamento próximos de sistemas DOS (Disk Operating System), como MS-DOS, nos ano de 2015 a 2017. Sendo assim, muitas chamadas de sistema e nomes de dispositivo seguiam uma sintaxe e nomes DOS. Com o passar do tempo, houve o interesse de aproximar o então núcleo do Sistema Operacional Andromeda (atualmente, Hexagonix), que a essa altura não possuia nome e era mantido junto ao código da distribuição, a uma estrutura e funcionamento mais próximos de sistemas do tipo Unix, como BSD ou Linux, por exemplo. Desta forma, muitas partes do kernel foram reimplementadas tendo em mente o novo objetivo. O código do núcleo foi separado do restante do Sistema e se tornou independente, em questão de desenvolvimento e também de funcionamento, além de ganhar um nome, Hexagon. Foi escrita uma camada de abstração de hardware com a inclusão de chamadas de sistema conhecidas no mundo Unix, como abrir(), fechar(), ler() e escrever(). Os dispositivos ganharam nome e as unidades de disco mudaram da nomenclatura DOS e foram para nomes de dispositivo Unix. O kernel então passa a seguir um processo de inicialização conhecido, com a execução, com PID 1, do primeiro processo do usuário, init, que então carrega o restante dos componentes. Foram então escritos utilitários Unix-like que passassem a utilizar a API Unix-like do kernel, e várias ferramentas Unix-like já foram escritas desde então (2017 em diante).
+O kernel foi inicialmente desenhado e escrito visando uma estrutura e funcionamento próximos de sistemas DOS (Disk Operating System), como MS-DOS, nos ano de 2015 a 2017. Sendo assim, muitas chamadas de sistema e nomes de dispositivo seguiam uma sintaxe e nomes DOS. Com o passar do tempo, houve o interesse de aproximar o então núcleo do Sistema Operacional Andromeda (atualmente, Hexagonix), que a essa altura não possuia nome e era mantido junto ao código da distribuição, a uma estrutura e funcionamento mais próximos de sistemas do tipo Unix, como BSD ou Linux, por exemplo. Desta forma, muitas partes do kernel foram reimplementadas tendo em mente o novo objetivo. O código do núcleo foi separado do restante do sistema e se tornou independente, em questão de desenvolvimento e também de funcionamento, além de ganhar um nome, Hexagon. Foi escrita uma camada de abstração de hardware com a inclusão de chamadas de sistema conhecidas no mundo Unix, como open(), close(), read() e write(). Os dispositivos ganharam nome e as unidades de disco mudaram da nomenclatura DOS e foram para nomes de dispositivo Unix. O kernel então passa a seguir um processo de inicialização conhecido, com a execução, com PID 1, do primeiro processo do usuário, init, que então carrega o restante dos componentes. Foram então escritos utilitários Unix-like que passassem a utilizar a API Unix-like do kernel, e várias ferramentas Unix-like já foram escritas desde então (2017 em diante).
 
 </div>
 
@@ -116,7 +117,7 @@ O Hexagon implementa uma série de funções que são expostas ao ambiente de us
 
 O número de chamadas de sistema podem variar de acordo com os lançamentos de novas versões do Hexagon, visto que a tendência é que a maioria das funções não críticas sejam movidas para bibliotecas, não permanecendo no núcleo. Entretanto, com a evolução natural do kernel, outras funções e chamadas podem ser implementadas.
 
-Neste momento, existem [68 chamadas de sistema](SYSCALL.pt.md) que são expostas ao ambiente de usuário pelo Hexagon. Para isso, ele implementa um sistema de interrupção que é acessível por qualquer aplicativo através da interrupção 69h (`int 69h`).
+Neste momento, existem [71 chamadas de sistema](SYSCALL.pt.md) que são expostas ao ambiente de usuário pelo Hexagon. Para isso, ele implementa um sistema de interrupção que é acessível por qualquer aplicativo através da interrupção 80h (`int 80h`), o mesmo vetor tradicionalmente usado por sistemas Unix-like.
 
 O formato de passagem de parâmetros para o manipulador de interrupção do Hexagon é um misto do observado para o implementado no MS-DOS e nos sistemas BSD. Parte dos parâmetros é passado na pilha (como em sistemas BSD), enquanto outros parâmetros são passados por meio dos registradores (como no MS-DOS), da seguinte forma:
 
@@ -131,7 +132,7 @@ Um exemplo de chamada de sistema, para finalizar o processo atual em execução,
 
     mov eax, 0 ;; Informar o código de erro 0
 
-    int 69h ;; Chamar o Hexagon
+    int 80h ;; Chamar o Hexagon
 
 ```
 
@@ -181,8 +182,6 @@ Abaixo, uma implementação de um pequeno aplicativo escrito como exemplo, que u
 ;; Este é um template para a construção de um app de modo texto para 
 ;; o Hexagonix!
 ;;
-;; Escrito por Felipe Miguel Nery Lunkes em 04/12/2020
-;;
 ;; Voce pode gerar uma imagem HAPP executável utilizando o montador
 ;; FASM. Para isso, utilize a linha de comando abaixo:
 ;;
@@ -192,30 +191,16 @@ Abaixo, uma implementação de um pequeno aplicativo escrito como exemplo, que u
 
 use32
 
-cabecalhoAPP:
+include "HAPP.s" ;; Struc que monta o cabeçalho HAPP
 
-.assinatura:      db "HAPP"    ;; Assinatura
-.arquitetura:     db 01h       ;; Arquitetura (i386 = 01h)
-.versaoMinima:    db 1         ;; Versão mínima do Hexagon
-.subversaoMinima: db 00        ;; Subversão mínima do Hexagon
-.pontoEntrada:    dd inicioAPP ;; Offset do ponto de entrada
-.tipoImagem:      db 01h       ;; Imagem executável
-.reservado0:      dd 0         ;; Reservado (Dword)
-.reservado1:      db 0         ;; Reservado (Byte)
-.reservado2:      db 0         ;; Reservado (Byte)
-.reservado3:      db 0         ;; Reservado (Byte)
-.reservado4:      dd 0         ;; Reservado (Dword)
-.reservado5:      dd 0         ;; Reservado (Dword)
-.reservado6:      dd 0         ;; Reservado (Dword)
-.reservado7:      db 0         ;; Reservado (Byte)
-.reservado8:      dw 0         ;; Reservado (Word)
-.reservado9:      dw 0         ;; Reservado (Word)
-.reservado10:     dw 0         ;; Reservado (Word)
+;; Instância | Estrutura | Arquitetura | Versão | Subversão | Ponto de entrada | Tipo de imagem
+appHeader headerHAPP HAPP.Architectures.i386, 1, 6, applicationStart, 01h
 
 ;;*************************************************************
 
 include "hexagon.s" ;; Incluir as chamadas de sistema
-include "macros.s"  ;; Inclui macros
+include "console.s" ;; Macros de saída no console (fputs, puts...)
+include "macros.s"  ;; finishProcess e outras macros de propósito geral
 
 ;;*************************************************************
 
@@ -227,13 +212,11 @@ msg: db 10, 10, "Este e um template com um exemplo de aplicativo HAPP simples!",
 
 ;; Ponto de entrada
 
-inicioAPP:
+applicationStart:
 
-    mov esi, msg
+    puts msg ;; Macro que imprime a string e quebra a linha em seguida
 
-    imprimirString ;; Aqui temos um macro que configura e chama uma função da API
-
-    Hexagonix encerrarProcesso ;; Outro macro que solicita qual chamada realizar
+    finishProcess 0, 0 ;; Código de erro 0, sem manter residente
 ``` 
 
 </div>

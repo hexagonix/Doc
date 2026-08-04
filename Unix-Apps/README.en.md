@@ -60,33 +60,63 @@ Please read the [license](https://github.com/hexagonix/Doc/blob/main/LICENSES/BS
 
 Several Unix-standard utilities are included so far. Are they:
 
+* adduser
+* arch
 * cat
 * clear
 * cowsay
 * cp
 * date
+* deluser
 * echo
 * file
 * free
+* hostname
 * init
+* kill
 * login
 * ls
 * man
 * mount
 * mv
+* passwd
 * ps
 * rm
 * sh
 * shutdown
 * su
+* syslogd
 * top
 * uname
 * whoami
 
 Other utilities are exclusive to Hexagonix. Are they:
 
-* hash (alternate shell)
-* lshapp (reads and displays information from HAPP images)
-* lshmod (reads and displays information from HBoot images)
+* clock (shows the current time in the console's top-right corner, refreshed every second. Meant to be run in the background, with `clock &`);
+* fnt (changes the graphic font used by the console);
+* hash (alternate shell);
+* logind (daemon that manages the  virtual terminal;
+* lshapp (reads and displays information from HAPP images);
+* lshmod (reads and displays information from HBoot images).
+
+</div>
+
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
+
+## Login and user management infrastructure
+
+<div align="justify">
+
+Hexagonix keeps its user database in a single file, `/shadow`, with one record per line in the format `username:passwordhash:code:shell:theme`. The `code` field follows the same ID scheme used by Hexagon itself (555 for regular users, 777 for root), and the `theme` field ("dark" or "light") is applied by `login` right after a successful authentication, so each user can carry their own color preference instead of a single system-wide theme.
+
+* `adduser`, restricted to the root user, interactively asks for the new username, the password (twice, with no echo on the console), the shell and the theme, then appends the corresponding record to `/shadow`, falling back to a default shell and theme if the user leaves those fields blank;
+* `deluser` removes a user's record from `/shadow`, rewriting the file without the matching line;
+* `passwd` lets the currently logged in user change their own password, updating only the hash field on their line;
+* `login` and `su` both consult `/shadow` to validate the supplied credentials, and it is `login` that applies the authenticated user's theme;
+* `logind` is the daemon responsible for setting up virtual terminal and manage other session settings.
+
+Passwords are never written in plain text: the hash field in `/shadow` is computed from a DJB2 hash (implemented in `libasm` and shared by all of these utilities). It is worth noting that this is not a cryptographic hash, uses no salt, and is reversible by brute force, but it does keep the password from sitting in plain, readable text for anyone opening the file directly.
 
 </div>

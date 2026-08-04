@@ -58,6 +58,14 @@ Andromeda SHell, or simply ASH, was developed as an alternative to Hexagonix's d
 
 The calculator allows the user to perform basic calculations.
 
+#### Config
+
+Config is Hexagonix's graphical control panel, bringing together video resolution, color and theme, graphic font, mounted volumes and serial and parallel port settings in one place.
+
+#### DOSsh
+
+DOSsh is a recreational shell that reproduces the look and behavior of the MS-DOS prompt on top of Hexagonix, down to its DOS-style messages and commands.
+
 #### Power
 
 The utility allows the user to easily shut down or restart the computer.
@@ -70,9 +78,13 @@ This utility allows you to interactively change the system's default graphic fon
 
 Lyoko was developed as an IDE that allows the user to develop programs to run on the system. It allows you to edit code and manipulate it, as well as build and test the application. So far, it works together with the flat assembler Hexagonix edition [(fasmX)](https://github.com/hexagonix/fasm) to allow building applications.
 
-#### Piano return Piano;
+#### OOBE
 
-The return Piano; is an electronic keyboard that allows the user to play music by emitting selected notes.
+OOBE (Out Of Box Experience) is Hexagonix's first-run walkthrough, a six-page tour that greets the user on their first contact with the system and introduces its main components and utilities.
+
+#### Piano
+
+Piano is an electronic keyboard that allows the user to play music by emitting selected notes.
 
 #### Quartzo
 

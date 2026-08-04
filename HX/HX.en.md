@@ -33,7 +33,7 @@
 
 <div align="center">
 
-<img height="200" src="https://github.com/hexagonix/Doc/blob/main/Img/HX.png">
+<img height="200" src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/HX.png">
 
 </div>
 
@@ -70,7 +70,8 @@ The `hx` utility is intended to unify the Hexagonix build process on Linux syste
 | `--info`| Displays Hexagonix information such as version, revision, development branch, etc| No secondary parameters|
 | `--indent`| Starts an hx utility that formats and optimizes Hexagonix source code, manuals, and definition files | No secondary parameters|
 | `--configure`| Runs the `configure.sh` module to generate the static files needed for the build| No secondary parameters|
-| `--stat`| Displays statistical information about Hexagonix (cloc installed required)| No secondary parameters|
+| `--stats`| Displays statistical information about Hexagonix (cloc installed required)| No secondary parameters|
+| `--flags`| Displays the build flags currently configured for HBoot, Hexagon and the userland utilities| No secondary parameters|
 
 ### hx modules
 
@@ -89,6 +90,7 @@ To build Hexagonix, hx looks for and executes a series of modules scattered thro
 |`common.hx`| Common functions used by all modules| Scripts/modules|
 |`contribBuilder.hx`| Responsible for executing the construction script for external packages (such as fasm)| Scripts/modules|
 |`contribChecker.hx`| Responsible for checking whether there are external packages built for installation in the system image| Scripts/modules|
+|`depend.hx`| Checks and installs build dependencies, and clones the Hexagonix repositories| Scripts/modules|
 |`diskBuilder.hx`| Responsible for installing Hexagonix components on the previously generated system disk image| Scripts/modules|
 |`fonts.hx`| Responsible for identifying and building graphic fonts compatible with the system| Scripts/modules|
 |`git.hx`| Responsible for updating system repositories with the remote server| Scripts/modules|
@@ -97,6 +99,7 @@ To build Hexagonix, hx looks for and executes a series of modules scattered thro
 |`logUtils.hx`| Useful functions for creating system build logs| Scripts/modules|
 |`macros.hx`| Useful functions for running modules from the `hx` utility or other modules| Scripts/modules|
 |`saturno.hx`| Responsible for executing the construction of the `Saturno` component (boot)| Scripts/modules|
+|`stat.hx`| Displays statistical information about the Hexagonix source code| Scripts/modules|
 |`systemBuilder.hx`| Runs all system component build modules and installs them in a temporary directory[^1]| Scripts/modules|
 |`unix.hx`| Responsible for building all Unix utilities| Scripts/modules|
 |`vm.hx`| Allows the configuration and execution of virtual machines using a generated disk image| Scripts/modules|

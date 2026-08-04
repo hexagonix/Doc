@@ -34,7 +34,7 @@
 
 <div align="center">
 
-<img height="200" src="https://github.com/hexagonix/Doc/blob/main/Img/HX.png">
+<img height="200" src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/HX.png">
 
 </div>
 
@@ -71,7 +71,8 @@ O `hx` aceita uma série de parâmetros para determinar quais ações devem ser 
 | `--info`| Exibe informações do Hexagonix, como versão, revisão, ramo de desenvolvimento, etc| Sem parâmetros secundários|
 | `--indent`| Inicializa um utilitário hx que formata e otimiza os códigos-fonte, manuais e arquivos de definição do Hexagonix | Sem parâmetros necessários|
 | `--configure`| Executa o módulo `configure.sh` para gerar os arquivos estáticos necessários para a construção| Sem parâmetros secundários|
-| `--stat`| Exibe informações estatísticas sobre o Hexagonix (necessário cloc instalado)| Sem parâmetros secundários|
+| `--stats`| Exibe informações estatísticas sobre o Hexagonix (necessário cloc instalado)| Sem parâmetros secundários|
+| `--flags`| Exibe as flags de build atualmente configuradas para o HBoot, o Hexagon e os utilitários userland| Sem parâmetros secundários|
 
 ### Módulos do hx
 
@@ -90,6 +91,7 @@ Para a construção do Hexagonix, o `hx` procura e executa uma série de **módu
 |`common.hx`| Funções comuns utilizadas por todos os módulos| Scripts/modules|
 |`contribBuilder.hx`| Responsável por executar o script de construção dos pacotes externos (como fasm)| Scripts/modules|
 |`contribChecker.hx`| Responsável por verificar se existem pacotes externos construídos para instalação na imagem do sistema| Scripts/modules|
+|`depend.hx`| Verifica e instala as dependências de construção, e clona os repositórios do Hexagonix| Scripts/modules|
 |`diskBuilder.hx`| Responsável por instalar os componentes do Hexagonix na imagem de disco do sistema gerada anteriormente| Scripts/modules|
 |`fonts.hx`| Responsável por identificar e construir fontes gráficas compatíveis com o sistema| Scripts/modules|
 |`git.hx`| Responsável por atualizar os repositórios do sistema com o servidor remoto| Scripts/modules|
@@ -98,6 +100,7 @@ Para a construção do Hexagonix, o `hx` procura e executa uma série de **módu
 |`logUtils.hx`| Funções úteis para a criação de logs de construção do sistema| Scripts/modules|
 |`macros.hx`| Funções úteis para executar módulos a partir do utilitário `hx` ou de outros módulos| Scripts/modules|
 |`saturno.hx`| Responsável por executar a construção do componente `Saturno` (boot)| Scripts/modules|
+|`stat.hx`| Exibe informações estatísticas sobre o código-fonte do Hexagonix| Scripts/modules|
 |`systemBuilder.hx`| Executa todos os módulos de construção dos componentes do sistema e os instala em um diretório temporário[^1]| Scripts/modules|
 |`unix.hx`| Responsável por construir todos os utilitários Unix| Scripts/modules|
 |`vm.hx`| Permite a configuração e execução de máquinas virtuais utilizando uma imagem de disco gerada| Scripts/modules|

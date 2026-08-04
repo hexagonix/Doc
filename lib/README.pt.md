@@ -49,16 +49,19 @@ Abaixo, uma lista com cada biblioteca dentro do pacote da libasm:
 | Biblioteca | Funções |
 |:----------:|:-------:|
 |[`console.s`](https://github.com/hexagonix/lib/blob/main/fasm/console.s)| Funções para manipulação do console (físico e virtual)|
-|[`dispositivos.s`](https://github.com/hexagonix/lib/blob/main/fasm/dispositivos.s)| Constantes para acessar os dispositivos reconhecidos pelo Hexagon|
-|[`erros.s`](https://github.com/hexagonix/lib/blob/main/fasm/erros.s)| Definição de erros em resposta a chamadas de sistema do Hexagon|
+|[`dev.s`](https://github.com/hexagonix/lib/blob/main/fasm/dev.s)| Constantes para acessar os dispositivos reconhecidos pelo Hexagon|
+|[`errors.s`](https://github.com/hexagonix/lib/blob/main/fasm/errors.s)| Definição de erros em resposta a chamadas de sistema do Hexagon|
 |[`HAPP.s`](https://github.com/hexagonix/lib/blob/main/fasm/HAPP.s)| Macro para a criação de um cabaçalho HAPP para imagens executáveis|
 |[`hexagon.s`](https://github.com/hexagonix/lib/blob/main/fasm/hexagon.s)| Definições para realizar chamadas de sistema ao Hexagon|
+|[`hexagonix.s`](https://github.com/hexagonix/lib/blob/main/fasm/hexagonix.s)| Macros e dados comuns aos componentes do Hexagonix|
 |[`log.s`](https://github.com/hexagonix/lib/blob/main/fasm/log.s)| Macro para envio de mensagens pelo Hexagon|
 |[`macros.s`](https://github.com/hexagonix/lib/blob/main/fasm/macros.s)| Macros avançados para facilitar o desenvolvimento de utilitários|
+|[`memory.s`](https://github.com/hexagonix/lib/blob/main/fasm/memory.s)| Macros para manipulação de valores de memória|
+|[`passwdHash.s`](https://github.com/hexagonix/lib/blob/main/fasm/passwdHash.s)| Hash de senhas e consulta ao `/shadow`, compartilhados por login, su, adduser, passwd e deluser|
 |[`verUtils.s`](https://github.com/hexagonix/lib/blob/main/fasm/verUtils.s)| Funções para obter e processar informações de versão do Hexagonix|
 
 Além disso, existe uma biblioteca específica, chamada `Estelar`. Essa biblioteca é dividida em dois componentes, [`Estelar`](https://github.com/hexagonix/lib/blob/main/fasm/Estelar/estelar.s) e [`Bigbang`](https://github.com/hexagonix/lib/blob/main/fasm/Estelar/bigbang.s). Essa biblioteca tem como objetivo facilitar o desenvolvimento de utilitários gráficos e que utilizem saída de som.
 
-> As bibliotecas são desenvolvidas com foco no flat assembler (fasm), e vêm sendo portadas para o NASM. Verifique dentro do pacote os diretórios `fasm` e `nasm` para encontrar as bibliotecas disponíveis para cada montador.
+> As bibliotecas são desenvolvidas com foco no flat assembler (fasm). Verifique o diretório `fasm` para encontrar as bibliotecas, e `samples` para exemplos de aplicativos que as utilizam.
 
 </div>
