@@ -35,7 +35,7 @@ Todos os direitos reservados.
 
 </div>
 
-O processo de inicialização do Hexagonix se dá por dois componentes que entrem em ação antes do Hexagon (kernel). São eles `Saturno` (responsável por carregar o segundo estágio de inicialização) e o `Hexagon Boot (HBoot)`, que é responsável por carregar, configurar e executar o Hexagon, bem como oferecer outros recursos.
+O processo de inicialização do Hexagonix se dá por dois componentes que entrem em ação antes do Hexagon (kernel). São eles `Saturno` (responsável por carregar o segundo estágio de inicialização) e o `HBoot`, que é responsável por carregar, configurar e executar o Hexagon, bem como oferecer outros recursos.
 
 Vamos conhecer cada um deles?
 
@@ -63,9 +63,9 @@ Leia a [licença](https://github.com/hexagonix/Doc/blob/main/LICENSES/BSD-3) par
 
 <img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
-## Hexagon Boot (HBoot)
+## HBoot
 
-O Hexagon Boot (HBoot) é um componente desenvolvido para permitir a inicialização do kernel Hexagon. Até então, a inicialização era realizada por apenas um estágio, que definia um ambiente bem básico, carregava o Hexagon na memória e imediatamente passava o controle para ele, fornecendo um conjunto bem pequeno e limitado de parâmetros, uma vez que o código desse estágio fica restrito a 512 bytes, o que limita a realização de diversos testes e processamento de dados. Como o HBoot, foi possível expandir o número de tarefas realizadas antes da execução do Hexagon, além da possibilidade de fornecer mais informações a respeito do ambiente da máquina e de inicialização. Isso é particularmente importante para permitir a criação de uma árvore de dispositivos que pode ser utilizada pelo Hexagon para decidir como manipular cada dispositivo identificado. O HBoot é capaz de verificar quais unidades de disco estão disponíveis na máquina, emitir um tom de inicialização, obter a quantidade de memória RAM disponível instalada e permitir ou não o seguimento do processo de boot de acordo com essa informação. Caso nenhuma interação do usuário seja detectada 3 segundos após todos os testes e atividades essenciais para criar um ambiente de inicialização para o Hexagon, o sistema irá carregar e executar o Hexagon (presente em um arquivo no volume nomeado de **HEXAGON.SIS** no Hexagonix H1 e **HEXAGON** no Hexagonix H2), sendo descarregado da memória. A interação com o HBoot se dá pelo pressionamento da tecla F8 após a respectiva mensagem surgir na tela.
+O HBoot é um componente desenvolvido para permitir a inicialização do kernel Hexagon. Até então, a inicialização era realizada por apenas um estágio, que definia um ambiente bem básico, carregava o Hexagon na memória e imediatamente passava o controle para ele, fornecendo um conjunto bem pequeno e limitado de parâmetros, uma vez que o código desse estágio fica restrito a 512 bytes, o que limita a realização de diversos testes e processamento de dados. Como o HBoot, foi possível expandir o número de tarefas realizadas antes da execução do Hexagon, além da possibilidade de fornecer mais informações a respeito do ambiente da máquina e de inicialização. Isso é particularmente importante para permitir a criação de uma árvore de dispositivos que pode ser utilizada pelo Hexagon para decidir como manipular cada dispositivo identificado. O HBoot é capaz de verificar quais unidades de disco estão disponíveis na máquina, emitir um tom de inicialização, obter a quantidade de memória RAM disponível instalada e permitir ou não o seguimento do processo de boot de acordo com essa informação. Caso nenhuma interação do usuário seja detectada 3 segundos após todos os testes e atividades essenciais para criar um ambiente de inicialização para o Hexagon, o sistema irá carregar e executar o Hexagon (presente em um arquivo no volume nomeado de **HEXAGON.SIS** no Hexagonix H1 e **HEXAGON** no Hexagonix H2), sendo descarregado da memória. A interação com o HBoot se dá pelo pressionamento da tecla F8 após a respectiva mensagem surgir na tela.
 
 <details title="Licença do HBoot" align='left'>
 <summary align='left'>Licença do HBoot</summary>
@@ -119,7 +119,7 @@ cabecalhoHBoot:
 
     cli				   ;; Desativar interrupções
     
-    mov ax, 0x2000                 ;; Definir aqui os registradores de pilha
+    mov ax, 0x2000     ;; Definir aqui os registradores de pilha
     mov ss, ax
     mov sp, 0
     
@@ -127,11 +127,11 @@ cabecalhoHBoot:
      
     clc 
 
-    mov ax, 0x2000                 ;; Definir aqui os registradores de segmento
+    mov ax, 0x2000     ;; Definir aqui os registradores de segmento
     mov ds, ax
     mov es, ax
     
-    sti                            ;; Habilitar as interrupções
+    sti                ;; Habilitar as interrupções
 
 ;; Seu código aqui
 

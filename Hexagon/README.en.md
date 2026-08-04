@@ -37,7 +37,7 @@ Some features of Hexagon:
 - :white_check_mark: Preemptive multitasking, with a round-robin scheduler and a dedicated idle process;
 - :white_check_mark: Seven process states (free, ready, running, blocked, sleeping, zombie and idle);
 - :white_check_mark: Non-blocking process creation (spawn) and process termination by PID (kill);
-- :white_check_mark: [System call](SYSCALL.en.md) with 71 sophisticated functions accessed by the user environment;
+- :white_check_mark: [System call](SYSCALL.en.md) with 71 functions accessed by the user environment;
 - :white_check_mark: Own executable binary format (HAPP);
 - :white_check_mark: Unix-like;
 - :white_check_mark: Completely written in x86 Assembly;
