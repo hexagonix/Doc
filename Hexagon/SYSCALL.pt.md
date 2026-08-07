@@ -135,6 +135,10 @@ Agora, uma tabela com as funções da chamada de sistema do Hexagonix, com todas
 | 71 | hx.kill | Gerenciamento de memória e processos | EBX = PID do processo alvo | CF definido se não existir processo com o PID informado; EAX = 05h | Encerra um processo arbitrário pelo PID, podendo ser chamado por qualquer processo contra qualquer outro (diferente do encerramento do processo em primeiro plano pela tecla especial)|
 | 72 | hx.mkdir | Gerenciamento de arquivos e dispositivos | ESI = Caminho do diretório a criar (absoluto ou relativo ao diretório atual) | CF definido em caso de erro; EAX = `IO.operationDenied` para um usuário sem privilégio, `IO.pathNotFound` se uma pasta do caminho não existir | Cria um novo diretório vazio no volume montado|
 | 73 | hx.rmdir | Gerenciamento de arquivos e dispositivos | ESI = Caminho do diretório a remover (absoluto ou relativo ao diretório atual) | CF definido em caso de erro; EAX = `IO.operationDenied` para um usuário sem privilégio, `IO.directoryNotEmpty` se o diretório ainda tiver entradas além de `.` e `..` | Remove um diretório vazio do volume montado|
+| 74 | hx.getenv | Gerenciamento de memória e processos | ESI = Nome da variável de ambiente | ESI = Ponteiro para o valor; CF definido se a variável não estiver definida | Lê uma variável de ambiente do processo chamador|
+| 75 | hx.setenv | Gerenciamento de memória e processos | ESI = Nome da variável de ambiente; EDI = Valor | CF definido se não houver espaço suficiente no ambiente para a nova entrada | Define ou substitui uma variável de ambiente do processo chamador|
+| 76 | hx.unsetenv | Gerenciamento de memória e processos | ESI = Nome da variável de ambiente | CF definido se a variável não estiver definida | Remove uma variável de ambiente do processo chamador|
+| 77 | hx.environ | Gerenciamento de memória e processos | Sem entrada | ESI = Ponteiro para o bloco de ambiente bruto, terminado por dois NUL; EAX = Número de variáveis definidas | Obtém todas as variáveis de ambiente do processo chamador|
 
 <!-- Vai funcionar como <hr> -->
 

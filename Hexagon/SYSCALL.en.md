@@ -135,6 +135,10 @@ Now, a table with the Hexagonix system call functions, with every function gathe
 | 71 | hx.kill | Memory and Process Management | EBX = Target PID | CF set if no process exists with the given PID; EAX = 05h | Terminates an arbitrary process by PID, callable by any process against any other (unlike terminating the foreground process via the special key)|
 | 72 | hx.mkdir | File and Device Management | ESI = Path of the directory to create (absolute or relative to the current directory) | CF defined in case of error; EAX = `IO.operationDenied` for a non-privileged user, `IO.pathNotFound` if a directory in the path does not exist | Creates a new, empty directory on the mounted volume|
 | 73 | hx.rmdir | File and Device Management | ESI = Path of the directory to remove (absolute or relative to the current directory) | CF defined in case of error; EAX = `IO.operationDenied` for a non-privileged user, `IO.directoryNotEmpty` if the directory still has entries other than `.` and `..` | Removes an empty directory from the mounted volume|
+| 74 | hx.getenv | Memory and Process Management | ESI = Name of the environment variable | ESI = Pointer to the value; CF set if the variable is not defined | Reads an environment variable from the calling process|
+| 75 | hx.setenv | Memory and Process Management | ESI = Name of the environment variable; EDI = Value | CF set if the environment does not have enough room left for the new entry | Defines or replaces an environment variable of the calling process|
+| 76 | hx.unsetenv | Memory and Process Management | ESI = Name of the environment variable | CF set if the variable is not defined | Removes an environment variable from the calling process|
+| 77 | hx.environ | Memory and Process Management | No input | ESI = Pointer to the raw, double NUL terminated environment block; EAX = Number of variables defined | Get every environment variable of the calling process|
 
 <!-- Vai funcionar como <hr> -->
 
