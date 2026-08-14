@@ -69,7 +69,7 @@ O `hx` aceita uma série de parâmetros para determinar quais ações devem ser 
 | `--version`| Exibe informações de versão e copyright| Sem parâmetros secundários|
 | `--depend`| Instala as dependências de construção (sistemas Debian, Ubuntu e derivados, apenas)| Sem parâmetros secundários|
 | `--info`| Exibe informações do Hexagonix, como versão, revisão, ramo de desenvolvimento, etc| Sem parâmetros secundários|
-| `--indent`| Inicializa um utilitário hx que formata e otimiza os códigos-fonte, manuais e arquivos de definição do Hexagonix | Sem parâmetros necessários|
+| `--format`| Inicializa um utilitário hx que formata e otimiza os códigos-fonte, manuais e arquivos de definição do Hexagonix | Sem parâmetros necessários|
 | `--configure`| Executa o módulo `configure.sh` para gerar os arquivos estáticos necessários para a construção| Sem parâmetros secundários|
 | `--stats`| Exibe informações estatísticas sobre o Hexagonix (necessário cloc instalado)| Sem parâmetros secundários|
 | `--flags`| Exibe as flags de build atualmente configuradas para o HBoot, o Hexagon e os utilitários userland| Sem parâmetros secundários|
@@ -104,7 +104,7 @@ Para a construção do Hexagonix, o `hx` procura e executa uma série de **módu
 |`systemBuilder.hx`| Executa todos os módulos de construção dos componentes do sistema e os instala em um diretório temporário[^1]| Scripts/modules|
 |`unix.hx`| Responsável por construir todos os utilitários Unix| Scripts/modules|
 |`vm.hx`| Permite a configuração e execução de máquinas virtuais utilizando uma imagem de disco gerada| Scripts/modules|
-|`indent.sh`| Responsável por indentar os arquivos do sistema (fontes)| Scripts/|
+|`formatter.sh`| Responsável por formatar os arquivos do sistema (fontes)| Scripts/|
 
 [^1]: Para saber quais módulos são executados, veja o conteúdo do módulo.
 
