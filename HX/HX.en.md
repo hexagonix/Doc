@@ -68,7 +68,7 @@ The `hx` utility is intended to unify the Hexagonix build process on Linux syste
 | `--version`| Displays version and copyright information| No secondary parameters|
 | `--depend`| Install build dependencies (Debian, Ubuntu and derivative systems only)| No secondary parameters|
 | `--info`| Displays Hexagonix information such as version, revision, development branch, etc| No secondary parameters|
-| `--indent`| Starts an hx utility that formats and optimizes Hexagonix source code, manuals, and definition files | No secondary parameters|
+| `--format`| Starts an hx utility that formats and optimizes Hexagonix source code, manuals, and definition files | No secondary parameters|
 | `--configure`| Runs the `configure.sh` module to generate the static files needed for the build| No secondary parameters|
 | `--stats`| Displays statistical information about Hexagonix (cloc installed required)| No secondary parameters|
 | `--flags`| Displays the build flags currently configured for HBoot, Hexagon and the userland utilities| No secondary parameters|
@@ -103,7 +103,7 @@ To build Hexagonix, hx looks for and executes a series of modules scattered thro
 |`systemBuilder.hx`| Runs all system component build modules and installs them in a temporary directory[^1]| Scripts/modules|
 |`unix.hx`| Responsible for building all Unix utilities| Scripts/modules|
 |`vm.hx`| Allows the configuration and execution of virtual machines using a generated disk image| Scripts/modules|
-|`indent.sh`| Responsible for indenting system fonts| Scripts/|
+|`formatter.sh`| Responsible for formatting system source files| Scripts/|
 
 [^1]: To find out which modules are executed, see the module contents.
 

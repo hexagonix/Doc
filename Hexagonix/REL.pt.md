@@ -52,15 +52,211 @@ Aqui você pode obter mais informações sobre todas as versões do Hexagonix j�
 
 <img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
-## Versões estáveis
+## Versões suportadas
 
-Aqui você irá encontrar mais informações sobre as versões estáveis do Hexagonix lançadas, bem como mais informações sobre elas e o changelog oficial.
+Aqui você irá encontrar mais informações sobre as versões suportadas do Hexagonix, bem como mais informações sobre elas e o changelog oficial.
+
+<details title="Hexagonix 1.0" align='left'>
+<summary align='left'><strong>Hexagonix 1.0</strong></summary>
+<br>
+
+<div align="justify">
+
+O Hexagonix 1.0 é a versão mais completa e polida até hoje, e é também a primeira versão completamente funcional do sistema. Veja abaixo mais informações sobre este lançamento.
+
+> Versões anteriores, marcadas com o padrão `Hexagonix H*` ou `Hexagonix v1.*`-`Hexagon v*.*`, com data anterior ao lançamento desta versão, devem ser consideradas versões legadas, não funcionais e não suportadas.
+
+**Data de lançamento**: 15/08/2026<br>
+
+- **Kernel Hexagon** v1.7.0:
+  - Esta versão introduz a multitarefa preemptiva ao kernel:
+    - Novo modelo de processo, com estados (*IDLE*, *BLOCKED*, *RUNNING*, *READY*, *ZOMBIE*), que marcam o ciclo de vida de um processo;
+    - Variáveis de ambiente por processo: cada processo pode configurar e recuperar variáveis de ambiente, que são herdadas do processo que os criou;
+    - PIDs não reutilizáveis: agora, cada processo tem um PID único;
+    - Cada processo tem sua *stack* particular;
+    - Novas chamadas spawn() e kill() para iniciar processos de forma não bloqueante e matar um processo pelo PID;
+    - Novo scheduler round-robin, que garante que todos os processos carregados tenham seu tempo de execução e sejam interrompidos/retomados de forma preemptiva;
+    - Uso de malloc() e free() para alocar qualquer estrutura do processo sob responsabilidade do kernel;
+    - Move dados que eram carregados em endereços fixos na memória do kernel para áreas alocadas via malloc(), garantindo maior estabilidade;
+  - Reescrita geral do gerenciamento de sistemas de arquivos FAT16:
+    - Capacidade de criar e remover diretórios;
+    - Possibilidade de alterar o diretório via chamada de sistema;
+    - Nova funcionalidade de caminhos relativos e absolutos:
+      - Os arquivos podem ser identificados por um caminho completo, como `/bin/ls`;
+      - Os arquivos podem ser identificados por um caminho relativo, ao acessar um diretório e buscar por `ls`;
+    - Exposição da chamada touch(), responsável por criar um arquivo vazio;
+  - Correções de bugs diversos no gerenciamento de processos;
+  - Correções de bugs críticos no gerenciamento de memória:
+    - Correção onde o valor de um ponteito era usado, quando na verdade ele deveria ser derefernciado, causando corrupção na tabela de processos;
+    - Torna malloc() e free() seguros em ambiente multitarefa, onde ocorrem interrupções e preempção;
+  - Alteração no handler de timer, para disparar a preempção;
+  - Corrige uma série de condições de corrida que foram identificadas durante a implementação da multitarefa preemptiva.
+  - Altera profundamente o gerenciamento de usuários do sistema:
+    - O sistema não armazena mais o nome do usuário logado, isso fica a cargo do ambiente de usuário, como é feito em sistemas como UNIX V7 e Linux;
+    - O identificador do usuário `root` se torna 0, como no UNIX v7 ou Linux. Até então, era usado o identificador fixo 777;
+    - Cada usuário não administrativo passa a ter um identificador próprio, que começa em 1. Esse controle é feito no ambiente de usuário. Até então, todos tinham o identificador fixo 555;
+  - Reorganização de todas as chamadas de sistema:
+    - Agrupamento de chamadas relacionadas;
+    - Quebra de contrato com todas as aplicações criadas para versões anteriores; Todos os utilitários precisam ser montados/compilados novamente, com a versão mais recente da `libasm`. Embora a numeração das chamadas tenha mudado, o contrato de cada uma delas permanece igual;
+  - Esta versão estava sendo trabalhada nos últimos 14 meses.
+- **HBoot** v0.22.0:
+  - Remove o termo Hexagon Boot em favor de HBoot;
+- **Utilitários Unix** (UnixUtils e CoreUtils):
+  - Novo utilitário `mkdir`:
+    - Responsável por criar novos diretórios no volume;
+  - Novo utilitário `rmdir`:
+    - Responsável por remover um diretório, caso vazio;
+  - Novo utilitário `kill`:
+    - Responsável por matar um processo com o PID informado;
+  - Novo utilitário `adduser`:
+    - Responsável por criar um novo usuário no sistema, observando a base de dados de usuário em `/etc/shadow`;
+    - Incrementando o identificador de usuário e criar o registro;
+    - Usa hash de senha, para impedir exposição da senha;
+  - Novo utilitário `deluser`:
+    - Responsável por remover um usuário do sistema, desde que ele não esteja logado no momento;
+  - Novo utilitário `passwd`:
+    - Responsável por alterar a senha de um usuário.
+  - Novo utilitário `touch`:
+    - Responsável por criar um arquivo vazio no volume;
+  - Novo utilitário `clock`:
+    - Este novo utilitário deve ser executado em segundo plano, com `clock &`. Ele também é, por padrão, iniciado com o sistema;
+    - Ele mostra, no canto superior direito da tela, a hora, com atualização constante e granularidade de segundos;
+  - Alteração nos shells do ambiente (`sh` e `hash`):
+    - Nova funcionalidade de execução de arquivos de shell, que devem ter um identificador `#!/bin/sh` (ou o nome de outro shell compatível) no início do arquivo;
+    - Novo comando para obter e definir variáveis de ambiente;
+    - Busca de executáveis utilizando a variável `PATH`, permitindo a execução de utilitários que estão segregados em outros diretórios do sistema;
+    - Capacidade de iniciar um processo em segundo plano, usando `&`:
+      - Por exemplo, iniciar o utilitário `clock` em segundo plano: `clock &`;
+  - Alteração no utilitário `man`:
+    - Agora, ele pausa quando o manual é maior que o espaço disponível em tela, pedindo interação do usuário;
+    - A finalização do utilitário agora é solicitada ao usuário, conforme a ferramente do Linux, usada como referência na usabilidade;
+    - Busca de manuais alterada de `/` para `/usr/share/man`, melhorando a organização e segregando os arquivos em um diretório próprio e padronizado;
+  - Alteração no utilitário `cowsay`:
+    - Busca de arquivos de personagens de `/` para `/usr/share/cowsay`, melhorando a organização e segregando os arquivos em um diretório próprio e padronizado;
+  - Nova versão do utilitário `init`:
+    - Script de inicialização alterada de `/rc` para `/etc/rc`;
+    - Capacidade de iniciar e monitorar processos, usando a expressão `respawn=`. Capacidade de monitorar 8 processos;
+    - Capacidade de iniciar processos não monitorados, com a expressão `spawn=`;
+    - Capacidade de definir variáveis de ambiente que serão herdadas por todos os processos, como `PATH`;
+  - Nova versão do utilitário `login`:
+    - Passa a usar o novo formato de base de dados de usuário, como o exemplo: `usuário:senha:id_usuario:shell_padrao:tema`;
+    - Base de dados de usuário movido de `/passwd` para `etc/shadow`. Mudança de nome para não conflitar com novo utilitário `passwd`;
+    - `login` não monitora mais o shell. Inicia o shell do usuário logado de forma bloqueante e, quando o shell é finalizado, se finaliza, retornando o controle para init, que detêm a regra de respawn;
+  - Nova versão do utilitário `logind`:
+    - Passa a usar o novo formato de base de dados de usuário, como o exemplo: `usuário:senha:id_usuario:shell_padrao:tema`;
+    - Base de dados de usuário movido de `/passwd` para `etc/shadow`. Mudança de nome para não conflitar com novo utilitário `passwd`;
+  - Nova versão do utilitário `su`:
+    - Passa a usar o novo formato de base de dados de usuário, como o exemplo: `usuário:senha:id_usuario:shell_padrao:tema`;
+    - Base de dados de usuário movido de `/passwd` para `etc/shadow`. Mudança de nome para não conflitar com novo utilitário `passwd`;
+  - Nova versão do utilitário `top`:
+    - Compatibilidade com o novo modelo de processos, mostrando o caminho completo do processo e o estado;
+    - Exibe, para cada processo, o processo pai (*PARENT*), que pode ser um processo de usuário ou o kernel;
+    - Correção na formatação dos dados, padronizando as colunas;
+  - Nova versão do utilitário `ps`:
+    - Compatibilidade com o novo modelo de processos, mostrando o caminho completo do processo e o estado;
+    - Exibe, para cada processo, o processo pai (*PARENT*), que pode ser um processo de usuário ou o kernel;
+  - Novos utilitários de teste de multitarefa, como prova de conceito:
+    - `testa`, `testb`, `workera`, `workerb` e `launcher`;
+  - Nova organização dos utilitários:
+    - `init`, `login`, `logind`, `shutdown`, `ps`, `top`, `passwd`, `adduser` e `deluser` foram movidos para `/sbin`;
+    - O restante dos utilitários foram movidos de `/` para `/bin`;
+  - Correções de erros gerais;
+  - Melhorias na estrutura dos utilitários;
+  - Versão mínima do Hexagon alterada para v1.7.0 para todos os utilitários;
+- **Andromeda Apps (ambiente Hexagonix-Andromeda)**:
+  - Alteração nos shells do ambiente (`ash` e `dossh`):
+    - Nova funcionalidade de execução de arquivos de shell, que devem ter um identificador `#!/bin/ash` (ou o nome de outro shell compatível) no início do arquivo;
+    - Novo comando para obter e definir variáveis de ambiente;
+    - Busca de executáveis utilizando a variável `PATH`, permitindo a execução de utilitários que estão segregados em outros diretórios do sistema;
+    - Capacidade de iniciar um processo em segundo plano, usando `&`:
+      - Por exemplo, iniciar o utilitário `clock` em segundo plano: `clock &`;
+  - Alteração no utilitário `config`:
+    - Adaptação de arquivos de configuração para usarem o diretório `/etc` como diretório base;
+    - Alteração em algumas mensagens do utilitário;
+  - Move utilitários de `/` para `/bin`;
+- **Scripts**:
+  - Altera o utilitário `indent.sh` para `formatter.sh`;
+  - Altera os módulos para construir a imagem:
+    - `init`, `login`, `logind`, `shutdown`, `ps`, `top`, `passwd`, `adduser` e `deluser` foram movidos para `/sbin`;
+    - O restante dos utilitários foram movidos de `/` para `/bin`;
+  - Altera o identificador de imagem do VirtualBox para um fixo, permitindo que as imagens atualizadas sejam utilizadas no VirtualBox sem precisar alterar as configurações ou remover/adicionar nova imagem;
+  - Altera a memória da máquina virtual, via qemu, de 32 para 64 MB.
+
+</div>
+
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
+
+</details>
+
+## Versões de desenvolvimento
+
+As versões de desenvolvimento do Hexagonix são nomeadas como `projetos` e podem dar origem à novas versões de lançamento do sistema. Essas versões apresentam componentes e características que podem estar instáveis ou inacabadas, e são inicialmente versões de pesquisa em design e implementação do Hexagonix. As versões de desenvolvimento, denominadas projetos, podem ou não ser a origem de uma nova versão de lançamento do Hexagonix, embora recursos possam ser implementados integralmente ou não em uma versão de lançamento. `Independente disso, o Hexagonix está sendo desenvolvido continuamente`.
+
+<details title="Projeto Dormin" align='left'>
+<summary align='left'><strong>Projeto Dormin (2025-2026) - projeto concluído</strong></summary>
+<br>
+
+<div align="justify">
+
+> O projeto `Dormin` se inicia com a base de código da versão **System II** do Hexagonix, após o lançamento oficial da versão.
+
+O projeto se inicia visando a melhoria contínua do sistema, adicionando multitarefa preemptiva e demais melhorias.
+
+</div>
+
+</details>
+
+<details title="Projeto Zonai" align='left'>
+<summary align='left'><strong>Projeto Zonai (2024-2025) - projeto concluído</strong></summary>
+<br>
+
+<div align="justify">
+
+> O projeto `Zonai` se inicia com a base de código da versão **System I** do Hexagonix, após o lançamento oficial da versão.
+
+O projeto Zonai é um fork do Hexagonix System I (ramo CURRENT), que objetiva desenvolver o próximo lançamento estável do sistema, a versão System II (sem cronograma de lançamento definido - o lançamento pode não ocorrer em 2024). Mais informações sobre o projeto em breve.
+
+</div>
+
+</details>
+
+<details title="Projeto Raava" align='left'>
+<summary align='left'><strong>Projeto Raava (2023-2024) - projeto concluído</strong></summary>
+<br>
+
+<div align="justify">
+
+> O projeto Raava foi concluído, dando origem ao **Hexagonix System I**.
+
+O projeto Raava é um fork do Hexagonix H2 Release 2 (ramo CURRENT), que objetiva desenvolver o próximo lançamento estável do sistema, a versão H3 (sem cronograma de lançamento definido - o lançamento pode não ocorrer em 2023). Para isso, o sistema parte de:
+
+- Hexagon baseado na antiga v1.3.6 (versão 1.3 revisão 6);
+- Base do Hexagonix H2 Release 2 (H2R2): H2-CURRENT+290320231532;
+- Hexagon v1.3.7 (versão 1.3 revisão 7) - 20/05/2023;
+
+</div>
+
+</details>
+
+## Versões descontinuadas (sem suporte)
+
+<div align="justify">
+
+Abaixo você pode ter acesso direto a algumas versões que se tornaram marcos na distribuição do sistema e ter acesso a informações resumidas sobre elas. Essas versões foram descontinuadas e não recebem mais atualizações e correções.
+
+> :construction: Aviso! Em 19/10/2023, a versão do Hexagon foi alterada para v1.0.0. Isso se deve à diversas melhorias e correções de estabilidade do sistema, além da correção de diversos bugs durante a execução do sistema. Além disso, novas funcionalidades adicionadas mostraram que agora o kernel se aproxima de uma maturidade e estabilidade. Desta forma, assim como a versão H1, a próxima edição do sistema será lançado com um kernel v1.0.0. Sendo assim, todas as versões do kernel reportadas abaixo dizem respeito a uma numeração anterior à remarcação de versão, e não dizem respeito às versões atuais do Hexagon.
+
+</div>
+
+<details title="Versões descontinuadas do Hexagonix" align='left'>
+<summary align='left'>Versões descontinuadas do Hexagonix</summary>
+<br>
 
 <details title="Hexagonix System I" align='left'>
 <summary align='left'><strong>Hexagonix System I</strong></summary>
 <br>
 
-<div align="justify">                                                                                                                          
+<div align="justify">
 
 > :construction: Aviso! Em 19/10/2023, a versão do Hexagon foi alterada para v1.0.0. Isso se deve à diversas melhorias e correções de estabilidade do sistema, além da correção de diversos bugs durante a execução do sistema. Desta forma, assim como versões antigas descontinuadas, o Hexagonix System I foi lançado com um kernel v1.0.0.
 
@@ -140,56 +336,6 @@ Changelog e informações técnicas desta versão:
 <img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
 </details>
-
-## Versões de desenvolvimento
-
-As versões de desenvolvimento do Hexagonix são nomeadas como `projetos` e podem dar origem à novas versões de lançamento do sistema. Essas versões apresentam componentes e características que podem estar instáveis ou inacabadas, e são inicialmente versões de pesquisa em design e implementação do Hexagonix. As versões de desenvolvimento, denominadas projetos, podem ou não ser a origem de uma nova versão de lançamento do Hexagonix, embora recursos possam ser implementados integralmente ou não em uma versão de lançamento. `Independente disso, o Hexagonix está sendo desenvolvido continuamente`.
-
-<details title="Projeto Zonai" align='left'>
-<summary align='left'><strong>Projeto Zonai (2024-atualmente) - em progresso</strong></summary>
-<br>
-
-<div align="justify">
-
-> O projeto `Zonai` se inicia com a base de código da versão **System I** do Hexagonix, após o lançamento oficial da versão.
-
-O projeto Zonai é um fork do Hexagonix System I (ramo CURRENT), que objetiva desenvolver o próximo lançamento estável do sistema, a versão System II (sem cronograma de lançamento definido - o lançamento pode não ocorrer em 2024). Mais informações sobre o projeto em breve.
-
-</div>
-
-</details>
-
-<details title="Projeto Raava" align='left'>
-<summary align='left'><strong>Projeto Raava (2023-2024) - projeto concluído</strong></summary>
-<br>
-
-<div align="justify">
-
-> O projeto Raava foi concluído, dando origem ao **Hexagonix System I**.
-
-O projeto Raava é um fork do Hexagonix H2 Release 2 (ramo CURRENT), que objetiva desenvolver o próximo lançamento estável do sistema, a versão H3 (sem cronograma de lançamento definido - o lançamento pode não ocorrer em 2023). Para isso, o sistema parte de:
-
-- Hexagon baseado na antiga v1.3.6 (versão 1.3 revisão 6);
-- Base do Hexagonix H2 Release 2 (H2R2): H2-CURRENT+290320231532;
-- Hexagon v1.3.7 (versão 1.3 revisão 7) - 20/05/2023;
-
-</div>
-
-</details>
-
-## Versões descontinuadas (sem suporte)
-
-<div align="justify">
-
-Abaixo você pode ter acesso direto a algumas versões que se tornaram marcos na distribuição do sistema e ter acesso a informações resumidas sobre elas. Essas versões foram descontinuadas e não recebem mais atualizações e correções.
-
-> :construction: Aviso! Em 19/10/2023, a versão do Hexagon foi alterada para v1.0.0. Isso se deve à diversas melhorias e correções de estabilidade do sistema, além da correção de diversos bugs durante a execução do sistema. Além disso, novas funcionalidades adicionadas mostraram que agora o kernel se aproxima de uma maturidade e estabilidade. Desta forma, assim como a versão H1, a próxima edição do sistema será lançado com um kernel v1.0.0. Sendo assim, todas as versões do kernel reportadas abaixo dizem respeito a uma numeração anterior à remarcação de versão, e não dizem respeito às versões atuais do Hexagon.
-
-</div>
-
-<details title="Versões descontinuadas do Hexagonix" align='left'>
-<summary align='left'>Versões descontinuadas do Hexagonix</summary>
-<br>
 
 <details title="Hexagonix H1" align='left'>
 <summary align='left'><strong>Hexagonix H1</strong></summary>
