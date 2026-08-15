@@ -64,7 +64,7 @@ Aqui você irá encontrar mais informações sobre as versões estáveis do Hexa
 
 O Hexagonix 1.0 é a versão mais completa e polida até hoje, e é também a primeira versão completamente funcional do sistema. Veja abaixo mais informações sobre este lançamento.
 
-> Versões anteriores, marcadas com o padrão `Hexagonix H*` ou `Hexagonix v1.*`-`Hexagon v*.*` com data anterior ao lançamento desta versão devem ser consideradas versões legadas, não funcionais e não suportadas.
+> Versões anteriores, marcadas com o padrão `Hexagonix H*` ou `Hexagonix v1.*`-`Hexagon v*.*`, com data anterior ao lançamento desta versão, devem ser consideradas versões legadas, não funcionais e não suportadas.
 
 **Data de lançamento**: 15/08/2026<br>
 
