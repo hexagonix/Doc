@@ -52,9 +52,9 @@ Aqui você pode obter mais informações sobre todas as versões do Hexagonix j�
 
 <img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
-## Versões estáveis
+## Versões suportadas
 
-Aqui você irá encontrar mais informações sobre as versões estáveis do Hexagonix lançadas, bem como mais informações sobre elas e o changelog oficial.
+Aqui você irá encontrar mais informações sobre as versões suportadas do Hexagonix, bem como mais informações sobre elas e o changelog oficial.
 
 <details title="Hexagonix 1.0" align='left'>
 <summary align='left'><strong>Hexagonix 1.0</strong></summary>
@@ -191,6 +191,20 @@ O Hexagonix 1.0 é a versão mais completa e polida até hoje, e é também a pr
 ## Versões de desenvolvimento
 
 As versões de desenvolvimento do Hexagonix são nomeadas como `projetos` e podem dar origem à novas versões de lançamento do sistema. Essas versões apresentam componentes e características que podem estar instáveis ou inacabadas, e são inicialmente versões de pesquisa em design e implementação do Hexagonix. As versões de desenvolvimento, denominadas projetos, podem ou não ser a origem de uma nova versão de lançamento do Hexagonix, embora recursos possam ser implementados integralmente ou não em uma versão de lançamento. `Independente disso, o Hexagonix está sendo desenvolvido continuamente`.
+
+<details title="Projeto Dormin" align='left'>
+<summary align='left'><strong>Projeto Dormin (2025-2026) - projeto concluído</strong></summary>
+<br>
+
+<div align="justify">
+
+> O projeto `Dormin` se inicia com a base de código da versão **System II** do Hexagonix, após o lançamento oficial da versão.
+
+O projeto se inicia visando a melhoria contínua do sistema, adicionando multitarefa preemptiva e demais melhorias.
+
+</div>
+
+</details>
 
 <details title="Projeto Zonai" align='left'>
 <summary align='left'><strong>Projeto Zonai (2024-2025) - projeto concluído</strong></summary>
