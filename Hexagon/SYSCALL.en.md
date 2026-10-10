@@ -55,6 +55,18 @@ The number and parameters of a function in the system call are always kept withi
 
 <img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
+## Descriptors
+
+Every process holds up to 8 descriptors, small numbers naming what it opened, like a Unix file descriptor. A process starts with a copy of its creator's descriptors, and the ones still open are closed when it ends.
+
+Descriptors 0, 1 and 2 name the controlling terminal of the process, the virtual terminal it is attached to, which makes them its standard input, output and error. They follow the process when it claims another virtual terminal through `hx.ioctl` command 3.
+
+Opening a device with `hx.open` takes the lowest free descriptor, which `hx.read`, `hx.write`, `hx.ioctl` and `hx.close` receive in EAX. Opening a common file loads it whole at the address given in EDI and takes no descriptor.
+
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
+
 ## Table of functions provides by Hexagon
 
 Now, a table with the Hexagonix system call functions, with every function gathered into a single table and sorted by category through the Group column.
@@ -77,9 +89,9 @@ Now, a table with the Hexagonix system call functions, with every function gathe
 | 12 | hx.setenv | Memory and Process Management | ESI = Name of the environment variable; EDI = Value | CF set if the environment does not have enough room left for the new entry | Defines or replaces an environment variable of the calling process|
 | 13 | hx.unsetenv | Memory and Process Management | ESI = Name of the environment variable | CF set if the variable is not defined | Removes an environment variable from the calling process|
 | 14 | hx.environ | Memory and Process Management | No input | ESI = Pointer to the raw, double NUL terminated environment block; EAX = Number of variables defined | Get every environment variable of the calling process|
-| 15 | hx.open | File and Device Management | ESI = Pointer to the device name, or to the path of the file to open (a leading `/` is absolute, otherwise relative to the current directory); EDI = Loading address, in case of file| CF set when device name is invalid or file does not exist | Opens a read/write channel on a requested device or common file present on disk (devices and disks are treated as files). In case of file on disk, a load address must be provided |
-| 16 | hx.write | File and Device Management | ESI = Pointer to the buffer containing the data | CF set on error or no device open | Send data to open device|
-| 17 | hx.close | File and Device Management | No input | No output | Closes the last device opened by the current process|
+| 15 | hx.open | File and Device Management | ESI = Pointer to the device name, or to the path of the file to open (a leading `/` is absolute, otherwise relative to the current directory); EDI = Loading address, in case of file; ECX = Byte cap on a file read, 0 for the whole file | EAX = Descriptor, for a device; CF set on error, with EAX holding its code (`0Ah` when the process has no free descriptor) | Opens a device and returns a [descriptor](#descriptors) for it, or loads a common file present on disk at the given address (devices and disks are treated as files)|
+| 16 | hx.write | File and Device Management | EAX = Descriptor; ESI = Pointer to the data; ECX = Number of bytes | EAX = Bytes written; CF set on error, with EAX holding its code (`09h` when the descriptor is not open) | Writes bytes to the device behind a descriptor. Written to a tty, they go through the [console terminal](TERMINAL.en.md)|
+| 17 | hx.close | File and Device Management | EAX = Descriptor | CF set if the descriptor is not open | Closes a descriptor|
 | 18 | hx.create | File and Device Management | ESI = Pointer to the path of the file to create (absolute or relative to the current directory); EDI = Pointer to the content; EAX = File Size | CF defined in case of error, file already present, or a directory in the path not existing (EAX = `IO.pathNotFound`) | Save a file on the mounted volume|
 | 19 | hx.touch | File and Device Management | ESI = Pointer to the path of the file to create (absolute or relative to the current directory) | CF set if the file already exists, a directory in the path does not exist, or the filename is longer than 12 characters | Creates a new, empty file on the mounted volume, unlike `hx.create` above, which writes content in one step. A file created by root comes out protected, through the SYSTEM attribute of FAT16B. See `hx.chown`|
 | 20 | hx.unlink | File and Device Management | ESI = Pointer to the path of the file to remove | CF defined in case of error, non-existing file, or removing a protected file (see `hx.chown`) as a non-root user | Remove a file on the mounted volume |
@@ -129,10 +141,11 @@ Now, a table with the Hexagonix system call functions, with every function gathe
 | 64 | hx.sendMessageHexagon | Messaging Service | ESI = Message; EAX = Error code, if any; EBX = Priority | No output | Sends a high priority message from Hexagon|
 | 65 | hx.date | Real Time Clock Services | EAX = Day, in ASCII; EBX = Month, in ASCII; ECX = Century, in ASCII; EDX = Year, in ASCII | No output | Returns real-time clock information in ASCII (String) format. Conversion to number may be required|
 | 66 | hx.time | Real Time Clock Services | EAX = Time, in ASCII; EBX = Minute, in ASCII; ECX = Second, in ASCII | No output | Returns real-time clock information in ASCII (String) format. Conversion to number may be required|
-| 67 | hx.ioctl | Device Control Service | EBX = Command; ECX = Argument for the command (the device must already be open via hx.open) | CF set if nothing is open, or the open device's class has no handler for this command | Device-specific control that does not fit the byte stream of read and write, dispatched to the class handler of the open device. For a tty, command 2 activates that virtual terminal|
+| 67 | hx.ioctl | Device Control Service | EAX = Descriptor; EBX = Command; ECX = Argument for the command | CF set if the descriptor is not open, or its class has no handler for this command | Device-specific control that does not fit the byte stream of read and write, dispatched to the class of the device behind the descriptor. For a tty, command 1 selects the console the process draws on (ECX = 0 for the main one, 1 for the secondary one presented by hx.updateScreen), command 2 activates that virtual terminal and command 3 claims it as the caller's own|
 | 68 | hx.chown | File and Device Management | ESI = Pointer to the path; EBX = Requested mode (only bit `0002h`, write for others, is inspected) | CF set on error; EAX = `01h` permission denied (root only), `02h` path not found | Applies a Unix-style mode to a path. Only root may call it. What the mode changes is up to the filesystem: FAT16B has no owner and no real permission bits, so it only derives whether the path becomes root-only-write, through its SYSTEM attribute, the same way the msdosfs driver of FreeBSD reduces chmod to the read-only DOS attribute. DEVFS ignores the call, without error|
 | 69 | hx.getTTY | Process Management Service | No input | EAX = VT index (0-7) | Tells the calling process which virtual terminal it is attached to, like ttyname() on Unix|
 | 70 | hx.sysctl | Kernel Diagnostics Service | EBX = Function number (only 1 exists: read the kernel log buffer); ESI = Caller's buffer; ECX = Caller's buffer size | EAX = Bytes copied; CF set on an unknown function number | Reads kernel diagnostic data into a buffer owned by the caller. Function 1 returns the log buffer of the kernel itself, without userland messages|
+| 71 | hx.read | File and Device Management | EAX = Descriptor; EDI = Caller's buffer; ECX = Maximum bytes | EAX = Bytes read; CF set on error, with EAX holding its code | Reads bytes from the device behind a descriptor, blocking until there is at least one. Only a tty can be read for now, and only by its own processes, as described in the [console terminal](TERMINAL.en.md#keys-read-from-a-tty)|
 
 <!-- Vai funcionar como <hr> -->
 

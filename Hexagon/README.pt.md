@@ -37,11 +37,12 @@ Algumas características do Hexagon:
 - [x] Multitarefa preemptiva, com escalonador round-robin e processo idle dedicado;
 - [x] Sete estados de processo (livre, pronto, em execução, bloqueado, dormindo, zumbi e idle);
 - [x] Criação de processos não bloqueante (spawn) e encerramento de processos por PID (kill);
-- [x] [Chamada de sistema](SYSCALL.pt.md) com 71 funções acessadas pelo ambiente de usuário;
+- [x] [Chamada de sistema](SYSCALL.pt.md) com 72 funções acessadas pelo ambiente de usuário;
 - [x] Formato binário executável próprio (HAPP);
 - [x] Unix-like;
 - [x] Completamente escrito em Assembly x86;
 - [x] Self-hosting (o montador usado para construir o Hexagon pode ser executado sobre ele);
+- [x] Descritores por processo, com um [terminal do console](TERMINAL.pt.md) que interpreta sequências de escape ANSI;
 - [x] Sistema de arquivos virtual;
 - [x] Abstração de dispositivos;
 - [x] Suporte total a leitura e escrita em sistemas de arquivos FAT16;

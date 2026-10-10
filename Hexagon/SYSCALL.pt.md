@@ -55,6 +55,18 @@ O número e parâmetros de uma função na chamada de sistema são sempre mantid
 
 <div align="justify">
 
+## Descritores
+
+Cada processo tem até 8 descritores, números pequenos que identificam o que ele abriu, como um descritor de arquivo do Unix. Um processo começa com uma cópia dos descritores de quem o criou, e os que ainda estiverem abertos são fechados quando ele termina.
+
+Os descritores 0, 1 e 2 identificam o terminal controlador do processo, o terminal virtual ao qual ele está ligado, e por isso são a sua entrada, saída e saída de erro padrão. Eles acompanham o processo quando ele reivindica outro terminal virtual pelo comando 3 de `hx.ioctl`.
+
+Abrir um dispositivo com `hx.open` ocupa o menor descritor livre, que `hx.read`, `hx.write`, `hx.ioctl` e `hx.close` recebem em EAX. Abrir um arquivo comum o carrega inteiro no endereço passado em EDI e não ocupa descritor.
+
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
+
 ## Tabela de funções disponibilzadas pelo Hexagon
 
 Agora, uma tabela com as funções da chamada de sistema do Hexagonix, com todas as funções reunidas em uma única tabela e classificadas por categoria através da coluna Grupo.
@@ -77,9 +89,9 @@ Agora, uma tabela com as funções da chamada de sistema do Hexagonix, com todas
 | 12 | hx.setenv | Gerenciamento de memória e processos | ESI = Nome da variável de ambiente; EDI = Valor | CF definido se não houver espaço suficiente no ambiente para a nova entrada | Define ou substitui uma variável de ambiente do processo chamador|
 | 13 | hx.unsetenv | Gerenciamento de memória e processos | ESI = Nome da variável de ambiente | CF definido se a variável não estiver definida | Remove uma variável de ambiente do processo chamador|
 | 14 | hx.environ | Gerenciamento de memória e processos | Sem entrada | ESI = Ponteiro para o bloco de ambiente bruto, terminado por dois NUL; EAX = Número de variáveis definidas | Obtém todas as variáveis de ambiente do processo chamador|
-| 15 | hx.open | Gerenciamento de arquivos e dispositivos | ESI = Ponteiro para o nome do dispositivo, ou para o caminho do arquivo a abrir (uma `/` inicial é absoluto, caso contrário é relativo ao diretório atual); EDI = Endereço de carregamento, em caso de arquivo| CF definido quando o nome do dispositivo for inválido ou arquivo não existir | Abre um canal de leitura/escrita em um dispositivo solicitado ou arquivo comum presente no disco (dispositivos e discos são tratados como arquivos). Em caso de arquivo no disco, um endereço de carregamento deve ser fornecido|
-| 16 | hx.write | Gerenciamento de arquivos e dispositivos |  ESI = Ponteiro com o buffer contendo os dados | CF definido em caso de erro ou nenhum dispositivo aberto | Envia dados para o dispositivo aberto|
-| 17 | hx.close | Gerenciamento de arquivos e dispositivos | Sem entrada | Sem saída | Fecha o último dispositivo aberto pelo processo atual|
+| 15 | hx.open | Gerenciamento de arquivos e dispositivos | ESI = Ponteiro para o nome do dispositivo, ou para o caminho do arquivo a abrir (uma `/` inicial é absoluto, caso contrário é relativo ao diretório atual); EDI = Endereço de carregamento, em caso de arquivo; ECX = Limite de bytes na leitura de um arquivo, 0 para o arquivo inteiro | EAX = Descritor, para um dispositivo; CF definido em caso de erro, com o código em EAX (`0Ah` quando o processo não tem descritor livre) | Abre um dispositivo e retorna um [descritor](#descritores) para ele, ou carrega um arquivo comum presente no disco no endereço fornecido (dispositivos e discos são tratados como arquivos)|
+| 16 | hx.write | Gerenciamento de arquivos e dispositivos | EAX = Descritor; ESI = Ponteiro para os dados; ECX = Número de bytes | EAX = Bytes escritos; CF definido em caso de erro, com o código em EAX (`09h` quando o descritor não está aberto) | Escreve bytes no dispositivo por trás de um descritor. Escritos em uma tty, passam pelo [terminal do console](TERMINAL.pt.md)|
+| 17 | hx.close | Gerenciamento de arquivos e dispositivos | EAX = Descritor | CF definido se o descritor não estiver aberto | Fecha um descritor|
 | 18 | hx.create | Gerenciamento de arquivos e dispositivos |  ESI = Ponteiro para o caminho do arquivo a criar (absoluto ou relativo ao diretório atual); EDI = Ponteiro para o conteúdo; EAX = Tamanho do arquivo | CF definido em caso de erro, arquivo já presente, ou uma pasta do caminho não existir (EAX = `IO.pathNotFound`) | Salva um arquivo no volume montado|
 | 19 | hx.touch | Gerenciamento de arquivos e dispositivos | ESI = Ponteiro para o caminho do arquivo a criar (absoluto ou relativo ao diretório atual) | CF definido se o arquivo já existir, uma pasta do caminho não existir, ou o nome do arquivo tiver mais de 12 caracteres | Cria um novo arquivo vazio no volume montado, diferente do `hx.create` acima, que grava conteúdo em uma única etapa. Um arquivo criado por root sai protegido, pelo atributo SYSTEM do FAT16B. Veja `hx.chown`|
 | 20 | hx.unlink | Gerenciamento de arquivos e dispositivos | ESI = Ponteiro para o caminho do arquivo a remover | CF definido em caso de erro, arquivo não existente, ou remoção de um arquivo protegido (veja `hx.chown`) por um usuário não-root | Remove um arquivo no volume montado |
@@ -129,10 +141,11 @@ Agora, uma tabela com as funções da chamada de sistema do Hexagonix, com todas
 | 64 | hx.sendMessageHexagon | Serviço de mensagens | ESI = Mensagem; EAX = Código de erro, se houver; EBX = Prioridade | Sem saída | Envia uma mensagem de alta prioridade do Hexagon|
 | 65 | hx.date | Serviços de relógio em tempo real | EAX = Dia, em ASCII;  EBX = Mês, em ASCII; ECX = Século, em ASCII; EDX = Ano, em ASCII  | Sem saída | Retorna informações de relógio em tempo real em formato ASCII (String). Conversão para número pode ser necessária|
 | 66 | hx.time | Serviços de relógio em tempo real | EAX = Hora, em ASCII; EBX = Minuto, em ASCII; ECX = Segundo, em ASCII | Sem saída | Retorna informações de relógio em tempo real em formato ASCII (String). Conversão para número pode ser necessária|
-| 67 | hx.ioctl | Serviço de controle de dispositivo | EBX = Comando; ECX = Argumento do comando (o dispositivo deve estar aberto via hx.open) | CF definido se nada estiver aberto, ou se a classe do dispositivo aberto não tratar o comando | Controle específico de dispositivo que não se encaixa no fluxo de bytes de leitura e escrita, despachado para o tratador da classe do dispositivo aberto. Para uma tty, o comando 2 ativa aquele terminal virtual|
+| 67 | hx.ioctl | Serviço de controle de dispositivo | EAX = Descritor; EBX = Comando; ECX = Argumento do comando | CF definido se o descritor não estiver aberto, ou se a sua classe não tratar o comando | Controle específico de dispositivo que não se encaixa no fluxo de bytes de leitura e escrita, despachado para a classe do dispositivo por trás do descritor. Para uma tty, o comando 1 escolhe o console em que o processo desenha (ECX = 0 para o principal, 1 para o secundário apresentado por hx.updateScreen), o comando 2 ativa aquele terminal virtual e o comando 3 o reivindica como do próprio chamador|
 | 68 | hx.chown | Gerenciamento de arquivos e dispositivos | ESI = Ponteiro para o caminho; EBX = Modo solicitado (só o bit `0002h`, escrita para outros, é observado) | CF definido em caso de erro; EAX = `01h` permissão negada (só root), `02h` caminho não encontrado | Aplica um modo no estilo Unix a um caminho. Só root pode chamar. O que o modo muda depende do sistema de arquivos: o FAT16B não tem dono nem bits de permissão reais, então só deriva se o caminho passa a ser de escrita exclusiva de root, pelo seu atributo SYSTEM, do mesmo jeito que o driver msdosfs do FreeBSD reduz o chmod ao atributo read-only do DOS. O DEVFS ignora a chamada, sem erro|
 | 69 | hx.getTTY | Serviço de gerenciamento de processos | Sem entrada | EAX = Índice da VT (0-7) | Informa ao processo chamador a qual terminal virtual ele está conectado, como o ttyname() do Unix|
 | 70 | hx.sysctl | Serviço de diagnóstico do kernel | EBX = Número da função (apenas 1 existe: ler o buffer de log do kernel); ESI = Buffer do chamador; ECX = Tamanho do buffer do chamador | EAX = Bytes copiados; CF definido em caso de número de função desconhecido | Lê dados de diagnóstico do kernel em um buffer que pertence ao chamador. A função 1 retorna o buffer de log do próprio kernel, sem as mensagens de userland|
+| 71 | hx.read | Gerenciamento de arquivos e dispositivos | EAX = Descritor; EDI = Buffer do chamador; ECX = Máximo de bytes | EAX = Bytes lidos; CF definido em caso de erro, com o código em EAX | Lê bytes do dispositivo por trás de um descritor, bloqueando até haver pelo menos um. Por enquanto só uma tty pode ser lida, e apenas pelos seus próprios processos, como descrito no [terminal do console](TERMINAL.pt.md#teclas-lidas-de-uma-tty)|
 
 <!-- Vai funcionar como <hr> -->
 
