@@ -93,49 +93,115 @@ Please read the [license](https://github.com/hexagonix/Doc/blob/main/LICENSES/BS
 Below you can find an example of HBoot module implementation:
 
 ```assembly
-;;**************************************************** ***********************************
+;;************************************************************************************
 ;;
 ;;
 ;; HBoot Module
 ;;
 ;; Hexagon Boot - HBoot
 ;;
-;; Copyright © 2020-2021 Felipe Miguel Nery Lunkes
+;; Copyright © 2020-2026 Felipe Miguel Nery Lunkes
 ;; All rights reserved
 ;;
-;;**************************************************** ***********************************
+;;************************************************************************************
 
 use16
 
 ;; The module must have a special HBoot image header
-;; There are 6 bytes, with signature (magic number) and target architecture
+;; There are 16 bytes, with signature (magic number), target architecture,
+;; version, subversion and internal name, the last one with up to 8 bytes
 
 HBootHeader:
 
-.signature:    db "HBOOT" ;; Signature, 5 bytes
-.architecture: db 01h     ;; Architecture (i386), 1 byte
+.signature:    db "HBOOT"    ;; Signature, 5 bytes
+.architecture: db 01h        ;; Architecture (i386), 1 byte
+.modVersion:   db 01h        ;; Version
+.modSubversion: db 00h       ;; Subversion
+.modName:      db "EXAMPLE " ;; Module name
 
-;; Configure stack and pointer
+HBOOT_SERVICES = 20h ;; Interrupt HBoot answers a module on
 
-    cli;; Disable interrupts
-    
-    mov ax, 0x2000 ;; Define stack registers here
-    mov ss, ax
-    mov sp, 0
-    
-    sti;; Enable interrupts
-     
-    clc
+;; The module starts executing at offset 10h, right past the header. The stack
+;; and the segment it was loaded into come from HBoot, so all it takes is
+;; reading the segment out of CS, which cannot be copied straight into DS and ES
 
-    mov ax, 0x2000 ;; Define segment registers here
+moduleStart:
+
+    mov ax, cs
     mov ds, ax
     mov es, ax
-    
-    sti;; Enable interrupts
 
-;; Your code here
+;; Your code here. Printing is a service of HBoot itself, so a module does not
+;; have to carry its own routine to write on the screen
 
+    mov si, message
+    mov ah, 01h
+
+    int HBOOT_SERVICES
+
+;; Returning to HBoot is a service as well, and it is the only way back
+
+    mov ah, 05h
+
+    int HBOOT_SERVICES
+
+message:
+db 13, 10, "Module started successfully.", 13, 10, 0
 ```
+
+### HBoot services for modules
+
+A module gets the whole machine to itself and, left alone, would have to carry its own copy of everything HBoot already does. To avoid that, HBoot installs interrupt `20h` before handing control over, and answers the module on it.
+
+The contract is the same for every function and does not vary:
+
+* On entry, `AH` holds the function number;
+* On exit, `CF` is clear if the function succeeded and set if it failed, with `EAX` holding the result of the function or, when `CF` is set, the error code;
+* Every other register, and every segment register, comes back exactly as it went in. A module may call from any stack, at any depth.
+
+The available functions:
+
+| Function | Description | Entry | Exit |
+| --- | --- | --- | --- |
+| `00h` | Interface information | `ES:DI` points to a buffer of 8 bytes | Buffer filled and `EAX` = 0 |
+| `01h` | Print a string | `DS:SI` points to it, terminated by a 0, with no limit to its length | `EAX` = 0 |
+| `02h` | Volume information | `ES:DI` points to a buffer of 12 bytes | Buffer filled and `EAX` = 0 |
+| `03h` | Load a file | `DS:SI` points to its path, terminated by a 0, and `ES` is the segment it is loaded into, from offset 0 | `EAX` holds the size of the file in bytes |
+| `04h` | Read sectors | `EBX` is the first LBA, `CX` the number of sectors and `ES:DI` the buffer they are read into | `EAX` = 0 |
+| `05h` | Return to HBoot | — | Does not come back |
+
+The error codes returned in `EAX`:
+
+| Code | Meaning |
+| --- | --- |
+| `01h` | No such function number |
+| `02h` | Path names nothing the volume can hold |
+| `03h` | No such file on the volume |
+| `04h` | Function called with a value it cannot use |
+
+The buffer function `00h` fills lets a module tell which interface it is talking to before relying on it:
+
+```assembly
+.signature:   db "HBSV" ;; 4 bytes
+.version:     db 01h
+.subversion:  db 00h
+.functions:   db 05h    ;; Highest function number answered
+.reserved:    db 00h
+```
+
+The buffer function `02h` fills describes the volume HBoot booted from:
+
+```assembly
+.BPB:          dd 0 ;; Flat address of the BIOS Parameter Block
+.partitionLBA: dd 0 ;; LBA the partition starts at
+.drive:        db 0 ;; Drive HBoot was loaded from
+.filesystem:   db 0 ;; Filesystem code
+.reserved:     dw 0
+```
+
+Function `03h` takes the path written the same way the user writes it on HBoot's own command line, as in `/boot/hexagon`. A path may name at most one directory, and each name in it at most 8 characters plus a 3 character extension.
+
+Returning to HBoot is function `05h`, and it is the only way back. Restarting the machine or jumping straight to HBoot's entry point does not work: HBoot reads the volume it was loaded from out of registers a module is free to have used. After function `05h`, HBoot picks the boot up again from where it left off.
 
 ### Supported file systems
 

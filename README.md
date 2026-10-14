@@ -65,6 +65,7 @@ Now select the document relating to system components or technical and developme
 | Document name | Description |
 |:-------------:|:-----------:|
 |[System Calls](https://github.com/hexagonix/Doc/tree/main/Hexagon/SYSCALL.en.md)|Hexagon System Calls documentation|
+|[HXBI](https://github.com/hexagonix/Doc/tree/main/Hexagon/HXBI.en.md)|The block HBoot hands the kernel at boot|
 |[libasm](https://github.com/hexagonix/Doc/tree/main/lib/README.en.md)| libasm - x86 Assembly development library|
 
 <img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
@@ -103,4 +104,5 @@ Selecione agora o documento relativo a componentes do sistema ou a informações
 | Nome do documento | Descrição |
 |:-----------------:|:---------:|
 |[Chamadas de sistema](https://github.com/hexagonix/Doc/tree/main/Hexagon/SYSCALL.pt.md)|Documentação das chamadas de sistema do Hexagon|
+|[HXBI](https://github.com/hexagonix/Doc/tree/main/Hexagon/HXBI.pt.md)|O bloco que o HBoot entrega ao kernel na inicialização|
 |[libasm](https://github.com/hexagonix/Doc/tree/main/lib/README.pt.md)| libasm - bibliotecas de desenvolvimento Assembly x86|

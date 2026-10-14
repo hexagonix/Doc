@@ -95,47 +95,114 @@ Abaixo é possível encontrar um exemplo de implementação de módulo HBoot:
 ```assembly
 ;;************************************************************************************
 ;;
-;;    
+;;
 ;; Módulo do HBoot
-;;        
+;;
 ;; Hexagon Boot - HBoot
-;;           
-;; Copyright © 2020-2021 Felipe Miguel Nery Lunkes
+;;
+;; Copyright © 2020-2026 Felipe Miguel Nery Lunkes
 ;; Todos os direitos reservados
-;;                                  
+;;
 ;;************************************************************************************
 
-use16					
+use16
 
 ;; O módulo deve apresentar um cabeçalho especial de imagem HBoot
-;; São 6 bytes, com assinatura (número mágico) e arquitetura alvo
+;; São 16 bytes, com assinatura (número mágico), arquitetura alvo, versão,
+;; subversão e nome interno, este último com até 8 bytes
 
 cabecalhoHBoot:
 
-.assinatura:  db "HBOOT"     ;; Assinatura, 5 bytes
-.arquitetura: db 01h         ;; Arquitetura (i386), 1 byte
+.assinatura:  db "HBOOT"    ;; Assinatura, 5 bytes
+.arquitetura: db 01h        ;; Arquitetura (i386), 1 byte
+.versaoMod:   db 01h        ;; Versão
+.subverMod:   db 00h        ;; Subversão
+.nomeMod:     db "EXEMPLO " ;; Nome do módulo
 
-;; Configurar pilha e ponteiro
+SERVICOS_HBOOT = 20h ;; Interrupção pela qual o HBoot atende um módulo
 
-    cli				   ;; Desativar interrupções
-    
-    mov ax, 0x2000     ;; Definir aqui os registradores de pilha
-    mov ss, ax
-    mov sp, 0
-    
-    sti				   ;; Habilitar interrupções
-     
-    clc 
+;; O módulo começa a ser executado no deslocamento 10h, logo após o cabeçalho.
+;; A pilha e o segmento de carregamento são fornecidos pelo HBoot, então basta
+;; obter o segmento a partir de CS, que não pode ser copiado diretamente para
+;; DS e ES
 
-    mov ax, 0x2000     ;; Definir aqui os registradores de segmento
+inicioModulo:
+
+    mov ax, cs
     mov ds, ax
     mov es, ax
-    
-    sti                ;; Habilitar as interrupções
 
-;; Seu código aqui
+;; Seu código aqui. Exibir uma mensagem é um serviço do próprio HBoot, então o
+;; módulo não precisa carregar a sua própria rotina de escrita na tela
 
+    mov si, mensagem
+    mov ah, 01h
+
+    int SERVICOS_HBOOT
+
+;; O retorno ao HBoot também é um serviço, e é o único caminho de volta
+
+    mov ah, 05h
+
+    int SERVICOS_HBOOT
+
+mensagem:
+db 13, 10, "Modulo iniciado com sucesso.", 13, 10, 0
 ```
+
+### Serviços do HBoot para módulos
+
+Um módulo recebe a máquina inteira para si e, sem ajuda, precisaria carregar sua própria cópia de tudo o que o HBoot já faz. Para evitar isso, o HBoot instala a interrupção `20h` antes de entregar o controle e atende o módulo por ela.
+
+O contrato é o mesmo para todas as funções e não varia:
+
+* Na entrada, `AH` contém o número da função;
+* Na saída, `CF` estará limpo caso a função tenha tido sucesso e marcado caso tenha falhado, com `EAX` contendo o resultado da função ou, quando `CF` estiver marcado, o código do erro;
+* Todos os demais registradores, incluindo os de segmento, retornam exatamente como entraram. O módulo pode chamar a interrupção a partir de qualquer pilha e de qualquer profundidade.
+
+As funções disponíveis:
+
+| Função | Descrição | Entrada | Saída |
+| --- | --- | --- | --- |
+| `00h` | Informações da interface | `ES:DI` aponta para um buffer de 8 bytes | Buffer preenchido e `EAX` = 0 |
+| `01h` | Exibir mensagem | `DS:SI` aponta para o texto, terminado em 0, sem limite de tamanho | `EAX` = 0 |
+| `02h` | Informações do volume | `ES:DI` aponta para um buffer de 12 bytes | Buffer preenchido e `EAX` = 0 |
+| `03h` | Carregar arquivo | `DS:SI` aponta para o caminho, terminado em 0, e `ES` é o segmento de destino, a partir do deslocamento 0 | `EAX` contém o tamanho do arquivo em bytes |
+| `04h` | Ler setores | `EBX` é o primeiro LBA, `CX` a quantidade de setores e `ES:DI` o buffer de destino | `EAX` = 0 |
+| `05h` | Retornar ao HBoot | — | Não retorna |
+
+Os códigos de erro devolvidos em `EAX`:
+
+| Código | Significado |
+| --- | --- |
+| `01h` | Função inexistente |
+| `02h` | Caminho que o volume não é capaz de representar |
+| `03h` | Arquivo não encontrado no volume |
+| `04h` | Função chamada com um valor que não pode ser utilizado |
+
+O buffer preenchido pela função `00h` permite ao módulo verificar com qual interface está falando antes de depender dela:
+
+```assembly
+.assinatura:  db "HBSV" ;; 4 bytes
+.versao:      db 01h
+.subversao:   db 00h
+.funcoes:     db 05h    ;; Maior número de função atendido
+.reservado:   db 00h
+```
+
+O buffer preenchido pela função `02h` descreve o volume a partir do qual o HBoot foi iniciado:
+
+```assembly
+.BPB:          dd 0 ;; Endereço plano do BIOS Parameter Block
+.particaoLBA:  dd 0 ;; LBA onde a partição começa
+.unidade:      db 0 ;; Unidade da qual o HBoot foi carregado
+.sistema:      db 0 ;; Código do sistema de arquivos
+.reservado:    dw 0
+```
+
+A função `03h` recebe o caminho da mesma forma que o usuário o escreve na linha de comando do HBoot, como em `/boot/hexagon`. Um caminho pode nomear no máximo um diretório, e cada nome nele no máximo 8 caracteres mais uma extensão de 3.
+
+O retorno ao HBoot é a função `05h` e é o único caminho de volta. Reiniciar a máquina ou saltar direto para o ponto de entrada do HBoot não funciona: o HBoot obtém o volume do qual foi carregado a partir de registradores que o módulo é livre para ter utilizado. Após a função `05h`, o HBoot retoma a inicialização de onde havia parado.
 
 ### Sistemas de arquivos suportados
 
