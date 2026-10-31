@@ -95,9 +95,34 @@ Uma sequência comporta no máximo 5 parâmetros, então uma cor de fonte e uma 
 
 <img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
-## Teclas lidas de uma tty
+## Leitura de uma tty
 
-`hx.read` em uma tty retorna o que é digitado conforme chega, sem eco e sem edição de linha. Teclas sem caractere próprio viram as sequências que um terminal envia para elas.
+O que `hx.read` retorna de uma tty depende do modo daquela tty, que pertence à tty e não aos seus processos, como o `c_lflag` do `termios`. O comando 4 de `hx.ioctl` o retorna em EAX e o comando 5 o define a partir de ECX:
+
+| Bit | Nome | Efeito |
+|:---:|:----:|:------:|
+| `01h` | Canônico | Linhas, reunidas e editadas pelo kernel |
+| `02h` | Eco | O que é digitado aparece enquanto se digita |
+
+Uma tty começa com os dois, o modo "cooked" do BSD. A biblioteca [`tty.s`](https://github.com/hexagonix/lib/blob/main/fasm/tty.s) da libasm tem `ttyGetMode` e `ttySetMode` para eles.
+
+### Modo canônico
+
+Uma leitura espera uma linha inteira e a retorna com o seu `0Ah`. Uma linha maior que o buffer de uma leitura é retornada nas leituras seguintes. Uma linha comporta no máximo 255 bytes, contando o seu fim.
+
+| Tecla | Byte | Efeito |
+|:-----:|:----:|:------:|
+| Enter | `0Ah` | Termina a linha |
+| Backspace | `08h` ou `7Fh` | Apaga o último caractere |
+| Ctrl+W | `17h` | Apaga a última palavra |
+| Ctrl+U | `15h` | Apaga a linha inteira |
+| Ctrl+D | `04h` | Retorna o que foi digitado, sem fim de linha. Em uma linha vazia a leitura retorna 0, o fim do arquivo |
+
+As setas, Home, End e Delete não fazem nada em uma linha. Editar em qualquer ponto dela fica a cargo do programa, como faz a `readLine` do `tty.s` sobre o modo cru.
+
+### Modo cru
+
+Uma leitura retorna o que é digitado conforme chega, pelo menos um byte. Ctrl com uma letra dá o seu caractere de controle, de `01h` a `1Ah`, exceto Ctrl+C, que encerra o processo em primeiro plano. Teclas sem caractere próprio viram as sequências que um terminal envia para elas, enquanto o teclado numérico digita os seus números.
 
 | Tecla | Bytes |
 |:-----:|:-----:|

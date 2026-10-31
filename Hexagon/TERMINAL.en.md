@@ -95,9 +95,34 @@ A sequence holds at most 5 parameters, so a font and a background color given in
 
 <img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
 
-## Keys read from a tty
+## Reading a tty
 
-`hx.read` on a tty returns what is typed as it comes, with no echo and no line editing. Keys with no character of their own become the sequences a terminal sends for them.
+What `hx.read` returns from a tty depends on the mode of that tty, kept by the tty and not by its processes, in the manner of the `c_lflag` of `termios`. `hx.ioctl` command 4 returns it in EAX and command 5 sets it from ECX:
+
+| Bit | Name | Effect |
+|:---:|:----:|:------:|
+| `01h` | Canonical | Lines, gathered and edited by the kernel |
+| `02h` | Echo | What is typed is shown as it is typed |
+
+A tty starts with both, the cooked mode of BSD. The [`tty.s`](https://github.com/hexagonix/lib/blob/main/fasm/tty.s) library of libasm has `ttyGetMode` and `ttySetMode` for them.
+
+### Canonical mode
+
+A read waits for a whole line and returns it with its `0Ah`. A line longer than the buffer of a read is returned over the next reads. A line holds 255 bytes at most, its end included.
+
+| Key | Byte | Effect |
+|:---:|:----:|:------:|
+| Enter | `0Ah` | Ends the line |
+| Backspace | `08h` or `7Fh` | Erases the last character |
+| Ctrl+W | `17h` | Erases the last word |
+| Ctrl+U | `15h` | Erases the whole line |
+| Ctrl+D | `04h` | Returns what was typed, with no end of line. On an empty line the read returns 0, the end of the file |
+
+The arrows, Home, End and Delete do nothing in a line. Editing anywhere in it is up to the program, as `readLine` in `tty.s` does over the raw mode.
+
+### Raw mode
+
+A read returns what is typed as it comes, at least one byte. Ctrl with a letter gives its control character, `01h` to `1Ah`, except Ctrl+C, which ends the foreground process. Keys with no character of their own become the sequences a terminal sends for them, while the numeric keypad types its digits.
 
 | Key | Bytes |
 |:---:|:-----:|

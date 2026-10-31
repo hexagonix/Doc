@@ -58,6 +58,7 @@ Abaixo, uma lista com cada biblioteca dentro do pacote da libasm:
 |[`macros.s`](https://github.com/hexagonix/lib/blob/main/fasm/macros.s)| Macros avançados para facilitar o desenvolvimento de utilitários|
 |[`memory.s`](https://github.com/hexagonix/lib/blob/main/fasm/memory.s)| Macros para manipulação de valores de memória|
 |[`passwdHash.s`](https://github.com/hexagonix/lib/blob/main/fasm/passwdHash.s)| Hash de senhas e consulta ao `/shadow`, compartilhados por login, su, adduser, passwd e deluser|
+|[`tty.s`](https://github.com/hexagonix/lib/blob/main/fasm/tty.s)| O terminal do processo: leitura e definição do seu modo, e a `readLine`, que edita uma linha sobre o modo cru|
 |[`verUtils.s`](https://github.com/hexagonix/lib/blob/main/fasm/verUtils.s)| Funções para obter e processar informações de versão do Hexagonix|
 
 Além disso, existe uma biblioteca específica, chamada `Estelar`. Essa biblioteca é dividida em dois componentes, [`Estelar`](https://github.com/hexagonix/lib/blob/main/fasm/Estelar/estelar.s) e [`Bigbang`](https://github.com/hexagonix/lib/blob/main/fasm/Estelar/bigbang.s). Essa biblioteca tem como objetivo facilitar o desenvolvimento de utilitários gráficos e que utilizem saída de som.

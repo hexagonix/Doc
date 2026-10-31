@@ -37,7 +37,7 @@ Some features of Hexagon:
 - [x] Preemptive multitasking, with a round-robin scheduler and a dedicated idle process;
 - [x] Seven process states (free, ready, running, blocked, sleeping, zombie and idle);
 - [x] Non-blocking process creation (spawn) and process termination by PID (kill);
-- [x] [System call](SYSCALL.en.md) with 72 functions accessed by the user environment;
+- [x] [System call](SYSCALL.en.md) with 71 functions accessed by the user environment;
 - [x] Own executable binary format (HAPP);
 - [x] Unix-like;
 - [x] Completely written in x86 Assembly;
