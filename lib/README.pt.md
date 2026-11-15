@@ -48,7 +48,7 @@ Abaixo, uma lista com cada biblioteca dentro do pacote da libasm:
 
 | Biblioteca | Funções |
 |:----------:|:-------:|
-|[`console.s`](https://github.com/hexagonix/lib/blob/main/fasm/console.s)| Funções para manipulação do console (físico e virtual)|
+|[`console.s`](https://github.com/hexagonix/lib/blob/main/fasm/console.s)| Funções para manipulação do console (físico e virtual), escritas como sequências de escape no descritor 1, e por isso também funcionam em um pseudoterminal: entre elas `gotoxy`, `gotoColumn`, `saveCursor`, `restoreCursor`, `clearConsoleLine`, `setConsoleColor`, `setConsoleForeground`, `resetConsoleColor`, `reverseConsoleColor` e `putCharacter`|
 |[`dev.s`](https://github.com/hexagonix/lib/blob/main/fasm/dev.s)| Constantes para acessar os dispositivos reconhecidos pelo Hexagon|
 |[`errors.s`](https://github.com/hexagonix/lib/blob/main/fasm/errors.s)| Definição de erros em resposta a chamadas de sistema do Hexagon|
 |[`HAPP.s`](https://github.com/hexagonix/lib/blob/main/fasm/HAPP.s)| Macro para a criação de um cabaçalho HAPP para imagens executáveis|
@@ -58,7 +58,7 @@ Abaixo, uma lista com cada biblioteca dentro do pacote da libasm:
 |[`macros.s`](https://github.com/hexagonix/lib/blob/main/fasm/macros.s)| Macros avançados para facilitar o desenvolvimento de utilitários|
 |[`memory.s`](https://github.com/hexagonix/lib/blob/main/fasm/memory.s)| Macros para manipulação de valores de memória|
 |[`passwdHash.s`](https://github.com/hexagonix/lib/blob/main/fasm/passwdHash.s)| Hash de senhas e consulta ao `/shadow`, compartilhados por login, su, adduser, passwd e deluser|
-|[`tty.s`](https://github.com/hexagonix/lib/blob/main/fasm/tty.s)| O terminal do processo: leitura e definição do seu modo, e a `readLine`, que edita uma linha sobre o modo cru|
+|[`tty.s`](https://github.com/hexagonix/lib/blob/main/fasm/tty.s)| O terminal do processo: leitura e definição do seu modo, o tamanho da sua janela com `ttyGetSize`, a `readKey`, que espera uma única tecla, e a `readLine`, que edita uma linha sobre o modo cru|
 |[`verUtils.s`](https://github.com/hexagonix/lib/blob/main/fasm/verUtils.s)| Funções para obter e processar informações de versão do Hexagonix|
 
 Além disso, existe uma biblioteca específica, chamada `Estelar`. Essa biblioteca é dividida em dois componentes, [`Estelar`](https://github.com/hexagonix/lib/blob/main/fasm/Estelar/estelar.s) e [`Bigbang`](https://github.com/hexagonix/lib/blob/main/fasm/Estelar/bigbang.s). Essa biblioteca tem como objetivo facilitar o desenvolvimento de utilitários gráficos e que utilizem saída de som.

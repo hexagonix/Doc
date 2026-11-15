@@ -59,6 +59,7 @@ CSI stands for ESC followed by `[`. Parameters are decimal numbers separated by 
 | `CSI n B` | Cursor down n rows |
 | `CSI n C` | Cursor forward n columns |
 | `CSI n D` | Cursor back n columns |
+| `CSI n G` | Cursor to column n of its row |
 | `CSI row ; column H` | Cursor to that row and column, also `f` |
 | `CSI J` | Clears from the cursor to the end of the screen |
 | `CSI 2 J` | Clears the whole screen, also `3 J` |
@@ -66,6 +67,8 @@ CSI stands for ESC followed by `[`. Parameters are decimal numbers separated by 
 | `CSI 1 K` | Clears from the start of the line to the cursor |
 | `CSI 2 K` | Clears the whole line |
 | `CSI ... m` | Colors, as below |
+| `ESC 7` | Saves the position of the cursor |
+| `ESC 8` | Puts the cursor back where `ESC 7` saved it, at the top left corner if nothing was saved |
 
 Clearing never moves the cursor. An unknown sequence is consumed whole and draws nothing, and so are private ones such as `CSI ? 25 l` and those with an intermediate byte such as `ESC ( B`.
 
@@ -78,6 +81,8 @@ Clearing never moves the cursor. An unknown sequence is consumed whole and draws
 | Parameter of `CSI ... m` | Effect |
 |:------------------------:|:------:|
 | `0` | Back to the colors of the theme |
+| `7` | Font and background swapped, until `27` or `0` |
+| `27` | Font and background back in place |
 | `30` to `37` | Font color, from the palette below |
 | `90` to `97` | Bright font color |
 | `40` to `47` | Background color |
@@ -103,8 +108,11 @@ What `hx.read` returns from a tty depends on the mode of that tty, kept by the t
 |:---:|:----:|:------:|
 | `01h` | Canonical | Lines, gathered and edited by the kernel |
 | `02h` | Echo | What is typed is shown as it is typed |
+| `04h` | ISIG | Ctrl+C ends what runs on the terminal |
 
-A tty starts with both, the cooked mode of BSD. The [`tty.s`](https://github.com/hexagonix/lib/blob/main/fasm/tty.s) library of libasm has `ttyGetMode` and `ttySetMode` for them.
+A tty starts with all three, the cooked mode of BSD. The [`tty.s`](https://github.com/hexagonix/lib/blob/main/fasm/tty.s) library of libasm has `ttyGetMode` and `ttySetMode` for them, and `readKey`, which waits for a single key in raw mode and puts the mode back.
+
+With ISIG, Ctrl+C on a virtual terminal ends its foreground process, as `SIGINT` would in BSD, though there are no signals yet. Without it, Ctrl+C reaches the program as the byte `03h`, which lets a program in raw mode, such as a terminal emulator, pass it on. `readLine` turns ISIG off while it reads, and drops the line on `03h`, showing `^C` as the shells of BSD do, so Ctrl+C at a prompt does not end the shell.
 
 ### Canonical mode
 
@@ -122,7 +130,7 @@ The arrows, Home, End and Delete do nothing in a line. Editing anywhere in it is
 
 ### Raw mode
 
-A read returns what is typed as it comes, at least one byte. Ctrl with a letter gives its control character, `01h` to `1Ah`, except Ctrl+C, which ends the foreground process. Keys with no character of their own become the sequences a terminal sends for them, while the numeric keypad types its digits.
+A read returns what is typed as it comes, at least one byte. Ctrl with a letter gives its control character, `01h` to `1Ah`, Ctrl+C included when ISIG is off. Keys with no character of their own become the sequences a terminal sends for them, while the numeric keypad types its digits.
 
 | Key | Bytes |
 |:---:|:-----:|
@@ -138,5 +146,40 @@ A read returns what is typed as it comes, at least one byte. Ctrl with a letter 
 | Backspace | `08h` |
 
 When a sequence does not fit in the buffer of a read, the rest is returned by the next one.
+
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
+
+## Size of the window
+
+`hx.ioctl` command 6 returns the size of the window of a tty, columns in EAX and rows in EBX, in the manner of `TIOCGWINSZ` in BSD. On a virtual terminal it is the size of the console. On a pty it is what the manager set with command 7, columns in ECX and rows in EDX, and 80 by 25 until it does. `ttyGetSize` in `tty.s` reads it for descriptor 0.
+
+A program that lines up text by the size of its window, and moves only through the sequences above, shows the same on a virtual terminal and on a pty.
+
+<!-- Vai funcionar como <hr> -->
+
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hr.png" width="100%" height="2px" />
+
+## Pseudoterminals
+
+A pty is a pair of devices, as `pty(4)` in BSD. The subsidiary side, `ttyp0` to `ttyp3`, is a tty like any virtual terminal, with its own mode, line and echo, where a program such as `sh` runs. The manager side, `ptyp0` to `ptyp3`, belongs to whatever plays the terminal, such as an emulator, and takes the place of the keyboard and the console:
+
+| Operation | Effect |
+|:---------:|:------:|
+| Writing to the manager | The bytes reach the subsidiary as if typed |
+| Reading the subsidiary | Through the mode of the subsidiary, as on a virtual terminal |
+| Writing to the subsidiary | The bytes, with the echo, wait for the manager |
+| Reading the manager | What the subsidiary wrote, at least one byte |
+
+Each side has a ring of 1 KB, allocated when the manager is opened. A read of an empty ring and a write to a full one wait until the other side acts. A manager already open refuses another `hx.open`, and so does a pair whose last session still has its subsidiary open, so a manager that opens is always a free pair. A subsidiary opens only while its manager is open. `hx.ioctl` commands 4 and 5 work on either side, acting on the mode of the subsidiary.
+
+Once no descriptor holds the manager, reading the subsidiary returns 0, the end of the file. Once no descriptor holds the subsidiary and what it wrote was read, reading the manager returns 0. This is how an emulator learns that its shell is gone. The rings are freed when no descriptor holds either side.
+
+A program runs on a pty because its descriptors 0, 1 and 2 point to the subsidiary, which its creator arranges with `hx.dup2` before `hx.spawn`. Its virtual terminal stays the one it came from, which `ps` shows.
+
+The byte `03h` written to the manager, while the subsidiary has ISIG, is not delivered. It ends the processes that read the subsidiary through descriptor 0, apart from those waiting on a child, as a shell outlives the command it ran, and drops the input not read yet.
+
+The [`script`](https://github.com/hexagonix/Unix-Apps/tree/main/script) utility runs a shell on a pty and records the session into a file, the way an emulator would drive it.
 
 </div>

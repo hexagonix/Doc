@@ -48,7 +48,7 @@ Below is a list of each library within the libasm package:
 
 | Library | Functions |
 |:-------:|:---------:|
-|[`console.s`](https://github.com/hexagonix/lib/blob/main/fasm/console.s)| Functions for manipulating the console (physical and virtual)|
+|[`console.s`](https://github.com/hexagonix/lib/blob/main/fasm/console.s)| Functions for manipulating the console (physical and virtual), written as escape sequences to descriptor 1, so they also work on a pseudoterminal: `gotoxy`, `gotoColumn`, `saveCursor`, `restoreCursor`, `clearConsoleLine`, `setConsoleColor`, `setConsoleForeground`, `resetConsoleColor`, `reverseConsoleColor` and `putCharacter` among them|
 |[`dev.s`](https://github.com/hexagonix/lib/blob/main/fasm/dev.s)| Constants to access devices recognized by Hexagon|
 |[`errors.s`](https://github.com/hexagonix/lib/blob/main/fasm/errors.s)| Errors in response to Hexagon System Calls|
 |[`HAPP.s`](https://github.com/hexagonix/lib/blob/main/fasm/HAPP.s)| Macro for creating a HAPP header for executable images|
@@ -58,7 +58,7 @@ Below is a list of each library within the libasm package:
 |[`macros.s`](https://github.com/hexagonix/lib/blob/main/fasm/macros.s)| Advanced macros to ease utility development|
 |[`memory.s`](https://github.com/hexagonix/lib/blob/main/fasm/memory.s)| Macros for manipulating memory values|
 |[`passwdHash.s`](https://github.com/hexagonix/lib/blob/main/fasm/passwdHash.s)| Password hashing and `/shadow` lookup, shared by login, su, adduser, passwd and deluser|
-|[`tty.s`](https://github.com/hexagonix/lib/blob/main/fasm/tty.s)| The terminal of the process: reading and setting its mode, and `readLine`, which edits a line over the raw mode|
+|[`tty.s`](https://github.com/hexagonix/lib/blob/main/fasm/tty.s)| The terminal of the process: reading and setting its mode, the size of its window with `ttyGetSize`, `readKey`, which waits for a single key, and `readLine`, which edits a line over the raw mode|
 |[`verUtils.s`](https://github.com/hexagonix/lib/blob/main/fasm/verUtils.s)| Functions to get and process Hexagonix version information |
 
 In addition, there is a specific library called `Estelar`. This library is divided into two components, [`Estelar`](https://github.com/hexagonix/lib/blob/main/fasm/Estelar/estelar.s) and [`Bigbang`](https://github.com/hexagonix/lib/blob/main/fasm/Estelar/bigbang.s). This library aims to facilitate the development of graphical utilities that use sound output.

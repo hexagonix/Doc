@@ -37,12 +37,13 @@ Algumas características do Hexagon:
 - [x] Multitarefa preemptiva, com escalonador round-robin e processo idle dedicado;
 - [x] Sete estados de processo (livre, pronto, em execução, bloqueado, dormindo, zumbi e idle);
 - [x] Criação de processos não bloqueante (spawn) e encerramento de processos por PID (kill);
-- [x] [Chamada de sistema](SYSCALL.pt.md) com 71 funções acessadas pelo ambiente de usuário;
+- [x] [Chamada de sistema](SYSCALL.pt.md) com 72 funções acessadas pelo ambiente de usuário;
 - [x] Formato binário executável próprio (HAPP);
 - [x] Unix-like;
 - [x] Completamente escrito em Assembly x86;
 - [x] Self-hosting (o montador usado para construir o Hexagon pode ser executado sobre ele);
 - [x] Descritores por processo, com um [terminal do console](TERMINAL.pt.md) que interpreta sequências de escape ANSI;
+- [x] [Pseudoterminais](TERMINAL.pt.md#pseudoterminais), para que um shell rode onde quer que um programa faça o papel do seu terminal;
 - [x] Sistema de arquivos virtual;
 - [x] Abstração de dispositivos;
 - [x] Suporte total a leitura e escrita em sistemas de arquivos FAT16;
@@ -118,7 +119,7 @@ O Hexagon implementa uma série de funções que são expostas ao ambiente de us
 
 O número de chamadas de sistema podem variar de acordo com os lançamentos de novas versões do Hexagon, visto que a tendência é que a maioria das funções não críticas sejam movidas para bibliotecas, não permanecendo no núcleo. Entretanto, com a evolução natural do kernel, outras funções e chamadas podem ser implementadas.
 
-Neste momento, existem [71 chamadas de sistema](SYSCALL.pt.md) que são expostas ao ambiente de usuário pelo Hexagon. Para isso, ele implementa um sistema de interrupção que é acessível por qualquer aplicativo através da interrupção 80h (`int 80h`), o mesmo vetor tradicionalmente usado por sistemas Unix-like.
+Neste momento, existem [72 chamadas de sistema](SYSCALL.pt.md) que são expostas ao ambiente de usuário pelo Hexagon. Para isso, ele implementa um sistema de interrupção que é acessível por qualquer aplicativo através da interrupção 80h (`int 80h`), o mesmo vetor tradicionalmente usado por sistemas Unix-like.
 
 O formato de passagem de parâmetros para o manipulador de interrupção do Hexagon é um misto do observado para o implementado no MS-DOS e nos sistemas BSD. Parte dos parâmetros é passado na pilha (como em sistemas BSD), enquanto outros parâmetros são passados por meio dos registradores (como no MS-DOS), da seguinte forma:
 
