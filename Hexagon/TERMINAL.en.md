@@ -163,7 +163,7 @@ A program that lines up text by the size of its window, and moves only through t
 
 ## Pseudoterminals
 
-A pty is a pair of devices, as `pty(4)` in BSD. The subsidiary side, `ttyp0` to `ttyp3`, is a tty like any virtual terminal, with its own mode, line and echo, where a program such as `sh` runs. The manager side, `ptyp0` to `ptyp3`, belongs to whatever plays the terminal, such as an emulator, and takes the place of the keyboard and the console:
+A pty is a pair of devices, as `pty(4)` in BSD. The subsidiary side, `ttyp0` to `ttyp7`, is a tty like any virtual terminal, with its own mode, line and echo, where a program such as `sh` runs. The manager side, `ptyp0` to `ptyp7`, belongs to whatever plays the terminal, such as an emulator, and takes the place of the keyboard and the console:
 
 | Operation | Effect |
 |:---------:|:------:|
@@ -180,6 +180,6 @@ A program runs on a pty because its descriptors 0, 1 and 2 point to the subsidia
 
 The byte `03h` written to the manager, while the subsidiary has ISIG, is not delivered. It ends the processes that read the subsidiary through descriptor 0, apart from those waiting on a child, as a shell outlives the command it ran, and drops the input not read yet.
 
-The [`script`](https://github.com/hexagonix/Unix-Apps/tree/main/script) utility runs a shell on a pty and records the session into a file, the way an emulator would drive it.
+The [`script`](https://github.com/hexagonix/Unix-Apps/tree/main/script) utility runs a shell on a pty and records the session into a file, the way an emulator would drive it. [`raava`](https://github.com/hexagonix/Unix-Apps/tree/main/raava) shows several shells in windows on a virtual terminal of its own, each on a pty, keeping what each one drew with the `term.s` library of libasm, which interprets bytes as this terminal does.
 
 </div>

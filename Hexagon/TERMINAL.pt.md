@@ -163,7 +163,7 @@ Um programa que alinha o texto pelo tamanho da sua janela, e se move apenas pela
 
 ## Pseudoterminais
 
-Um pty é um par de dispositivos, como o `pty(4)` do BSD. O lado subsidiário, de `ttyp0` a `ttyp3`, é uma tty como qualquer terminal virtual, com o seu próprio modo, linha e eco, onde roda um programa como o `sh`. O lado gerenciador, de `ptyp0` a `ptyp3`, pertence a quem faz o papel do terminal, como um emulador, e toma o lugar do teclado e do console:
+Um pty é um par de dispositivos, como o `pty(4)` do BSD. O lado subsidiário, de `ttyp0` a `ttyp7`, é uma tty como qualquer terminal virtual, com o seu próprio modo, linha e eco, onde roda um programa como o `sh`. O lado gerenciador, de `ptyp0` a `ptyp7`, pertence a quem faz o papel do terminal, como um emulador, e toma o lugar do teclado e do console:
 
 | Operação | Efeito |
 |:--------:|:------:|
@@ -180,6 +180,6 @@ Um programa roda em um pty porque os seus descritores 0, 1 e 2 apontam para o su
 
 O byte `03h` escrito no gerenciador, enquanto o subsidiário tem ISIG, não é entregue. Ele encerra os processos que leem o subsidiário pelo descritor 0, exceto os que esperam um filho, já que um shell sobrevive ao comando que rodou, e descarta a entrada ainda não lida.
 
-O utilitário [`script`](https://github.com/hexagonix/Unix-Apps/tree/main/script) roda um shell em um pty e grava a sessão em um arquivo, do jeito que um emulador o conduziria.
+O utilitário [`script`](https://github.com/hexagonix/Unix-Apps/tree/main/script) roda um shell em um pty e grava a sessão em um arquivo, do jeito que um emulador o conduziria. O [`raava`](https://github.com/hexagonix/Unix-Apps/tree/main/raava) mostra vários shells em janelas num terminal virtual só seu, cada um em um pty, guardando o que cada um desenhou com a biblioteca `term.s` da libasm, que interpreta os bytes como este terminal.
 
 </div>

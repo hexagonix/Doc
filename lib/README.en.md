@@ -52,13 +52,14 @@ Below is a list of each library within the libasm package:
 |[`dev.s`](https://github.com/hexagonix/lib/blob/main/fasm/dev.s)| Constants to access devices recognized by Hexagon|
 |[`errors.s`](https://github.com/hexagonix/lib/blob/main/fasm/errors.s)| Errors in response to Hexagon System Calls|
 |[`HAPP.s`](https://github.com/hexagonix/lib/blob/main/fasm/HAPP.s)| Macro for creating a HAPP header for executable images|
-|[`hexagon.s`](https://github.com/hexagonix/lib/blob/main/fasm/hexagon.s)| Definitions for making system calls to Hexagon|
+|[`hexagon.s`](https://github.com/hexagonix/lib/blob/main/fasm/hexagon.s)| Definitions for making system calls to Hexagon, and the `hx.setNonBlocking` and `hx.setCloseOnSpawn` macros for the flags of a descriptor|
 |[`hexagonix.s`](https://github.com/hexagonix/lib/blob/main/fasm/hexagonix.s)| Macros and data shared by Hexagonix components|
 |[`log.s`](https://github.com/hexagonix/lib/blob/main/fasm/log.s)| Macro for sending messages through Hexagon|
 |[`macros.s`](https://github.com/hexagonix/lib/blob/main/fasm/macros.s)| Advanced macros to ease utility development|
 |[`memory.s`](https://github.com/hexagonix/lib/blob/main/fasm/memory.s)| Macros for manipulating memory values|
 |[`passwdHash.s`](https://github.com/hexagonix/lib/blob/main/fasm/passwdHash.s)| Password hashing and `/shadow` lookup, shared by login, su, adduser, passwd and deluser|
-|[`tty.s`](https://github.com/hexagonix/lib/blob/main/fasm/tty.s)| The terminal of the process: reading and setting its mode, the size of its window with `ttyGetSize`, `readKey`, which waits for a single key, and `readLine`, which edits a line over the raw mode|
+|[`term.s`](https://github.com/hexagonix/lib/blob/main/fasm/term.s)| A terminal kept in memory as a grid of cells, for a program that plays one: `termInit`, `termWrite`, which interprets bytes as the console terminal of Hexagon does, `termResize` and `termFree`|
+|[`tty.s`](https://github.com/hexagonix/lib/blob/main/fasm/tty.s)| The terminal of the process: reading and setting its mode, the size of its window with `ttyGetSize`, `readKey`, which waits for a single key, and `readLine`, which edits a line over the raw mode and reports the end of the input with CF set|
 |[`verUtils.s`](https://github.com/hexagonix/lib/blob/main/fasm/verUtils.s)| Functions to get and process Hexagonix version information |
 
 In addition, there is a specific library called `Estelar`. This library is divided into two components, [`Estelar`](https://github.com/hexagonix/lib/blob/main/fasm/Estelar/estelar.s) and [`Bigbang`](https://github.com/hexagonix/lib/blob/main/fasm/Estelar/bigbang.s). This library aims to facilitate the development of graphical utilities that use sound output.
