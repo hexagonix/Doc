@@ -37,11 +37,13 @@ Some features of Hexagon:
 - [x] Preemptive multitasking, with a round-robin scheduler and a dedicated idle process;
 - [x] Seven process states (free, ready, running, blocked, sleeping, zombie and idle);
 - [x] Non-blocking process creation (spawn) and process termination by PID (kill);
-- [x] [System call](SYSCALL.en.md) with 71 functions accessed by the user environment;
+- [x] [System call](SYSCALL.en.md) with 72 functions accessed by the user environment;
 - [x] Own executable binary format (HAPP);
 - [x] Unix-like;
 - [x] Completely written in x86 Assembly;
 - [x] Self-hosting (the assembler used to build the Hexagon can run on top of it);
+- [x] Per-process descriptors, with a [console terminal](TERMINAL.en.md) that interprets ANSI escape sequences;
+- [x] [Pseudoterminals](TERMINAL.en.md#pseudoterminals), so a shell runs wherever a program plays its terminal;
 - [x] Virtual file system;
 - [x] Device abstraction;
 - [x] Full support for reading and writing on FAT16 file systems;
@@ -117,7 +119,7 @@ Hexagon implements a series of functions that are exposed to the user environmen
 
 The number of system calls may vary with new Hexagon releases, as the tendency is for most non-critical functions to be moved to libraries, not staying in the core. However, with the natural evolution of the kernel, other functions and calls can be implemented.
 
-At this time, there are [71 system calls](SYSCALL.en.md) that are exposed to the user environment by Hexagon. To do so, it implements an interrupt system that is accessible by any application via interrupt 80h (`int 80h`), the same vector traditionally used by Unix-like systems.
+At this time, there are [72 system calls](SYSCALL.en.md) that are exposed to the user environment by Hexagon. To do so, it implements an interrupt system that is accessible by any application via interrupt 80h (`int 80h`), the same vector traditionally used by Unix-like systems.
 
 The format for passing parameters to the Hexagon interrupt handler is a mix of what is observed for what is implemented in MS-DOS and BSD systems. Some of the parameters are passed on the stack (as in BSD systems), while other parameters are passed through registers (as in MS-DOS), as follows:
 
