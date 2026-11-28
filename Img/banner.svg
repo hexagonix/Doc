@@ -120,10 +120,20 @@
     <circle cx="-120" cy="1010" r="760" fill="#0D1530" stroke="#FF8A1F" stroke-width="2" stroke-opacity="0.55"/>
   </g>
   <g inkscape:groupmode="layer" inkscape:label="logo">
-    <g transform="translate(300 128) scale(1.4)">
-      <polygon points="60,18 96.4,39 96.4,81 60,102 23.6,81 23.6,39" fill="none" stroke="#FF8A1F" stroke-linejoin="round" stroke-linecap="round" stroke-width="5"/>
-      <path d="M41 44 L59 60 L41 76" fill="none" stroke="#FF8A1F" stroke-linejoin="round" stroke-linecap="round" stroke-width="8"/>
-      <rect x="65" y="71" width="21" height="8" rx="1" fill="#FF8A1F"/>
+    <g transform="translate(276 116) scale(1.6)">
+  <g inkscape:label="anel atras">
+    <g transform="rotate(-12 60 60)"><ellipse cx="60" cy="60" rx="55" ry="13" fill="none" stroke="#FF8A1F" stroke-linejoin="round" stroke-linecap="round" stroke-width="4"/></g>
+  </g>
+  <g inkscape:label="planeta">
+    <polygon points="60,26 89.44,43 89.44,77 60,94 30.56,77 30.56,43" fill="#0A1024"/>
+    <polygon points="60,26 89.44,43 89.44,77 60,94 30.56,77 30.56,43" fill="none" stroke="#FF8A1F" stroke-linejoin="round" stroke-linecap="round" stroke-width="5"/>
+    <path d="M46.05 38.15 L57.21 48.07 L46.05 57.99" fill="none" stroke="#FF8A1F" stroke-linejoin="round" stroke-linecap="round" stroke-width="5"/>
+    <rect x="60.93" y="54.89" width="13" height="5" rx="0.8" fill="#FF8A1F"/>
+  </g>
+  <g inkscape:label="anel frente">
+    <clipPath id="planeta-frente"><rect x="0" y="60" width="120" height="60"/></clipPath>
+    <g transform="rotate(-12 60 60)"><g clip-path="url(#planeta-frente)"><ellipse cx="60" cy="60" rx="55" ry="13" fill="none" stroke="#0A1024" stroke-width="9"/><ellipse cx="60" cy="60" rx="55" ry="13" fill="none" stroke="#FF8A1F" stroke-linejoin="round" stroke-linecap="round" stroke-width="4"/></g></g>
+  </g>
     </g>
   </g>
   <g inkscape:groupmode="layer" inkscape:label="nome">
