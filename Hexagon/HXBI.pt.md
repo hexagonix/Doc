@@ -33,7 +33,7 @@ Todos os direitos reservados.
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/HexagonixSourceHeader.png">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hexagonix-source-header.png">
 
 </div>
 

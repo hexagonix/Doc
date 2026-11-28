@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" viewBox="0 0 120 120" width="512" height="512">
+  <g inkscape:groupmode="layer" inkscape:label="fundo">
+    <rect width="120" height="120" fill="#0A1024"/>
+  </g>
+  <g inkscape:groupmode="layer" inkscape:label="marca">
+    <polygon points="60,18 96.4,39 96.4,81 60,102 23.6,81 23.6,39" fill="none" stroke="#FF8A1F" stroke-linejoin="round" stroke-linecap="round" stroke-width="5"/>
+  </g>
+  <g inkscape:groupmode="layer" inkscape:label="texto">
+    <path fill="#E9EDF7" d="M41.97 59.90L41.97 40.50L36.52 40.50L36.52 79.50L41.97 79.50L41.97 65.50Q41.97 63.95 42.60 62.80Q43.22 61.65 44.38 61Q45.52 60.35 47.07 60.35L47.07 60.35Q49.27 60.35 50.30 61.65Q51.32 62.95 51.32 65.50L51.32 65.50L51.32 79.50L56.77 79.50L56.77 64.75Q56.77 61.80 55.88 59.83Q54.97 57.85 53.22 56.85Q51.47 55.85 48.88 55.85Q46.27 55.85 44.47 57.10L44.47 57.10Q42.92 58.20 41.97 59.90L41.97 59.90Z"/>
+    <path fill="#FF8A1F" d="M82.97 56.50L76.92 56.50L71.92 63.70L66.92 56.50L60.72 56.50L69.02 67.65L60.22 79.50L66.42 79.50L71.92 71.60L77.42 79.50L83.47 79.50L74.72 67.65L82.97 56.50Z"/>
+  </g>
+  <g inkscape:groupmode="layer" inkscape:label="texto editável" style="display:none">
+    <text x="33.07" y="79.50" font-family="Jost Medium, Jost, sans-serif" font-weight="500" font-size="50" fill="#E9EDF7">h<tspan fill="#FF8A1F">x</tspan></text>
+  </g>
+</svg>

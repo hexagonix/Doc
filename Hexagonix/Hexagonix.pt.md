@@ -36,7 +36,7 @@
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/HexagonixSourceHeader.png">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hexagonix-source-header.png">
 
 </div>
 
@@ -147,7 +147,7 @@ A interação com o HBoot se dá pelo pressionamento da tecla `F8` após a inici
 </div>
 
 <p align="center">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/HBoot.png" width="600" height="500">
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hboot.png" width="600" height="500">
 </p>
 
 ##### Reportar bugs
@@ -163,7 +163,7 @@ O HBoot ganhou muita complexidade desde o início de seu desenvolvimento, em 202
 ### Kernel Hexagon
 
 <p align="center">
-<img src="https://github.com/hexagonix/Doc/blob/main/Img/LogoHexagon.png" width="180" height="180">
+<img src="https://github.com/hexagonix/Doc/blob/main/Img/hexagon-logo.png" width="180" height="180">
 </p>
 
 <div align="justify">
@@ -312,16 +312,16 @@ Para saber mais e verificar cada função disponível nas bibliotecas de desenvo
 ## 🌙 Capturas de tela
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/Hexagonix1.png" width="400" height="300">
-<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/Hexagonix2.png" width="400" height="300">
-<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/Hexagonix3.png" width="400" height="300">
-<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/Hexagonix4.png" width="400" height="300">
-<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/Hexagonix5.png" width="400" height="300">
-<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/Hexagonix6.png" width="400" height="300">
-<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/Hexagonix7.png" width="400" height="300">
-<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/Hexagonix8.png" width="400" height="300">
-<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/Hexagonix9.png" width="400" height="300">
-<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/Hexagonix10.png" width="400" height="300">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hexagonix-screenshot-1.png" width="400" height="300">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hexagonix-screenshot-2.png" width="400" height="300">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hexagonix-screenshot-3.png" width="400" height="300">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hexagonix-screenshot-4.png" width="400" height="300">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hexagonix-screenshot-5.png" width="400" height="300">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hexagonix-screenshot-6.png" width="400" height="300">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hexagonix-screenshot-7.png" width="400" height="300">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hexagonix-screenshot-8.png" width="400" height="300">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hexagonix-screenshot-9.png" width="400" height="300">
+<img src="https://raw.githubusercontent.com/hexagonix/Doc/refs/heads/main/Img/hexagonix-screenshot-10.png" width="400" height="300">
 </p>
 
 <!-- Vai funcionar como <hr> -->
