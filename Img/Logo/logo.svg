@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" viewBox="0 0 120 120" width="512" height="512">
+  <g inkscape:groupmode="layer" inkscape:label="fundo" style="display:none">
+    <rect width="120" height="120" fill="#0A1024"/>
+  </g>
+  <g inkscape:groupmode="layer" inkscape:label="marca">
+    <polygon points="60,18 96.4,39 96.4,81 60,102 23.6,81 23.6,39" fill="none" stroke="#FF8A1F" stroke-linejoin="round" stroke-linecap="round" stroke-width="5"/>
+    <path d="M41 44 L59 60 L41 76" fill="none" stroke="#FF8A1F" stroke-linejoin="round" stroke-linecap="round" stroke-width="8"/>
+    <rect x="65" y="71" width="21" height="8" rx="1" fill="#FF8A1F"/>
+  </g>
+</svg>
